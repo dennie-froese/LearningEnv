@@ -8,7 +8,7 @@ const stateMachine = Machine({
   context: {
     user: "",
     password: "",
-    authorised: false
+    authenticated: false
   },
   states: {
     unauthorised: {
@@ -21,6 +21,16 @@ const stateMachine = Machine({
         INPUT_PASSWORD: {
           actions: assign({
             password: (_, event) => event.value
+          })
+        },
+        UNAUTHENTICATED: {
+          actions: assign({
+            authenticated: false
+          })
+        },
+        AUTHENTICATED: {
+          actions: assign({
+            authenticated: true
           })
         }
       }
