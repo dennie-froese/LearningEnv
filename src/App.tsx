@@ -6,12 +6,16 @@ import Home from "./routes/Home";
 import Login from "./routes/Login";
 import Question from "./routes/QuestionRange";
 import QuestionRange from "./routes/QuestionRange";
+import QuestionTextInput from "./routes/QuestionTextInput/index";
 
 function App() {
   return (
     <StateMachineProvider>
       <Router>
         <Switch>
+          <Route path="/questionTextInput">
+            <QuestionTextInput />
+          </Route>
           <Route path="/questionRange">
             <QuestionRange />
           </Route>

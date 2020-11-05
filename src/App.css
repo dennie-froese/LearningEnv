@@ -134,6 +134,19 @@
   border-radius: 10px;
 }
 
+.Question-textinput-l {
+  width: 80%;
+  height: 50vh;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s all;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 5px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
