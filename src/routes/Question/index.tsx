@@ -6,8 +6,8 @@ function Question() {
     <div className="Question">
       <div className="Question-container">
         <div className="Question-header">
-          <p>How are you?</p>
           <p>Question 1:</p>
+          <p>How are you?</p>
         </div>
         <div className="Question-nav">
           <Link to="/questions">

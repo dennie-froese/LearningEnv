@@ -42,7 +42,7 @@ function Login() {
           />
         </form>
         {authenticated ? (
-          <Link to="/questions">
+          <Link to="/questionRange">
             <button className="App-button">Log in!</button>
           </Link>
         ) : (

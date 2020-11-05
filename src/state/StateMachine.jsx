@@ -4,14 +4,14 @@ import { useMachine } from "@xstate/react";
 
 const stateMachine = Machine({
   id: "stateMachine",
-  initial: "unauthorised",
+  initial: "initial",
   context: {
     user: "",
     password: "",
     authenticated: false
   },
   states: {
-    unauthorised: {
+    initial: {
       on: {
         INPUT_USER: {
           actions: assign({

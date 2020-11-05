@@ -4,13 +4,17 @@ import { StateMachineProvider } from "./state/StateMachine.jsx";
 import "./App.css";
 import Home from "./routes/Home";
 import Login from "./routes/Login";
-import Question from "./routes/Question";
+import Question from "./routes/QuestionRange";
+import QuestionRange from "./routes/QuestionRange";
 
 function App() {
   return (
     <StateMachineProvider>
       <Router>
         <Switch>
+          <Route path="/questionRange">
+            <QuestionRange />
+          </Route>
           <Route path="/questions">
             <Question />
           </Route>
