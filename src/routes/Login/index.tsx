@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   useStateMachineState,
   useStateMachineDispatch
 } from "../../state/StateMachine";
+import { users, password as adminPassword } from "../../logins";
 
 function Login() {
   const current = useStateMachineState();
   const send = useStateMachineDispatch();
+  const password = current.context.password;
+  const user = current.context.user;
+  const authenticated = current.context.authenticated;
+
+  useEffect(() => {
+    users.includes(user) && password === adminPassword
+      ? send("AUTHENTICATED")
+      : send("UNAUTHENTICATED");
+  }, [password]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -16,7 +27,7 @@ function Login() {
           <label>User:</label>
           <input
             className="Form-input"
-            value={current.context.user}
+            value={user}
             onChange={e => send("INPUT_USER", { value: e.target.value })}
             type="text"
             name="name"
@@ -24,15 +35,21 @@ function Login() {
           <label>Password:</label>
           <input
             className="Form-input"
-            value={current.context.password}
+            value={password}
             onChange={e => send("INPUT_PASSWORD", { value: e.target.value })}
             type="password"
             name="name"
           />
         </form>
-        <Link to="/questions">
-          <button className="App-button">Log in!</button>
-        </Link>
+        {authenticated ? (
+          <Link to="/questions">
+            <button className="App-button">Log in!</button>
+          </Link>
+        ) : (
+          <div>
+            <button className="App-button">Log in!</button>
+          </div>
+        )}
       </header>
     </div>
   );
