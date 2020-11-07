@@ -9,7 +9,7 @@ interface Props {
 
 function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
   const [value, setValue] = useState<undefined | number>(undefined);
-  const checkboxes = [];
+  const checkboxes: JSX.Element[] = [];
   for (var i = 1; i < rangeMax + 1; i++) {
     const v = i;
     checkboxes.push(
@@ -27,13 +27,13 @@ function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
     <div className="Question">
       <div className="Question-container">
         <div className="Question-header">
-          <p>Question 1:</p>
+          <p>{`Question: ${questionNumber}`}</p>
           <p>{question}</p>
           <div className="Question-range">{checkboxes}</div>
         </div>
         <div className="Question-nav">
           {value ? (
-            <Link to={`/question${questionNumber}`}>
+            <Link to={`/question${questionNumber + 1}`}>
               <button className="Question-button">Next question</button>
             </Link>
           ) : (
