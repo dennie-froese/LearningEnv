@@ -5,7 +5,6 @@ import Home from "../routes/Home";
 import Login from "../routes/Login";
 import Question from "../routes/Question";
 import QuestionRange from "../routes/QuestionRange";
-import QuestionTextInput from "../routes/QuestionTextInput/index";
 import SomethingWentWrong from "../routes/SomethingWentWrong/index";
 
 function Router() {
@@ -15,19 +14,20 @@ function Router() {
   return (
     <BrowserRouter>
       <Switch>
-        {authenticated && (
-          <Route path="/questionTextInput">
-            <QuestionTextInput />
-          </Route>
-        )}
-        {authenticated && (
-          <Route path="/questionRange">
-            <QuestionRange />
-          </Route>
-        )}
+        <Route path="/questionRange">
+          <QuestionRange
+            questionNumber={1}
+            question="Please select from 1 to 10"
+            rangeMax={10}
+          />
+        </Route>
         {authenticated && (
           <Route path="/question">
-            <Question />
+            <Question
+              type="range"
+              question="On a scale from 1 to 10?"
+              rangeMax={10}
+            />
           </Route>
         )}
         <Route path="/login">
