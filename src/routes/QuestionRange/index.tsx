@@ -1,81 +1,46 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function QuestionRange() {
+interface Props {
+  questionNumber: number;
+  question: string;
+  rangeMax?: number;
+}
+
+function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
   const [value, setValue] = useState<undefined | number>(undefined);
+  const checkboxes = [];
+  for (var i = 1; i < rangeMax + 1; i++) {
+    const v = i;
+    checkboxes.push(
+      <div>
+        <input
+          type="checkbox"
+          checked={value === v ? true : false}
+          onClick={() => (value === v ? setValue(undefined) : setValue(v))}
+        />
+        <p>{v}</p>
+      </div>
+    );
+  }
   return (
     <div className="Question">
       <div className="Question-container">
         <div className="Question-header">
           <p>Question 1:</p>
-          <p>Please choose from 1 to 6</p>
-          <div className="Question-range">
-            <div>
-              <input
-                type="checkbox"
-                checked={value === 1 ? true : false}
-                onClick={() =>
-                  value === 1 ? setValue(undefined) : setValue(1)
-                }
-              />
-              <p>1</p>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                checked={value === 2 ? true : false}
-                onClick={() =>
-                  value === 2 ? setValue(undefined) : setValue(2)
-                }
-              />
-              <p>2</p>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                checked={value === 3 ? true : false}
-                onClick={() =>
-                  value === 3 ? setValue(undefined) : setValue(3)
-                }
-              />
-              <p>3</p>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                checked={value === 4 ? true : false}
-                onClick={() =>
-                  value === 4 ? setValue(undefined) : setValue(4)
-                }
-              />
-              <p>4</p>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                checked={value === 5 ? true : false}
-                onClick={() =>
-                  value === 5 ? setValue(undefined) : setValue(5)
-                }
-              />
-              <p>5</p>
-            </div>
-            <div>
-              <input
-                type="checkbox"
-                checked={value === 6 ? true : false}
-                onClick={() =>
-                  value === 6 ? setValue(undefined) : setValue(6)
-                }
-              />
-              <p>6</p>
-            </div>
-          </div>
+          <p>{question}</p>
+          <div className="Question-range">{checkboxes}</div>
         </div>
         <div className="Question-nav">
-          <Link to="/questions">
-            <button className="Question-button">Next question</button>
-          </Link>
+          {value ? (
+            <Link to={`/question${questionNumber}`}>
+              <button className="Question-button">Next question</button>
+            </Link>
+          ) : (
+            <div>
+              <button className="Question-button">Next question</button>
+            </div>
+          )}
         </div>
       </div>
     </div>
