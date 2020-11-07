@@ -1,22 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import QuestionTextInput from "../QuestionTextInput";
+import QuestionRange from "../QuestionRange";
 
-function Question() {
-  return (
-    <div className="Question">
-      <div className="Question-container">
-        <div className="Question-header">
-          <p>Question 1:</p>
-          <p>How are you?</p>
-        </div>
-        <div className="Question-nav">
-          <Link to="/questions">
-            <button className="Question-button">Next question</button>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+interface Props {
+  type: string;
+  question: string;
+  rangeMax?: number;
+}
+
+function Question({ type, question, rangeMax = 0 }: Props) {
+  return type === "textInput" ? (
+    <QuestionTextInput question={question} />
+  ) : type === "range" ? (
+    <QuestionRange questionNumber={1} question={question} rangeMax={rangeMax} />
+  ) : null;
 }
 
 export default Question;
