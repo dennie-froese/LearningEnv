@@ -41,8 +41,8 @@
 
 .App-button {
   background-color: #524091;
-  width: 20vh;
-  height: 5vh;
+  width: 24vh;
+  height: 6vh;
   color: white;
   border-radius: 10px;
   padding: 10px;
@@ -88,14 +88,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(12px + 2vmin);
   color: white;
 }
 
 .Question-header {
-  min-height: 80vh;
-  min-width: 80vw;
+  height: 50vh;
+  width: 80vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,13 +134,19 @@
   border-radius: 10px;
 }
 
+.Question-text {
+  text-align: left;
+  font-size: calc(8px + 1vmin);
+  color: white;
+  overflow-y: scroll;
+}
+
 .Question-textinput-l {
-  width: 80%;
-  height: 50vh;
+  width: 70%;
+  height: 30vh;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.3);
   transition: 0.3s all;
-  margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
