@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { useStateMachineState } from "../state/StateMachine.jsx";
 import Home from "../routes/Home";
@@ -6,6 +6,7 @@ import Login from "../routes/Login";
 import Question from "../routes/Question";
 import SomethingWentWrong from "../routes/SomethingWentWrong/index";
 import questions from "../questions";
+import Finish from "../routes/Finish/index";
 
 function Router() {
   const current = useStateMachineState();
@@ -48,7 +49,12 @@ function Router() {
         <Route path="/login">
           <Login />
         </Route>
-        <Route path="/home">
+        {authenticated && (
+          <Route path="/finish">
+            <Finish />
+          </Route>
+        )}
+        <Route exact path="/">
           <Home />
         </Route>
         <Route path="*">
