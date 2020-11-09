@@ -17,7 +17,8 @@ function Login() {
     users.includes(user) && password === adminPassword
       ? send("AUTHENTICATED")
       : send("UNAUTHENTICATED");
-  }, [password]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user, password]);
 
   return (
     <div className="App">
