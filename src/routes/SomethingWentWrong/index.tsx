@@ -8,7 +8,7 @@ function SomethingWentWrong() {
         <p>Oops!</p>
         <p>We're really sorry, but it looks like something went wrong here.</p>
         <p></p>
-        <Link to="/home">
+        <Link to="/">
           <button className="App-button">Go back to home</button>
         </Link>
       </header>

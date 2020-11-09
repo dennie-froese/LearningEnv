@@ -25,8 +25,16 @@ function QuestionTextInput({ question, questionNumber }: Props) {
           }}
         />
         <div className="Question-nav">
-          <Link to={`/question${questionNumber + 1}`}>
-            <button className="Question-button">Next question</button>
+          <Link
+            to={
+              questionNumber === 3
+                ? "/finish"
+                : `/question${questionNumber + 1}`
+            }
+          >
+            <button className="Question-button">
+              {questionNumber === 3 ? "Finish the survey" : "Next question"}
+            </button>
           </Link>
         </div>
       </div>
