@@ -3,60 +3,32 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { useStateMachineState } from "../state/StateMachine.jsx";
 import Home from "../routes/Home";
 import Login from "../routes/Login";
-import Question from "../routes/Question";
+
 import SomethingWentWrong from "../routes/SomethingWentWrong/index";
-import questions from "../questions";
 import Finish from "../routes/Finish/index";
+import Question from "../routes/Question";
+import Questions from "../questions/index";
 
 function Router() {
   const current = useStateMachineState();
   const authenticated = current.context.authenticated;
 
-  const questionArray: JSX.Element[] = [];
-  function questionRoutes() {
-    questions.forEach(element =>
-      element.questionType === "range"
-        ? questionArray.push(
-            <Route path={`/question${element.id}`}>
-              <Question
-                questionNumber={element.id}
-                type={element.questionType}
-                question={element.questionText}
-                rangeMax={element.additionalInfo}
-              />
-            </Route>
-          )
-        : element.questionType === "textInput"
-        ? questionArray.push(
-            <Route path={`/question${element.id}`}>
-              <Question
-                questionNumber={element.id}
-                type={element.questionType}
-                question={element.questionText}
-                rangeMax={element.additionalInfo}
-              />
-            </Route>
-          )
-        : null
-    );
-  }
-  console.log(questionArray);
   return (
     <BrowserRouter>
       <Switch>
-        {questionRoutes()}
-        {authenticated && questionArray}
-        <Route path="/login">
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/login">
           <Login />
         </Route>
+        {authenticated &&
+          Questions.map((question) => <Question {...question} />)}
         {authenticated && (
           <Route path="/finish">
             <Finish />
           </Route>
         )}
-        <Route exact path="/">
-          <Home />
-        </Route>
         <Route path="*">
           <SomethingWentWrong />
         </Route>
