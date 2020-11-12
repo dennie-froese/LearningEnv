@@ -7,28 +7,18 @@ interface Props {
 }
 
 function SlideIntro({ slideText, slideNumber }: Props) {
-  const [input, setInput] = useState<undefined | string>(undefined);
-
   return (
-    <div className="Question">
-      <div className="Question-container">
-        <div className="Question-header">
-          <p>{`Question: ${slideNumber}`}</p>
-          <p className="Question-text">{slideText}</p>
+    <div className="Slide">
+      <div className="Slide-container">
+        <div className="Slide-header">
+          <p>This an intro slide</p>
+          <p className="Slide-text">{slideText}</p>
         </div>
-        <textarea
-          autoCorrect="false"
-          className="Question-textinput-l"
-          value={input}
-          onChange={(e) => {
-            setInput(e.target.value);
-          }}
-        />
-        <div className="Question-nav">
+        <div className="Slide-nav">
           <Link
             to={slideNumber === 3 ? "/finish" : `/question${slideNumber + 1}`}
           >
-            <button className="Question-button">
+            <button className="Slide-button">
               {slideNumber === 4 ? "Finish the survey" : "Next question"}
             </button>
           </Link>

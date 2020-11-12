@@ -78,11 +78,11 @@
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
 }
 
-.Question {
+.Slide {
   text-align: center;
 }
 
-.Question-container {
+.Slide-container {
   background-color: #353a44;
   min-height: 100vh;
   display: flex;
@@ -93,7 +93,7 @@
   color: white;
 }
 
-.Question-header {
+.Slide-header {
   height: 50vh;
   width: 80vw;
   display: flex;
@@ -104,7 +104,7 @@
   color: white;
 }
 
-.Question-nav {
+.Slide-nav {
   min-height: 10vh;
   min-width: 80vw;
   display: flex;
@@ -114,7 +114,7 @@
   font-size: calc(12px + 2vmin);
 }
 
-.Question-button {
+.Slide-button {
   background-color: #493e70;
   width: 20vh;
   height: 5vh;
@@ -122,7 +122,7 @@
   border-radius: 10px;
 }
 
-.Question-range {
+.Slide-range {
   background-color: #474d58;
   width: 60vh;
   height: 20vh;
@@ -134,14 +134,14 @@
   border-radius: 10px;
 }
 
-.Question-text {
+.Slide-text {
   text-align: left;
   font-size: calc(8px + 1vmin);
   color: white;
   overflow-y: scroll;
 }
 
-.Question-textinput-l {
+.Slide-textinput-l {
   width: 70%;
   height: 30vh;
   border-radius: 4px;

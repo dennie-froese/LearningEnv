@@ -15,21 +15,21 @@ function QuestionTextInput({ question, questionNumber }: Props) {
   };
 
   return (
-    <div className="Question">
-      <div className="Question-container">
-        <div className="Question-header">
+    <div className="Slide">
+      <div className="Slide-container">
+        <div className="Slide-header">
           <p>{`Question: ${questionNumber}`}</p>
-          <p className="Question-text">{question}</p>
+          <p className="Slide-text">{question}</p>
         </div>
         <textarea
           autoCorrect="false"
-          className="Question-textinput-l"
+          className="Slide-textinput-l"
           value={input}
-          onChange={e => {
+          onChange={(e) => {
             setInput(e.target.value);
           }}
         />
-        <div className="Question-nav">
+        <div className="Slide-nav">
           <Link
             to={
               questionNumber === 3
@@ -37,7 +37,7 @@ function QuestionTextInput({ question, questionNumber }: Props) {
                 : `/question${questionNumber + 1}`
             }
           >
-            <button className="Question-button" onClick={finish}>
+            <button className="Slide-button" onClick={finish}>
               {questionNumber === 3 ? "Finish the survey" : "Next question"}
             </button>
           </Link>

@@ -28,18 +28,18 @@ function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
   }
 
   return (
-    <div className="Question">
-      <div className="Question-container">
-        <div className="Question-header">
+    <div className="Slide">
+      <div className="Slide-container">
+        <div className="Slide-header">
           <p>{`Question: ${questionNumber}`}</p>
           <p>{question}</p>
-          <div className="Question-range">{checkboxes}</div>
+          <div className="Slide-range">{checkboxes}</div>
         </div>
-        <div className="Question-nav">
+        <div className="Slide-nav">
           {value ? (
             <Link to={`/question${questionNumber + 1}`}>
               <button
-                className="Question-button"
+                className="Slide-button"
                 onClick={() =>
                   console.log(
                     `${launchTime && (launchTime - Date.now()) / -1000} seconds`
@@ -51,7 +51,7 @@ function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
             </Link>
           ) : (
             <div>
-              <button className="Question-button">Next question</button>
+              <button className="Slide-button">Next question</button>
             </div>
           )}
         </div>
