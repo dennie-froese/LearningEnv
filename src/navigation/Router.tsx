@@ -6,8 +6,8 @@ import Login from "../routes/Login";
 
 import SomethingWentWrong from "../routes/SomethingWentWrong/index";
 import Finish from "../routes/Finish/index";
-import Question from "../routes/Question";
-import Questions from "../questions/index";
+import Slide from "../routes/Slide";
+import Slides from "../slides/index";
 
 function Router() {
   const current = useStateMachineState();
@@ -22,8 +22,7 @@ function Router() {
         <Route exact path="/login">
           <Login />
         </Route>
-        {authenticated &&
-          Questions.map((question) => <Question {...question} />)}
+        {authenticated && Slides.map((slide) => <Slide {...slide} />)}
         {authenticated && (
           <Route path="/finish">
             <Finish />
