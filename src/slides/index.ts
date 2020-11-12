@@ -12,8 +12,9 @@ type SlideID = typeof SlideIDs[number];
 const Slides: { [key in SlideID]: SlideInterface } = {
   1: {
     id: 1,
-    slideType: "textInput",
-    slideText: "Please tell us about your day.",
+    slideType: "intro",
+    slideText:
+      "This is the intro slide, Here should be some relevant information",
     additionalInfo: 0,
   },
   2: {
