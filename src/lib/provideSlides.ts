@@ -12,7 +12,7 @@ export default function provideSlides(condition: number) {
   const slidesArray: SlideInterface[] = [];
 
   for (let i = 0; i < SLIDES_COND[condition - 1].length; i++) {
-    slidesArray.push(Slides[i]);
+    slidesArray.push(Slides[SLIDES_COND[condition - 1][i]]);
   }
 
   return slidesArray;
