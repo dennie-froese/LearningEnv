@@ -15,9 +15,8 @@ function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
   for (var i = 1; i < rangeMax + 1; i++) {
     const v = i;
     checkboxes.push(
-      <div>
+      <div key={v.toString()}>
         <input
-          id={v.toString()}
           type="checkbox"
           checked={value === v ? true : false}
           onClick={() => (value === v ? setValue(undefined) : setValue(v))}

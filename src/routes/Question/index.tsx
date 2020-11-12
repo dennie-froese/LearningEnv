@@ -1,24 +1,26 @@
 import React from "react";
 import QuestionTextInput from "../QuestionTextInput";
 import QuestionRange from "../QuestionRange";
+import { QuestionInterface } from "./../../questions";
+import { Route } from "react-router-dom";
 
-interface Props {
-  questionNumber: number;
-  type: string;
-  question: string;
-  rangeMax?: number;
-}
-
-function Question({ questionNumber, type, question, rangeMax = 0 }: Props) {
-  return type === "textInput" ? (
-    <QuestionTextInput questionNumber={questionNumber} question={question} />
-  ) : type === "range" ? (
-    <QuestionRange
-      questionNumber={questionNumber}
-      question={question}
-      rangeMax={rangeMax}
-    />
-  ) : null;
+function Question(question: QuestionInterface) {
+  return (
+    <Route path={`/question${question.id}`}>
+      {question.questionType === "textInput" ? (
+        <QuestionTextInput
+          questionNumber={question.id}
+          question={question.questionText}
+        />
+      ) : (
+        <QuestionRange
+          question={question.questionText}
+          questionNumber={question.id}
+          rangeMax={question.additionalInfo}
+        />
+      )}
+    </Route>
+  );
 }
 
 export default Question;

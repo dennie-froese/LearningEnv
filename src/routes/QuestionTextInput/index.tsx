@@ -9,6 +9,11 @@ interface Props {
 function QuestionTextInput({ question, questionNumber }: Props) {
   const [input, setInput] = useState<undefined | string>(undefined);
 
+  const finish = () => {
+    if (questionNumber === 3) {
+    }
+  };
+
   return (
     <div className="Question">
       <div className="Question-container">
@@ -32,7 +37,7 @@ function QuestionTextInput({ question, questionNumber }: Props) {
                 : `/question${questionNumber + 1}`
             }
           >
-            <button className="Question-button">
+            <button className="Question-button" onClick={finish}>
               {questionNumber === 3 ? "Finish the survey" : "Next question"}
             </button>
           </Link>
