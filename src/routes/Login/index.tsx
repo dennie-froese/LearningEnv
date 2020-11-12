@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   useStateMachineState,
-  useStateMachineDispatch
+  useStateMachineDispatch,
 } from "../../state/StateMachine";
 import { users, password as adminPassword } from "../../logins";
 
@@ -29,7 +29,7 @@ function Login() {
           <input
             className="Form-input"
             value={user}
-            onChange={e => send("INPUT_USER", { value: e.target.value })}
+            onChange={(e) => send("INPUT_USER", { value: e.target.value })}
             type="text"
             name="name"
           />
@@ -37,13 +37,13 @@ function Login() {
           <input
             className="Form-input"
             value={password}
-            onChange={e => send("INPUT_PASSWORD", { value: e.target.value })}
+            onChange={(e) => send("INPUT_PASSWORD", { value: e.target.value })}
             type="password"
             name="name"
           />
         </form>
         {authenticated ? (
-          <Link to="/question1">
+          <Link to="/slides">
             <button className="App-button">Log in!</button>
           </Link>
         ) : (

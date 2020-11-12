@@ -7,7 +7,7 @@ import SlideIntro from "../SlideIntro";
 
 function Slide(slide: SlideInterface) {
   return (
-    <Route path={`/question${slide.id}`}>
+    <Route path="/slides">
       {slide.slideType === "textInput" ? (
         <QuestionTextInput
           question={slide.slideText}
