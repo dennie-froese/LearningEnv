@@ -16,9 +16,10 @@ type SetSlides = {
   };
 };
 type SubmitSlide = { type: "submit_slide" };
+
 type Action = SetUser | SetSlides | SubmitSlide;
 
-type SlidesProviderProps = { children: React.ReactNode };
+type Dispatch = (action: Action) => void;
 
 type State = {
   user: string;
@@ -28,7 +29,7 @@ type State = {
   slideSelection: number[] | undefined;
 };
 
-type Dispatch = (action: Action) => void;
+type SlidesProviderProps = { children: React.ReactNode };
 
 const SlidesStateContext = React.createContext<State | undefined>(undefined);
 
@@ -36,7 +37,7 @@ const SlidesDispatchContext = React.createContext<Dispatch | undefined>(
   undefined
 );
 
-function slidesReducer(state: State, action: Action) {
+function slidesReducer(state: State, action: any) {
   switch (action.type) {
     case "set_user": {
       return {
@@ -46,7 +47,19 @@ function slidesReducer(state: State, action: Action) {
       };
     }
     case "set_slides": {
-      return { ...state, slides: action.payload };
+      return {
+        ...state,
+        slides: action.payload,
+        activeSlide: 1,
+        slideSelection: [1, 3, 4],
+      };
+    }
+    case "submit_slide": {
+      return {
+        ...state,
+        activeSlide: 1,
+        slideSelection: [1, 3, 4],
+      };
     }
     default: {
       throw new Error("Unhandled action.");
@@ -62,7 +75,6 @@ function SlidesProvider({ children }: SlidesProviderProps) {
     activeSlide: undefined,
     slideSelection: undefined,
   });
-
   return (
     <SlidesStateContext.Provider value={state}>
       <SlidesDispatchContext.Provider value={dispatch}>

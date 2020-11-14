@@ -7,12 +7,12 @@ import Login from "../routes/Login";
 import SomethingWentWrong from "../routes/SomethingWentWrong/index";
 import Finish from "../routes/Finish/index";
 import Slide from "../routes/Slide";
-import provideSlides from "../lib/provideSlides";
+import { useSlidesState } from "../hooks/useSlides";
 
 function Router() {
   const current = useStateMachineState();
   const authenticated = current.context.authenticated;
-  const slides = provideSlides(4);
+  const context = useSlidesState();
 
   return (
     <BrowserRouter>
@@ -23,7 +23,9 @@ function Router() {
         <Route exact path="/login">
           <Login />
         </Route>
-        {authenticated && slides.map((slide) => <Slide {...slide} />)}
+        {authenticated &&
+          context?.slides &&
+          context.slides.map((slide) => <Slide {...slide} />)}
         {authenticated && (
           <Route path="/finish">
             <Finish />
