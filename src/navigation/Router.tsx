@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { useStateMachineState } from "../state/StateMachine.jsx";
 import Home from "../routes/Home";
 import Login from "../routes/Login";
 
@@ -10,9 +9,8 @@ import Slide from "../routes/Slide";
 import { useSlidesState } from "../hooks/useSlides";
 
 function Router() {
-  const current = useStateMachineState();
-  const authenticated = current.context.authenticated;
   const context = useSlidesState();
+  const slides = useSlidesState()?.slides;
 
   return (
     <BrowserRouter>
@@ -23,10 +21,8 @@ function Router() {
         <Route exact path="/login">
           <Login />
         </Route>
-        {authenticated &&
-          context?.slides &&
-          context.slides.map((slide) => <Slide {...slide} />)}
-        {authenticated && (
+        {context?.authenticated && slides?.map((slide) => <Slide {...slide} />)}
+        {context?.authenticated && (
           <Route path="/finish">
             <Finish />
           </Route>

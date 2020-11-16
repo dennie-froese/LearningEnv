@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useSlidesDispatch } from "../../hooks/useSlides";
 import { users, password as adminPassword } from "../../logins";
 
@@ -6,6 +7,7 @@ function Login() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useSlidesDispatch();
+  const history = useHistory();
 
   const logon = () => {
     if (users.includes(user) && password === adminPassword) {
@@ -14,6 +16,7 @@ function Login() {
           type: "set_user",
           payload: { user: user, authenticated: true },
         });
+      history.push("/slides");
     }
   };
 

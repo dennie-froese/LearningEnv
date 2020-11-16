@@ -1,7 +1,7 @@
 import { SlideInterface } from "../slides";
 import Slides from "./../slides";
 
-const SLIDES_COND = [
+export const SLIDES_COND = [
   [1, 2, 4],
   [1, 2, 4],
   [1, 3, 4],

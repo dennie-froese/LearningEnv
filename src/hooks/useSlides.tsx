@@ -1,4 +1,5 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
+import provideSlides from "../lib/provideSlides";
 import { SlideInterface } from "../slides";
 
 type UserStateType = {
@@ -11,8 +12,6 @@ type SetSlides = {
   type: "set_slides";
   payload: {
     slides: SlideInterface[];
-    activeSlide: number;
-    slideSelection: number[];
   };
 };
 type SubmitSlide = { type: "submit_slide" };
@@ -49,9 +48,7 @@ function slidesReducer(state: State, action: any) {
     case "set_slides": {
       return {
         ...state,
-        slides: action.payload,
-        activeSlide: 1,
-        slideSelection: [1, 3, 4],
+        slides: action.payload.slides,
       };
     }
     case "submit_slide": {
@@ -75,6 +72,15 @@ function SlidesProvider({ children }: SlidesProviderProps) {
     activeSlide: undefined,
     slideSelection: undefined,
   });
+
+  useEffect(() => {
+    if (state.user) {
+      const condition = parseInt(state.user.charAt(0));
+      const slides = provideSlides(condition);
+      dispatch({ type: "set_slides", payload: { slides } });
+    }
+  }, [state.user]);
+
   return (
     <SlidesStateContext.Provider value={state}>
       <SlidesDispatchContext.Provider value={dispatch}>
