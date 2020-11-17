@@ -12,6 +12,9 @@ function Router() {
   const context = useSlidesState();
   const slides = useSlidesState()?.slides;
 
+  console.warn(`slideSelection: ${context?.slideSelection}`);
+  console.warn(`activeslide: ${context?.activeSlide}`);
+
   return (
     <BrowserRouter>
       <Switch>

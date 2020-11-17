@@ -1,19 +1,19 @@
 import { SlideInterface } from "../slides";
 import Slides from "./../slides";
 
-export const SLIDES_COND = [
-  [1, 2, 4],
-  [1, 2, 4],
-  [1, 3, 4],
-  [1, 4],
-];
-
 export default function provideSlides(condition: number) {
+  const SLIDES_SELECTIONS = [
+    [1, 2, 3, 4],
+    [1, 2, 4],
+    [1, 3, 4],
+    [1, 4],
+  ];
   const slidesArray: SlideInterface[] = [];
+  const slidesSelected: number[] = SLIDES_SELECTIONS[condition - 1];
 
-  for (let i = 0; i < SLIDES_COND[condition - 1].length; i++) {
-    slidesArray.push(Slides[SLIDES_COND[condition - 1][i]]);
+  for (let i = 0; i < SLIDES_SELECTIONS[condition - 1].length; i++) {
+    slidesArray.push(Slides[SLIDES_SELECTIONS[condition - 1][i]]);
   }
 
-  return slidesArray;
+  return { slidesArray, slidesSelected };
 }

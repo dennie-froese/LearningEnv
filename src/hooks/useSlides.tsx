@@ -12,6 +12,8 @@ type SetSlides = {
   type: "set_slides";
   payload: {
     slides: SlideInterface[];
+    activeSlide: number;
+    slideSelection: number[];
   };
 };
 type SubmitSlide = { type: "submit_slide" };
@@ -49,13 +51,14 @@ function slidesReducer(state: State, action: any) {
       return {
         ...state,
         slides: action.payload.slides,
+        activeSlide: action.payload.activeSlide,
+        slideSelection: action.payload.slideSelection,
       };
     }
     case "submit_slide": {
       return {
         ...state,
-        activeSlide: 1,
-        slideSelection: [1, 3, 4],
+        activeSlide: 2,
       };
     }
     default: {
@@ -76,8 +79,15 @@ function SlidesProvider({ children }: SlidesProviderProps) {
   useEffect(() => {
     if (state.user) {
       const condition = parseInt(state.user.charAt(0));
-      const slides = provideSlides(condition);
-      dispatch({ type: "set_slides", payload: { slides } });
+      const { slidesArray, slidesSelected } = provideSlides(condition);
+      dispatch({
+        type: "set_slides",
+        payload: {
+          slides: slidesArray,
+          activeSlide: slidesSelected[0],
+          slideSelection: slidesSelected,
+        },
+      });
     }
   }, [state.user]);
 

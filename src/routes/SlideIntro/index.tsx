@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useSlidesDispatch } from "../../hooks/useSlides";
 
 interface Props {
   slideText: string;
@@ -7,6 +7,11 @@ interface Props {
 }
 
 function SlideIntro({ slideText, slideNumber }: Props) {
+  const dispatch = useSlidesDispatch();
+
+  const finish = () => {
+    dispatch && dispatch({ type: "submit_slide" });
+  };
   return (
     <div className="Slide">
       <div className="Slide-container">
@@ -15,13 +20,9 @@ function SlideIntro({ slideText, slideNumber }: Props) {
           <p className="Slide-text">{slideText}</p>
         </div>
         <div className="Slide-nav">
-          <Link
-            to={slideNumber === 3 ? "/finish" : `/question${slideNumber + 1}`}
-          >
-            <button className="Slide-button">
-              {slideNumber === 4 ? "Finish the survey" : "Next question"}
-            </button>
-          </Link>
+          <button className="Slide-button" onClick={finish}>
+            Next question
+          </button>
         </div>
       </div>
     </div>

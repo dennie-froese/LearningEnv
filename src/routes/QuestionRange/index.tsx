@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import useTimer from "./../../hooks/useTimer";
-import { Link } from "react-router-dom";
+import { useSlidesDispatch } from "../../hooks/useSlides";
 
 interface Props {
   questionNumber: number;
@@ -10,6 +10,7 @@ interface Props {
 
 function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
   const [value, setValue] = useState<undefined | number>(undefined);
+  const dispatch = useSlidesDispatch();
   const launchTime = useTimer();
   const checkboxes: JSX.Element[] = [];
   for (var i = 1; i < rangeMax + 1; i++) {
@@ -26,6 +27,10 @@ function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
       </div>
     );
   }
+  const finish = () => {
+    console.log(`${launchTime && (launchTime - Date.now()) / -1000} seconds`);
+    dispatch && dispatch({ type: "submit_slide" });
+  };
 
   return (
     <div className="Slide">
@@ -36,24 +41,9 @@ function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
           <div className="Slide-range">{checkboxes}</div>
         </div>
         <div className="Slide-nav">
-          {value ? (
-            <Link to={`/question${questionNumber + 1}`}>
-              <button
-                className="Slide-button"
-                onClick={() =>
-                  console.log(
-                    `${launchTime && (launchTime - Date.now()) / -1000} seconds`
-                  )
-                }
-              >
-                Next question
-              </button>
-            </Link>
-          ) : (
-            <div>
-              <button className="Slide-button">Next question</button>
-            </div>
-          )}
+          <button className="Slide-button" onClick={finish}>
+            Next question
+          </button>
         </div>
       </div>
     </div>
