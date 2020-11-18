@@ -56,10 +56,19 @@ function slidesReducer(state: State, action: any) {
       };
     }
     case "submit_slide": {
-      return {
-        ...state,
-        activeSlide: 2,
-      };
+      if (state.slideSelection && state.activeSlide) {
+        return {
+          ...state,
+          activeSlide:
+            state?.slideSelection[
+              state.slideSelection?.indexOf(state.activeSlide) + 1
+            ],
+        };
+      } else {
+        return {
+          ...state,
+        };
+      }
     }
     default: {
       throw new Error("Unhandled action.");
