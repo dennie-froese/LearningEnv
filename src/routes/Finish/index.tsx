@@ -14,11 +14,11 @@ function Finish({ slideText, slideNumber }: Props) {
   };
 
   return (
-    <div className="Slide">
-      <div className="Slide-container">
-        <div className="Slide-header">
+    <div className="App">
+      <div className="App-container">
+        <div className="App-header">
           <p className="Slide-text">{slideText}</p>
-          <button className="Slide-button" onClick={finish}>
+          <button className="App-button" onClick={finish}>
             Finish survey!
           </button>
         </div>
