@@ -1,14 +1,28 @@
 import React from "react";
+import { useSlidesDispatch } from "../../hooks/useSlides";
 
-function Finish() {
+interface Props {
+  slideText: string;
+  slideNumber: number;
+}
+
+function Finish({ slideText, slideNumber }: Props) {
+  const dispatch = useSlidesDispatch();
+
+  const finish = () => {
+    dispatch && dispatch({ type: "submit_slide" });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Thank you so much for your time.</p>
-        <p>
-          This is the end of the survey. Your answers have now been submitted.
-        </p>
-      </header>
+    <div className="Slide">
+      <div className="Slide-container">
+        <div className="Slide-header">
+          <p className="Slide-text">{slideText}</p>
+          <button className="Slide-button" onClick={finish}>
+            Finish survey!
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

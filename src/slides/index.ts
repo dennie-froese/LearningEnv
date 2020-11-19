@@ -35,6 +35,13 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText: "Please tell us about you.",
     additionalInfo: 0,
   },
+  5: {
+    id: 5,
+    slideType: "finish",
+    slideText:
+      "Thank you very much for taking part in our survey, this is the last slide",
+    additionalInfo: 0,
+  },
 };
 
 export default Slides;

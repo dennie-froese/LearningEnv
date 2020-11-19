@@ -4,6 +4,7 @@ import QuestionRange from "../QuestionRange";
 import { SlideInterface } from "../../slides";
 import { Route } from "react-router-dom";
 import SlideIntro from "../SlideIntro";
+import Finish from "../Finish";
 
 function Slide(slide: SlideInterface) {
   return (
@@ -19,8 +20,10 @@ function Slide(slide: SlideInterface) {
           questionNumber={slide.id}
           rangeMax={slide.additionalInfo}
         />
-      ) : (
+      ) : slide.slideType === "intro" ? (
         <SlideIntro slideText={slide.slideText} slideNumber={slide.id} />
+      ) : (
+        <Finish slideText={slide.slideText} slideNumber={slide.id} />
       )}
     </Route>
   );

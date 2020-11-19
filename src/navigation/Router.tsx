@@ -4,7 +4,6 @@ import Home from "../routes/Home";
 import Login from "../routes/Login";
 
 import SomethingWentWrong from "../routes/SomethingWentWrong/index";
-import Finish from "../routes/Finish/index";
 import Slide from "../routes/Slide";
 import { useSlidesState } from "../hooks/useSlides";
 import { SlideInterface } from "../slides";
@@ -35,11 +34,6 @@ function Router() {
           <Login />
         </Route>
         {context?.authenticated && slide && <Slide {...slide} />}
-        {context?.authenticated && (
-          <Route path="/finish">
-            <Finish />
-          </Route>
-        )}
         <Route path="*">
           <SomethingWentWrong />
         </Route>

@@ -31,7 +31,7 @@ function QuestionTextInput({ question, questionNumber }: Props) {
         />
         <div className="Slide-nav">
           <button className="Slide-button" onClick={finish}>
-            {questionNumber === 3 ? "Finish the survey" : "Next question"}
+            Next question
           </button>
         </div>
       </div>

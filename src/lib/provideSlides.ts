@@ -3,7 +3,7 @@ import Slides from "./../slides";
 
 export default function provideSlides(condition: number) {
   const SLIDES_SELECTIONS = [
-    [1, 2, 3, 4],
+    [1, 2, 3, 4, 5],
     [1, 2, 4],
     [1, 3, 4],
     [1, 4],
