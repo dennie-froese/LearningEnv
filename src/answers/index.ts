@@ -238,6 +238,8 @@ export const answerTypes: string[] = [
   "Ende",
 ];
 
+export type answerID = typeof answerTypes[number];
+
 export type Answers = {
   select: { answer: Answer };
   Vpn: { answer: Answer };
