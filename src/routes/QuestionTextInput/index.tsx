@@ -1,17 +1,25 @@
 import React, { useState } from "react";
 import { useSlidesDispatch } from "../../hooks/useSlides";
+import useTimer from "../../hooks/useTimer";
 
 interface Props {
   question: string;
   questionNumber: number;
+  type: string;
 }
 
-function QuestionTextInput({ question, questionNumber }: Props) {
+function QuestionTextInput({ question, questionNumber, type }: Props) {
   const [input, setInput] = useState<undefined | string>(undefined);
   const dispatch = useSlidesDispatch();
+  const launchTime = useTimer();
 
   const finish = () => {
-    dispatch && dispatch({ type: "submit_slide" });
+    dispatch &&
+      launchTime &&
+      dispatch({
+        type: "submit_slide",
+        payload: { type: type, answer: { zeit: launchTime - Date.now() } },
+      });
   };
 
   return (

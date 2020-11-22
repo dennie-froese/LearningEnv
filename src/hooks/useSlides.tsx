@@ -1,4 +1,5 @@
 import React, { useEffect, useReducer } from "react";
+import { Answer } from "../answers";
 import provideSlides from "../lib/provideSlides";
 import { SlideInterface } from "../slides";
 
@@ -16,7 +17,10 @@ type SetSlides = {
     slideSelection: number[];
   };
 };
-type SubmitSlide = { type: "submit_slide" };
+type SubmitSlide = {
+  type: "submit_slide";
+  payload: { type: string; answer: Answer };
+};
 
 type Action = SetUser | SetSlides | SubmitSlide;
 
@@ -28,6 +32,7 @@ type State = {
   slides: SlideInterface[] | undefined;
   activeSlide: number | undefined;
   slideSelection: number[] | undefined;
+  answers: Answer[] | undefined;
 };
 
 type SlidesProviderProps = { children: React.ReactNode };
@@ -63,6 +68,7 @@ function slidesReducer(state: State, action: any) {
             state?.slideSelection[
               state.slideSelection?.indexOf(state.activeSlide) + 1
             ],
+          answers: [action.payload.answer],
         };
       } else {
         return {
@@ -83,6 +89,7 @@ function SlidesProvider({ children }: SlidesProviderProps) {
     slides: undefined,
     activeSlide: undefined,
     slideSelection: undefined,
+    answers: undefined,
   });
 
   useEffect(() => {

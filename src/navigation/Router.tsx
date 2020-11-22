@@ -14,10 +14,6 @@ function Router() {
   const activeSlide = useSlidesState()?.activeSlide;
   const [slide, setSlide] = useState<SlideInterface | undefined>(undefined);
 
-  console.warn(`slideSelection: ${context?.slideSelection}`);
-  console.warn(`activeslide: ${context?.activeSlide}`);
-  console.warn(slide);
-
   useEffect(() => {
     if (activeSlide && slides) {
       setSlide(slides.find((slide) => slide.id === activeSlide));

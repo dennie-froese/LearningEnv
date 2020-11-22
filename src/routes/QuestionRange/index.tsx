@@ -6,9 +6,15 @@ interface Props {
   questionNumber: number;
   question: string;
   rangeMax?: number;
+  type: string;
 }
 
-function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
+function QuestionRange({
+  questionNumber,
+  question,
+  rangeMax = 6,
+  type,
+}: Props) {
   const [value, setValue] = useState<undefined | number>(undefined);
   const dispatch = useSlidesDispatch();
   const launchTime = useTimer();
@@ -28,8 +34,18 @@ function QuestionRange({ questionNumber, question, rangeMax = 6 }: Props) {
     );
   }
   const finish = () => {
-    console.log(`${launchTime && (launchTime - Date.now()) / -1000} seconds`);
-    dispatch && dispatch({ type: "submit_slide" });
+    dispatch &&
+      launchTime &&
+      dispatch({
+        type: "submit_slide",
+        payload: {
+          type: type,
+          answer: {
+            zeit: launchTime - Date.now(),
+            Ausdenken_Attribution1: "1",
+          },
+        },
+      });
   };
 
   return (

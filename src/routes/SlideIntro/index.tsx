@@ -1,16 +1,24 @@
 import React from "react";
 import { useSlidesDispatch } from "../../hooks/useSlides";
+import useTimer from "../../hooks/useTimer";
 
 interface Props {
   slideText: string;
   slideNumber: number;
+  type: string;
 }
 
-function SlideIntro({ slideText, slideNumber }: Props) {
+function SlideIntro({ slideText, slideNumber, type }: Props) {
   const dispatch = useSlidesDispatch();
+  const launchTime = useTimer();
 
   const finish = () => {
-    dispatch && dispatch({ type: "submit_slide" });
+    dispatch &&
+      launchTime &&
+      dispatch({
+        type: "submit_slide",
+        payload: { type: type, answer: { zeit: launchTime - Date.now() } },
+      });
   };
   return (
     <div className="Slide">

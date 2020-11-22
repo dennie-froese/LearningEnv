@@ -21,17 +21,27 @@ function Slide(slide: SlideInterface) {
         <QuestionTextInput
           question={slide.slideText}
           questionNumber={slide.id}
+          type={slide.slideType}
         />
       ) : slide.slideType === "range" ? (
         <QuestionRange
           question={slide.slideText}
           questionNumber={slide.id}
           rangeMax={slide.additionalInfo}
+          type={slide.slideType}
         />
       ) : slide.slideType === "intro" ? (
-        <SlideIntro slideText={slide.slideText} slideNumber={slide.id} />
+        <SlideIntro
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+        />
       ) : (
-        <Finish slideText={slide.slideText} slideNumber={slide.id} />
+        <Finish
+          type={slide.slideType}
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+        />
       )}
     </Route>
   );

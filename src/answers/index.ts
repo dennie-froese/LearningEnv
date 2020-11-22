@@ -146,96 +146,188 @@ export interface Answer {
   Ausdenken_GWG4?: string;
 }
 
-type Answers = [
-  { select: Answer },
-  { Vpn: Answer },
-  { Code: Answer },
-  { Willkommen: Answer },
-  { Intro: Answer },
-  { demographisch: Answer },
-  { demographisch_intro: Answer },
-  { Nachangaben_1_5: Answer },
-  { NachAngaben_6_11: Answer },
-  { Nachangaben_12_17: Answer },
-  { Nachangaben_18_22: Answer },
-  { Konzept_Intro: Answer },
-  { Konzept_Attribution: Answer },
-  { Konzept_SN: Answer },
-  { Konzept_Konsens: Answer },
-  { Konzept_Konsistenz: Answer },
-  { Konzept_Distinktheit: Answer },
-  { Konzept_FA: Answer },
-  { Konzept_SV: Answer },
-  { Konzept_GWG: Answer },
-  { Text_Intro: Answer },
-  { Text_Text: Answer },
-  { Definition_Intro: Answer },
-  { Definition_Attribution: Answer },
-  { Definition_SN: Answer },
-  { Definition_Konsens: Answer },
-  { Definition_Konsistenz: Answer },
-  { Definition_Distinktheit: Answer },
-  { Definition_FA: Answer },
-  { Definition_SV: Answer },
-  { Definition_GWG: Answer },
-  { Beispiel_Intro: Answer },
-  { Beispiel_Attribution0: Answer },
-  { Beispiel_Attribution1: Answer },
-  { Beispiel_Attribution2: Answer },
-  { Attribution_g1_1: Answer },
-  { Attribution_g1_2: Answer },
-  { Beispiel_Attribution3: Answer },
-  { Beispiel_Attribution4: Answer },
-  { Beispiel_SN0: Answer },
-  { Beispiel_SN1: Answer },
-  { Beispiel_SN2: Answer },
-  { SN_g1_1: Answer },
-  { SN_g1_2: Answer },
-  { Beispiel_SN3: Answer },
-  { Beispiel_SN4: Answer },
-  { Beispiel_Konsens0: Answer },
-  { Beispiel_Konsens1: Answer },
-  { Beispiel_Konsens2: Answer },
-  { Konsens_g1_1: Answer },
-  { Konsens_g1_2: Answer },
-  { Beispiel_Konsens3: Answer },
-  { Beispiel_Konsens4: Answer },
-  { Beispiel_Konsistenz0: Answer },
-  { Beispiel_Konsistenz1: Answer },
-  { Beispiel_Konsistenz2: Answer },
-  { Konsistenz_g1_1: Answer },
-  { Konsistenz_g1_2: Answer },
-  { Beispiel_Konsistenz3: Answer },
-  { Beispiel_Konsistenz4: Answer },
-  { Beispiel_Distinktheit0: Answer },
-  { Beispiel_Distinktheit1: Answer },
-  { Beispiel_Distinktheit2: Answer },
-  { Distinktheit_g1_1: Answer },
-  { Distinktheit_g1_2: Answer },
-  { Beispiel_Distinktheit3: Answer },
-  { Beispiel_Distinktheit4: Answer },
-  { Beispiel_FA0: Answer },
-  { Beispiel_FA1: Answer },
-  { Beispiel_FA2: Answer },
-  { FA_g1_1: Answer },
-  { FA_g1_2: Answer },
-  { Beispiel_FA3: Answer },
-  { Beispiel_FA4: Answer },
-  { Beispiel_SV0: Answer },
-  { Beispiel_SV1: Answer },
-  { Beispiel_SV2: Answer },
-  { SV_g1_1: Answer },
-  { SV_g1_2: Answer },
-  { Beispiel_SV3: Answer },
-  { Beispiel_SV4: Answer },
-  { Beispiel_GWG0: Answer },
-  { Beispiel_GWG1: Answer },
-  { Beispiel_GWG2: Answer },
-  { GWG_g1_1: Answer },
-  { GWG_g1_2: Answer },
-  { Beispiel_GWG3: Answer },
-  { Beispiel_GWG4: Answer },
-  { Ende: Answer }
+const answerTypes: string[] = [
+  "select",
+  "Vpn",
+  "Code",
+  "Willkommen",
+  "Intro",
+  "demographisch",
+  "demographisch_intro",
+  "Nachangaben_1_5",
+  "NachAngaben_6_11",
+  "Nachangaben_12_17",
+  "Nachangaben_18_22",
+  "Konzept_Intro",
+  "Konzept_Attribution",
+  "Konzept_SN",
+  "Konzept_Konsens",
+  "Konzept_Konsistenz",
+  "Konzept_Distinktheit",
+  "Konzept_FA",
+  "Konzept_SV",
+  "Konzept_GWG",
+  "Text_Intro",
+  "Text_Text",
+  "Definition_Intro",
+  "Definition_Attribution",
+  "Definition_SN",
+  "Definition_Konsens",
+  "Definition_Konsistenz",
+  "Definition_Distinktheit",
+  "Definition_FA",
+  "Definition_SV",
+  "Definition_GWG",
+  "Beispiel_Intro",
+  "Beispiel_Attribution0",
+  "Beispiel_Attribution1",
+  "Beispiel_Attribution2",
+  "Attribution_g1_1",
+  "Attribution_g1_2",
+  "Beispiel_Attribution3",
+  "Beispiel_Attribution4",
+  "Beispiel_SN0",
+  "Beispiel_SN1",
+  "Beispiel_SN2",
+  "SN_g1_1",
+  "SN_g1_2",
+  "Beispiel_SN3",
+  "Beispiel_SN4",
+  "Beispiel_Konsens0",
+  "Beispiel_Konsens1",
+  "Beispiel_Konsens2",
+  "Konsens_g1_1",
+  "Konsens_g1_2",
+  "Beispiel_Konsens3",
+  "Beispiel_Konsens4",
+  "Beispiel_Konsistenz0",
+  "Beispiel_Konsistenz1",
+  "Beispiel_Konsistenz2",
+  "Konsistenz_g1_1",
+  "Konsistenz_g1_2",
+  "Beispiel_Konsistenz3",
+  "Beispiel_Konsistenz4",
+  "Beispiel_Distinktheit0",
+  "Beispiel_Distinktheit1",
+  "Beispiel_Distinktheit2",
+  "Distinktheit_g1_1",
+  "Distinktheit_g1_2",
+  "Beispiel_Distinktheit3",
+  "Beispiel_Distinktheit4",
+  "Beispiel_FA0",
+  "Beispiel_FA1",
+  "Beispiel_FA2",
+  "FA_g1_1",
+  "FA_g1_2",
+  "Beispiel_FA3",
+  "Beispiel_FA4",
+  "Beispiel_SV0",
+  "Beispiel_SV1",
+  "Beispiel_SV2",
+  "SV_g1_1",
+  "SV_g1_2",
+  "Beispiel_SV3",
+  "Beispiel_SV4",
+  "Beispiel_GWG0",
+  "Beispiel_GWG1",
+  "Beispiel_GWG2",
+  "GWG_g1_1",
+  "GWG_g1_2",
+  "Beispiel_GWG3",
+  "Beispiel_GWG4",
+  "Ende",
 ];
+
+type Answers = {
+  select: { answer: Answer };
+  Vpn: { answer: Answer };
+  Code: { answer: Answer };
+  Willkommen: { answer: Answer };
+  Intro: { answer: Answer };
+  demographisch: { answer: Answer };
+  demographisch_intro: { answer: Answer };
+  Nachangaben_1_5: { answer: Answer };
+  NachAngaben_6_11: { answer: Answer };
+  Nachangaben_12_17: { answer: Answer };
+  Nachangaben_18_22: { answer: Answer };
+  Konzept_Intro: { answer: Answer };
+  Konzept_Attribution: { answer: Answer };
+  Konzept_SN: { answer: Answer };
+  Konzept_Konsens: { answer: Answer };
+  Konzept_Konsistenz: { answer: Answer };
+  Konzept_Distinktheit: { answer: Answer };
+  Konzept_FA: { answer: Answer };
+  Konzept_SV: { answer: Answer };
+  Konzept_GWG: { answer: Answer };
+  Text_Intro: { answer: Answer };
+  Text_Text: { answer: Answer };
+  Definition_Intro: { answer: Answer };
+  Definition_Attribution: { answer: Answer };
+  Definition_SN: { answer: Answer };
+  Definition_Konsens: { answer: Answer };
+  Definition_Konsistenz: { answer: Answer };
+  Definition_Distinktheit: { answer: Answer };
+  Definition_FA: { answer: Answer };
+  Definition_SV: { answer: Answer };
+  Definition_GWG: { answer: Answer };
+  Beispiel_Intro: { answer: Answer };
+  Beispiel_Attribution0: { answer: Answer };
+  Beispiel_Attribution1: { answer: Answer };
+  Beispiel_Attribution2: { answer: Answer };
+  Attribution_g1_1: { answer: Answer };
+  Attribution_g1_2: { answer: Answer };
+  Beispiel_Attribution3: { answer: Answer };
+  Beispiel_Attribution4: { answer: Answer };
+  Beispiel_SN0: { answer: Answer };
+  Beispiel_SN1: { answer: Answer };
+  Beispiel_SN2: { answer: Answer };
+  SN_g1_1: { answer: Answer };
+  SN_g1_2: { answer: Answer };
+  Beispiel_SN3: { answer: Answer };
+  Beispiel_SN4: { answer: Answer };
+  Beispiel_Konsens0: { answer: Answer };
+  Beispiel_Konsens1: { answer: Answer };
+  Beispiel_Konsens2: { answer: Answer };
+  Konsens_g1_1: { answer: Answer };
+  Konsens_g1_2: { answer: Answer };
+  Beispiel_Konsens3: { answer: Answer };
+  Beispiel_Konsens4: { answer: Answer };
+  Beispiel_Konsistenz0: { answer: Answer };
+  Beispiel_Konsistenz1: { answer: Answer };
+  Beispiel_Konsistenz2: { answer: Answer };
+  Konsistenz_g1_1: { answer: Answer };
+  Konsistenz_g1_2: { answer: Answer };
+  Beispiel_Konsistenz3: { answer: Answer };
+  Beispiel_Konsistenz4: { answer: Answer };
+  Beispiel_Distinktheit0: { answer: Answer };
+  Beispiel_Distinktheit1: { answer: Answer };
+  Beispiel_Distinktheit2: { answer: Answer };
+  Distinktheit_g1_1: { answer: Answer };
+  Distinktheit_g1_2: { answer: Answer };
+  Beispiel_Distinktheit3: { answer: Answer };
+  Beispiel_Distinktheit4: { answer: Answer };
+  Beispiel_FA0: { answer: Answer };
+  Beispiel_FA1: { answer: Answer };
+  Beispiel_FA2: { answer: Answer };
+  FA_g1_1: { answer: Answer };
+  FA_g1_2: { answer: Answer };
+  Beispiel_FA3: { answer: Answer };
+  Beispiel_FA4: { answer: Answer };
+  Beispiel_SV0: { answer: Answer };
+  Beispiel_SV1: { answer: Answer };
+  Beispiel_SV2: { answer: Answer };
+  SV_g1_1: { answer: Answer };
+  SV_g1_2: { answer: Answer };
+  Beispiel_SV3: { answer: Answer };
+  Beispiel_SV4: { answer: Answer };
+  Beispiel_GWG0: { answer: Answer };
+  Beispiel_GWG1: { answer: Answer };
+  Beispiel_GWG2: { answer: Answer };
+  GWG_g1_1: { answer: Answer };
+  GWG_g1_2: { answer: Answer };
+  Beispiel_GWG3: { answer: Answer };
+  Beispiel_GWG4: { answer: Answer };
+  Ende: { answer: Answer };
+};
 
 export default Answers;
