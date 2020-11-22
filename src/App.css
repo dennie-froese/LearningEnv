@@ -154,6 +154,13 @@
   padding: 5px;
 }
 
+.Error-text {
+  text-align: center;
+  font-size: calc(8px + 1vmin);
+  color: red;
+  overflow-y: scroll;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
