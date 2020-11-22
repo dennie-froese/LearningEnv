@@ -21,6 +21,6 @@ const config: FirebaseConfig = {
 firebase.initializeApp(config);
 const db = firebase.database();
 
-export const saveToDatabase = (string: string, string2: string) => {
-  return db.ref("/").push;
+export const saveToDatabase = (string: string, obj: any) => {
+  return db.ref(`/${string}/`).push(obj);
 };

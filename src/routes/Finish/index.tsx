@@ -1,5 +1,6 @@
 import React from "react";
-import { useSlidesDispatch } from "../../hooks/useSlides";
+import { saveToDatabase } from "../../firebase/firebase";
+import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 }
 
 function Finish({ slideText, slideNumber, type }: Props) {
+  const context = useSlidesState();
   const dispatch = useSlidesDispatch();
   const launchTime = useTimer();
 
@@ -19,6 +21,7 @@ function Finish({ slideText, slideNumber, type }: Props) {
         type: "submit_slide",
         payload: { type: type, answer: { zeit: launchTime - Date.now() } },
       });
+    context?.user && saveToDatabase(context?.user, context?.answers);
   };
 
   return (
