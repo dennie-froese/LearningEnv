@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from "react";
-import { Answer, answerID, answerTypes } from "../answers";
+import { Answer } from "../answers";
 import provideSlides from "../lib/provideSlides";
 import { SlideInterface } from "../slides";
 
