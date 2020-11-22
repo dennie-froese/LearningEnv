@@ -146,7 +146,7 @@ export interface Answer {
   Ausdenken_GWG4?: string;
 }
 
-const answerTypes: string[] = [
+export const answerTypes: string[] = [
   "select",
   "Vpn",
   "Code",
@@ -238,7 +238,7 @@ const answerTypes: string[] = [
   "Ende",
 ];
 
-type Answers = {
+export type Answers = {
   select: { answer: Answer };
   Vpn: { answer: Answer };
   Code: { answer: Answer };
@@ -329,5 +329,3 @@ type Answers = {
   Beispiel_GWG4: { answer: Answer };
   Ende: { answer: Answer };
 };
-
-export default Answers;
