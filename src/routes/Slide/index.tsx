@@ -6,7 +6,10 @@ import { Prompt, Route } from "react-router-dom";
 import SlideIntro from "../SlideIntro";
 import Finish from "../Finish";
 
+const typeOnlyInfo: number[] = [1, 2, 3, 4, 5];
+
 function Slide(slide: SlideInterface) {
+  console.warn(slide.id);
   useEffect(() => {
     window.onbeforeunload = () => true;
   }, []);
@@ -17,20 +20,14 @@ function Slide(slide: SlideInterface) {
           "Are you sure you want to leave this page? All your progress would be lost."
         }
       />
-      {slide.slideType === "textInput" ? (
-        <QuestionTextInput
-          question={slide.slideText}
-          questionNumber={slide.id}
-          type={slide.slideType}
-        />
-      ) : slide.slideType === "range" ? (
+      {slide.slideType === "range" ? (
         <QuestionRange
           question={slide.slideText}
           questionNumber={slide.id}
           rangeMax={slide.additionalInfo}
           type={slide.slideType}
         />
-      ) : slide.slideType === "intro" ? (
+      ) : typeOnlyInfo.includes(slide.id) ? (
         <SlideIntro
           slideText={slide.slideText}
           slideNumber={slide.id}
