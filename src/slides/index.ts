@@ -3,6 +3,7 @@ export type SlideInterface = {
   slideType: string;
   slideText: string;
   additionalInfo: number;
+  demographic?: Record<string, string>;
 };
 
 const SlideIDs = [1, 2, 3, 4, 5];

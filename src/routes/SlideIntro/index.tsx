@@ -24,7 +24,7 @@ function SlideIntro({ slideText, slideNumber, type }: Props) {
     <div className="Slide">
       <div className="Slide-container">
         <div className="Slide-header">
-          <p>This an intro slide</p>
+          <p></p>
         </div>
         <div className="Slide-main">
           <div className="Slide-text">{slideText}</div>

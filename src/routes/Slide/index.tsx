@@ -5,11 +5,11 @@ import { SlideInterface } from "../../slides";
 import { Prompt, Route } from "react-router-dom";
 import SlideIntro from "../SlideIntro";
 import Finish from "../Finish";
+import SlideDemographics from "../SlideDemographics";
 
 const typeOnlyInfo: number[] = [1, 2, 3, 4, 5];
 
 function Slide(slide: SlideInterface) {
-  console.warn(slide.id);
   useEffect(() => {
     window.onbeforeunload = () => true;
   }, []);
@@ -25,6 +25,12 @@ function Slide(slide: SlideInterface) {
           question={slide.slideText}
           questionNumber={slide.id}
           rangeMax={slide.additionalInfo}
+          type={slide.slideType}
+        />
+      ) : slide.slideType === "demographisch" ? (
+        <SlideDemographics
+          slideText={slide.slideText}
+          slideNumber={slide.id}
           type={slide.slideType}
         />
       ) : typeOnlyInfo.includes(slide.id) ? (
