@@ -39,7 +39,7 @@ function QuestionTextInput({ question, questionNumber, type }: Props) {
         />
         <div className="Slide-nav">
           <button className="Slide-button" onClick={finish}>
-            Next question
+            Weiter
           </button>
         </div>
       </div>

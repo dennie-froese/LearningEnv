@@ -25,11 +25,13 @@ function SlideIntro({ slideText, slideNumber, type }: Props) {
       <div className="Slide-container">
         <div className="Slide-header">
           <p>This an intro slide</p>
-          <p className="Slide-text">{slideText}</p>
+        </div>
+        <div className="Slide-main">
+          <div className="Slide-text">{slideText}</div>
         </div>
         <div className="Slide-nav">
           <button className="Slide-button" onClick={finish}>
-            Next question
+            Weiter
           </button>
         </div>
       </div>
