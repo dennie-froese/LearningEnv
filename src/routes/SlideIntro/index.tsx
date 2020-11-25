@@ -23,11 +23,8 @@ function SlideIntro({ slideText, slideNumber, type }: Props) {
   return (
     <div className="Slide">
       <div className="Slide-container">
-        <div className="Slide-header">
-          <p></p>
-        </div>
-        <div className="Slide-main">
-          <div className="Slide-text">{slideText}</div>
+        <div className="Slide-intro-main">
+          <div className="Slide-text-l">{slideText}</div>
         </div>
         <div className="Slide-nav">
           <button className="Slide-button" onClick={finish}>

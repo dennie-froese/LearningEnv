@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
-import QuestionTextInput from "../QuestionTextInput";
-import QuestionRange from "../QuestionRange";
 import { SlideInterface } from "../../slides";
 import { Prompt, Route } from "react-router-dom";
 import SlideIntro from "../SlideIntro";
 import Finish from "../Finish";
 import SlideDemographics from "../SlideDemographics";
+import SlideNachangaben from "../SlideNachangaben";
+import QuestionTextInput from "../QuestionTextInput";
 
-const typeOnlyInfo: number[] = [1, 2, 3, 4, 5];
+const typeIntro: number[] = [1, 2, 3, 4, 5, 7, 12];
+const typeNachangaben: number[] = [8, 9, 10, 11];
+const typeTextinput: number[] = [13, 14, 15, 16, 17, 18, 19, 20];
 
 function Slide(slide: SlideInterface) {
   useEffect(() => {
@@ -30,6 +32,19 @@ function Slide(slide: SlideInterface) {
         <SlideIntro
           slideText={slide.slideText}
           slideNumber={slide.id}
+          type={slide.slideType}
+        />
+      ) : typeNachangaben.includes(slide.id) ? (
+        <SlideNachangaben
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          nachangaben={slide.nachangaben}
+        />
+      ) : typeTextinput.includes(slide.id) ? (
+        <QuestionTextInput
+          question={slide.slideText}
+          questionNumber={slide.id}
           type={slide.slideType}
         />
       ) : (

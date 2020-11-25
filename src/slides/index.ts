@@ -4,6 +4,7 @@ export type SlideInterface = {
   slideText: string;
   additionalInfo: number;
   demographic?: Record<string, string>;
+  nachangaben?: Record<number, [string, string, string]>;
 };
 
 const SlideIDs = [1, 2, 3, 4, 5];
@@ -27,7 +28,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   4: {
     id: 4,
     slideText:
-      "Herzlich Willkommen! Schön, dass Du an dieser Studie teilnimmst.Zum Starten der Studie klicke bitte auf „Weiter“.",
+      "Herzlich Willkommen! Schön, dass Du an dieser Studie teilnimmst.\n\n\nZum Starten der Studie klicke bitte auf „Weiter“.",
     slideType: "Willkommen",
     additionalInfo: 0,
   },
@@ -48,54 +49,195 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   7: {
     id: 7,
     slideText:
-      "Nun möchten wir Dich bitten, anzugeben, inwiefern die folgenden Aussagen auf Dich persönlich zutreffen. Es gibt keine richtigen oder falschen Antworten. Klicke auf „Weiter“, um zur nächsten Seite zu gelangen.",
+      "Nun möchten wir Dich bitten, anzugeben, inwiefern die folgenden Aussagen auf Dich persönlich zutreffen. \n\nEs gibt keine richtigen oder falschen Antworten. \n\n\nKlicke auf „Weiter“, um zur nächsten Seite zu gelangen.",
     slideType: "demographisch_intro",
     additionalInfo: 0,
   },
-  8: { id: 8, slideText: "", slideType: "Nachangaben_1_5", additionalInfo: 0 },
-  9: { id: 9, slideText: "", slideType: "NachAngaben_6_11", additionalInfo: 0 },
+  8: {
+    id: 8,
+    slideText: "",
+    slideType: "Nachangaben_1_5",
+    additionalInfo: 0,
+    nachangaben: {
+      1: [
+        "Wenn ich mir angucke, was wir im Studium können müssen, halte ich mich für….",
+        "Nicht begabt",
+        "Sehr begabt",
+      ],
+      2: [
+        "Wenn ich mir angucke, was wir im Studium können müssen, meine ich, dass mir das Lernen von neuen Sachen….",
+        "Leicht fällt",
+        "Schwer fällt",
+      ],
+      3: [
+        "Wenn ich mir angucke, was wir im Studium können müssen, finde ich, dass ich mit den Aufgaben….",
+        "Gut zurechtkomme",
+        "Nicht zurechtkomme",
+      ],
+      4: [
+        "Wenn ich mir angucke, was wir im Studium können müssen, glaube ich, dass ich….",
+        "Nicht intelligent bin",
+        "Sehr intelligent bin",
+      ],
+      5: [
+        "Wenn ich mir angucke, was wir im Studium können müssen, finde ich, dass ich….",
+        "Viel kann",
+        "Wenig kann",
+      ],
+    },
+  },
+  9: {
+    id: 9,
+    slideText: "",
+    slideType: "NachAngaben_6_11",
+    additionalInfo: 0,
+    nachangaben: {
+      1: [
+        "Ich bin für das Studium…",
+        "Weniger begabt als früher",
+        "Begabter als früher",
+      ],
+      2: [
+        "Das Lernen von neuen Sachen im Studium fällt mir…",
+        "Schwerer als früher",
+        "Leichter als früher",
+      ],
+      3: [
+        "Ich komme mit den Aufgaben im Studium…",
+        "Besser zurecht als früher",
+        "Schlechter zurecht als früher",
+      ],
+      4: [
+        "Ich bin…",
+        "Weniger intelligent als früher",
+        "Intelligenter als früher",
+      ],
+      5: [
+        "Die Aufgaben im Studium fallen mir…",
+        "Leichter als früher",
+        "Schwerer als früher",
+      ],
+    },
+  },
   10: {
     id: 10,
     slideText: "",
     slideType: "Nachangaben_12_17",
     additionalInfo: 0,
+    nachangaben: {
+      1: [
+        "Ich denke, ich bin für das Studium…",
+        "Weniger begabt als meine Kommilitonen",
+        "Begabter als meine Kommilitonen",
+      ],
+      2: [
+        "Etwas Neues zu lernen fällt mir…",
+        "Schwerer als als meinen Kommilitonen",
+        "Leichter als meinen Kommilitonen",
+      ],
+      3: [
+        "Mit den Aufgaben im Studium komme ich…",
+        "Schlechter zurecht als meine Kommilitonen",
+        "Besser zurecht als meine Kommilitonen",
+      ],
+      4: [
+        "Ich bin…",
+        "Weniger intelligent als meine Kommilitonen",
+        "Intelligenter als meine Kommilitonen",
+      ],
+      5: [
+        "Ich kann im Studium…",
+        "Weniger als meine Kommilitonen",
+        "Mehr als meine Kommilitonen",
+      ],
+      6: [
+        "Die Aufgaben im Studium fallen mir…",
+        "Leichter als meinen Kommilitonen",
+        "Schwerer als meinen Kommilitonen",
+      ],
+    },
   },
   11: {
     id: 11,
     slideText: "",
     slideType: "Nachangaben_18_22",
     additionalInfo: 0,
+    nachangaben: {
+      1: ["Ich bin für das Studium…", "Sehr begabt", "Nicht begabt"],
+      2: ["Neues zu lernen fällt mir…", "Schwer", "Leicht"],
+      3: [
+        "Mit den Aufgaben im Studium komme ich…",
+        "Schlechter zurecht als meine Kommilitonen",
+        "Besser zurecht als meine Kommilitonen",
+      ],
+      4: ["Ich bin…", "Nicht intelligent", "Sehr intelligent"],
+      5: ["Ich kann im Studium…", "Wenig", "Viel"],
+      6: ["Im Studium fallen mir viele Aufgaben…", "Schwer", "Leicht"],
+    },
   },
-  12: { id: 12, slideText: "", slideType: "Konzept_Intro", additionalInfo: 0 },
+  12: {
+    id: 12,
+    slideText:
+      "Mit den folgenden Aufgaben soll Dein Wissen zu verschiedenen Konzepten der Sozialpsychologie erfasst werden. Bitte versuche, die Aufgaben möglichst gut zu bearbeiten, rate jedoch nicht. \n\nFalls Du eine der Fragen nicht beantworten kannst, setze bitte ein „-“. Wenn es losgehen kann, klicke bitte auf „Weiter“. ",
+    slideType: "Konzept_Intro",
+    additionalInfo: 0,
+  },
   13: {
     id: 13,
-    slideText: "",
+    slideText: "Bitte definiere das Konzept „Attribution”.",
     slideType: "Konzept_Attribution",
     additionalInfo: 0,
   },
-  14: { id: 14, slideText: "", slideType: "Konzept_SN", additionalInfo: 0 },
+  14: {
+    id: 14,
+    slideText: "Bitte definiere das Konzept „Soziale Normen”.",
+    slideType: "Konzept_SN",
+    additionalInfo: 0,
+  },
   15: {
     id: 15,
-    slideText: "",
+    slideText: "Bitte definiere das Konzept „Konsens”.",
     slideType: "Konzept_Konsens",
     additionalInfo: 0,
   },
   16: {
     id: 16,
-    slideText: "",
+    slideText: "Bitte definiere das Konzept „Konsistenz”.",
     slideType: "Konzept_Konsistenz",
     additionalInfo: 0,
   },
   17: {
     id: 17,
-    slideText: "",
+    slideText: "Bitte definiere das Konzept „Distinktheit”.",
     slideType: "Konzept_Distinktheit",
     additionalInfo: 0,
   },
-  18: { id: 18, slideText: "", slideType: "Konzept_FA", additionalInfo: 0 },
-  19: { id: 19, slideText: "", slideType: "Konzept_SV", additionalInfo: 0 },
-  20: { id: 20, slideText: "", slideType: "Konzept_GWG", additionalInfo: 0 },
-  21: { id: 21, slideText: "", slideType: "Text_Intro", additionalInfo: 0 },
+  18: {
+    id: 18,
+    slideText:
+      "Bitte definiere das Konzept „Fundamentaler Attributionsfehler”.",
+    slideType: "Konzept_FA",
+    additionalInfo: 0,
+  },
+  19: {
+    id: 19,
+    slideText: "Bitte definiere das Konzept „Selbstwertdienliche Verzerrung”.",
+    slideType: "Konzept_SV",
+    additionalInfo: 0,
+  },
+  20: {
+    id: 20,
+    slideText: "Bitte definiere das Konzept „Gerechte-Welt-Glaube”.",
+    slideType: "Konzept_GWG",
+    additionalInfo: 0,
+  },
+  21: {
+    id: 21,
+    slideText:
+      "Deine nächste Aufgabe ist es, einen Text zu lesen, der verschiedene Konzepte der Sozialpsychologie behandelt. Es ist wichtig, dass Du den Text aufmerksam liest. Du hast dafür 4:00 Minuten Zeit. Im Anschluss sollst Du Dir Beispiele zu den Themen im Text ausdenken. ",
+    slideType: "Text_Intro",
+    additionalInfo: 0,
+  },
   22: { id: 22, slideText: "", slideType: "Text_Text", additionalInfo: 0 },
   23: {
     id: 23,

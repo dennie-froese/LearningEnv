@@ -14,11 +14,31 @@ function QuestionTextInput({ question, questionNumber, type }: Props) {
   const launchTime = useTimer();
 
   const finish = () => {
+    const obj =
+      type === "Konzept_Attribution"
+        ? { Text_Attribution: input }
+        : type === "Konzept_SN"
+        ? { Text_SN: input }
+        : type === "Konzept_Konsens"
+        ? { Text_Konsens: input }
+        : type === "Konzept_Konsistenz"
+        ? { Text_Konsistenz: input }
+        : type === "Konzept_Distinktheit"
+        ? { Text_Distinktheit: input }
+        : type === "Konzept_FA"
+        ? { Text_FA: input }
+        : type === "Konzept_SV"
+        ? { Text_SV: input }
+        : { Text_GWG: input };
+    setInput("");
     dispatch &&
       launchTime &&
       dispatch({
         type: "submit_slide",
-        payload: { type: type, answer: { zeit: launchTime - Date.now() } },
+        payload: {
+          type: type,
+          answer: { zeit: launchTime - Date.now(), ...obj },
+        },
       });
   };
 
@@ -26,8 +46,7 @@ function QuestionTextInput({ question, questionNumber, type }: Props) {
     <div className="Slide">
       <div className="Slide-container">
         <div className="Slide-header">
-          <p>{`Question: ${questionNumber}`}</p>
-          <p className="Slide-text">{question}</p>
+          <p>{question}</p>
         </div>
         <textarea
           autoCorrect="false"
