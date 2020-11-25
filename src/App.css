@@ -115,6 +115,17 @@
   color: white;
 }
 
+.Slide-intro-main {
+  padding-top: 10vh;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
 .Slide-demographic {
   width: 40vw;
   display: flex;
@@ -137,7 +148,7 @@
 
 .Slide-demographic-row-boxes {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   flex-direction: row;
   font-size: calc(12px + 2vmin);
   color: white;
@@ -160,6 +171,76 @@
   padding-left: 10px;
   padding-right: 10px;
   padding: 5px;
+}
+
+.Slide-nachangaben-main {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
+  overflow-y: scroll;
+}
+
+.Slide-nachangaben-row-1 {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #3a3f4b;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
+.Slide-nachangaben-row-2 {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  background-color: #2f333d;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
+.Slide-nachangaben-label {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 40vw;
+  font-size: calc(14px + 1vmin);
+  color: white;
+  padding-left: 1vw;
+}
+
+.Slide-nachangaben-row-boxes {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1vw;
+}
+
+.Slide-nachangaben-row-boxes-container {
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Slide-nachangaben-row-boxes-boxes-container {
+  display: flex;
+  align-items: center;
+  padding-right: 1vw;
+  padding-left: 1vw;
+}
+
+.Slide-nachangaben-label-l {
+  width: 15vw;
+  font-size: calc(14px + 1vmin);
+  color: white;
 }
 
 .Slide-nav {
@@ -200,9 +281,31 @@
   white-space: pre-wrap;
 }
 
+.Slide-text-l {
+  text-align: center;
+  font-size: calc(16px + 1vmin);
+  color: white;
+  overflow-y: scroll;
+  white-space: pre-wrap;
+}
+
+.Slide-label {
+  text-align: center;
+  font-size: calc(6px + 1vmin);
+  color: white;
+  overflow-y: scroll;
+  white-space: pre-wrap;
+}
+
+.Slide-label-l {
+  text-align: center;
+  font-size: calc(14px + 1vmin);
+  color: white;
+}
+
 .Slide-textinput-l {
-  width: 70%;
-  height: 30vh;
+  width: 75vw;
+  height: 40vh;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.3);
   transition: 0.3s all;
@@ -210,6 +313,40 @@
   padding-left: 10px;
   padding-right: 10px;
   padding: 5px;
+}
+
+.Dropdown-button {
+  background-color: #574a88;
+  width: 15vh;
+  height: 5vh;
+  color: #ffffff;
+  border-radius: 10px;
+}
+.Dropdown-button-small {
+  background-color: #232cac;
+  width: 10vh;
+  height: 3vh;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.Dropdown.show {
+  width: 15vh;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  transition: 1s ease;
+  z-index: 1000;
+  overflow-y: scroll;
+  border: 2px;
+  background-color: #857baa;
+  border-radius: 2px;
+}
+
+.Dropdown.hide {
+  transform: translate3d(-100vw, 0, 0);
 }
 
 .Error-text {
