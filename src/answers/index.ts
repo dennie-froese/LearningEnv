@@ -6,6 +6,7 @@ export interface Answer {
   Alter?: string;
   Geschlecht?: string;
   Geburtssprache1?: string;
+  Geburtssprache2?: string;
   Abiturnote?: string;
   Studiengang1?: string;
   Studiengang2?: string;

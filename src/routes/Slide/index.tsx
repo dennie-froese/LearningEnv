@@ -20,20 +20,13 @@ function Slide(slide: SlideInterface) {
           "Are you sure you want to leave this page? All your progress would be lost."
         }
       />
-      {slide.slideType === "range" ? (
-        <QuestionRange
-          question={slide.slideText}
-          questionNumber={slide.id}
-          rangeMax={slide.additionalInfo}
-          type={slide.slideType}
-        />
-      ) : slide.slideType === "demographisch" ? (
+      {slide.slideType === "demographisch" ? (
         <SlideDemographics
           slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}
         />
-      ) : typeOnlyInfo.includes(slide.id) ? (
+      ) : typeIntro.includes(slide.id) ? (
         <SlideIntro
           slideText={slide.slideText}
           slideNumber={slide.id}
