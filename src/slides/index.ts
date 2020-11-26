@@ -238,45 +238,87 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideType: "Text_Intro",
     additionalInfo: 0,
   },
-  22: { id: 22, slideText: "", slideType: "Text_Text", additionalInfo: 0 },
+  22: {
+    id: 22,
+    slideText:
+      "Der Frage, warum andere sich so verhalten, wie sie es tun, begegnen wir alltäglich in den verschiedensten Kontexten. Der Prozess, durch den wir versuchen, ein eingetretenes Ereignis oder Verhalten auf bestimmte Ursachen zurückzuführen, wird als Attribution bezeichnet. Im Allgemeinen ist dies ein recht planmäßiger Prozess.\nWir prüfen das Verhalten anderer auf Hinweise für die Gründe, die hinter dem liegen, was sie sagen oder tun. Eine grundlegende Frage dabei ist, ob das Verhalten einer anderen Person auf internale Gründe (also Faktoren, die mit der eigenen Intention, Motiven oder Charaktereigenschaften zu tun haben) oder auf externale Ursachen zurückzuführen ist. Externale Ursachen beinhalten oftmals physische Objekte oder Situationen innerhalb der Umwelt, aber auch soziale oder kulturelle Faktoren. Diese Faktoren beinhalten oftmals auch soziale Normen: explizite oder implizite Konventionen, die vorgeben, welches Verhalten in sozialen Situationen angemessen ist. \nUm das Verhalten anderer zu erklären, fokussieren wir uns oft auf Informationen über (1) Konsens, also das Ausmaß, in welchem das Verhalten auch von anderen Personen gezeigt wird, (2) Konsistenz, also das Ausmaß, in welchem eine bestimmte Person jeweils ähnliches Verhalten als Reaktion auf die gleichen Stimuli oder Situationen zeigt, und (3) Distinktheit, also das Ausmaß, in welchem eine bestimmte Person in unterschiedlicher Art und Weise auf ähnliche Situationen oder Stimuli reagiert. Wenn sehr wenige Personen wie eine bestimmte Person handeln (Konsens ist niedrig), die Person sich immer wieder in gleicher Weise verhält (Konsistenz ist hoch) und in derselben Art und Weise in vielen ähnlichen Situationen reagiert (Distinktheit ist niedrig), dann schließen wir daraus, dass ihr Verhalten auf internale Ursachen zurückzuführen ist. Daraus leiten wir ab, was für eine Art von Mensch diese Person ist und vermutlich immer bleiben wird. Wenn alle drei dieser Faktoren hoch sind, leiten wir im Gegensatz dazu eher ab, dass die Person sich auf Grund von externalen Gründen so verhält, wie sie es tut.\nAuch wenn Attribution oft logisches Schlussfolgern beinhaltet, wie sie eben beschrieben wurde, ist das nicht immer der Fall. Tatsächlich wird die Attribution oft Gegenstand verschiedener Wahrnehmungsverzerrungen. Eine der populärsten Wahrnehmungsverzerrungen ist bekannt als fundamentaler Attributionsfehler. Er beschreibt die Tendenz, das Verhalten anderer Personen zu einem größeren Teil auf internale Ursachen zurückzuführen als eigentlich gerechtfertigt wäre, während die Effekte der spezifischen Situation unterschätzt werden. Dies kann uns zu falschen Schlussfolgerungen über andere verleiten. Eine andere Verzerrung in unserer Attribution betrifft unser eigenes Verhalten. Die selbstwertdienliche Verzerrung ist die Tendenz, positive Ergebnisse auf unsere eigenen Eigenschaften zurückzuführen (internale Ursachen), aber negative Ergebnisse auf Faktoren außerhalb unserer Kontrolle (externale Ursachen). Schließlich gibt es noch den Gerechte-Welt-Glauben. Dieser bezieht sich auf das starke Verlangen oder Bedürfnis zu glauben, dass die Welt ein gerechter, vorhersehbarer und geordneter Ort ist, an dem jeder bekommt, was er verdient. Das beeinflusst unsere Attributionen, denn auch wenn wir Anhaltspunkte dafür erhalten, dass die Welt vielleicht nicht gerecht ist, neigen wir dazu, uns dennoch selbst davon überzeugen zu wollen, dass keine Ungerechtigkeit vorkommt.",
+    slideType: "Text_Text",
+    additionalInfo: 0,
+  },
   23: {
     id: 23,
-    slideText: "",
+    slideText:
+      "Dir werden nun noch einmal die Definitionen der einzelnen Konzepte, die Du im Text kennengelernt hast, gezeigt. Lies sie Dir bitte aufmerksam durch. Du kannst selbst entscheiden, wie viel Zeit Du dir dafür nimmst.\n\nWenn es losgehen kann, klicke bitte auf „Weiter“. ",
     slideType: "Definition_Intro",
     additionalInfo: 0,
   },
   24: {
     id: 24,
-    slideText: "",
+    slideText:
+      "Attribution\n\nDer subjektive Prozess, durch den wir versuchen festzustellen, welche Gründe hinter dem Verhalten von anderen Personen stecken.",
     slideType: "Definition_Attribution",
     additionalInfo: 0,
   },
-  25: { id: 25, slideText: "", slideType: "Definition_SN", additionalInfo: 0 },
+  25: {
+    id: 25,
+    slideText:
+      "Soziale Normen\n\nExplizite oder implizite Konventionen, die korrektes Verhalten in sozialen Situationen vorgeben.",
+    slideType: "Definition_SN",
+    additionalInfo: 0,
+  },
   26: {
     id: 26,
-    slideText: "",
+    slideText:
+      "Konsens\n\nDas Ausmaß, in dem ein Verhalten einer Person auch von anderen Personen gezeigt wird. Der Konsens ist hoch, wenn viele andere Personen ähnlich reagieren, und niedrig, wenn nur wenige andere Personen ähnlich reagieren.",
     slideType: "Definition_Konsens",
     additionalInfo: 0,
   },
   27: {
     id: 27,
-    slideText: "",
+    slideText:
+      "Konsistenz\n\nDas Ausmaß, in dem eine Person über die Zeit hinweg ähnliche Verhaltensweisen als Reaktion auf die gleiche Situation oder den gleichen Stimulus zeigt. Die Konsistenz ist hoch, wenn das Verhalten sich über die Zeit hinweg ähnelt, und niedrig, wenn das Verhalten nur zu wenigen Zeitpunkten gleichbleibt.",
     slideType: "Definition_Konsistenz",
     additionalInfo: 0,
   },
   28: {
     id: 28,
-    slideText: "",
+    slideText:
+      "Distinktheit\n\nDas Ausmaß, in dem eine Person in unterschiedlicher Art und Weise auf ähnliche Stimuli oder Situationen reagiert. Die Distinktheit ist hoch, wenn sich eine Person in wenigen Situationen gleich verhält, und niedrig, wenn sie in vielen ähnlichen Situationen das gleiche Verhalten zeigt.",
     slideType: "Definition_Distinktheit",
     additionalInfo: 0,
   },
-  29: { id: 29, slideText: "", slideType: "Definition_FA", additionalInfo: 0 },
-  30: { id: 30, slideText: "", slideType: "Definition_SV", additionalInfo: 0 },
-  31: { id: 31, slideText: "", slideType: "Definition_GWG", additionalInfo: 0 },
-  32: { id: 32, slideText: "", slideType: "Beispiel_Intro", additionalInfo: 0 },
+  29: {
+    id: 29,
+    slideText:
+      "Fundamentaler Attributionsfehler\n\nDie Tendenz, das Verhalten von anderen in höherem Maße auf interne Ursachen zurückzuführen, als es eigentlich gerechtfertigt wäre, bei gleichzeitigem Unterschätzen des Einflusses der Situation.",
+    slideType: "Definition_FA",
+    additionalInfo: 0,
+  },
+  30: {
+    id: 30,
+    slideText:
+      "Selbstwertdienliche Verzerrung\n\nDie Tendenz, positive Ergebnisse auf unsere eigenen Charaktereigenschaften (internale Ursachen) zurückzuführen, aber negative Ergebnisse eher auf Faktoren außerhalb unserer Kontrolle (externale Ursachen). ",
+    slideType: "Definition_SV",
+    additionalInfo: 0,
+  },
+  31: {
+    id: 31,
+    slideText:
+      "Gerechte-Welt-Glaube\n\nDas starke Verlangen oder Bedürfnis zu glauben, dass die Welt ein geordneter, vorhersehbarer, und gerechter Ort ist, an dem jeder bekommt, was er oder sie verdient.",
+    slideType: "Definition_GWG",
+    additionalInfo: 0,
+  },
+  32: {
+    id: 32,
+    slideText:
+      "Deine nächste Aufgabe ist es gleich, Dir Beispiele für die Konzepte auszudenken, die Du im Text kennengelernt hast. Nach jedem Beispiel, das Du Dir ausgedacht hast, wirst Du darum gebeten, Dein Beispiel zu bewerten. \n\nWenn es losgehen kann, klicke bitte auf „Weiter“. ",
+    slideType: "Beispiel_Intro",
+    additionalInfo: 0,
+  },
   33: {
     id: 33,
-    slideText: "",
+    slideText:
+      "Denke Dir bitte ein Beispiel aus, das das Konzept „Attribution” veranschaulicht.\nAttribution: Der subjektive Prozess, durch den wir versuchen festzustellen, welche Gründe hinter dem Verhalten von anderen Personen stecken.",
     slideType: "Beispiel_Attribution0",
     additionalInfo: 0,
   },

@@ -6,8 +6,9 @@ import Finish from "../Finish";
 import SlideDemographics from "../SlideDemographics";
 import SlideNachangaben from "../SlideNachangaben";
 import QuestionTextInput from "../QuestionTextInput";
+import SlideTimer from "../SlideTimer";
 
-const typeIntro: number[] = [1, 2, 3, 4, 5, 7, 12];
+const typeIntro: number[] = [1, 2, 3, 4, 5, 7, 12, 21];
 const typeNachangaben: number[] = [8, 9, 10, 11];
 const typeTextinput: number[] = [13, 14, 15, 16, 17, 18, 19, 20];
 
@@ -24,6 +25,12 @@ function Slide(slide: SlideInterface) {
       />
       {slide.slideType === "demographisch" ? (
         <SlideDemographics
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+        />
+      ) : slide.slideType === "Text_Text" ? (
+        <SlideTimer
           slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}

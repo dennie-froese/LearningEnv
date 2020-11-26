@@ -289,6 +289,14 @@
   white-space: pre-wrap;
 }
 
+.Slide-text-m {
+  text-align: left;
+  font-size: calc(12px + 1vmin);
+  color: white;
+  overflow-y: scroll;
+  white-space: pre-wrap;
+}
+
 .Slide-label {
   text-align: center;
   font-size: calc(6px + 1vmin);
@@ -347,6 +355,16 @@
 
 .Dropdown.hide {
   transform: translate3d(-100vw, 0, 0);
+}
+
+.Slide-timer-main {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
 }
 
 .Error-text {
