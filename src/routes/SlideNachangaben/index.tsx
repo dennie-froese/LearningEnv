@@ -17,17 +17,65 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
   const [valueFive, setValueFive] = useState<undefined | number>(undefined);
   const [valueSix, setValueSix] = useState<undefined | number>(undefined);
 
+  const reset = () => {
+    setValueOne(undefined);
+    setValueTwo(undefined);
+    setValueThree(undefined);
+    setValueFour(undefined);
+    setValueFive(undefined);
+    setValueSix(undefined);
+    restart();
+  };
+
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
 
   const finish = () => {
+    const obj =
+      type === "Nachangaben_1_5"
+        ? {
+            NachAngaben_1: valueOne?.toString(),
+            NachAngaben_2: valueTwo?.toString(),
+            NachAngaben_3: valueThree?.toString(),
+            NachAngaben_4: valueFour?.toString(),
+            NachAngaben_5: valueFive?.toString(),
+          }
+        : type === "NachAngaben_6_11"
+        ? {
+            NachAngaben_6: valueOne?.toString(),
+            NachAngaben_7: valueTwo?.toString(),
+            NachAngaben_8: valueThree?.toString(),
+            NachAngaben_9: valueFour?.toString(),
+            NachAngaben_10: valueFive?.toString(),
+            NachAngaben_11: valueSix?.toString(),
+          }
+        : type === "Nachangaben_12_17"
+        ? {
+            NachAngaben_12: valueOne?.toString(),
+            NachAngaben_13: valueTwo?.toString(),
+            NachAngaben_14: valueThree?.toString(),
+            NachAngaben_15: valueFour?.toString(),
+            NachAngaben_16: valueFive?.toString(),
+            NachAngaben_17: valueSix?.toString(),
+          }
+        : {
+            NachAngaben_18: valueOne?.toString(),
+            NachAngaben_19: valueTwo?.toString(),
+            NachAngaben_20: valueThree?.toString(),
+            NachAngaben_21: valueFour?.toString(),
+            NachAngaben_22: valueFive?.toString(),
+          };
+
     dispatch &&
       launchTime &&
       dispatch({
         type: "submit_slide",
-        payload: { type: type, answer: { zeit: launchTime - Date.now() } },
+        payload: {
+          type: type,
+          answer: { zeit: launchTime - Date.now(), ...obj },
+        },
       });
-    restart();
+    reset();
   };
 
   return (
