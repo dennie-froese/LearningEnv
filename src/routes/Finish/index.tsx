@@ -12,7 +12,7 @@ interface Props {
 function Finish({ slideText, slideNumber, type }: Props) {
   const context = useSlidesState();
   const dispatch = useSlidesDispatch();
-  const launchTime = useTimer();
+  const { launchTime, restart } = useTimer();
 
   const finish = () => {
     dispatch &&

@@ -86,7 +86,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
   const [degree, setDegree] = useState<undefined | string>(undefined);
   const [error, setError] = useState("");
 
-  const launchTime = useTimer();
+  const { launchTime, restart } = useTimer();
 
   const finish = () => {
     if (

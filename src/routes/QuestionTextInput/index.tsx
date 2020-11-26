@@ -11,7 +11,7 @@ interface Props {
 function QuestionTextInput({ question, questionNumber, type }: Props) {
   const [input, setInput] = useState<undefined | string>(undefined);
   const dispatch = useSlidesDispatch();
-  const launchTime = useTimer();
+  const { launchTime, restart } = useTimer();
 
   const finish = () => {
     const obj =
@@ -40,6 +40,7 @@ function QuestionTextInput({ question, questionNumber, type }: Props) {
           answer: { zeit: launchTime - Date.now(), ...obj },
         },
       });
+    restart();
   };
 
   return (

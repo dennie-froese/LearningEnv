@@ -18,16 +18,16 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
   const [valueSix, setValueSix] = useState<undefined | number>(undefined);
 
   const dispatch = useSlidesDispatch();
-  const launchTime = useTimer();
+  const { launchTime, restart } = useTimer();
 
   const finish = () => {
-    console.log("test");
     dispatch &&
       launchTime &&
       dispatch({
         type: "submit_slide",
         payload: { type: type, answer: { zeit: launchTime - Date.now() } },
       });
+    restart();
   };
 
   return (

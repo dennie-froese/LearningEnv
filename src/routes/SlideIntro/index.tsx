@@ -10,7 +10,7 @@ interface Props {
 
 function SlideIntro({ slideText, slideNumber, type }: Props) {
   const dispatch = useSlidesDispatch();
-  const launchTime = useTimer();
+  const { launchTime, restart } = useTimer();
 
   const finish = () => {
     dispatch &&
@@ -19,6 +19,7 @@ function SlideIntro({ slideText, slideNumber, type }: Props) {
         type: "submit_slide",
         payload: { type: type, answer: { zeit: launchTime - Date.now() } },
       });
+    restart();
   };
   return (
     <div className="Slide">

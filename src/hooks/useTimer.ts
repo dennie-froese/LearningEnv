@@ -5,7 +5,11 @@ function useTimer() {
 
   useEffect(() => setLaunchTime(Date.now()), []);
 
-  return launchTime;
+  const restart = () => {
+    setLaunchTime(Date.now());
+  };
+
+  return { launchTime, restart };
 }
 
 export default useTimer;

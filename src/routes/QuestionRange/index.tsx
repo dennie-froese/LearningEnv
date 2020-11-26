@@ -17,7 +17,7 @@ function QuestionRange({
 }: Props) {
   const [value, setValue] = useState<undefined | number>(undefined);
   const dispatch = useSlidesDispatch();
-  const launchTime = useTimer();
+  const { launchTime, restart } = useTimer();
   const checkboxes: JSX.Element[] = [];
   for (var i = 1; i < rangeMax + 1; i++) {
     const v = i;
