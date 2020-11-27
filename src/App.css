@@ -243,6 +243,13 @@
   color: white;
 }
 
+.Slide-range-row-boxes {
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .Slide-nav {
   min-height: 10vh;
   min-width: 80vw;
@@ -301,8 +308,6 @@
   text-align: center;
   font-size: calc(6px + 1vmin);
   color: white;
-  overflow-y: scroll;
-  white-space: pre-wrap;
 }
 
 .Slide-label-l {
