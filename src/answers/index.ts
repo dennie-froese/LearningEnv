@@ -41,8 +41,8 @@ export interface Answer {
   Text_Distinktheit?: string;
   Text_FA?: string;
   Text_SV?: string;
-  example_Attribution?: string;
   Text_GWG?: string;
+  example_Attribution?: string;
   Ausdenken_Attribution1?: string;
   Ausdenken_Attribution2?: string;
   Attribution_g1_1_1?: string;
