@@ -268,6 +268,15 @@
   border-radius: 10px;
 }
 
+.Slide-button-active {
+  background-color: #372380;
+  width: 20vh;
+  height: 5vh;
+  color: #ffffff;
+  border-radius: 10px;
+  border-style: solid;
+}
+
 .Slide-range {
   background-color: #474d58;
   width: 60vh;
@@ -316,6 +325,9 @@
   text-align: center;
   font-size: calc(14px + 1vmin);
   color: white;
+  padding: 5;
+  overflow-y: scroll;
+  white-space: pre-wrap;
 }
 
 .Slide-textinput-l {
@@ -379,6 +391,89 @@
   font-size: calc(8px + 1vmin);
   color: red;
   overflow-y: scroll;
+}
+
+.Slide-demographic {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
+.Slide-idea-units-main {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
+.Slide-idea-units-row {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: calc(12px + 2vmin);
+  color: white;
+  padding-top: 2%;
+}
+
+.Slide-idea-unit-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: ivory;
+}
+
+.Slide-idea-units-box-column {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
+  padding-right: 5%;
+  padding-left: 2%;
+}
+
+.Slide-idea-units-checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
+.Slide-idea-units-text-container {
+  margin-top: 5%;
+  width: 100%;
+}
+
+.Slide-idea-units-text-container-text {
+  margin-top: 1%;
+  width: 100%;
+  font-size: calc(8px + 2vmin);
+  text-align: left;
+  padding-left: 1%;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: ivory;
+}
+
+.Slide-demographic-row-boxes-container {
+  padding-right: 2%;
+  padding-left: 2%;
 }
 
 @keyframes App-logo-spin {
