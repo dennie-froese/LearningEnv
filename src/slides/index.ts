@@ -5,6 +5,7 @@ export type SlideInterface = {
   demographic?: Record<string, string>;
   nachangaben?: Record<number, [string, string, string]>;
   header?: string;
+  ideaUnitsTypeOne?: string[];
 };
 
 const SlideIDs = [
@@ -430,8 +431,15 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   36: {
     id: 36,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "Attribution_g1_1",
+    header: "Konzept „Attribution“",
+    ideaUnitsTypeOne: [
+      "Subjektiver Prozess/ Mechanismus",
+      "Suche nach Gründen",
+      "Gründe beziehen sich auf Verhalten anderer",
+    ],
   },
   37: {
     id: 37,

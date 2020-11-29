@@ -10,6 +10,7 @@ import QuestionTextInput from "../QuestionTextInput";
 import SlideTimer from "../SlideTimer";
 import QuestionTextInputWithHeader from "../QuestionTextInputWithHeader";
 import QuestionRange from "../QuestionRange";
+import SlideIdeaUnitsTypeOne from "../SlideIdeaUnitsTypeOne";
 
 const typeIntro: number[] = [1, 2, 3, 4, 5, 7, 12, 21, 23, 32];
 const typeIntroWithHeader: number[] = [24, 25, 26, 27, 28, 29, 30, 31];
@@ -50,6 +51,7 @@ const typeRange: number[] = [
   111,
   112,
 ];
+const ideaUnitsTypeOne: number[] = [36];
 
 function Slide(slide: SlideInterface) {
   useEffect(() => {
@@ -112,6 +114,14 @@ function Slide(slide: SlideInterface) {
           question={slide.slideText}
           questionNumber={slide.id}
           type={slide.slideType}
+        />
+      ) : ideaUnitsTypeOne.includes(slide.id) ? (
+        <SlideIdeaUnitsTypeOne
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          header={slide.header}
+          ideaUnitsTypeOne={slide.ideaUnitsTypeOne}
         />
       ) : (
         <Finish
