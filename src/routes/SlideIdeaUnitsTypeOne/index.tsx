@@ -8,6 +8,7 @@ interface Props {
   type: string;
   header: string | undefined;
   ideaUnitsTypeOne: string[] | undefined;
+  expertExamples: string[] | undefined;
 }
 
 function SlideIdeaUnitsTypeOne({
@@ -16,12 +17,13 @@ function SlideIdeaUnitsTypeOne({
   type,
   header,
   ideaUnitsTypeOne,
+  expertExamples,
 }: Props) {
   const [valueOne, setValueOne] = useState<undefined | string>(undefined);
   const [valueTwo, setValueTwo] = useState<undefined | string>(undefined);
   const [valueThree, setValueThree] = useState<undefined | string>(undefined);
   const [exampleEvaluation, setExampleEvaluation] = useState<
-    undefined | string
+    undefined | number
   >(undefined);
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
@@ -45,23 +47,166 @@ function SlideIdeaUnitsTypeOne({
     ? context?.answers.Beispiel_GWG0.example_GWG
     : "Du hast leider kein Beispiel definiert.";
 
+  const resetValues = () => {
+    setValueOne(undefined);
+    setValueTwo(undefined);
+    setValueThree(undefined);
+    setExampleEvaluation(undefined);
+  };
+
   const finish = () => {
+    const obj =
+      type === "Attribution_g1_1"
+        ? {
+            Attribution_g1_1_1: valueOne,
+            Attribution_g1_1_2: valueTwo,
+            Attribution_g1_1_3: valueThree,
+            Attribution_g1_1_4: exampleEvaluation?.toString(),
+          }
+        : type === "Attribution_g1_2"
+        ? {
+            Attribution_g1_2_1: valueOne,
+            Attribution_g1_2_2: valueTwo,
+            Attribution_g1_2_3: valueThree,
+            Attribution_g1_2_4: exampleEvaluation?.toString(),
+          }
+        : type === "SN_g1_1"
+        ? {
+            SN_g1_1_1: valueOne,
+            SN_g1_1_2: valueTwo,
+            SN_g1_1_3: valueThree,
+            SN_g1_1_4: exampleEvaluation?.toString(),
+          }
+        : type === "SN_g1_2"
+        ? {
+            SN_g1_2_1: valueOne,
+            SN_g1_2_2: valueTwo,
+            SN_g1_2_3: valueThree,
+            SN_g1_2_4: exampleEvaluation?.toString(),
+          }
+        : type === "Konsens_g1_1"
+        ? {
+            Konsens_g1_1_1: valueOne,
+            Konsens_g1_1_2: valueTwo,
+            Konsens_g1_1_3: valueThree,
+            Konsens_g1_1_4: exampleEvaluation?.toString(),
+          }
+        : type === "Konsens_g1_2"
+        ? {
+            Konsens_g1_2_1: valueOne,
+            Konsens_g1_2_2: valueTwo,
+            Konsens_g1_2_3: valueThree,
+            Konsens_g1_2_4: exampleEvaluation?.toString(),
+          }
+        : type === "Konsistenz_g1_1"
+        ? {
+            Konsistenz_g1_1_1: valueOne,
+            Konsistenz_g1_1_2: valueTwo,
+            Konsistenz_g1_1_3: valueThree,
+            Konsistenz_g1_1_4: exampleEvaluation?.toString(),
+          }
+        : type === "Konsistenz_g1_2"
+        ? {
+            Konsistenz_g1_2_1: valueOne,
+            Konsistenz_g1_2_2: valueTwo,
+            Konsistenz_g1_2_3: valueThree,
+            Konsistenz_g1_2_4: exampleEvaluation?.toString(),
+          }
+        : type === "Distinktheit_g1_1"
+        ? {
+            Distinktheit_g1_1_1: valueOne,
+            Distinktheit_g1_1_2: valueTwo,
+            Distinktheit_g1_1_3: valueThree,
+            Distinktheit_g1_1_4: exampleEvaluation?.toString(),
+          }
+        : type === "Distinktheit_g1_2"
+        ? {
+            Distinktheit_g1_2_1: valueOne,
+            Distinktheit_g1_2_2: valueTwo,
+            Distinktheit_g1_2_3: valueThree,
+            Distinktheit_g1_2_4: exampleEvaluation?.toString(),
+          }
+        : type === "FA_g1_1"
+        ? {
+            FA_g1_1_1: valueOne,
+            FA_g1_1_2: valueTwo,
+            FA_g1_1_3: valueThree,
+            FA_g1_1_4: exampleEvaluation?.toString(),
+          }
+        : type === "FA_g1_2"
+        ? {
+            FA_g1_2_1: valueOne,
+            FA_g1_2_2: valueTwo,
+            FA_g1_2_3: valueThree,
+            FA_g1_2_4: exampleEvaluation?.toString(),
+          }
+        : type === "SV_g1_1"
+        ? {
+            SV_g1_1_1: valueOne,
+            SV_g1_1_2: valueTwo,
+            SV_g1_1_3: valueThree,
+            SV_g1_1_4: exampleEvaluation?.toString(),
+          }
+        : type === "SV_g1_2"
+        ? {
+            SV_g1_2_1: valueOne,
+            SV_g1_2_2: valueTwo,
+            SV_g1_2_3: valueThree,
+            SV_g1_2_4: exampleEvaluation?.toString(),
+          }
+        : type === "GWG_g1_1"
+        ? {
+            GWG_g1_1_1: valueOne,
+            GWG_g1_1_2: valueTwo,
+            GWG_g1_1_3: valueThree,
+            GWG_g1_1_4: exampleEvaluation?.toString(),
+          }
+        : type === "GWG_g1_2"
+        ? {
+            GWG_g1_2_1: valueOne,
+            GWG_g1_2_2: valueTwo,
+            GWG_g1_2_3: valueThree,
+            GWG_g1_2_4: exampleEvaluation?.toString(),
+          }
+        : null;
     dispatch &&
       launchTime &&
       dispatch({
         type: "submit_slide",
-        payload: { type: type, answer: { zeit: launchTime - Date.now() } },
+        payload: {
+          type: type,
+          answer: { zeit: launchTime - Date.now(), ...obj },
+        },
       });
     restart();
+    type.includes("2") && resetValues();
   };
   return (
     <div className="Slide">
       <div className="Slide-container">
-        <div className="Slide-header">
+        <div className="Slide-idea-units-header">
           <p>{header}</p>
         </div>
         <div className="Slide-idea-units-main">
           <div className="Slide-text-m">{slideText}</div>
+          {expertExamples && expertExamples[0] && expertExamples[1] && (
+            <div className="Slide-idea-units-text-container">
+              <div className="Slide-text-m">Expertenbeispiel 1:</div>
+              <textarea
+                className="Slide-idea-units-text-container-text"
+                disabled={true}
+              >
+                {expertExamples[0]}
+              </textarea>
+              <div className="Slide-text-m">Expertenbeispiel 2:</div>
+              <textarea
+                className="Slide-idea-units-text-container-text"
+                disabled={true}
+              >
+                {expertExamples[1]}
+              </textarea>
+            </div>
+          )}
           <div className="Slide-idea-units-row">
             <div className="Slide-idea-unit-box">
               <div className="Slide-idea-units-box-column">
@@ -161,9 +306,12 @@ function SlideIdeaUnitsTypeOne({
           </div>
           <div className="Slide-idea-units-text-container">
             <div className="Slide-text-m">Dein Beispiel:</div>
-            <div className="Slide-idea-units-text-container-text">
+            <textarea
+              className="Slide-idea-units-text-container-text"
+              disabled={true}
+            >
               {yourExample}
-            </div>
+            </textarea>
           </div>
           <div className="Slide-idea-units-text-container">
             <div className="Slide-text-m">
@@ -173,42 +321,42 @@ function SlideIdeaUnitsTypeOne({
             <div className="Slide-idea-units-row">
               <button
                 className={
-                  exampleEvaluation === "one"
+                  exampleEvaluation === 1
                     ? "Slide-button-active"
                     : "Slide-button"
                 }
                 onClick={() =>
-                  exampleEvaluation === "one"
+                  exampleEvaluation === 1
                     ? setExampleEvaluation(undefined)
-                    : setExampleEvaluation("one")
+                    : setExampleEvaluation(1)
                 }
               >
                 einen ganzen Punkt
               </button>
               <button
                 className={
-                  exampleEvaluation === "half"
+                  exampleEvaluation === 0.5
                     ? "Slide-button-active"
                     : "Slide-button"
                 }
                 onClick={() =>
-                  exampleEvaluation === "half"
+                  exampleEvaluation === 0.5
                     ? setExampleEvaluation(undefined)
-                    : setExampleEvaluation("half")
+                    : setExampleEvaluation(0.5)
                 }
               >
                 einen halben Punkt
               </button>
               <button
                 className={
-                  exampleEvaluation === "none"
+                  exampleEvaluation === 0
                     ? "Slide-button-active"
                     : "Slide-button"
                 }
                 onClick={() =>
-                  exampleEvaluation === "none"
+                  exampleEvaluation === 0
                     ? setExampleEvaluation(undefined)
-                    : setExampleEvaluation("none")
+                    : setExampleEvaluation(0)
                 }
               >
                 keinen Punkt

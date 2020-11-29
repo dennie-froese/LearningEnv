@@ -421,7 +421,7 @@
   flex-direction: row;
   font-size: calc(12px + 2vmin);
   color: white;
-  padding-top: 2%;
+  padding-top: 1%;
 }
 
 .Slide-idea-unit-box {
@@ -455,25 +455,37 @@
 }
 
 .Slide-idea-units-text-container {
-  margin-top: 5%;
+  margin-top: 3%;
   width: 100%;
+  height: auto;
+  overflow: auto;
 }
 
 .Slide-idea-units-text-container-text {
   margin-top: 1%;
-  width: 100%;
-  font-size: calc(8px + 2vmin);
+  width: 95%;
+  height: 15vh;
+  font-size: calc(8px + 1vmin);
+  resize: none;
   text-align: left;
   padding-left: 1%;
   border-radius: 4px;
   border-width: 2px;
   border-style: solid;
   border-color: ivory;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
 }
 
-.Slide-demographic-row-boxes-container {
-  padding-right: 2%;
-  padding-left: 2%;
+.Slide-idea-units-header {
+  height: 15vh;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
 }
 
 @keyframes App-logo-spin {

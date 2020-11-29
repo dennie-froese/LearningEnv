@@ -6,6 +6,7 @@ export type SlideInterface = {
   nachangaben?: Record<number, [string, string, string]>;
   header?: string;
   ideaUnitsTypeOne?: string[];
+  expertExamples?: string[];
 };
 
 const SlideIDs = [
@@ -443,8 +444,19 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   37: {
     id: 37,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ nun mit den hier dargestellten beiden Expertenbeispielen ab und passe deine Einschätzungen zu den enthaltenen Teilaspekten und der Gesamtbewertung Deines Beispiels gegebenenfalls an.",
     slideType: "Attribution_g1_2",
+    header: "Konzept „Attribution“",
+    ideaUnitsTypeOne: [
+      "Subjektiver Prozess/ Mechanismus",
+      "Suche nach Gründen",
+      "Gründe beziehen sich auf Verhalten anderer",
+    ],
+    expertExamples: [
+      "Als Maria am Nachmittag nach Hause kommt, die Türen hinter sich zuschlägt und sich in ihrem Zimmer verkriecht, wundert sich ihre Mutter über Marias Verhalten. Sie überlegt, ob dieses mit der Prüfung zusammenhängt, die Maria heute in der Schule abgelegt hat. Die Mutter zieht darüber hinaus als Grund für das Verhalten ihrer Tochter in Erwägung, dass diese einfach ein sehr negativer Mensch ist. Marias Mutter überlegt, am Abend nochmal das Gespräch mit ihrer Tochter zu suchen, um den wahren Grund für Marias Verhalten herauszufinden.",
+      "Tim und Jana sind seit zwei Jahren ein Paar und streiten sich mal wieder. Tim entgegnet Jana auf ihren Vorwurf, sich regelmäßig mit seiner besten Freundin zu treffen: „Du bist doch total eifersüchtig!“ Jana verlässt die Situation und fragt sich wenig später, warum Tim ihr dies an den Kopf geworfen hat. Sie wägt ab, ob sein Verhalten damit begründet werden kann, dass Tim in einem kulturellen Umfeld groß geworden ist, in dem Freundschaften zwischen Mann und Frau üblich und ganz normal sind, auch wenn eine der beiden Personen in einer festen Beziehung ist. Andererseits denkt Jana, sein Verhalten könnte auch damit begründet werden, dass Tim ein sehr impulsiver Mensch ist. Sie beschließt, sich keine weiteren Gedanken zu machen, da sie den Grund für Tims Verhalten vermutlich nie genau erfahren wird.",
+    ],
   },
   38: {
     id: 38,

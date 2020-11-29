@@ -51,7 +51,7 @@ const typeRange: number[] = [
   111,
   112,
 ];
-const ideaUnitsTypeOne: number[] = [36];
+const ideaUnitsTypeOne: number[] = [36, 37];
 
 function Slide(slide: SlideInterface) {
   useEffect(() => {
@@ -122,6 +122,7 @@ function Slide(slide: SlideInterface) {
           type={slide.slideType}
           header={slide.header}
           ideaUnitsTypeOne={slide.ideaUnitsTypeOne}
+          expertExamples={slide.expertExamples}
         />
       ) : (
         <Finish

@@ -43,7 +43,7 @@ const SlidesDispatchContext = React.createContext<Dispatch | undefined>(
   undefined
 );
 
-function slidesReducer(state: State, action: any) {
+function slidesReducer(state: State, action: Action) {
   switch (action.type) {
     case "set_user": {
       return {
