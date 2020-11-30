@@ -7,7 +7,7 @@ interface Props {
   slideNumber: number;
   type: string;
   header: string | undefined;
-  ideaUnitsTypeOne: string[] | undefined;
+  ideaUnits: string[] | undefined;
   expertExamples: string[] | undefined;
 }
 
@@ -16,12 +16,13 @@ function SlideIdeaUnitsTypeOne({
   slideNumber,
   type,
   header,
-  ideaUnitsTypeOne,
+  ideaUnits,
   expertExamples,
 }: Props) {
   const [valueOne, setValueOne] = useState<undefined | string>(undefined);
   const [valueTwo, setValueTwo] = useState<undefined | string>(undefined);
   const [valueThree, setValueThree] = useState<undefined | string>(undefined);
+  const [valueFour, setValueFour] = useState<undefined | string>(undefined);
   const [exampleEvaluation, setExampleEvaluation] = useState<
     undefined | number
   >(undefined);
@@ -51,6 +52,7 @@ function SlideIdeaUnitsTypeOne({
     setValueOne(undefined);
     setValueTwo(undefined);
     setValueThree(undefined);
+    setValueFour(undefined);
     setExampleEvaluation(undefined);
   };
 
@@ -88,29 +90,29 @@ function SlideIdeaUnitsTypeOne({
         ? {
             Konsens_g1_1_1: valueOne,
             Konsens_g1_1_2: valueTwo,
-            Konsens_g1_1_3: valueThree,
-            Konsens_g1_1_4: exampleEvaluation?.toString(),
+            Konsens_g1_1_3: exampleEvaluation?.toString(),
           }
         : type === "Konsens_g1_2"
         ? {
             Konsens_g1_2_1: valueOne,
             Konsens_g1_2_2: valueTwo,
-            Konsens_g1_2_3: valueThree,
-            Konsens_g1_2_4: exampleEvaluation?.toString(),
+            Konsens_g1_2_3: exampleEvaluation?.toString(),
           }
         : type === "Konsistenz_g1_1"
         ? {
             Konsistenz_g1_1_1: valueOne,
             Konsistenz_g1_1_2: valueTwo,
             Konsistenz_g1_1_3: valueThree,
-            Konsistenz_g1_1_4: exampleEvaluation?.toString(),
+            Konsistenz_g1_1_4: valueFour,
+            Konsistenz_g1_1_5: exampleEvaluation?.toString(),
           }
         : type === "Konsistenz_g1_2"
         ? {
             Konsistenz_g1_2_1: valueOne,
             Konsistenz_g1_2_2: valueTwo,
             Konsistenz_g1_2_3: valueThree,
-            Konsistenz_g1_2_4: exampleEvaluation?.toString(),
+            Konsistenz_g1_2_4: valueFour,
+            Konsistenz_g1_2_5: exampleEvaluation?.toString(),
           }
         : type === "Distinktheit_g1_1"
         ? {
@@ -131,28 +133,28 @@ function SlideIdeaUnitsTypeOne({
             FA_g1_1_1: valueOne,
             FA_g1_1_2: valueTwo,
             FA_g1_1_3: valueThree,
-            FA_g1_1_4: exampleEvaluation?.toString(),
+            FA_g1_1_4: valueFour,
+            FA_g1_1_5: exampleEvaluation?.toString(),
           }
         : type === "FA_g1_2"
         ? {
             FA_g1_2_1: valueOne,
             FA_g1_2_2: valueTwo,
             FA_g1_2_3: valueThree,
-            FA_g1_2_4: exampleEvaluation?.toString(),
+            FA_g1_2_4: valueFour,
+            FA_g1_2_5: exampleEvaluation?.toString(),
           }
         : type === "SV_g1_1"
         ? {
             SV_g1_1_1: valueOne,
             SV_g1_1_2: valueTwo,
-            SV_g1_1_3: valueThree,
-            SV_g1_1_4: exampleEvaluation?.toString(),
+            SV_g1_1_3: exampleEvaluation?.toString(),
           }
         : type === "SV_g1_2"
         ? {
             SV_g1_2_1: valueOne,
             SV_g1_2_2: valueTwo,
-            SV_g1_2_3: valueThree,
-            SV_g1_2_4: exampleEvaluation?.toString(),
+            SV_g1_2_3: exampleEvaluation?.toString(),
           }
         : type === "GWG_g1_1"
         ? {
@@ -207,80 +209,18 @@ function SlideIdeaUnitsTypeOne({
               </textarea>
             </div>
           )}
-          <div className="Slide-idea-units-row">
-            <div className="Slide-idea-unit-box">
-              <div className="Slide-idea-units-box-column">
-                <div className="Slide-idea-units-checkbox-row">
-                  <input
-                    type="checkbox"
-                    checked={valueOne === "yes" ? true : false}
-                    onClick={() =>
-                      valueOne === "yes"
-                        ? setValueOne(undefined)
-                        : setValueOne("yes")
-                    }
-                  />
-                  <div className="Slide-label">Ja</div>
-                </div>
-                <div className="Slide-idea-units-checkbox-row">
-                  <input
-                    type="checkbox"
-                    checked={valueOne === "no" ? true : false}
-                    onClick={() =>
-                      valueOne === "no"
-                        ? setValueOne(undefined)
-                        : setValueOne("no")
-                    }
-                  />
-                  <div className="Slide-label">Nein</div>
-                </div>
-              </div>
-              <div className="Slide-label">
-                {ideaUnitsTypeOne && ideaUnitsTypeOne[0]}
-              </div>
-            </div>
-            <div className="Slide-idea-unit-box">
-              <div className="Slide-idea-units-box-column">
-                <div className="Slide-idea-units-checkbox-row">
-                  <input
-                    type="checkbox"
-                    checked={valueTwo === "yes" ? true : false}
-                    onClick={() =>
-                      valueTwo === "yes"
-                        ? setValueTwo(undefined)
-                        : setValueTwo("yes")
-                    }
-                  />
-                  <div className="Slide-label">Ja</div>
-                </div>
-                <div className="Slide-idea-units-checkbox-row">
-                  <input
-                    type="checkbox"
-                    checked={valueTwo === "no" ? true : false}
-                    onClick={() =>
-                      valueTwo === "no"
-                        ? setValueTwo(undefined)
-                        : setValueTwo("no")
-                    }
-                  />
-                  <div className="Slide-label">Nein</div>
-                </div>
-              </div>
-              <div className="Slide-label">
-                {ideaUnitsTypeOne && ideaUnitsTypeOne[1]}
-              </div>
-            </div>
-            {ideaUnitsTypeOne && ideaUnitsTypeOne[2] && (
+          {type.includes("1_1") && (
+            <div className="Slide-idea-units-row">
               <div className="Slide-idea-unit-box">
                 <div className="Slide-idea-units-box-column">
                   <div className="Slide-idea-units-checkbox-row">
                     <input
                       type="checkbox"
-                      checked={valueThree === "yes" ? true : false}
+                      checked={valueOne === "yes" ? true : false}
                       onClick={() =>
-                        valueThree === "yes"
-                          ? setValueThree(undefined)
-                          : setValueThree("yes")
+                        valueOne === "yes"
+                          ? setValueOne(undefined)
+                          : setValueOne("yes")
                       }
                     />
                     <div className="Slide-label">Ja</div>
@@ -288,22 +228,130 @@ function SlideIdeaUnitsTypeOne({
                   <div className="Slide-idea-units-checkbox-row">
                     <input
                       type="checkbox"
-                      checked={valueThree === "no" ? true : false}
+                      checked={valueOne === "no" ? true : false}
                       onClick={() =>
-                        valueThree === "no"
-                          ? setValueThree(undefined)
-                          : setValueThree("no")
+                        valueOne === "no"
+                          ? setValueOne(undefined)
+                          : setValueOne("no")
                       }
                     />
                     <div className="Slide-label">Nein</div>
                   </div>
                 </div>
-                <div className="Slide-label">
-                  {ideaUnitsTypeOne && ideaUnitsTypeOne[2]}
+                <div className="Slide-label">{ideaUnits && ideaUnits[0]}</div>
+              </div>
+              <div className="Slide-idea-unit-box">
+                <div className="Slide-idea-units-box-column">
+                  <div className="Slide-idea-units-checkbox-row">
+                    <input
+                      type="checkbox"
+                      checked={valueTwo === "yes" ? true : false}
+                      onClick={() =>
+                        valueTwo === "yes"
+                          ? setValueTwo(undefined)
+                          : setValueTwo("yes")
+                      }
+                    />
+                    <div className="Slide-label">Ja</div>
+                  </div>
+                  <div className="Slide-idea-units-checkbox-row">
+                    <input
+                      type="checkbox"
+                      checked={valueTwo === "no" ? true : false}
+                      onClick={() =>
+                        valueTwo === "no"
+                          ? setValueTwo(undefined)
+                          : setValueTwo("no")
+                      }
+                    />
+                    <div className="Slide-label">Nein</div>
+                  </div>
+                </div>
+                <div className="Slide-label">{ideaUnits && ideaUnits[1]}</div>
+              </div>
+              {ideaUnits && ideaUnits[2] && (
+                <div className="Slide-idea-unit-box">
+                  <div className="Slide-idea-units-box-column">
+                    <div className="Slide-idea-units-checkbox-row">
+                      <input
+                        type="checkbox"
+                        checked={valueThree === "yes" ? true : false}
+                        onClick={() =>
+                          valueThree === "yes"
+                            ? setValueThree(undefined)
+                            : setValueThree("yes")
+                        }
+                      />
+                      <div className="Slide-label">Ja</div>
+                    </div>
+                    <div className="Slide-idea-units-checkbox-row">
+                      <input
+                        type="checkbox"
+                        checked={valueThree === "no" ? true : false}
+                        onClick={() =>
+                          valueThree === "no"
+                            ? setValueThree(undefined)
+                            : setValueThree("no")
+                        }
+                      />
+                      <div className="Slide-label">Nein</div>
+                    </div>
+                  </div>
+                  <div className="Slide-label">{ideaUnits && ideaUnits[2]}</div>
+                </div>
+              )}
+              {ideaUnits && ideaUnits[3] && (
+                <div className="Slide-idea-unit-box">
+                  <div className="Slide-idea-units-box-column">
+                    <div className="Slide-idea-units-checkbox-row">
+                      <input
+                        type="checkbox"
+                        checked={valueFour === "yes" ? true : false}
+                        onClick={() =>
+                          valueFour === "yes"
+                            ? setValueFour(undefined)
+                            : setValueFour("yes")
+                        }
+                      />
+                      <div className="Slide-label">Ja</div>
+                    </div>
+                    <div className="Slide-idea-units-checkbox-row">
+                      <input
+                        type="checkbox"
+                        checked={valueFour === "no" ? true : false}
+                        onClick={() =>
+                          valueFour === "no"
+                            ? setValueFour(undefined)
+                            : setValueFour("no")
+                        }
+                      />
+                      <div className="Slide-label">Nein</div>
+                    </div>
+                  </div>
+                  <div className="Slide-label">{ideaUnits && ideaUnits[3]}</div>
+                </div>
+              )}
+            </div>
+          )}
+          {type.includes("1_2") && (
+            <div className="Slide-idea-units-text-container">
+              <div className="Slide-text-m">
+                In beiden Expertenbeispielen wurden alle Teilaspekte der
+                Definition veranschaulicht:
+              </div>
+              <div className="Slide-idea-units-row">
+                <div className="Slide-idea-unit-box-l">
+                  <div className="Slide-label">{ideaUnits && ideaUnits[0]}</div>
+                </div>
+                <div className="Slide-idea-unit-box-l">
+                  <div className="Slide-label">{ideaUnits && ideaUnits[1]}</div>
+                </div>
+                <div className="Slide-idea-unit-box-l">
+                  <div className="Slide-label">{ideaUnits && ideaUnits[2]}</div>
                 </div>
               </div>
-            )}
-          </div>
+            </div>
+          )}
           <div className="Slide-idea-units-text-container">
             <div className="Slide-text-m">Dein Beispiel:</div>
             <textarea
@@ -313,10 +361,146 @@ function SlideIdeaUnitsTypeOne({
               {yourExample}
             </textarea>
           </div>
+          {type.includes("1_2") && (
+            <div>
+              <div className="Slide-text-m">
+                Dies ist Deine Einschätzung zur Veranschaulichung der in Deinem
+                Beispiel enthaltenen Teilaspekte. Du hast nun die Möglichkeit,
+                dies nochmal zu ändern.
+              </div>
+              <div className="Slide-idea-units-row">
+                <div className="Slide-idea-unit-box">
+                  <div className="Slide-idea-units-box-column">
+                    <div className="Slide-idea-units-checkbox-row">
+                      <input
+                        type="checkbox"
+                        checked={valueOne === "yes" ? true : false}
+                        onClick={() =>
+                          valueOne === "yes"
+                            ? setValueOne(undefined)
+                            : setValueOne("yes")
+                        }
+                      />
+                      <div className="Slide-label">Ja</div>
+                    </div>
+                    <div className="Slide-idea-units-checkbox-row">
+                      <input
+                        type="checkbox"
+                        checked={valueOne === "no" ? true : false}
+                        onClick={() =>
+                          valueOne === "no"
+                            ? setValueOne(undefined)
+                            : setValueOne("no")
+                        }
+                      />
+                      <div className="Slide-label">Nein</div>
+                    </div>
+                  </div>
+                  <div className="Slide-label">{ideaUnits && ideaUnits[0]}</div>
+                </div>
+                <div className="Slide-idea-unit-box">
+                  <div className="Slide-idea-units-box-column">
+                    <div className="Slide-idea-units-checkbox-row">
+                      <input
+                        type="checkbox"
+                        checked={valueTwo === "yes" ? true : false}
+                        onClick={() =>
+                          valueTwo === "yes"
+                            ? setValueTwo(undefined)
+                            : setValueTwo("yes")
+                        }
+                      />
+                      <div className="Slide-label">Ja</div>
+                    </div>
+                    <div className="Slide-idea-units-checkbox-row">
+                      <input
+                        type="checkbox"
+                        checked={valueTwo === "no" ? true : false}
+                        onClick={() =>
+                          valueTwo === "no"
+                            ? setValueTwo(undefined)
+                            : setValueTwo("no")
+                        }
+                      />
+                      <div className="Slide-label">Nein</div>
+                    </div>
+                  </div>
+                  <div className="Slide-label">{ideaUnits && ideaUnits[1]}</div>
+                </div>
+                {ideaUnits && ideaUnits[2] && (
+                  <div className="Slide-idea-unit-box">
+                    <div className="Slide-idea-units-box-column">
+                      <div className="Slide-idea-units-checkbox-row">
+                        <input
+                          type="checkbox"
+                          checked={valueThree === "yes" ? true : false}
+                          onClick={() =>
+                            valueThree === "yes"
+                              ? setValueThree(undefined)
+                              : setValueThree("yes")
+                          }
+                        />
+                        <div className="Slide-label">Ja</div>
+                      </div>
+                      <div className="Slide-idea-units-checkbox-row">
+                        <input
+                          type="checkbox"
+                          checked={valueThree === "no" ? true : false}
+                          onClick={() =>
+                            valueThree === "no"
+                              ? setValueThree(undefined)
+                              : setValueThree("no")
+                          }
+                        />
+                        <div className="Slide-label">Nein</div>
+                      </div>
+                    </div>
+                    <div className="Slide-label">
+                      {ideaUnits && ideaUnits[2]}
+                    </div>
+                  </div>
+                )}
+                {ideaUnits && ideaUnits[3] && (
+                  <div className="Slide-idea-unit-box">
+                    <div className="Slide-idea-units-box-column">
+                      <div className="Slide-idea-units-checkbox-row">
+                        <input
+                          type="checkbox"
+                          checked={valueFour === "yes" ? true : false}
+                          onClick={() =>
+                            valueFour === "yes"
+                              ? setValueFour(undefined)
+                              : setValueFour("yes")
+                          }
+                        />
+                        <div className="Slide-label">Ja</div>
+                      </div>
+                      <div className="Slide-idea-units-checkbox-row">
+                        <input
+                          type="checkbox"
+                          checked={valueFour === "no" ? true : false}
+                          onClick={() =>
+                            valueFour === "no"
+                              ? setValueFour(undefined)
+                              : setValueFour("no")
+                          }
+                        />
+                        <div className="Slide-label">Nein</div>
+                      </div>
+                    </div>
+                    <div className="Slide-label">
+                      {ideaUnits && ideaUnits[3]}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
           <div className="Slide-idea-units-text-container">
             <div className="Slide-text-m">
-              Wenn die Qualität Deines Beispiels bewertet werden müsste, was
-              denkst Du, würde es erhalten:
+              {type.includes("1_1")
+                ? "Wenn die Qualität Deines Beispiels bewertet werden müsste, was denkst Du, würde es erhalten:"
+                : "Dies ist Deine Einschätzung zur Gesamtbewertung der Qualität Deines Beispiels. Auch hier hast Du die Möglichkeit, die Bewertung nochmal zu ändern. Wenn die Qualität Deines Beispiels bewertet werden müsste, was denkst Du, würde es erhalten:"}
             </div>
             <div className="Slide-idea-units-row">
               <button
