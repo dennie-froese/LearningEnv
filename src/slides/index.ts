@@ -5,7 +5,7 @@ export type SlideInterface = {
   demographic?: Record<string, string>;
   nachangaben?: Record<number, [string, string, string]>;
   header?: string;
-  ideaUnitsTypeOne?: string[];
+  ideaUnits?: string[];
   expertExamples?: string[];
 };
 
@@ -436,7 +436,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "Attribution_g1_1",
     header: "Konzept „Attribution“",
-    ideaUnitsTypeOne: [
+    ideaUnits: [
       "Subjektiver Prozess/ Mechanismus",
       "Suche nach Gründen",
       "Gründe beziehen sich auf Verhalten anderer",
@@ -448,7 +448,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ nun mit den hier dargestellten beiden Expertenbeispielen ab und passe deine Einschätzungen zu den enthaltenen Teilaspekten und der Gesamtbewertung Deines Beispiels gegebenenfalls an.",
     slideType: "Attribution_g1_2",
     header: "Konzept „Attribution“",
-    ideaUnitsTypeOne: [
+    ideaUnits: [
       "Subjektiver Prozess/ Mechanismus",
       "Suche nach Gründen",
       "Gründe beziehen sich auf Verhalten anderer",
@@ -460,121 +460,310 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   38: {
     id: 38,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "Attribution_g2",
+    header: "Konzept „Attribution“",
+    ideaUnits: [
+      "Subjektiver Prozess/ Mechanismus",
+      "Suche nach Gründen",
+      "Gründe beziehen sich auf Verhalten anderer",
+    ],
   },
   39: {
     id: 39,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ mit den beiden hier dargestellten Expertenbeispielen ab.",
     slideType: "Attribution_g3",
+    header: "Konzept „Attribution“",
+    expertExamples: [
+      "Als Maria am Nachmittag nach Hause kommt, die Türen hinter sich zuschlägt und sich in ihrem Zimmer verkriecht, wundert sich ihre Mutter über Marias Verhalten. Sie überlegt, ob dieses mit der Prüfung zusammenhängt, die Maria heute in der Schule abgelegt hat. Die Mutter zieht darüber hinaus als Grund für das Verhalten ihrer Tochter in Erwägung, dass diese einfach ein sehr negativer Mensch ist. Marias Mutter überlegt, am Abend nochmal das Gespräch mit ihrer Tochter zu suchen, um den wahren Grund für Marias Verhalten herauszufinden.",
+      "Tim und Jana sind seit zwei Jahren ein Paar und streiten sich mal wieder. Tim entgegnet Jana auf ihren Vorwurf, sich regelmäßig mit seiner besten Freundin zu treffen: „Du bist doch total eifersüchtig!“ Jana verlässt die Situation und fragt sich wenig später, warum Tim ihr dies an den Kopf geworfen hat. Sie wägt ab, ob sein Verhalten damit begründet werden kann, dass Tim in einem kulturellen Umfeld groß geworden ist, in dem Freundschaften zwischen Mann und Frau üblich und ganz normal sind, auch wenn eine der beiden Personen in einer festen Beziehung ist. Andererseits denkt Jana, sein Verhalten könnte auch damit begründet werden, dass Tim ein sehr impulsiver Mensch ist. Sie beschließt, sich keine weiteren Gedanken zu machen, da sie den Grund für Tims Verhalten vermutlich nie genau erfahren wird.",
+    ],
   },
-  40: { id: 40, slideText: "", slideType: "Attribution_g4" },
+  40: {
+    id: 40,
+    slideText: "Bitte bewerte nun Dein Beispiel.",
+    slideType: "Attribution_g4",
+    header: "Konzept „Attribution“",
+  },
   41: {
     id: 41,
-    slideText: "",
+    slideText:
+      "Das Einschätzen der Qualität meines Beispiels zum Konzept „Attribution“ fiel mir…",
     slideType: "Beispiel_Attribution3",
   },
   42: {
     id: 42,
-    slideText: "",
+    slideText:
+      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „Attribution“ war meine geistige Denkanstrengung…",
     slideType: "Beispiel_Attribution4",
   },
-  43: { id: 43, slideText: "", slideType: "Beispiel_SN0" },
-  44: { id: 44, slideText: "", slideType: "Beispiel_SN1" },
-  45: { id: 45, slideText: "", slideType: "Beispiel_SN2" },
-  46: { id: 46, slideText: "", slideType: "SN_g1_1" },
-  47: { id: 47, slideText: "", slideType: "SN_g1_2" },
+  43: {
+    id: 43,
+    slideText:
+      "Soziale Normen: Explizite oder implizite Konventionen, die korrektes Verhalten in sozialen Situationen vorgeben.",
+    slideType: "Beispiel_SN0",
+    header:
+      "Denke Dir bitte ein Beispiel aus, das das Konzept „Soziale Normen” veranschaulicht.",
+  },
+  44: {
+    id: 44,
+    slideText:
+      "Das Ausdenken eines Beispiels zum Konzept „Soziale Normen“ fiel mir…",
+    slideType: "Beispiel_SN1",
+  },
+  45: {
+    id: 45,
+    slideText:
+      "Beim Ausdenken eines Beispiels zum Konzept „Soziale Normen“ war meine geistige Denkanstrengung…",
+    slideType: "Beispiel_SN2",
+  },
+  46: {
+    id: 46,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
+    slideType: "SN_g1_1",
+    header: "Konzept „Soziale Normen“",
+    ideaUnits: [
+      "Explizite oder implizite Konventionen",
+      "Vorgabe von korrektem Verhalten",
+      "Beziehen sich auf soziale Situationen",
+    ],
+  },
+  47: {
+    id: 47,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ nun mit den hier dargestellten beiden Expertenbeispielen ab und passe deine Einschätzungen zu den enthaltenen Teilaspekten und der Gesamtbewertung Deines Beispiels gegebenenfalls an. ",
+    slideType: "SN_g1_2",
+    header: "Konzept „Soziale Normen“",
+    ideaUnits: [
+      "Explizite oder implizite Konventionen",
+      "Vorgabe von korrektem Verhalten",
+      "Beziehen sich auf soziale Situationen",
+    ],
+    expertExamples: [
+      "Im Bus fällt Marian eine ältere Dame auf, die erst später zugestiegen ist und daher im Gang stehen muss. Entgegen der anderen Fahrgäste steht Marian sofort auf und bietet der älteren Dame seinen Sitzplan an. Dieses Verhalten sieht er als korrekt an, weil es ihm in seiner Erziehung so vermittelt wurde.",
+      "Michael macht sich nach Feierabend auf den Weg nach Hause. Er fährt in seinem Kleinwagen die übliche Strecke und sieht in weiter Ferne einen Zebrastreifen. Dort wartet eine Familie mit zwei kleinen Kindern, um die Straße zu überqueren. Das Auto vor Michael rast die Straße entlang und beachtet den Zebrastreifen nicht. Michael dagegen bremst bereits einige Meter vor dem Zebrastreifen auf wenige km/h herunter, hält an und winkt die Familie über die Straße. Er ärgert sich darüber, dass der Raser vor ihm sich nicht an die Vorgabe hält, vor dem Zebrastreifen zu warten und die Leute die Straße passieren zu lassen. Michael ordnet sein eigenes Verhalten dagegen als vorbildlich und korrekt ein.",
+    ],
+  },
   48: {
     id: 48,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "SN_g2",
+    header: "Konzept „Soziale Normen“",
+    ideaUnits: [
+      "Explizite oder implizite Konventionen",
+      "Vorgabe von korrektem Verhalten",
+      "Beziehen sich auf soziale Situationen",
+    ],
   },
   49: {
     id: 49,
-    slideText: "",
+    slideText:
+      " Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ mit den beiden hier dargestellten Expertenbeispielen ab. ",
     slideType: "SN_g3",
+    header: "Konzept „Soziale Normen“",
+    expertExamples: [
+      "Im Bus fällt Marian eine ältere Dame auf, die erst später zugestiegen ist und daher im Gang stehen muss. Entgegen der anderen Fahrgäste steht Marian sofort auf und bietet der älteren Dame seinen Sitzplan an. Dieses Verhalten sieht er als korrekt an, weil es ihm in seiner Erziehung so vermittelt wurde.",
+      "Michael macht sich nach Feierabend auf den Weg nach Hause. Er fährt in seinem Kleinwagen die übliche Strecke und sieht in weiter Ferne einen Zebrastreifen. Dort wartet eine Familie mit zwei kleinen Kindern, um die Straße zu überqueren. Das Auto vor Michael rast die Straße entlang und beachtet den Zebrastreifen nicht. Michael dagegen bremst bereits einige Meter vor dem Zebrastreifen auf wenige km/h herunter, hält an und winkt die Familie über die Straße. Er ärgert sich darüber, dass der Raser vor ihm sich nicht an die Vorgabe hält, vor dem Zebrastreifen zu warten und die Leute die Straße passieren zu lassen. Michael ordnet sein eigenes Verhalten dagegen als vorbildlich und korrekt ein.",
+    ],
   },
-  50: { id: 50, slideText: "", slideType: "SN_g4" },
-  51: { id: 51, slideText: "", slideType: "Beispiel_SN3" },
-  52: { id: 52, slideText: "", slideType: "Beispiel_SN4" },
+  50: {
+    id: 50,
+    slideText: "Bitte bewerte nun Dein Beispiel.",
+    slideType: "SN_g4",
+    header: "Konzept „Soziale Normen“",
+  },
+  51: {
+    id: 51,
+    slideText:
+      "Das Einschätzen der Qualität meines Beispiels zum Konzept „Soziale Normen“ fiel mir…",
+    slideType: "Beispiel_SN3",
+  },
+  52: {
+    id: 52,
+    slideText:
+      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „Soziale Normen“ war meine geistige Denkanstrengung…",
+    slideType: "Beispiel_SN4",
+  },
   53: {
     id: 53,
-    slideText: "",
+    slideText:
+      "Konsens: Das Ausmaß, in dem ein Verhalten einer Person auch von anderen Personen gezeigt wird. Der Konsens ist hoch, wenn viele andere Personen ähnlich reagieren, und niedrig, wenn nur wenige andere Personen ähnlich reagieren.",
     slideType: "Beispiel_Konsens0",
+    header:
+      "Denke Dir bitte ein Beispiel aus, das das Konzept von hohem Konsens veranschaulicht.",
   },
   54: {
     id: 54,
-    slideText: "",
+    slideText:
+      " Das Ausdenken eines Beispiels zum Konzept „hoher Konsens“ fiel mir…",
     slideType: "Beispiel_Konsens1",
   },
   55: {
     id: 55,
-    slideText: "",
+    slideText:
+      " Beim Ausdenken eines Beispiels zum Konzept „hoher Konsens“ war meine geistige Denkanstrengung…",
     slideType: "Beispiel_Konsens2",
   },
-  56: { id: 56, slideText: "", slideType: "Konsens_g1_1" },
-  57: { id: 57, slideText: "", slideType: "Konsens_g1_2" },
-  58: { id: 58, slideText: "", slideType: "Konsens_g2" },
-  59: { id: 59, slideText: "", slideType: "Konsens_g3" },
-  60: { id: 60, slideText: "", slideType: "Konsens_g4" },
+  56: {
+    id: 56,
+    slideText:
+      " Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
+    slideType: "Konsens_g1_1",
+    header: "Konzept „hoher Konsens“",
+    ideaUnits: [
+      "Hohes Ausmaß an Übereinstimmung",
+      "Abgleich von eigenem Verhalten mit Verhalten anderer",
+    ],
+  },
+  57: {
+    id: 57,
+    slideText:
+      " Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ nun mit den hier dargestellten beiden Expertenbeispielen ab und passe deine Einschätzungen zu den enthaltenen Teilaspekten und der Gesamtbewertung Deines Beispiels gegebenenfalls an.",
+    slideType: "Konsens_g1_2",
+    header: "Konzept „hoher Konsens“",
+    ideaUnits: [
+      "Hohes Ausmaß an Übereinstimmung",
+      "Abgleich von eigenem Verhalten mit Verhalten anderer ",
+    ],
+    expertExamples: [
+      "Julia kann ihre alten Converse-Sneakers nicht mehr sehen und beschließt, am Montag nach der Schule gemeinsam mit ihren beiden Freundinnen shoppen zu gehen, um sich die neuen, angesagten Nike-Sneakers zu kaufen. Als die drei im Schuhgeschäft angekommen sind, betrachten die beiden Freundinnen von Julia ihre eigenen Schuhe und bemerken, dass ihre alten Sneakers im Vergleich mit den neuen Nike-Schuhen von Julia ebenfalls längst aus der Mode gekommen sind. Daraufhin beschließen die beiden, sich genauso wie ihre Freundin Julia die neuen Nike-Sneakers zu kaufen.",
+      "Aufgrund der Corona-Pandemie müssen sich nun alle Mitarbeiter nacheinander ihr Essen in der Mensa holen. Draußen am Essenstisch angekommen, fällt der Arbeitsgruppe auf, dass sich alle für einen Salat mit Falafel entschieden haben. Sie vermuten, dass ihre gleiche Entscheidung sowohl am heißen Wetter als auch an dem aktuellen Ernährungstrend liegt.",
+    ],
+  },
+  58: {
+    id: 58,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+    slideType: "Konsens_g2",
+    header: "Konzept „hoher Konsens“",
+    ideaUnits: [
+      "Hohes Ausmaß an Übereinstimmung",
+      "Abgleich von eigenem Verhalten mit Verhalten anderer ",
+    ],
+  },
+  59: {
+    id: 59,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ mit den beiden hier dargestellten Expertenbeispielen ab.",
+    slideType: "Konsens_g3",
+    header: "Konzept „hoher Konsens“",
+    expertExamples: [
+      "Julia kann ihre alten Converse-Sneakers nicht mehr sehen und beschließt, am Montag nach der Schule gemeinsam mit ihren beiden Freundinnen shoppen zu gehen, um sich die neuen, angesagten Nike-Sneakers zu kaufen. Als die drei im Schuhgeschäft angekommen sind, betrachten die beiden Freundinnen von Julia ihre eigenen Schuhe und bemerken, dass ihre alten Sneakers im Vergleich mit den neuen Nike-Schuhen von Julia ebenfalls längst aus der Mode gekommen sind. Daraufhin beschließen die beiden, sich genauso wie ihre Freundin Julia die neuen Nike-Sneakers zu kaufen.",
+      "Aufgrund der Corona-Pandemie müssen sich nun alle Mitarbeiter nacheinander ihr Essen in der Mensa holen. Draußen am Essenstisch angekommen, fällt der Arbeitsgruppe auf, dass sich alle für einen Salat mit Falafel entschieden haben. Sie vermuten, dass ihre gleiche Entscheidung sowohl am heißen Wetter als auch an dem aktuellen Ernährungstrend liegt.",
+    ],
+  },
+  60: {
+    id: 60,
+    slideText: "Bitte bewerte nun Dein Beispiel.",
+    slideType: "Konsens_g4",
+    header: "Konzept „hoher Konsens“",
+  },
   61: {
     id: 61,
-    slideText: "",
+    slideText:
+      "Das Einschätzen der Qualität meines Beispiels zum Konzept „hoher Konsens“ fiel mir…",
     slideType: "Beispiel_Konsens3",
   },
   62: {
     id: 62,
-    slideText: "",
+    slideText:
+      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „hoher Konsens“ war meine geistige Denkanstrengung…",
     slideType: "Beispiel_Konsens4",
   },
   63: {
     id: 63,
-    slideText: "",
+    slideText:
+      "Konsistenz: Das Ausmaß, in dem eine Person über die Zeit hinweg ähnliche Verhaltensweisen als Reaktion auf die gleiche Situation oder den gleichen Stimulus zeigt. Die Konsistenz ist hoch, wenn das Verhalten sich über die Zeit hinweg ähnelt und niedrig, wenn das Verhalten nur zu wenigen Zeitpunkten gleichbleibt.",
     slideType: "Beispiel_Konsistenz0",
+    header:
+      "Denke Dir bitte ein Beispiel aus, das das Konzept hoher Konsistenz veranschaulicht.“",
   },
   64: {
     id: 64,
-    slideText: "",
+    slideText:
+      "Das Ausdenken eines Beispiels zum Konzept „hohe Konsistenz“ fiel mir…",
     slideType: "Beispiel_Konsistenz1",
   },
   65: {
     id: 65,
-    slideText: "",
+    slideText:
+      "Beim Ausdenken eines Beispiels zum Konzept „hohe Konsistenz“ war meine geistige Denkanstrengung…",
     slideType: "Beispiel_Konsistenz2",
   },
   66: {
     id: 66,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "Konsistenz_g1_1",
+    header: "Konzept „hohe Konsistenz“",
+    ideaUnits: [
+      "Hohes Ausmaß der Ähnlichkeit des Verhaltens",
+      "Ähnlichkeit über die Zeit hinweg",
+      "Ähnlichkeit über die gleiche Situation hinweg",
+      "Bezug auf Verhalten oder Reaktion einer Person",
+    ],
   },
   67: {
     id: 67,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ nun mit den hier dargestellten beiden Expertenbeispielen ab und passe deine Einschätzungen zu den enthaltenen Teilaspekten und der Gesamtbewertung Deines Beispiels gegebenenfalls an. ",
     slideType: "Konsistenz_g1_2",
+    header: "Konzept „hohe Konsistenz“",
+    ideaUnits: [
+      "Hohes Ausmaß der Ähnlichkeit des Verhaltens",
+      "Ähnlichkeit über die Zeit hinweg",
+      "Ähnlichkeit über die gleiche Situation hinweg",
+      "Bezug auf Verhalten oder Reaktion einer Person",
+    ],
+    expertExamples: [
+      "Als Silvia in der Schule war, hat sie vor Schularbeiten ihren Glücksstein immer drei Mal gerieben, weil sie dachte, dass ihr dies Glück bringt. Mittlerweile ist sie älter, nutzt ihren Glücksstein aber immer noch, beispielsweise am Tag ihrer Führerscheinprüfung. Sie reibt ihn vorher drei Mal, da sie immer noch an die Glückswirkung des Steines glaubt.",
+      "Frau Albers gibt jedes Mal im Restaurant hohes Trinkgeld. Früher hat sie dem Kellner im kleinen Dorfrestaurant bereits 30 Euro gegeben, obwohl sie damals noch nicht viel Geld hatte. Heute, wo sie ihren 50. Geburtstag beim schicken Italiener feiert, gibt sie dem Kellner ebenfalls 30 Euro Trinkgeld.",
+    ],
   },
   68: {
     id: 68,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "Konsistenz_g2",
+    header: "Konzept „hohe Konsistenz“",
+    ideaUnits: [
+      "Hohes Ausmaß der Ähnlichkeit des Verhaltens",
+      "Ähnlichkeit über die Zeit hinweg",
+      "Ähnlichkeit über die gleiche Situation hinweg",
+      "Bezug auf Verhalten oder Reaktion einer Person",
+    ],
   },
   69: {
     id: 69,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ mit den beiden hier dargestellten Expertenbeispielen ab.",
     slideType: "Konsistenz_g3",
+    header: "Konzept „hohe Konsistenz“",
+    expertExamples: [
+      "Als Silvia in der Schule war, hat sie vor Schularbeiten ihren Glücksstein immer drei Mal gerieben, weil sie dachte, dass ihr dies Glück bringt. Mittlerweile ist sie älter, nutzt ihren Glücksstein aber immer noch, beispielsweise am Tag ihrer Führerscheinprüfung. Sie reibt ihn vorher drei Mal, da sie immer noch an die Glückswirkung des Steines glaubt. ",
+      "Frau Albers gibt jedes Mal im Restaurant hohes Trinkgeld. Früher hat sie dem Kellner im kleinen Dorfrestaurant bereits 30 Euro gegeben, obwohl sie damals noch nicht viel Geld hatte. Heute, wo sie ihren 50. Geburtstag beim schicken Italiener feiert, gibt sie dem Kellner ebenfalls 30 Euro Trinkgeld.",
+    ],
   },
   70: {
     id: 70,
-    slideText: "",
+    slideText: "Bitte bewerte nun Dein Beispiel.",
     slideType: "Konsistenz_g4",
+    header: "Konzept „hohe Konsistenz“",
   },
   71: {
     id: 71,
-    slideText: "",
+    slideText:
+      "Das Einschätzen der Qualität meines Beispiels zum Konzept „hohe Konsistenz“ fiel mir…",
     slideType: "Beispiel_Konsistenz3",
   },
   72: {
     id: 72,
-    slideText: "",
+    slideText:
+      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „hohe Konsistenz“ war meine geistige Denkanstrengung…",
     slideType: "Beispiel_Konsistenz4",
   },
   73: {
