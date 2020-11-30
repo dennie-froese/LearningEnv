@@ -11,6 +11,9 @@ import SlideTimer from "../SlideTimer";
 import QuestionTextInputWithHeader from "../QuestionTextInputWithHeader";
 import QuestionRange from "../QuestionRange";
 import SlideIdeaUnitsTypeOne from "../SlideIdeaUnitsTypeOne";
+import SlideIdeaUnitsTypeTwo from "../SlideIdeaUnitsTypeTwo";
+import SlideIdeaUnitsTypeThree from "../SlideIdeaUnitsTypeThree";
+import SlideIdeaUnitsTypeFour from "../SlideIdeaUnitsTypeFour";
 
 const typeIntro: number[] = [1, 2, 3, 4, 5, 7, 12, 21, 23, 32];
 const typeIntroWithHeader: number[] = [24, 25, 26, 27, 28, 29, 30, 31];
@@ -51,7 +54,27 @@ const typeRange: number[] = [
   111,
   112,
 ];
-const ideaUnitsTypeOne: number[] = [36, 37];
+const ideaUnitsTypeOne: number[] = [
+  36,
+  37,
+  46,
+  47,
+  56,
+  57,
+  66,
+  67,
+  76,
+  77,
+  86,
+  87,
+  96,
+  97,
+  106,
+  107,
+];
+const ideaUnitsTypeTwo: number[] = [38, 48, 58, 68, 78, 88, 98, 108];
+const ideaUnitsTypeThree: number[] = [39, 49, 59, 69, 79, 9, 99, 109];
+const ideaUnitsTypeFour: number[] = [40, 50, 60, 70, 80, 90, 100];
 
 function Slide(slide: SlideInterface) {
   useEffect(() => {
@@ -121,8 +144,32 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
           header={slide.header}
-          ideaUnitsTypeOne={slide.ideaUnitsTypeOne}
+          ideaUnits={slide.ideaUnits}
           expertExamples={slide.expertExamples}
+        />
+      ) : ideaUnitsTypeTwo.includes(slide.id) ? (
+        <SlideIdeaUnitsTypeTwo
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          header={slide.header}
+          ideaUnits={slide.ideaUnits}
+          expertExamples={slide.expertExamples}
+        />
+      ) : ideaUnitsTypeThree.includes(slide.id) ? (
+        <SlideIdeaUnitsTypeThree
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          header={slide.header}
+          expertExamples={slide.expertExamples}
+        />
+      ) : ideaUnitsTypeFour.includes(slide.id) ? (
+        <SlideIdeaUnitsTypeFour
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          header={slide.header}
         />
       ) : (
         <Finish
