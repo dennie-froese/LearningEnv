@@ -53,6 +53,11 @@ export interface Answer {
   Attribution_g1_2_2?: string;
   Attribution_g1_2_3?: string;
   Attribution_g1_2_4?: string;
+  Attribution_g2_1?: string;
+  Attribution_g2_2?: string;
+  Attribution_g2_3?: string;
+  Attribution_g2_4?: string;
+  Attribution_g3_1?: string;
   Ausdenken_Attribution3?: string;
   Ausdenken_Attribution4?: string;
   example_SN?: string;
@@ -66,6 +71,11 @@ export interface Answer {
   SN_g1_2_2?: string;
   SN_g1_2_3?: string;
   SN_g1_2_4?: string;
+  SN_g2_1?: string;
+  SN_g2_2?: string;
+  SN_g2_3?: string;
+  SN_g2_4?: string;
+  SN_g3_1?: string;
   Ausdenken_SN3?: string;
   Ausdenken_SN4?: string;
   example_Konsens?: string;
@@ -76,6 +86,10 @@ export interface Answer {
   Konsens_g1_2_1?: string;
   Konsens_g1_2_2?: string;
   Konsens_g1_2_3?: string;
+  Konsens_g2_1?: string;
+  Konsens_g2_2?: string;
+  Konsens_g2_3?: string;
+  Konsens_g3_1?: string;
   Ausdenken_Konsens3?: string;
   Ausdenken_Konsens4?: string;
   example_Konsistenz?: string;
@@ -91,6 +105,12 @@ export interface Answer {
   Konsistenz_g1_2_3?: string;
   Konsistenz_g1_2_4?: string;
   Konsistenz_g1_2_5?: string;
+  Konsistenz_g2_1?: string;
+  Konsistenz_g2_2?: string;
+  Konsistenz_g2_3?: string;
+  Konsistenz_g2_4?: string;
+  Konsistenz_g2_5?: string;
+  Konsistenz_g3_1?: string;
   Ausdenken_Konsistenz3?: string;
   Ausdenken_Konsistenz4?: string;
   example_Distinktheit?: string;
@@ -104,6 +124,11 @@ export interface Answer {
   Distinktheit_g1_2_2?: string;
   Distinktheit_g1_2_3?: string;
   Distinktheit_g1_2_4?: string;
+  Distinktheit_g2_1?: string;
+  Distinktheit_g2_2?: string;
+  Distinktheit_g2_3?: string;
+  Distinktheit_g2_4?: string;
+  Distinktheit_g3_1?: string;
   Ausdenken_Distinktheit3?: string;
   Ausdenken_Distinktheit4?: string;
   example_FA?: string;
@@ -119,6 +144,12 @@ export interface Answer {
   FA_g1_2_3?: string;
   FA_g1_2_4?: string;
   FA_g1_2_5?: string;
+  FA_g2_1?: string;
+  FA_g2_2?: string;
+  FA_g2_3?: string;
+  FA_g2_4?: string;
+  FA_g2_5?: string;
+  FA_g3_1?: string;
   Ausdenken_FA3?: string;
   Ausdenken_FA4?: string;
   example_SV?: string;
@@ -130,6 +161,10 @@ export interface Answer {
   SV_g1_2_1?: string;
   SV_g1_2_2?: string;
   SV_g1_2_3?: string;
+  SV_g2_1?: string;
+  SV_g2_2?: string;
+  SV_g2_3?: string;
+  SV_g3_1?: string;
   Ausdenken_SV3?: string;
   Ausdenken_SV4?: string;
   example_GWG?: string;
@@ -143,6 +178,11 @@ export interface Answer {
   GWG_g1_2_2?: string;
   GWG_g1_2_3?: string;
   GWG_g1_2_4?: string;
+  GWG_g2_1?: string;
+  GWG_g2_2?: string;
+  GWG_g2_3?: string;
+  GWG_g2_4?: string;
+  GWG_g3_1?: string;
   Ausdenken_GWG3?: string;
   Ausdenken_GWG4?: string;
 }
