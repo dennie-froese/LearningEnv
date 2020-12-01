@@ -200,7 +200,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                 className="Dropdown-button"
                 onClick={() => setDropDownGrade(!dropDownGrade)}
               >
-                {grade ? grade : "- Auswahl -"}
+                {grade ? grade : "Auswahl"}
               </button>
               <div>
                 {dropDownGrade && (
@@ -227,7 +227,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                 className="Dropdown-button"
                 onClick={() => setDropDownTerm(!dropDownTerm)}
               >
-                {term ? term : "- Auswahl -"}
+                {term ? term : "Auswahl"}
               </button>
               <div>
                 {dropDownTerm && (

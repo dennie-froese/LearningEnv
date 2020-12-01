@@ -53,11 +53,6 @@ function SlideTimer({ slideText, slideNumber, type }: Props) {
         <div className="Slide-timer-main">
           <div className="Slide-text-m">{slideText}</div>
         </div>
-        <div className="Slide-nav">
-          <button className="Slide-button" onClick={finish}>
-            Weiter
-          </button>
-        </div>
       </div>
     </div>
   );
