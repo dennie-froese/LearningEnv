@@ -346,9 +346,20 @@ function SlideIdeaUnitsTypeOne({
                 <div className="Slide-idea-unit-box-l">
                   <div className="Slide-label">{ideaUnits && ideaUnits[1]}</div>
                 </div>
-                <div className="Slide-idea-unit-box-l">
-                  <div className="Slide-label">{ideaUnits && ideaUnits[2]}</div>
-                </div>
+                {ideaUnits && ideaUnits[2] && (
+                  <div className="Slide-idea-unit-box-l">
+                    <div className="Slide-label">
+                      {ideaUnits && ideaUnits[2]}
+                    </div>
+                  </div>
+                )}
+                {ideaUnits && ideaUnits[3] && (
+                  <div className="Slide-idea-unit-box-l">
+                    <div className="Slide-label">
+                      {ideaUnits && ideaUnits[3]}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )}
