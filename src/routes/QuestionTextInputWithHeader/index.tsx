@@ -23,6 +23,8 @@ function QuestionTextInputWithHeader({
     const obj =
       type === "Beispiel_Attribution0"
         ? { example_Attribution: input }
+        : type === "Beispiel_SN0"
+        ? { example_SN: input }
         : type === "Beispiel_Konsens0"
         ? { example_Konsens: input }
         : type === "Beispiel_Konsistenz0"
