@@ -14,6 +14,8 @@ import SlideIdeaUnitsTypeOne from "../SlideIdeaUnitsTypeOne";
 import SlideIdeaUnitsTypeTwo from "../SlideIdeaUnitsTypeTwo";
 import SlideIdeaUnitsTypeThree from "../SlideIdeaUnitsTypeThree";
 import SlideIdeaUnitsTypeFour from "../SlideIdeaUnitsTypeFour";
+import SlideDetails from "../SlideDetails";
+import { useSlidesState } from "../../hooks/useSlides";
 
 const typeIntro: number[] = [1, 2, 3, 4, 5, 7, 12, 21, 23, 32];
 const typeIntroWithHeader: number[] = [24, 25, 26, 27, 28, 29, 30, 31];
@@ -77,14 +79,17 @@ const ideaUnitsTypeThree: number[] = [39, 49, 59, 69, 79, 9, 99, 109];
 const ideaUnitsTypeFour: number[] = [40, 50, 60, 70, 80, 90, 100];
 
 function Slide(slide: SlideInterface) {
+  const context = useSlidesState();
   useEffect(() => {
-    window.onbeforeunload = () => true;
-  }, []);
+    window.onbeforeunload = () => (context?.authenticated ? true : null);
+  }, [context?.authenticated]);
+  console.log(context?.authenticated);
   return (
     <Route path="/slides">
       <Prompt
+        when={context?.authenticated}
         message={
-          "Are you sure you want to leave this page? All your progress would be lost."
+          "Bist du sicher, dass du die Seite verlassen willst? Deine Eingaben gehen verloren."
         }
       />
       {slide.slideType === "demographisch" ? (
@@ -98,6 +103,13 @@ function Slide(slide: SlideInterface) {
           slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}
+        />
+      ) : slide.slideType === "Ende" ? (
+        <SlideDetails
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          header={slide.header}
         />
       ) : typeIntro.includes(slide.id) ? (
         <SlideIntro
