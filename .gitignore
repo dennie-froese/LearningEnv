@@ -25,7 +25,7 @@ yarn-error.log*
 
 /src/logins.ts
 
-/src/SlideDetails/index.tsx
+/src/routes/SlideDetails/
 
 .firebase
 
