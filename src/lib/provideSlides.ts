@@ -4,9 +4,9 @@ import Slides from "./../slides";
 export default function provideSlides(condition: number) {
   const SLIDES_SELECTIONS = [
     [
-      1,
-      2,
-      3,
+      // 1,
+      // 2,
+      // 3,
       4,
       5,
       6,
@@ -97,9 +97,9 @@ export default function provideSlides(condition: number) {
       115,
     ],
     [
-      1,
-      2,
-      3,
+      // 1,
+      // 2,
+      // 3,
       4,
       5,
       6,
@@ -182,9 +182,9 @@ export default function provideSlides(condition: number) {
       115,
     ],
     [
-      1,
-      2,
-      3,
+      // 1,
+      // 2,
+      // 3,
       4,
       5,
       6,
@@ -267,9 +267,9 @@ export default function provideSlides(condition: number) {
       115,
     ],
     [
-      1,
-      2,
-      3,
+      // 1,
+      // 2,
+      // 3,
       4,
       5,
       6,
