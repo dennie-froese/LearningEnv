@@ -627,7 +627,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     header: "Konzept „hoher Konsens“",
     ideaUnits: [
       "Hohes Ausmaß an Übereinstimmung",
-      "Abgleich von eigenem Verhalten mit Verhalten anderer ",
+      "Abgleich von eigenem Verhalten mit Verhalten anderer",
     ],
     expertExamples: [
       "Julia kann ihre alten Converse-Sneakers nicht mehr sehen und beschließt, am Montag nach der Schule gemeinsam mit ihren beiden Freundinnen shoppen zu gehen, um sich die neuen, angesagten Nike-Sneakers zu kaufen. Als die drei im Schuhgeschäft angekommen sind, betrachten die beiden Freundinnen von Julia ihre eigenen Schuhe und bemerken, dass ihre alten Sneakers im Vergleich mit den neuen Nike-Schuhen von Julia ebenfalls längst aus der Mode gekommen sind. Daraufhin beschließen die beiden, sich genauso wie ihre Freundin Julia die neuen Nike-Sneakers zu kaufen.",
@@ -642,7 +642,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     header: "Konzept „hoher Konsens“",
     ideaUnits: [
       "Hohes Ausmaß an Übereinstimmung",
-      "Abgleich von eigenem Verhalten mit Verhalten anderer ",
+      "Abgleich von eigenem Verhalten mit Verhalten anderer",
     ],
   },
   59: {
@@ -768,86 +768,374 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   73: {
     id: 73,
-    slideText: "",
+    slideText:
+      "Distinktheit: Das Ausmaß, in dem eine Person in unterschiedlicher Art und Weise auf ähnliche Stimuli oder Situationen reagiert. Die Distinktheit ist hoch, wenn sich eine Personen in wenigen Situationen gleich verhält, und niedrig, wenn sie in vielen Situationen das gleiche Verhalten zeigt.",
     slideType: "Beispiel_Distinktheit0",
+    header:
+      "Denke Dir bitte ein Beispiel aus, das das Konzept hoher Distinktheit veranschaulicht.",
   },
   74: {
     id: 74,
-    slideText: "",
+    slideText:
+      "Das Ausdenken eines Beispiels zum Konzept „hohe Distinktheit“ fiel mir…",
     slideType: "Beispiel_Distinktheit1",
   },
   75: {
     id: 75,
-    slideText: "",
+    slideText:
+      "Beim Ausdenken eines Beispiels zum Konzept „hohe Distinktheit“ war meine geistige Denkanstrengung…",
     slideType: "Beispiel_Distinktheit2",
   },
   76: {
     id: 76,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
     slideType: "Distinktheit_g1_1",
+    header: "Konzept „hohe Distinktheit“",
+    ideaUnits: [
+      "Hohes Ausmaß von unterschiedlichen Reaktionen",
+      "Reaktion auf ähnliche Stimuli oder Situationen",
+      "Verhalten oder Reaktion einer einzelnen Person",
+    ],
   },
   77: {
     id: 77,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ nun mit den hier dargestellten beiden Expertenbeispielen ab und passe deine Einschätzungen zu den enthaltenen Teilaspekten und der Gesamtbewertung Deines Beispiels gegebenenfalls an. ",
     slideType: "Distinktheit_g1_2",
+    header: "Konzept „hohe Distinktheit“",
+    ideaUnits: [
+      "Hohes Ausmaß von unterschiedlichen Reaktionen",
+      "Reaktion auf ähnliche Stimuli oder Situationen",
+      "Verhalten oder Reaktion einer einzelnen Person",
+    ],
+    expertExamples: [
+      "Im Hause Müller wird jeden Abend vor dem Essen ein Tischgebet gesprochen. Wenn der jüngste Sohn, Yannick, von seinem Vater darum gebeten wird, das Tischgebet zu halten, kommt er dieser Bitte nach. Wird Yannick allerdings von seiner Mutter darum gebeten, gibt er nur eine genervte Antwort.",
+      "Als Steven eine ältere Dame sieht, deren Einkäufe heruntergefallen sind, eilt er ihr zu Hilfe und räumt ihr die Einkäufe zurück in die Tasche. Am nächsten Tag bemerkt Steven einen älteren Mann, dem sein Portemonnaie auf die Straße gefallen ist. Steven hilft ihm nicht, sondern geht einfach weiter.",
+    ],
   },
   78: {
     id: 78,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "Distinktheit_g2",
+    header: "Konzept „hohe Distinktheit“",
+    ideaUnits: [
+      "Hohes Ausmaß von unterschiedlichen Reaktionen",
+      "Reaktion auf ähnliche Stimuli oder Situationen",
+      "Verhalten oder Reaktion einer einzelnen Person",
+    ],
   },
   79: {
     id: 79,
-    slideText: "",
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ mit den beiden hier dargestellten Expertenbeispielen ab. ",
     slideType: "Distinktheit_g3",
+    header: "Konzept „hohe Distinktheit“",
+    expertExamples: [
+      "Im Hause Müller wird jeden Abend vor dem Essen ein Tischgebet gesprochen. Wenn der jüngste Sohn, Yannick, von seinem Vater darum gebeten wird, das Tischgebet zu halten, kommt er dieser Bitte nach. Wird Yannick allerdings von seiner Mutter darum gebeten, gibt er nur eine genervte Antwort.",
+      "Als Steven eine ältere Dame sieht, deren Einkäufe heruntergefallen sind, eilt er ihr zu Hilfe und räumt ihr die Einkäufe zurück in die Tasche. Am nächsten Tag bemerkt Steven einen älteren Mann, dem sein Portemonnaie auf die Straße gefallen ist. Steven hilft ihm nicht, sondern geht einfach weiter.",
+    ],
   },
   80: {
     id: 80,
-    slideText: "",
+    slideText: "Bitte bewerte nun Dein Beispiel.",
     slideType: "Distinktheit_g4",
+    header: "Konzept „hohe Distinktheit“",
   },
   81: {
     id: 81,
-    slideText: "",
+    slideText:
+      "Das Einschätzen der Qualität meines Beispiels zum Konzept „hohe Distinktheit“ fiel mir…",
     slideType: "Beispiel_Distinktheit3",
   },
   82: {
     id: 82,
-    slideText: "",
+    slideText:
+      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „hohe Distinktheit“ war meine geistige Denkanstrengung…",
     slideType: "Beispiel_Distinktheit4",
   },
-  83: { id: 83, slideText: "", slideType: "Beispiel_FA0" },
-  84: { id: 84, slideText: "", slideType: "Beispiel_FA1" },
-  85: { id: 85, slideText: "", slideType: "Beispiel_FA2" },
-  86: { id: 86, slideText: "", slideType: "FA_g1_1" },
-  87: { id: 87, slideText: "", slideType: "FA_g1_2" },
-  88: { id: 88, slideText: "", slideType: "FA_g2" },
-  89: { id: 89, slideText: "", slideType: "FA_g3" },
-  90: { id: 90, slideText: "", slideType: "FA_g4" },
-  91: { id: 91, slideText: "", slideType: "Beispiel_FA3" },
-  92: { id: 92, slideText: "", slideType: "Beispiel_FA4" },
-  93: { id: 93, slideText: "", slideType: "Beispiel_SV0" },
-  94: { id: 94, slideText: "", slideType: "Beispiel_SV1" },
-  95: { id: 95, slideText: "", slideType: "Beispiel_SV2" },
-  96: { id: 96, slideText: "", slideType: "SV_g1_1" },
-  97: { id: 97, slideText: "", slideType: "SV_g1_2" },
-  98: { id: 98, slideText: "", slideType: "SV_g2" },
-  99: { id: 99, slideText: "", slideType: "SV_g3" },
-  100: { id: 100, slideText: "", slideType: "SV_g4" },
-  101: { id: 101, slideText: "", slideType: "Beispiel_SV3" },
-  102: { id: 102, slideText: "", slideType: "Beispiel_SV4" },
-  103: { id: 103, slideText: "", slideType: "Beispiel_GWG0" },
-  104: { id: 104, slideText: "", slideType: "Beispiel_GWG1" },
-  105: { id: 105, slideText: "", slideType: "Beispiel_GWG2" },
-  106: { id: 106, slideText: "", slideType: "GWG_g1_1" },
-  107: { id: 107, slideText: "", slideType: "GWG_g1_2" },
-  108: { id: 108, slideText: "", slideType: "GWG_g2" },
-  109: { id: 109, slideText: "", slideType: "GWG_g3" },
-  110: { id: 110, slideText: "", slideType: "GWG_g4" },
-  111: { id: 111, slideText: "", slideType: "Beispiel_GWG3" },
-  112: { id: 112, slideText: "", slideType: "Beispiel_GWG4" },
-  113: { id: 113, slideText: "", slideType: "Ende" },
-  114: { id: 114, slideText: "", slideType: "Spass" },
+  83: {
+    id: 83,
+    slideText:
+      "Fundamentaler Attributionsfehler: Die Tendenz, das Verhalten von anderen in höherem Maß auf interne Ursachen zurückzuführen, als es eigentlich gerechtfertigt wäre, bei gleichzeitigem Unterschätzen des Einflusses der Situation.",
+    slideType: "Beispiel_FA0",
+    header: "Konzept „Fundamentaler Attributionsfehler“",
+  },
+  84: {
+    id: 84,
+    slideText:
+      "Das Ausdenken eines Beispiels zum Konzept „Fundamentaler Attributionsfehler“ fiel mir…",
+    slideType: "Beispiel_FA1",
+  },
+  85: {
+    id: 85,
+    slideText:
+      "Beim Ausdenken eines Beispiels zum Konzept „Fundamentaler Attributionsfehler“ war meine geistige Denkanstrengung…",
+    slideType: "Beispiel_FA2",
+  },
+  86: {
+    id: 86,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+    slideType: "FA_g1_1",
+    header: "Konzept „Fundamentaler Attributionsfehler“",
+    ideaUnits: [
+      "Attribution des Verhaltens anderer",
+      "Attribution ist fehlgeleitet/ fehlerhaft",
+      "Überschätzung interner Ursachen für Verhalten",
+      "Überschätzung des Situationseinflusses",
+    ],
+  },
+  87: {
+    id: 87,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ nun mit den hier dargestellten beiden Expertenbeispielen ab und passe deine Einschätzungen zu den enthaltenen Teilaspekten und der Gesamtbewertung Deines Beispiels gegebenenfalls an. ",
+    slideType: "FA_g1_2",
+    header: "Konzept „Fundamentaler Attributionsfehler“",
+    ideaUnits: [
+      "Attribution des Verhaltens anderer",
+      "Attribution ist fehlgeleitet/ fehlerhaft",
+      "Überschätzung interner Ursachen für Verhalten",
+      "Überschätzung des Situationseinflusses",
+    ],
+    expertExamples: [
+      "Im spannenden Endspiel der Fußballweltmeisterschaft wird dem Torwart infolge eines Fouls eine gelbe Karte gegeben. Der Torwart wird daraufhin aggressiv und beschimpft den Schiedsrichter. Der Kommentator schlussfolgert, die Reaktion des Torwarts sei durch die generell schon aggressive Art und geringe Frustrationstoleranz des Torwarts bedingt. Im Interview nach dem Spiel erklärt der Torwart bezüglich seines Ausrasters, dass die Situation, im Finale der Weltmeisterschaft zu stehen, einen großen Druck auf ihn ausgeübt habe und er grundsätzlich kein aggressiver Mensch sei.",
+      "Bei Familie Maier ist das Gesprächsthema Nummer 1 die gegenüber von ihnen wohnende Frau Peters. Familie Maier regt sich darüber auf, dass Frau Peters einen Babysitter für ihr Neugeborenes eingestellt hat. Frau und Herr Maier erklären sich dieses Verhalten damit, dass Frau Peters eine lieblose Mutter sei und sich nicht richtig um ihr Kind kümmern würde. Frau Peters ist allerdings alleinerziehend und muss arbeiten gehen, um genug Geld zu verdienen, weshalb sie einen Babysitter benötigt.",
+    ],
+  },
+  88: {
+    id: 88,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+    slideType: "FA_g2",
+    header: "Konzept „Fundamentaler Attributionsfehler“",
+    ideaUnits: [
+      "Attribution des Verhaltens anderer",
+      "Attribution ist fehlgeleitet/ fehlerhaft",
+      "Überschätzung interner Ursachen für Verhalten",
+      "Überschätzung des Situationseinflusses",
+    ],
+  },
+  89: {
+    id: 89,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ mit den beiden hier dargestellten Expertenbeispielen ab.",
+    slideType: "FA_g3",
+    header: "Konzept „Fundamentaler Attributionsfehler“",
+    expertExamples: [
+      "Im spannenden Endspiel der Fußballweltmeisterschaft wird dem Torwart infolge eines Fouls eine gelbe Karte gegeben. Der Torwart wird daraufhin aggressiv und beschimpft den Schiedsrichter. Der Kommentator schlussfolgert, die Reaktion des Torwarts sei durch die generell schon aggressive Art und geringe Frustrationstoleranz des Torwarts bedingt. Im Interview nach dem Spiel erklärt der Torwart bezüglich seines Ausrasters, dass die Situation, im Finale der Weltmeisterschaft zu stehen, einen großen Druck auf ihn ausgeübt habe und er grundsätzlich kein aggressiver Mensch sei.",
+      "Bei Familie Maier ist das Gesprächsthema Nummer 1 die gegenüber von ihnen wohnende Frau Peters. Familie Maier regt sich darüber auf, dass Frau Peters einen Babysitter für ihr Neugeborenes eingestellt hat. Frau und Herr Maier erklären sich dieses Verhalten damit, dass Frau Peters eine lieblose Mutter sei und sich nicht richtig um ihr Kind kümmern würde. Frau Peters ist allerdings alleinerziehend und muss arbeiten gehen, um genug Geld zu verdienen, weshalb sie einen Babysitter benötigt.",
+    ],
+  },
+  90: {
+    id: 90,
+    slideText: "Bitte bewerte nun Dein Beispiel.",
+    slideType: "FA_g4",
+    header: "Konzept „Fundamentaler Attributionsfehler“",
+  },
+  91: {
+    id: 91,
+    slideText:
+      "Das Einschätzen der Qualität meines Beispiels zum Konzept „Fundamentaler Attributionsfehler“ fiel mir…",
+    slideType: "Beispiel_FA3",
+  },
+  92: {
+    id: 92,
+    slideText:
+      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „Fundamentaler Attributionsfehler“ war meine geistige Denkanstrengung…",
+    slideType: "Beispiel_FA4",
+  },
+  93: {
+    id: 93,
+    slideText:
+      "Selbstwertdienliche Verzerrung: Die Tendenz, positive Ergebnisse auf unsere eigenen Charaktereigenschaften (internale Ursachen) zurückzuführen, aber negative Ergebnisse eher auf Faktoren außerhalb unserer Kontrolle (externale Ursachen).",
+    slideType: "Beispiel_SV0",
+    header:
+      "Denke Dir bitte ein Beispiel aus, das das Konzept „Selbstwertdienliche Verzerrung” veranschaulicht.“",
+  },
+  94: {
+    id: 94,
+    slideText:
+      "Das Ausdenken eines Beispiels zum Konzept „Selbstwertdienliche Verzerrung“ fiel mir…",
+    slideType: "Beispiel_SV1",
+  },
+  95: {
+    id: 95,
+    slideText:
+      "Beim Ausdenken eines Beispiels zum Konzept „Selbstwertdienliche Verzerrung“ war meine geistige Denkanstrengung…",
+    slideType: "Beispiel_SV2",
+  },
+  96: {
+    id: 96,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
+    slideType: "SV_g1_1",
+    header: "Konzept „Selbstwertdienliche Verzerrung“",
+    ideaUnits: [
+      "Positives auf eigene Eigenschaften/internale Ursachen zurückgeführt",
+      "Negatives auf unkontrollierbare Faktoren/externale Ursachen zurückgeführt",
+    ],
+  },
+  97: {
+    id: 97,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ nun mit den hier dargestellten beiden Expertenbeispielen ab und passe deine Einschätzungen zu den enthaltenen Teilaspekten und der Gesamtbewertung Deines Beispiels gegebenenfalls an.",
+    slideType: "SV_g1_2",
+    header: "Konzept „Selbstwertdienliche Verzerrung“",
+    ideaUnits: [
+      "Positives auf eigene Eigenschaften/internale Ursachen zurückgeführt",
+      "Negatives auf unkontrollierbare Faktoren/externale Ursachen zurückgeführt",
+    ],
+    expertExamples: [
+      "Nach einem Referat erhält Janosch sowohl positives als auch negatives Feedback. Eine seiner Mitschülerinnen lobt ihn für die sinnvolle Aufteilung der Inhalte. Janosch führt dies auf seine Intelligenz zurück. Ein anderer Mitschüler macht Janosch darauf aufmerksam, dass die Inhalte des Referats nicht gut nachzuvollziehen waren. Dies erklärt Janosch sich mit den technischen Störungen des Beamers und den Unterbrechungen vom Lehrer – an ihm selber wird dies wohl nicht gelegen haben.",
+      "Herr Janssen ist Geschäftsführer einer privaten Firma und hat vor Kurzem zwei wichtige Angebote bei zwei verschiedenen Firmen eingereicht. Als er die Rückmeldung erhält, dass eines der zwei Angebote abgelehnt wurde, schreibt er dies dem Sachbearbeiter zu, der das Angebot bearbeitet hat, weil dieser wohl eine persönliche Abneigung gegen Herrn Janssen habe. Das zweite Angebot dagegen wurde angenommen, was Herr Janssen damit begründet, dass er sehr gut darin ist, Angebote zu schreiben.",
+    ],
+  },
+  98: {
+    id: 98,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+    slideType: "SV_g2",
+
+    header: "Konzept „Selbstwertdienliche Verzerrung“",
+    ideaUnits: [
+      "Positives auf eigene Eigenschaften/internale Ursachen zurückgeführt",
+      "Negatives auf unkontrollierbare Faktoren/externale Ursachen zurückgeführt",
+    ],
+  },
+  99: {
+    id: 99,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ mit den beiden hier dargestellten Expertenbeispielen ab. ",
+    slideType: "SV_g3",
+    header: "Konzept „Selbstwertdienliche Verzerrung“",
+    expertExamples: [
+      "Nach einem Referat erhält Janosch sowohl positives als auch negatives Feedback. Eine seiner Mitschülerinnen lobt ihn für die sinnvolle Aufteilung der Inhalte. Janosch führt dies auf seine Intelligenz zurück. Ein anderer Mitschüler macht Janosch darauf aufmerksam, dass die Inhalte des Referats nicht gut nachzuvollziehen waren. Dies erklärt Janosch sich mit den technischen Störungen des Beamers und den Unterbrechungen vom Lehrer – an ihm selber wird dies wohl nicht gelegen haben.",
+      "Herr Janssen ist Geschäftsführer einer privaten Firma und hat vor Kurzem zwei wichtige Angebote bei zwei verschiedenen Firmen eingereicht. Als er die Rückmeldung erhält, dass eines der zwei Angebote abgelehnt wurde, schreibt er dies dem Sachbearbeiter zu, der das Angebot bearbeitet hat, weil dieser wohl eine persönliche Abneigung gegen Herrn Janssen habe. Das zweite Angebot dagegen wurde angenommen, was Herr Janssen damit begründet, dass er sehr gut darin ist, Angebote zu schreiben.",
+    ],
+  },
+  100: {
+    id: 100,
+    slideText: "Bitte bewerte nun Dein Beispiel.",
+    slideType: "SV_g4",
+    header: "Konzept „Selbstwertdienliche Verzerrung“",
+  },
+  101: {
+    id: 101,
+    slideText:
+      "Das Einschätzen der Qualität meines Beispiels zum Konzept „Selbstwertdienliche Verzerrung“ fiel mir…",
+    slideType: "Beispiel_SV3",
+  },
+  102: {
+    id: 102,
+    slideText:
+      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „Selbstwertdienliche Verzerrung“ war meine geistige Denkanstrengung…",
+    slideType: "Beispiel_SV4",
+  },
+  103: {
+    id: 103,
+    slideText:
+      "Gerechte-Welt-Glaube: Das starke Verlangen oder Bedürfnis zu glauben, dass die Welt ein geordneter, vorhersehbarer und gerechter Ort ist, an dem jeder bekommt, was er oder sie verdient.",
+    slideType: "Beispiel_GWG0",
+    header:
+      "Denke Dir bitte ein Beispiel aus, das das Konzept „Gerechter-Welt-Glaube” veranschaulicht.",
+  },
+  104: {
+    id: 104,
+    slideText:
+      "Das Ausdenken eines Beispiels zum Konzept „Gerechte-Welt-Glaube“ fiel mir…",
+    slideType: "Beispiel_GWG1",
+  },
+  105: {
+    id: 105,
+    slideText:
+      "Beim Ausdenken eines Beispiels zum Konzept „Gerechte-Welt-Glaube“ war meine geistige Denkanstrengung…",
+    slideType: "Beispiel_GWG2",
+  },
+  106: {
+    id: 106,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
+    slideType: "GWG_g1_1",
+    header: "Konzept „Gerechter-Welt-Glaube”",
+    ideaUnits: [
+      "Annahme 1: Welt ist ein vorhersehbarer Ort",
+      "Annahme 2: Welt ist ein gerechter Ort",
+      "Annahme 3: Jeder bekommt, was er oder sie verdient",
+    ],
+  },
+  107: {
+    id: 107,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ nun mit den hier dargestellten beiden Expertenbeispielen ab und passe deine Einschätzungen zu den enthaltenen Teilaspekten und der Gesamtbewertung Deines Beispiels gegebenenfalls an.",
+    slideType: "GWG_g1_2",
+    header: "Konzept „Gerechter-Welt-Glaube”",
+    ideaUnits: [
+      "Annahme 1: Welt ist ein vorhersehbarer Ort",
+      "Annahme 2: Welt ist ein gerechter Ort",
+      "Annahme 3: Jeder bekommt, was er oder sie verdient",
+    ],
+    expertExamples: [
+      "Laura streitet sich mit ihrer Mutter. Sie hat erneut ihr Zimmer nicht aufgeräumt, will aber jetzt zur Stufenparty fahren, obwohl ihre Mutter sie darum bittet, vorher ihr Zimmer in Ordnung zu bringen. Laura ignoriert die Bitte und steigt auf ihr Fahrrad. Auf der Hälfte der Strecke übersieht sie einen Bordstein und stürzt. Ihre Knie und Hände sind aufgeschürft. Laura ist sich sicher, dass sie diesen Unfall hätte vorhersehen können, da sie es verdient hatte, hinzufallen, weil sie ihr Zimmer nicht aufgeräumt und sich mit ihrer Mutter gestritten hatte. Laura ist der festen Überzeugung, dass der Unfall ihr zu Recht geschehen ist.",
+      "In der Grundschule zeigt Simon stets vorbildliches Verhalten. Er beteiligt sich am Unterricht, hilft seinen Mitschülern und respektiert die Lehrer. Zum Ende des Schuljahres erhält Simon dafür eine Auszeichnung als „bester Schüler des Jahres“. Seine Eltern waren sich schon immer sicher, dass Simon diese Auszeichnung für sein Verhalten verdient hat und es nur gerecht sei, dass sein vorbildliches Verhalten belohnt wird.",
+    ],
+  },
+  108: {
+    id: 108,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+    slideType: "GWG_g2",
+    header: "Konzept „Gerechter-Welt-Glaube”",
+    ideaUnits: [
+      "Annahme 1: Welt ist ein vorhersehbarer Ort",
+      "Annahme 2: Welt ist ein gerechter Ort",
+      "Annahme 3: Jeder bekommt, was er oder sie verdient",
+    ],
+  },
+  109: {
+    id: 109,
+    slideText:
+      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den beiden hier dargestellten Expertenbeispielen ab.",
+    slideType: "GWG_g3",
+    header: "Konzept „Gerechter-Welt-Glaube”",
+    expertExamples: [
+      "Laura streitet sich mit ihrer Mutter. Sie hat erneut ihr Zimmer nicht aufgeräumt, will aber jetzt zur Stufenparty fahren, obwohl ihre Mutter sie darum bittet, vorher ihr Zimmer in Ordnung zu bringen. Laura ignoriert die Bitte und steigt auf ihr Fahrrad. Auf der Hälfte der Strecke übersieht sie einen Bordstein und stürzt. Ihre Knie und Hände sind aufgeschürft. Laura ist sich sicher, dass sie diesen Unfall hätte vorhersehen können, da sie es verdient hatte, hinzufallen, weil sie ihr Zimmer nicht aufgeräumt und sich mit ihrer Mutter gestritten hatte. Laura ist der festen Überzeugung, dass der Unfall ihr zu Recht geschehen ist.",
+      "In der Grundschule zeigt Simon stets vorbildliches Verhalten. Er beteiligt sich am Unterricht, hilft seinen Mitschülern und respektiert die Lehrer. Zum Ende des Schuljahres erhält Simon dafür eine Auszeichnung als „bester Schüler des Jahres“. Seine Eltern waren sich schon immer sicher, dass Simon diese Auszeichnung für sein Verhalten verdient hat und es nur gerecht sei, dass sein vorbildliches Verhalten belohnt wird.",
+    ],
+  },
+  110: {
+    id: 110,
+    slideText: "Bitte bewerte nun Dein Beispiel.",
+    slideType: "GWG_g4",
+    header: "Konzept „Gerechter-Welt-Glaube”",
+  },
+  111: {
+    id: 111,
+    slideText:
+      "Das Einschätzen der Qualität meines Beispiels zum Konzept „Gerechte-Welt-Glaube“ fiel mir…",
+    slideType: "Beispiel_GWG3",
+  },
+  112: {
+    id: 112,
+    slideText:
+      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „Gerechte-Welt-Glaube“ war meine geistige Denkanstrengung…",
+    slideType: "Beispiel_GWG4",
+  },
+  113: {
+    id: 113,
+    slideText:
+      "Damit wir Dir die Aufwandsentschädigung zahlen können, möchten wir Dich noch bitten, Angaben zu Deiner Bankverbindung zu machen. Bitte beachte, dass diese Daten selbstverständlich nur zu Überweisungszwecken gespeichert und nach Auszahlung der Vergütung umgehend gelöscht werden.",
+    slideType: "Ende",
+    header: "Du bist nun am Ende der Studie angekommen.",
+  },
+  114: {
+    id: 114,
+    slideText:
+      "Dann hast Du hier die Möglichkeit, anzugeben, ob Du für weitere Studien der Arbeitsgruppe „Pädagogische Intervention, Evaluation und Implementation“ per Mail kontaktiert werden möchtest, wenn wieder Probanden für eine Testung gesucht werden.",
+    slideType: "Spass",
+    header: "Dir hat es Spaß gemacht?",
+  },
   115: { id: 115, slideText: "", slideType: "Vielen_Dank" },
 };
 

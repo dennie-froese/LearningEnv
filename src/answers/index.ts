@@ -185,6 +185,12 @@ export interface Answer {
   GWG_g3_1?: string;
   Ausdenken_GWG3?: string;
   Ausdenken_GWG4?: string;
+  name?: string;
+  details1?: string;
+  details2?: string;
+  details3?: string;
+  details4?: string;
+  details5?: string;
 }
 
 export const answerTypes: string[] = [
