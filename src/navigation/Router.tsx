@@ -29,7 +29,7 @@ function Router() {
         <Route exact path="/login">
           <Login />
         </Route>
-        {context?.authenticated && slide && <Slide {...slide} />}
+        {slide && <Slide {...slide} />}
         <Route path="*">
           <SomethingWentWrong />
         </Route>
