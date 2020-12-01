@@ -20,7 +20,7 @@ function Login() {
       history.push("/slides");
     } else {
       setError(
-        "It seems like your user and e-mail don't match - please check your inputs."
+        "Deine Eingaben scheinen nicht korrekt zu sein – bitte überprüfe diese und probiere es noch einmal."
       );
     }
   };
@@ -28,9 +28,19 @@ function Login() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Please authenticate yourself below:</p>
+        <p>
+          Bitte logge Dich mit deiner E-Mail-Adresse und der von uns
+          bereitgestellten, dreistelligen Nummer ein.
+        </p>
         <form className="Form">
-          <label>User:</label>
+          <label>E-Mail-Adresse:</label>
+          <input
+            className="Form-input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            name="name"
+          />
+          <label>Nummer:</label>
           <input
             className="Form-input"
             value={user}
@@ -38,17 +48,10 @@ function Login() {
             type="text"
             name="name"
           />
-          <label>E-mail:</label>
-          <input
-            className="Form-input"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            name="name"
-          />
         </form>
         <p className="Error-text">{error}</p>
         <button className="App-button" onClick={logon}>
-          Log in!
+          Jetzt anmelden!
         </button>
       </header>
     </div>

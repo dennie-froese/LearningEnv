@@ -5,11 +5,11 @@ function SomethingWentWrong() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Oops!</p>
-        <p>We're really sorry, but it looks like something went wrong here.</p>
+        <p>Ups!</p>
+        <p>Tut uns leid, hier scheint etwas schief gelaufen zu sein! </p>
         <p></p>
         <Link to="/">
-          <button className="App-button">Go back to home</button>
+          <button className="App-button">Zurück zur Startseite</button>
         </Link>
       </header>
     </div>

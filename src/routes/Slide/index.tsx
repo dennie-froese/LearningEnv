@@ -89,7 +89,7 @@ function Slide(slide: SlideInterface) {
       <Prompt
         when={context?.authenticated}
         message={
-          "Bist du sicher, dass du die Seite verlassen willst? Deine Eingaben gehen verloren."
+          "Bist Du sicher, dass du die Seite verlassen möchtest? Alle bisher gespeicherten Daten gehen verloren."
         }
       />
       {slide.slideType === "demographisch" ? (

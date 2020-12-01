@@ -2,20 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const firebaseWrite = () => {
-    // firebase.
-  };
-
   return (
     <div className="App">
       <header className="App-header">
-        <p>Welcome to this survey!</p>
-        <p>We appreciate you taking the time out to answer our questions.</p>
-        <p>But first, let's get you logged in:</p>
-        <p></p>
+        <p>Herzlich Willkommen zu dieser Studie!</p>
+        <p>
+          Vielen Dank, dass Du dir die Zeit nimmst, um an dieser Studie
+          teilzunehmen.
+        </p>
         <Link to="/login">
-          <button className="App-button" onClick={firebaseWrite}>
-            Proceed to login!
+          <button className="App-button-welcome">
+            Hier geht’s zur Anmeldung!
           </button>
         </Link>
       </header>
