@@ -1136,7 +1136,11 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideType: "Spass",
     header: "Dir hat es Spaß gemacht?",
   },
-  115: { id: 115, slideText: "", slideType: "Vielen_Dank" },
+  115: {
+    id: 115,
+    slideText: "Vielen Dank für deine Teilnahme!",
+    slideType: "Vielen_Dank",
+  },
 };
 
 export default Slides;

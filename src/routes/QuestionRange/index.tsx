@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import useTimer from "./../../hooks/useTimer";
 import { useSlidesDispatch } from "../../hooks/useSlides";
-import { Answer } from "../../answers";
 
 interface Props {
   questionNumber: number;

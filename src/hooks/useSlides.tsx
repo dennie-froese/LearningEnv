@@ -21,8 +21,11 @@ type SubmitSlide = {
   type: "submit_slide";
   payload: { type: string; answer: Answer };
 };
+type Reset = {
+  type: "reset";
+};
 
-type Action = SetUser | SetSlides | SubmitSlide;
+type Action = SetUser | SetSlides | SubmitSlide | Reset;
 
 type Dispatch = (action: Action) => void;
 
@@ -75,6 +78,13 @@ function slidesReducer(state: State, action: Action) {
           ...state,
         };
       }
+    }
+    case "reset": {
+      return {
+        ...state,
+        user: "",
+        authenticated: false,
+      };
     }
     default: {
       throw new Error("Unhandled action.");

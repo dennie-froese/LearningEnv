@@ -191,6 +191,7 @@ export interface Answer {
   details3?: string;
   details4?: string;
   details5?: string;
+  surveyFun?: string;
 }
 
 export const answerTypes: string[] = [
