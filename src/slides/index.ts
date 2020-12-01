@@ -680,7 +680,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Konsistenz: Das Ausmaß, in dem eine Person über die Zeit hinweg ähnliche Verhaltensweisen als Reaktion auf die gleiche Situation oder den gleichen Stimulus zeigt. Die Konsistenz ist hoch, wenn das Verhalten sich über die Zeit hinweg ähnelt und niedrig, wenn das Verhalten nur zu wenigen Zeitpunkten gleichbleibt.",
     slideType: "Beispiel_Konsistenz0",
     header:
-      "Denke Dir bitte ein Beispiel aus, das das Konzept hoher Konsistenz veranschaulicht.“",
+      "Denke Dir bitte ein Beispiel aus, das das Konzept hoher Konsistenz veranschaulicht.",
   },
   64: {
     id: 64,
@@ -860,7 +860,8 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText:
       "Fundamentaler Attributionsfehler: Die Tendenz, das Verhalten von anderen in höherem Maß auf interne Ursachen zurückzuführen, als es eigentlich gerechtfertigt wäre, bei gleichzeitigem Unterschätzen des Einflusses der Situation.",
     slideType: "Beispiel_FA0",
-    header: "Konzept „Fundamentaler Attributionsfehler“",
+    header:
+      "Denke Dir bitte ein Beispiel aus, das das Konzept „Fundamentaler Attributionsfehler” veranschaulicht.",
   },
   84: {
     id: 84,
