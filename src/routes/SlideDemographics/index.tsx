@@ -89,37 +89,37 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
   const { launchTime, restart } = useTimer();
 
   const finish = () => {
-    if (
-      age &&
-      sex &&
-      languageOne &&
-      languageTwo &&
-      grade &&
-      term &&
-      degree &&
-      subjectOne
-    ) {
-      dispatch &&
-        launchTime &&
-        dispatch({
-          type: "submit_slide",
-          payload: {
-            type: type,
-            answer: {
-              zeit: launchTime - Date.now(),
-              Alter: age,
-              Geschlecht: sex,
-              Geburtssprache1: languageOne,
-              Geburtssprache2: languageTwo || "-",
-              Abiturnote: grade,
-              Studiengang1: subjectOne,
-              Studiengang2: subjectTwo || "-",
-            },
+    // if (
+    //   age &&
+    //   sex &&
+    //   languageOne &&
+    //   languageTwo &&
+    //   grade &&
+    //   term &&
+    //   degree &&
+    //   subjectOne
+    // ) {
+    dispatch &&
+      launchTime &&
+      dispatch({
+        type: "submit_slide",
+        payload: {
+          type: type,
+          answer: {
+            zeit: launchTime - Date.now(),
+            Alter: age,
+            Geschlecht: sex,
+            Geburtssprache1: languageOne,
+            Geburtssprache2: languageTwo || "-",
+            Abiturnote: grade,
+            Studiengang1: subjectOne,
+            Studiengang2: subjectTwo || "-",
           },
-        });
-    } else {
-      setError("Bitte überpruefe die Vollständigkeit deiner Angaben.");
-    }
+        },
+      });
+    // } else {
+    //   setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+    // }
   };
   return (
     <div className="Slide">

@@ -60,7 +60,7 @@ function SlideFun({ slideText, slideNumber, type, header }: Props) {
               }
               onChange={() => null}
             />
-            <p>Nein, ich habe Interesse.</p>
+            <p>Nein, ich habe kein Interesse.</p>
           </div>
         </div>
         <div className="Slide-nav">

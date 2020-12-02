@@ -76,15 +76,15 @@ const ideaUnitsTypeOne: number[] = [
   107,
 ];
 const ideaUnitsTypeTwo: number[] = [38, 48, 58, 68, 78, 88, 98, 108];
-const ideaUnitsTypeThree: number[] = [39, 49, 59, 69, 79, 9, 99, 109];
-const ideaUnitsTypeFour: number[] = [40, 50, 60, 70, 80, 90, 100];
+const ideaUnitsTypeThree: number[] = [39, 49, 59, 69, 79, 89, 99, 109];
+const ideaUnitsTypeFour: number[] = [40, 50, 60, 70, 80, 90, 100, 110];
 
 function Slide(slide: SlideInterface) {
   const context = useSlidesState();
   useEffect(() => {
     window.onbeforeunload = () => (context?.authenticated ? true : null);
   }, [context?.authenticated]);
-  console.log(context?.authenticated);
+
   return (
     <Route path="/slides">
       <Prompt

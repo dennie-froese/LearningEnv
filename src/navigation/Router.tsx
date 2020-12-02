@@ -9,7 +9,6 @@ import { useSlidesState } from "../hooks/useSlides";
 import { SlideInterface } from "../slides";
 
 function Router() {
-  const context = useSlidesState();
   const slides = useSlidesState()?.slides;
   const activeSlide = useSlidesState()?.activeSlide;
   const [slide, setSlide] = useState<SlideInterface | undefined>(undefined);

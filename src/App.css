@@ -57,6 +57,14 @@
   border-radius: 10px;
   padding: 10px;
   margin: 30px;
+  font-size: calc(1px + 2vmin);
+  align-items: center;
+  justify-content: center;
+}
+
+.App-button-welcome-text {
+  color: white;
+  font-size: calc(1px + 2vmin);
 }
 
 .Form {
@@ -91,6 +99,10 @@
 
 .Slide {
   text-align: center;
+}
+
+.Strong-underline {
+  text-decoration: underline;
 }
 
 .Slide-container {
@@ -191,7 +203,6 @@
   flex-direction: column;
   font-size: calc(12px + 2vmin);
   color: white;
-  overflow-y: scroll;
 }
 
 .Slide-nachangaben-row-1 {
@@ -303,7 +314,6 @@
   text-align: left;
   font-size: calc(8px + 1vmin);
   color: white;
-  overflow-y: scroll;
   white-space: pre-wrap;
 }
 
@@ -311,7 +321,6 @@
   text-align: center;
   font-size: calc(16px + 1vmin);
   color: white;
-  overflow-y: scroll;
   white-space: pre-wrap;
 }
 
@@ -319,7 +328,6 @@
   text-align: left;
   font-size: calc(12px + 1vmin);
   color: white;
-  overflow-y: scroll;
   white-space: pre-wrap;
 }
 
@@ -327,7 +335,6 @@
   text-align: center;
   font-size: calc(6px + 1vmin);
   color: white;
-  overflow-y: scroll;
   white-space: pre-wrap;
 }
 
@@ -336,7 +343,6 @@
   font-size: calc(14px + 1vmin);
   color: white;
   padding: 5;
-  overflow-y: scroll;
   white-space: pre-wrap;
 }
 
@@ -376,7 +382,6 @@
   position: absolute;
   transition: 1s ease;
   z-index: 1000;
-  overflow-y: scroll;
   border: 2px;
   background-color: #857baa;
   border-radius: 2px;
@@ -394,13 +399,13 @@
   flex-direction: column;
   font-size: calc(12px + 2vmin);
   color: white;
+  padding-bottom: 2%;
 }
 
 .Error-text {
   text-align: center;
   font-size: calc(8px + 1vmin);
   color: red;
-  overflow-y: scroll;
 }
 
 .Slide-demographic {

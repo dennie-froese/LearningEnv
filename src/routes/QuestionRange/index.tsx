@@ -17,7 +17,7 @@ function QuestionRange({ questionNumber, question, type }: Props) {
   const from =
     type.includes("1") || type.includes("3") ? "Sehr leicht" : "Sehr niedrig";
   const to =
-    type.includes("1") || type.includes("4") ? "Sehr schwer" : "Sehr hoch";
+    type.includes("1") || type.includes("3") ? "Sehr schwer" : "Sehr hoch";
 
   for (var i = 1; i < range + 1; i++) {
     const v = i;
