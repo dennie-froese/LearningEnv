@@ -1040,7 +1040,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Gerechte-Welt-Glaube: Das starke Verlangen oder Bedürfnis zu glauben, dass die Welt ein geordneter, vorhersehbarer und gerechter Ort ist, an dem jeder bekommt, was er oder sie verdient.",
     slideType: "Beispiel_GWG0",
     header:
-      "Denke Dir bitte ein Beispiel aus, das das Konzept „Gerechter-Welt-Glaube” veranschaulicht.",
+      "Denke Dir bitte ein Beispiel aus, das das Konzept „Gerechte-Welt-Glaube” veranschaulicht.",
   },
   104: {
     id: 104,
@@ -1059,7 +1059,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText:
       "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
     slideType: "GWG_g1_1",
-    header: "Konzept „Gerechter-Welt-Glaube”",
+    header: "Konzept „Gerechte-Welt-Glaube”",
     ideaUnits: [
       "Annahme 1: Welt ist ein vorhersehbarer Ort",
       "Annahme 2: Welt ist ein gerechter Ort",
@@ -1071,7 +1071,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText:
       "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ nun mit den hier dargestellten beiden Expertenbeispielen ab und passe deine Einschätzungen zu den enthaltenen Teilaspekten und der Gesamtbewertung Deines Beispiels gegebenenfalls an.",
     slideType: "GWG_g1_2",
-    header: "Konzept „Gerechter-Welt-Glaube”",
+    header: "Konzept „Gerechte-Welt-Glaube”",
     ideaUnits: [
       "Annahme 1: Welt ist ein vorhersehbarer Ort",
       "Annahme 2: Welt ist ein gerechter Ort",
@@ -1087,7 +1087,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText:
       "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "GWG_g2",
-    header: "Konzept „Gerechter-Welt-Glaube”",
+    header: "Konzept „Gerechte-Welt-Glaube”",
     ideaUnits: [
       "Annahme 1: Welt ist ein vorhersehbarer Ort",
       "Annahme 2: Welt ist ein gerechter Ort",
@@ -1099,7 +1099,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText:
       "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den beiden hier dargestellten Expertenbeispielen ab.",
     slideType: "GWG_g3",
-    header: "Konzept „Gerechter-Welt-Glaube”",
+    header: "Konzept „Gerechte-Welt-Glaube”",
     expertExamples: [
       "Laura streitet sich mit ihrer Mutter. Sie hat erneut ihr Zimmer nicht aufgeräumt, will aber jetzt zur Stufenparty fahren, obwohl ihre Mutter sie darum bittet, vorher ihr Zimmer in Ordnung zu bringen. Laura ignoriert die Bitte und steigt auf ihr Fahrrad. Auf der Hälfte der Strecke übersieht sie einen Bordstein und stürzt. Ihre Knie und Hände sind aufgeschürft. Laura ist sich sicher, dass sie diesen Unfall hätte vorhersehen können, da sie es verdient hatte, hinzufallen, weil sie ihr Zimmer nicht aufgeräumt und sich mit ihrer Mutter gestritten hatte. Laura ist der festen Überzeugung, dass der Unfall ihr zu Recht geschehen ist.",
       "In der Grundschule zeigt Simon stets vorbildliches Verhalten. Er beteiligt sich am Unterricht, hilft seinen Mitschülern und respektiert die Lehrer. Zum Ende des Schuljahres erhält Simon dafür eine Auszeichnung als „bester Schüler des Jahres“. Seine Eltern waren sich schon immer sicher, dass Simon diese Auszeichnung für sein Verhalten verdient hat und es nur gerecht sei, dass sein vorbildliches Verhalten belohnt wird.",
@@ -1109,7 +1109,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 110,
     slideText: "Bitte bewerte nun Dein Beispiel.",
     slideType: "GWG_g4",
-    header: "Konzept „Gerechter-Welt-Glaube”",
+    header: "Konzept „Gerechte-Welt-Glaube”",
   },
   111: {
     id: 111,

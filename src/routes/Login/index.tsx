@@ -50,7 +50,7 @@ function Login() {
           />
         </form>
         <p className="Error-text">{error}</p>
-        <button className="App-button" onClick={logon}>
+        <button className="App-button-welcome" onClick={logon}>
           Jetzt anmelden!
         </button>
       </header>

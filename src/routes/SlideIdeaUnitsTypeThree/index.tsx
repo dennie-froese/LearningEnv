@@ -117,6 +117,10 @@ function SlideIdeaUnitsTypeThree({
               >
                 {expertExamples[1]}
               </textarea>
+              <div className="Slide-text-m">
+                Beide Expertenbeispiele würden bei der Bewertung jeweils einen
+                ganzen Punkt erhalten.
+              </div>
             </div>
           )}
           <div className="Slide-idea-units-text-container">

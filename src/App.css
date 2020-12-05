@@ -39,32 +39,15 @@
   color: #61dafb;
 }
 
-.App-button {
-  background-color: #524091;
-  width: 24vh;
-  height: 6vh;
-  color: white;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 30px;
-}
-
 .App-button-welcome {
   background-color: #524091;
-  width: 30vh;
-  height: 6vh;
   color: white;
+  margin: 10px;
+  padding: 2vh;
   border-radius: 10px;
-  padding: 10px;
-  margin: 30px;
   font-size: calc(1px + 2vmin);
   align-items: center;
   justify-content: center;
-}
-
-.App-button-welcome-text {
-  color: white;
-  font-size: calc(1px + 2vmin);
 }
 
 .Form {
@@ -332,10 +315,11 @@
 }
 
 .Slide-label {
-  text-align: center;
+  text-align: left;
   font-size: calc(6px + 1vmin);
   color: white;
   white-space: pre-wrap;
+  padding-left: 1%;
 }
 
 .Slide-label-l {
@@ -364,13 +348,30 @@
   height: 5vh;
   color: #ffffff;
   border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-.Dropdown-button-small {
-  background-color: #232cac;
+
+.Dropdown-button-small-container {
   width: 10vh;
   height: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: 1px;
+}
+
+.Dropdown-button-small {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #232cac;
+  width: 10vh;
   color: #ffffff;
   border-radius: 8px;
+  font-size: calc(0.2px + 1.5vmin);
 }
 
 .Dropdown.show {
@@ -385,6 +386,7 @@
   border: 2px;
   background-color: #857baa;
   border-radius: 2px;
+  overflow-y: scroll;
 }
 
 .Dropdown.hide {
@@ -448,6 +450,8 @@
   border-width: 2px;
   border-style: solid;
   border-color: ivory;
+  padding: 0.5%;
+  margin: 0.5%;
 }
 
 .Slide-idea-unit-box-l {
@@ -460,6 +464,7 @@
   border-style: solid;
   border-color: ivory;
   padding: 1%;
+  margin: 0.5%;
 }
 
 .Slide-idea-units-box-column {
@@ -500,7 +505,6 @@
   border-width: 2px;
   border-style: solid;
   border-color: ivory;
-  background-color: rgba(255, 255, 255, 0.3);
   color: black;
 }
 

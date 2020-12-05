@@ -202,13 +202,13 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
               >
                 {grade ? grade : "Auswahl"}
               </button>
-              <div>
-                {dropDownGrade && (
-                  <div className={dropDownGradeClassName}>
-                    {GRADES.map((grade) => (
+              {dropDownGrade && (
+                <div className={dropDownGradeClassName}>
+                  {GRADES.map((grade) => (
+                    <div className="Dropdown-button-small-container">
                       <button
-                        id={grade}
                         className="Dropdown-button-small"
+                        id={grade}
                         onClick={() => {
                           setGrade(grade);
                           setDropDownGrade(false);
@@ -216,10 +216,10 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                       >
                         {grade}
                       </button>
-                    ))}
-                  </div>
-                )}
-              </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
             <p>Hochschulsemester:</p>
             <div>
@@ -233,16 +233,18 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                 {dropDownTerm && (
                   <div className={dropDownTermClassName}>
                     {TERMS.map((term) => (
-                      <button
-                        id={term.toString()}
-                        className="Dropdown-button-small"
-                        onClick={() => {
-                          setTerm(term);
-                          setDropDownTerm(false);
-                        }}
-                      >
-                        {term}
-                      </button>
+                      <div className="Dropdown-button-small-container">
+                        <button
+                          className="Dropdown-button-small"
+                          id={term.toString()}
+                          onClick={() => {
+                            setTerm(term);
+                            setDropDownTerm(false);
+                          }}
+                        >
+                          {term}
+                        </button>
+                      </div>
                     ))}
                   </div>
                 )}

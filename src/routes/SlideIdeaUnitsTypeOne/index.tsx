@@ -336,8 +336,9 @@ function SlideIdeaUnitsTypeOne({
           {type.includes("1_2") && (
             <div className="Slide-idea-units-text-container">
               <div className="Slide-text-m">
-                In beiden Expertenbeispielen wurden alle Teilaspekte der
-                Definition veranschaulicht:
+                Beide Expertenbeispiele würden bei der Bewertung jeweils einen
+                ganzen Punkt erhalten und veranschaulichen alle Teilaspekte der
+                Definition:
               </div>
               <div className="Slide-idea-units-row">
                 <div className="Slide-idea-unit-box-l">
