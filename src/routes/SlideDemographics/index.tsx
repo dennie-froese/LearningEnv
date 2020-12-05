@@ -125,11 +125,11 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
     <div className="Slide">
       <div className="Slide-container">
         <div className="Slide-header">
-          <p>{slideText}</p>
+          <p className="Slide-demographic-label-header">{slideText}</p>
         </div>
         <div className="Slide-demographic">
           <div className="Slide-demographic-row">
-            <p>Alter:</p>
+            <p className="Slide-demographic-label-l">Alter:</p>
             <input
               className="Slide-demographic-input"
               value={age}
@@ -139,7 +139,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
             />
           </div>
           <div className="Slide-demographic-row">
-            <p>Geschlecht:</p>
+            <p className="Slide-demographic-label-l">Geschlecht:</p>
             <div className="Slide-demographic-row-boxes">
               <div className="Slide-demographic-row-boxes-container">
                 <input
@@ -177,7 +177,9 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
             </div>
           </div>
           <div className="Slide-demographic-row">
-            <p>Welche Sprache(n) hast du von Geburt an gelernt?:</p>
+            <p className="Slide-demographic-label-l">
+              Welche Sprache(n) hast du von Geburt an gelernt?:
+            </p>
             <input
               className="Slide-demographic-input"
               value={languageOne}
@@ -194,7 +196,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
             />
           </div>
           <div className="Slide-demographic-row">
-            <p>Abiturnote:</p>
+            <p className="Slide-demographic-label-l">Abiturnote:</p>
             <div>
               <button
                 className="Dropdown-button"
@@ -221,7 +223,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                 </div>
               )}
             </div>
-            <p>Hochschulsemester:</p>
+            <p className="Slide-demographic-label-l">Hochschulsemester:</p>
             <div>
               <button
                 className="Dropdown-button"
@@ -252,7 +254,9 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
             </div>
           </div>
           <div className="Slide-demographic-row">
-            <p>Studiengang (Erstfach & Zweitfach):</p>
+            <p className="Slide-demographic-label-l">
+              Studiengang (Erstfach & Zweitfach):
+            </p>
             <input
               className="Slide-demographic-input"
               value={subjectOne}
@@ -269,7 +273,9 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
             />
           </div>
           <div className="Slide-demographic-row">
-            <p>Angestrebter Hochschulabschluss:</p>
+            <p className="Slide-demographic-label-l">
+              Angestrebter Hochschulabschluss:
+            </p>
             <div className="Slide-demographic-row-boxes">
               <div className="Slide-demographic-row-boxes-container">
                 <input
@@ -284,7 +290,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   }
                   onChange={() => null}
                 />
-                <div className="Slide-label">
+                <div className="Slide-demographic-label-checkboxes">
                   Bachelor of Arts/Science 1-Fach
                 </div>
               </div>
@@ -301,7 +307,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   }
                   onChange={() => null}
                 />
-                <div className="Slide-label">
+                <div className="Slide-demographic-label-checkboxes">
                   Bachelor of Arts/Science 2-Fach
                 </div>
               </div>
@@ -318,7 +324,9 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   }
                   onChange={() => null}
                 />
-                <div className="Slide-label">Master of Arts/Science 1-Fach</div>
+                <div className="Slide-demographic-label-checkboxes">
+                  Master of Arts/Science 1-Fach
+                </div>
               </div>
               <div className="Slide-demographic-row-boxes-container">
                 <input
@@ -333,7 +341,9 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   }
                   onChange={() => null}
                 />
-                <div className="Slide-label">Master of Arts/Science 2-Fach</div>
+                <div className="Slide-demographic-label-checkboxes">
+                  Master of Arts/Science 2-Fach
+                </div>
               </div>
               <div className="Slide-demographic-row-boxes-container">
                 <input
@@ -346,7 +356,9 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   }
                   onChange={() => null}
                 />
-                <div className="Slide-label">Master of Education</div>
+                <div className="Slide-demographic-label-checkboxes">
+                  Master of Education
+                </div>
               </div>
               <div className="Slide-demographic-row-boxes-container">
                 <input
@@ -359,7 +371,9 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   }
                   onChange={() => null}
                 />
-                <div className="Slide-label">Anderer Studienabschluss</div>
+                <div className="Slide-demographic-label-checkboxes">
+                  Anderer Studienabschluss
+                </div>
               </div>
             </div>
           </div>

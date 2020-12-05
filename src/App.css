@@ -91,6 +91,7 @@
 .Slide-container {
   background-color: #353a44;
   min-height: 100vh;
+  min-width: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,23 +133,20 @@
 }
 
 .Slide-demographic {
-  width: 40vw;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: column;
   font-size: calc(12px + 2vmin);
   color: white;
 }
 
 .Slide-demographic-row {
-  width: 70vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
   flex-direction: row;
   font-size: calc(12px + 2vmin);
   color: white;
+  width: 100%;
 }
 
 .Slide-demographic-row-boxes {
@@ -165,7 +163,7 @@
 }
 
 .Slide-demographic-input {
-  width: 10%;
+  width: 15vh;
   height: 25px;
   border-radius: 4px;
   position: relative;
@@ -176,6 +174,27 @@
   padding-left: 10px;
   padding-right: 10px;
   padding: 5px;
+  margin-right: 5vw;
+}
+
+.Slide-demographic-label-checkboxes {
+  text-align: center;
+  font-size: calc(6px + 1vmin);
+  color: white;
+}
+
+.Slide-demographic-label-l {
+  text-align: left;
+  font-size: calc(5px + 2vmin);
+  color: white;
+  padding-right: 10vw;
+}
+
+.Slide-demographic-label-header {
+  text-align: center;
+  font-size: calc(6px + 2vmin);
+  color: white;
+  padding-right: 10vw;
 }
 
 .Slide-nachangaben-main {
@@ -351,6 +370,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  margin-right: 10vw;
 }
 
 .Dropdown-button-small-container {
@@ -411,7 +431,8 @@
 }
 
 .Slide-demographic {
-  width: 40vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
