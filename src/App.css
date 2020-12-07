@@ -285,16 +285,36 @@
 
 .Slide-button {
   background-color: #493e70;
-  width: 20vh;
-  height: 5vh;
+  margin: 10px;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  font-size: calc(4px + 2vmin);
   color: #ffffff;
   border-radius: 10px;
 }
 
-.Slide-button-active {
+.Slide-button-idea-units {
+  background-color: #493e70;
+  margin: 10px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  font-size: calc(8px + 1vmin);
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.Slide-button-idea-units-active {
   background-color: #372380;
-  width: 20vh;
-  height: 5vh;
+  margin: 10px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  font-size: calc(8px + 1vmin);
   color: #ffffff;
   border-radius: 10px;
   border-style: solid;
@@ -505,6 +525,7 @@
   flex-direction: row;
   font-size: calc(12px + 2vmin);
   color: white;
+  padding-right: 1vw;
 }
 
 .Slide-idea-units-text-container {

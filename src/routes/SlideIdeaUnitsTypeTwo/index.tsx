@@ -293,8 +293,8 @@ function SlideIdeaUnitsTypeTwo({
               <button
                 className={
                   exampleEvaluation === 1
-                    ? "Slide-button-active"
-                    : "Slide-button"
+                    ? "Slide-button-idea-units-active"
+                    : "Slide-button-idea-units"
                 }
                 onClick={() =>
                   exampleEvaluation === 1
@@ -307,8 +307,8 @@ function SlideIdeaUnitsTypeTwo({
               <button
                 className={
                   exampleEvaluation === 0.5
-                    ? "Slide-button-active"
-                    : "Slide-button"
+                    ? "Slide-button-idea-units-active"
+                    : "Slide-button-idea-units"
                 }
                 onClick={() =>
                   exampleEvaluation === 0.5
@@ -321,8 +321,8 @@ function SlideIdeaUnitsTypeTwo({
               <button
                 className={
                   exampleEvaluation === 0
-                    ? "Slide-button-active"
-                    : "Slide-button"
+                    ? "Slide-button-idea-units-active"
+                    : "Slide-button-idea-units"
                 }
                 onClick={() =>
                   exampleEvaluation === 0
