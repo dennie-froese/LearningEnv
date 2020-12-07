@@ -10,20 +10,20 @@ interface Props {
 }
 
 function SlideNachangaben({ slideText, type, nachangaben }: Props) {
-  const [valueOne, setValueOne] = useState<undefined | number>(undefined);
-  const [valueTwo, setValueTwo] = useState<undefined | number>(undefined);
-  const [valueThree, setValueThree] = useState<undefined | number>(undefined);
-  const [valueFour, setValueFour] = useState<undefined | number>(undefined);
-  const [valueFive, setValueFive] = useState<undefined | number>(undefined);
-  const [valueSix, setValueSix] = useState<undefined | number>(undefined);
+  const [valueOne, setValueOne] = useState<number>(0);
+  const [valueTwo, setValueTwo] = useState<number>(0);
+  const [valueThree, setValueThree] = useState<number>(0);
+  const [valueFour, setValueFour] = useState<number>(0);
+  const [valueFive, setValueFive] = useState<number>(0);
+  const [valueSix, setValueSix] = useState<number>(0);
 
   const reset = () => {
-    setValueOne(undefined);
-    setValueTwo(undefined);
-    setValueThree(undefined);
-    setValueFour(undefined);
-    setValueFive(undefined);
-    setValueSix(undefined);
+    setValueOne(0);
+    setValueTwo(0);
+    setValueThree(0);
+    setValueFour(0);
+    setValueFive(0);
+    setValueSix(0);
     restart();
   };
 
@@ -97,7 +97,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueOne === 1 ? true : false}
                     onClick={() =>
-                      valueOne === 1 ? setValueOne(undefined) : setValueOne(1)
+                      valueOne === 1 ? setValueOne(0) : setValueOne(1)
                     }
                   />
                 </div>
@@ -106,7 +106,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueOne === 2 ? true : false}
                     onClick={() =>
-                      valueOne === 2 ? setValueOne(undefined) : setValueOne(2)
+                      valueOne === 2 ? setValueOne(0) : setValueOne(2)
                     }
                   />
                 </div>
@@ -115,7 +115,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueOne === 3 ? true : false}
                     onClick={() =>
-                      valueOne === 3 ? setValueOne(undefined) : setValueOne(3)
+                      valueOne === 3 ? setValueOne(0) : setValueOne(3)
                     }
                   />
                 </div>
@@ -124,7 +124,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueOne === 4 ? true : false}
                     onClick={() =>
-                      valueOne === 4 ? setValueOne(undefined) : setValueOne(4)
+                      valueOne === 4 ? setValueOne(0) : setValueOne(4)
                     }
                   />
                 </div>
@@ -133,7 +133,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueOne === 5 ? true : false}
                     onClick={() =>
-                      valueOne === 5 ? setValueOne(undefined) : setValueOne(5)
+                      valueOne === 5 ? setValueOne(0) : setValueOne(5)
                     }
                   />
                 </div>
@@ -157,7 +157,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueTwo === 1 ? true : false}
                     onClick={() =>
-                      valueTwo === 1 ? setValueTwo(undefined) : setValueTwo(1)
+                      valueTwo === 1 ? setValueTwo(0) : setValueTwo(1)
                     }
                   />
                 </div>
@@ -166,7 +166,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueTwo === 2 ? true : false}
                     onClick={() =>
-                      valueTwo === 2 ? setValueTwo(undefined) : setValueTwo(2)
+                      valueTwo === 2 ? setValueTwo(0) : setValueTwo(2)
                     }
                   />
                 </div>
@@ -175,7 +175,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueTwo === 3 ? true : false}
                     onClick={() =>
-                      valueTwo === 3 ? setValueTwo(undefined) : setValueTwo(3)
+                      valueTwo === 3 ? setValueTwo(0) : setValueTwo(3)
                     }
                   />
                 </div>
@@ -184,7 +184,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueTwo === 4 ? true : false}
                     onClick={() =>
-                      valueTwo === 4 ? setValueTwo(undefined) : setValueTwo(4)
+                      valueTwo === 4 ? setValueTwo(0) : setValueTwo(4)
                     }
                   />
                 </div>
@@ -193,7 +193,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueTwo === 5 ? true : false}
                     onClick={() =>
-                      valueTwo === 5 ? setValueTwo(undefined) : setValueTwo(5)
+                      valueTwo === 5 ? setValueTwo(0) : setValueTwo(5)
                     }
                   />
                 </div>
@@ -217,9 +217,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueThree === 1 ? true : false}
                     onClick={() =>
-                      valueThree === 1
-                        ? setValueThree(undefined)
-                        : setValueThree(1)
+                      valueThree === 1 ? setValueThree(0) : setValueThree(1)
                     }
                   />
                 </div>
@@ -228,9 +226,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueThree === 2 ? true : false}
                     onClick={() =>
-                      valueThree === 2
-                        ? setValueThree(undefined)
-                        : setValueThree(2)
+                      valueThree === 2 ? setValueThree(0) : setValueThree(2)
                     }
                   />
                 </div>
@@ -239,9 +235,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueThree === 3 ? true : false}
                     onClick={() =>
-                      valueThree === 3
-                        ? setValueThree(undefined)
-                        : setValueThree(3)
+                      valueThree === 3 ? setValueThree(0) : setValueThree(3)
                     }
                   />
                 </div>
@@ -250,9 +244,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueThree === 4 ? true : false}
                     onClick={() =>
-                      valueThree === 4
-                        ? setValueThree(undefined)
-                        : setValueThree(4)
+                      valueThree === 4 ? setValueThree(0) : setValueThree(4)
                     }
                   />
                 </div>
@@ -261,9 +253,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueThree === 5 ? true : false}
                     onClick={() =>
-                      valueThree === 5
-                        ? setValueThree(undefined)
-                        : setValueThree(5)
+                      valueThree === 5 ? setValueThree(0) : setValueThree(5)
                     }
                   />
                 </div>
@@ -287,9 +277,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueFour === 1 ? true : false}
                     onClick={() =>
-                      valueFour === 1
-                        ? setValueFour(undefined)
-                        : setValueFour(1)
+                      valueFour === 1 ? setValueFour(0) : setValueFour(1)
                     }
                   />
                 </div>
@@ -298,9 +286,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueFour === 2 ? true : false}
                     onClick={() =>
-                      valueFour === 2
-                        ? setValueFour(undefined)
-                        : setValueFour(2)
+                      valueFour === 2 ? setValueFour(0) : setValueFour(2)
                     }
                   />
                 </div>
@@ -309,9 +295,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueFour === 3 ? true : false}
                     onClick={() =>
-                      valueFour === 3
-                        ? setValueFour(undefined)
-                        : setValueFour(3)
+                      valueFour === 3 ? setValueFour(0) : setValueFour(3)
                     }
                   />
                 </div>
@@ -320,9 +304,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueFour === 4 ? true : false}
                     onClick={() =>
-                      valueFour === 4
-                        ? setValueFour(undefined)
-                        : setValueFour(4)
+                      valueFour === 4 ? setValueFour(0) : setValueFour(4)
                     }
                   />
                 </div>
@@ -331,9 +313,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueFour === 5 ? true : false}
                     onClick={() =>
-                      valueFour === 5
-                        ? setValueFour(undefined)
-                        : setValueFour(5)
+                      valueFour === 5 ? setValueFour(0) : setValueFour(5)
                     }
                   />
                 </div>
@@ -357,9 +337,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueFive === 1 ? true : false}
                     onClick={() =>
-                      valueFive === 1
-                        ? setValueFive(undefined)
-                        : setValueFive(1)
+                      valueFive === 1 ? setValueFive(0) : setValueFive(1)
                     }
                   />
                 </div>
@@ -368,9 +346,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueFive === 2 ? true : false}
                     onClick={() =>
-                      valueFive === 2
-                        ? setValueFive(undefined)
-                        : setValueFive(2)
+                      valueFive === 2 ? setValueFive(0) : setValueFive(2)
                     }
                   />
                 </div>
@@ -379,9 +355,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueFive === 3 ? true : false}
                     onClick={() =>
-                      valueFive === 3
-                        ? setValueFive(undefined)
-                        : setValueFive(3)
+                      valueFive === 3 ? setValueFive(0) : setValueFive(3)
                     }
                   />
                 </div>
@@ -390,9 +364,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueFive === 4 ? true : false}
                     onClick={() =>
-                      valueFive === 4
-                        ? setValueFive(undefined)
-                        : setValueFive(4)
+                      valueFive === 4 ? setValueFive(0) : setValueFive(4)
                     }
                   />
                 </div>
@@ -401,9 +373,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                     type="checkbox"
                     checked={valueFive === 5 ? true : false}
                     onClick={() =>
-                      valueFive === 5
-                        ? setValueFive(undefined)
-                        : setValueFive(5)
+                      valueFive === 5 ? setValueFive(0) : setValueFive(5)
                     }
                   />
                 </div>
@@ -428,7 +398,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                       type="checkbox"
                       checked={valueSix === 1 ? true : false}
                       onClick={() =>
-                        valueSix === 1 ? setValueSix(undefined) : setValueSix(1)
+                        valueSix === 1 ? setValueSix(0) : setValueSix(1)
                       }
                     />
                   </div>
@@ -437,7 +407,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                       type="checkbox"
                       checked={valueSix === 2 ? true : false}
                       onClick={() =>
-                        valueSix === 2 ? setValueSix(undefined) : setValueSix(2)
+                        valueSix === 2 ? setValueSix(0) : setValueSix(2)
                       }
                     />
                   </div>
@@ -446,7 +416,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                       type="checkbox"
                       checked={valueSix === 3 ? true : false}
                       onClick={() =>
-                        valueSix === 3 ? setValueSix(undefined) : setValueSix(3)
+                        valueSix === 3 ? setValueSix(0) : setValueSix(3)
                       }
                     />
                   </div>
@@ -455,7 +425,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                       type="checkbox"
                       checked={valueSix === 4 ? true : false}
                       onClick={() =>
-                        valueSix === 4 ? setValueSix(undefined) : setValueSix(4)
+                        valueSix === 4 ? setValueSix(0) : setValueSix(4)
                       }
                     />
                   </div>
@@ -464,7 +434,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
                       type="checkbox"
                       checked={valueSix === 5 ? true : false}
                       onClick={() =>
-                        valueSix === 5 ? setValueSix(undefined) : setValueSix(5)
+                        valueSix === 5 ? setValueSix(0) : setValueSix(5)
                       }
                     />
                   </div>

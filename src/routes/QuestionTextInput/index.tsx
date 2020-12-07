@@ -9,7 +9,7 @@ interface Props {
 }
 
 function QuestionTextInput({ question, questionNumber, type }: Props) {
-  const [input, setInput] = useState<undefined | string>(undefined);
+  const [input, setInput] = useState<string>("");
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
 

@@ -67,23 +67,23 @@ const TERMS: number[] = [
 
 function SlideDemographics({ slideText, slideNumber, type }: Props) {
   const dispatch = useSlidesDispatch();
-  const [age, setAge] = useState<undefined | string>(undefined);
-  const [sex, setSex] = useState<undefined | string>(undefined);
-  const [languageOne, setLanguageOne] = useState<undefined | string>(undefined);
-  const [languageTwo, setLanguageTwo] = useState<undefined | string>(undefined);
+  const [age, setAge] = useState<string>("");
+  const [sex, setSex] = useState<string>("");
+  const [languageOne, setLanguageOne] = useState<string>("");
+  const [languageTwo, setLanguageTwo] = useState<string>("");
   const [dropDownGrade, setDropDownGrade] = useState(false);
   const dropDownGradeClassName = dropDownGrade
     ? "Dropdown show"
     : "Dropdown hide";
-  const [grade, setGrade] = useState<undefined | string>(undefined);
+  const [grade, setGrade] = useState<string>("");
   const [dropDownTerm, setDropDownTerm] = useState(false);
   const dropDownTermClassName = dropDownTerm
     ? "Dropdown show"
     : "Dropdown hide";
-  const [term, setTerm] = useState<undefined | number>(undefined);
-  const [subjectOne, setSubjectOne] = useState<undefined | string>(undefined);
-  const [subjectTwo, setSubjectTwo] = useState<undefined | string>(undefined);
-  const [degree, setDegree] = useState<undefined | string>(undefined);
+  const [term, setTerm] = useState<number>(0);
+  const [subjectOne, setSubjectOne] = useState<string>("");
+  const [subjectTwo, setSubjectTwo] = useState<string>("");
+  const [degree, setDegree] = useState<string>("");
   const [error, setError] = useState("");
 
   const { launchTime, restart } = useTimer();
@@ -146,7 +146,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   type="checkbox"
                   checked={sex === "männlich" ? true : false}
                   onClick={() =>
-                    sex === "männlich" ? setSex(undefined) : setSex("männlich")
+                    sex === "männlich" ? setSex("") : setSex("männlich")
                   }
                   onChange={() => null}
                 />
@@ -157,7 +157,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   type="checkbox"
                   checked={sex === "weiblich" ? true : false}
                   onClick={() =>
-                    sex === "weiblich" ? setSex(undefined) : setSex("weiblich")
+                    sex === "weiblich" ? setSex("") : setSex("weiblich")
                   }
                   onChange={() => null}
                 />
@@ -168,7 +168,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   type="checkbox"
                   checked={sex === "divers" ? true : false}
                   onClick={() =>
-                    sex === "divers" ? setSex(undefined) : setSex("divers")
+                    sex === "divers" ? setSex("") : setSex("divers")
                   }
                   onChange={() => null}
                 />
@@ -285,7 +285,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   }
                   onClick={() =>
                     degree === "Bachelor of Arts/Science 1-Fach"
-                      ? setDegree(undefined)
+                      ? setDegree("")
                       : setDegree("Bachelor of Arts/Science 1-Fach")
                   }
                   onChange={() => null}
@@ -302,7 +302,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   }
                   onClick={() =>
                     degree === "Bachelor of Arts/Science 2-Fach"
-                      ? setDegree(undefined)
+                      ? setDegree("")
                       : setDegree("Bachelor of Arts/Science 2-Fach")
                   }
                   onChange={() => null}
@@ -319,7 +319,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   }
                   onClick={() =>
                     degree === "Master of Arts/Science 1-Fach"
-                      ? setDegree(undefined)
+                      ? setDegree("")
                       : setDegree("Master of Arts/Science 1-Fach")
                   }
                   onChange={() => null}
@@ -336,7 +336,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   }
                   onClick={() =>
                     degree === "Master of Arts/Science 2-Fach"
-                      ? setDegree(undefined)
+                      ? setDegree("")
                       : setDegree("Master of Arts/Science 2-Fach")
                   }
                   onChange={() => null}
@@ -351,7 +351,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   checked={degree === "Master of Education" ? true : false}
                   onClick={() =>
                     degree === "Master of Education"
-                      ? setDegree(undefined)
+                      ? setDegree("")
                       : setDegree("Master of Education")
                   }
                   onChange={() => null}
@@ -366,7 +366,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
                   checked={degree === "Anderer Studienabschluss" ? true : false}
                   onClick={() =>
                     degree === "Anderer Studienabschluss"
-                      ? setDegree(undefined)
+                      ? setDegree("")
                       : setDegree("Anderer Studienabschluss")
                   }
                   onChange={() => null}

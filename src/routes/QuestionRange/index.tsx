@@ -9,7 +9,7 @@ interface Props {
 }
 
 function QuestionRange({ questionNumber, question, type }: Props) {
-  const [value, setValue] = useState<undefined | number>(undefined);
+  const [value, setValue] = useState<number>(0);
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
   const checkboxes: JSX.Element[] = [];
@@ -26,7 +26,7 @@ function QuestionRange({ questionNumber, question, type }: Props) {
         <input
           type="checkbox"
           checked={value === v ? true : false}
-          onClick={() => (value === v ? setValue(undefined) : setValue(v))}
+          onClick={() => (value === v ? setValue(0) : setValue(v))}
           onChange={() => null}
         />
       </div>
@@ -99,7 +99,7 @@ function QuestionRange({ questionNumber, question, type }: Props) {
         : type === "Beispiel_GWG4"
         ? { Ausdenken_GWG4: value?.toString() }
         : null;
-    setValue(undefined);
+    setValue(0);
     dispatch &&
       launchTime &&
       dispatch({

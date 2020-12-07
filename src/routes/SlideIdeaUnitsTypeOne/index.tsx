@@ -19,13 +19,11 @@ function SlideIdeaUnitsTypeOne({
   ideaUnits,
   expertExamples,
 }: Props) {
-  const [valueOne, setValueOne] = useState<undefined | string>(undefined);
-  const [valueTwo, setValueTwo] = useState<undefined | string>(undefined);
-  const [valueThree, setValueThree] = useState<undefined | string>(undefined);
-  const [valueFour, setValueFour] = useState<undefined | string>(undefined);
-  const [exampleEvaluation, setExampleEvaluation] = useState<
-    undefined | number
-  >(undefined);
+  const [valueOne, setValueOne] = useState<string>("");
+  const [valueTwo, setValueTwo] = useState<string>("");
+  const [valueThree, setValueThree] = useState<string>("");
+  const [valueFour, setValueFour] = useState<string>("");
+  const [exampleEvaluation, setExampleEvaluation] = useState<number>(10);
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
@@ -49,11 +47,11 @@ function SlideIdeaUnitsTypeOne({
     : "Du hast leider kein Beispiel definiert.";
 
   const resetValues = () => {
-    setValueOne(undefined);
-    setValueTwo(undefined);
-    setValueThree(undefined);
-    setValueFour(undefined);
-    setExampleEvaluation(undefined);
+    setValueOne("");
+    setValueTwo("");
+    setValueThree("");
+    setValueFour("");
+    setExampleEvaluation(10);
   };
 
   const finish = () => {
@@ -219,7 +217,7 @@ function SlideIdeaUnitsTypeOne({
                       checked={valueOne === "yes" ? true : false}
                       onClick={() =>
                         valueOne === "yes"
-                          ? setValueOne(undefined)
+                          ? setValueOne("")
                           : setValueOne("yes")
                       }
                     />
@@ -230,9 +228,7 @@ function SlideIdeaUnitsTypeOne({
                       type="checkbox"
                       checked={valueOne === "no" ? true : false}
                       onClick={() =>
-                        valueOne === "no"
-                          ? setValueOne(undefined)
-                          : setValueOne("no")
+                        valueOne === "no" ? setValueOne("") : setValueOne("no")
                       }
                     />
                     <div className="Slide-label">Nein</div>
@@ -248,7 +244,7 @@ function SlideIdeaUnitsTypeOne({
                       checked={valueTwo === "yes" ? true : false}
                       onClick={() =>
                         valueTwo === "yes"
-                          ? setValueTwo(undefined)
+                          ? setValueTwo("")
                           : setValueTwo("yes")
                       }
                     />
@@ -259,9 +255,7 @@ function SlideIdeaUnitsTypeOne({
                       type="checkbox"
                       checked={valueTwo === "no" ? true : false}
                       onClick={() =>
-                        valueTwo === "no"
-                          ? setValueTwo(undefined)
-                          : setValueTwo("no")
+                        valueTwo === "no" ? setValueTwo("") : setValueTwo("no")
                       }
                     />
                     <div className="Slide-label">Nein</div>
@@ -278,7 +272,7 @@ function SlideIdeaUnitsTypeOne({
                         checked={valueThree === "yes" ? true : false}
                         onClick={() =>
                           valueThree === "yes"
-                            ? setValueThree(undefined)
+                            ? setValueThree("")
                             : setValueThree("yes")
                         }
                       />
@@ -290,7 +284,7 @@ function SlideIdeaUnitsTypeOne({
                         checked={valueThree === "no" ? true : false}
                         onClick={() =>
                           valueThree === "no"
-                            ? setValueThree(undefined)
+                            ? setValueThree("")
                             : setValueThree("no")
                         }
                       />
@@ -309,7 +303,7 @@ function SlideIdeaUnitsTypeOne({
                         checked={valueFour === "yes" ? true : false}
                         onClick={() =>
                           valueFour === "yes"
-                            ? setValueFour(undefined)
+                            ? setValueFour("")
                             : setValueFour("yes")
                         }
                       />
@@ -321,7 +315,7 @@ function SlideIdeaUnitsTypeOne({
                         checked={valueFour === "no" ? true : false}
                         onClick={() =>
                           valueFour === "no"
-                            ? setValueFour(undefined)
+                            ? setValueFour("")
                             : setValueFour("no")
                         }
                       />
@@ -389,7 +383,7 @@ function SlideIdeaUnitsTypeOne({
                         checked={valueOne === "yes" ? true : false}
                         onClick={() =>
                           valueOne === "yes"
-                            ? setValueOne(undefined)
+                            ? setValueOne("")
                             : setValueOne("yes")
                         }
                       />
@@ -401,7 +395,7 @@ function SlideIdeaUnitsTypeOne({
                         checked={valueOne === "no" ? true : false}
                         onClick={() =>
                           valueOne === "no"
-                            ? setValueOne(undefined)
+                            ? setValueOne("")
                             : setValueOne("no")
                         }
                       />
@@ -418,7 +412,7 @@ function SlideIdeaUnitsTypeOne({
                         checked={valueTwo === "yes" ? true : false}
                         onClick={() =>
                           valueTwo === "yes"
-                            ? setValueTwo(undefined)
+                            ? setValueTwo("")
                             : setValueTwo("yes")
                         }
                       />
@@ -430,7 +424,7 @@ function SlideIdeaUnitsTypeOne({
                         checked={valueTwo === "no" ? true : false}
                         onClick={() =>
                           valueTwo === "no"
-                            ? setValueTwo(undefined)
+                            ? setValueTwo("")
                             : setValueTwo("no")
                         }
                       />
@@ -448,7 +442,7 @@ function SlideIdeaUnitsTypeOne({
                           checked={valueThree === "yes" ? true : false}
                           onClick={() =>
                             valueThree === "yes"
-                              ? setValueThree(undefined)
+                              ? setValueThree("")
                               : setValueThree("yes")
                           }
                         />
@@ -460,7 +454,7 @@ function SlideIdeaUnitsTypeOne({
                           checked={valueThree === "no" ? true : false}
                           onClick={() =>
                             valueThree === "no"
-                              ? setValueThree(undefined)
+                              ? setValueThree("")
                               : setValueThree("no")
                           }
                         />
@@ -481,7 +475,7 @@ function SlideIdeaUnitsTypeOne({
                           checked={valueFour === "yes" ? true : false}
                           onClick={() =>
                             valueFour === "yes"
-                              ? setValueFour(undefined)
+                              ? setValueFour("")
                               : setValueFour("yes")
                           }
                         />
@@ -493,7 +487,7 @@ function SlideIdeaUnitsTypeOne({
                           checked={valueFour === "no" ? true : false}
                           onClick={() =>
                             valueFour === "no"
-                              ? setValueFour(undefined)
+                              ? setValueFour("")
                               : setValueFour("no")
                           }
                         />
@@ -523,7 +517,7 @@ function SlideIdeaUnitsTypeOne({
                 }
                 onClick={() =>
                   exampleEvaluation === 1
-                    ? setExampleEvaluation(undefined)
+                    ? setExampleEvaluation(10)
                     : setExampleEvaluation(1)
                 }
               >
@@ -537,7 +531,7 @@ function SlideIdeaUnitsTypeOne({
                 }
                 onClick={() =>
                   exampleEvaluation === 0.5
-                    ? setExampleEvaluation(undefined)
+                    ? setExampleEvaluation(10)
                     : setExampleEvaluation(0.5)
                 }
               >
@@ -551,7 +545,7 @@ function SlideIdeaUnitsTypeOne({
                 }
                 onClick={() =>
                   exampleEvaluation === 0
-                    ? setExampleEvaluation(undefined)
+                    ? setExampleEvaluation(10)
                     : setExampleEvaluation(0)
                 }
               >

@@ -11,7 +11,7 @@ interface Props {
 }
 
 function SlideFun({ slideText, slideNumber, type, header }: Props) {
-  const [value, setValue] = useState<undefined | string>("");
+  const [value, setValue] = useState<string>("");
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
@@ -46,9 +46,7 @@ function SlideFun({ slideText, slideNumber, type, header }: Props) {
             <input
               type="checkbox"
               checked={value === "ja" ? true : false}
-              onClick={() =>
-                value === "ja" ? setValue(undefined) : setValue("ja")
-              }
+              onClick={() => (value === "ja" ? setValue("") : setValue("ja"))}
               onChange={() => null}
             />
             <p>Ja, ich habe Interesse.</p>
@@ -56,7 +54,7 @@ function SlideFun({ slideText, slideNumber, type, header }: Props) {
               type="checkbox"
               checked={value === "nein" ? true : false}
               onClick={() =>
-                value === "nein" ? setValue(undefined) : setValue("nein")
+                value === "nein" ? setValue("") : setValue("nein")
               }
               onChange={() => null}
             />
