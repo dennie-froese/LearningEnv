@@ -227,6 +227,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
         "Leichter als früher",
         "Schwerer als früher",
       ],
+      6: ["Ich kann im Studium…", "Weniger als früher", "Mehr als früher"],
     },
   },
   10: {
@@ -273,14 +274,9 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     nachangaben: {
       1: ["Ich bin für das Studium…", "Sehr begabt", "Nicht begabt"],
       2: ["Neues zu lernen fällt mir…", "Schwer", "Leicht"],
-      3: [
-        "Mit den Aufgaben im Studium komme ich…",
-        "Schlechter zurecht als meine Kommilitonen",
-        "Besser zurecht als meine Kommilitonen",
-      ],
-      4: ["Ich bin…", "Nicht intelligent", "Sehr intelligent"],
-      5: ["Ich kann im Studium…", "Wenig", "Viel"],
-      6: ["Im Studium fallen mir viele Aufgaben…", "Schwer", "Leicht"],
+      3: ["Ich bin…", "Nicht intelligent", "Sehr intelligent"],
+      4: ["Ich kann im Studium…", "Wenig", "Viel"],
+      5: ["Im Studium fallen mir viele Aufgaben…", "Schwer", "Leicht"],
     },
   },
   12: {
@@ -884,8 +880,8 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     ideaUnits: [
       "Attribution des Verhaltens anderer",
       "Attribution ist fehlgeleitet/ fehlerhaft",
-      "Überschätzung interner Ursachen für Verhalten",
-      "Überschätzung des Situationseinflusses",
+      "Unterschätzung interner Ursachen für Verhalten",
+      "Unterschätzung des Situationseinflusses",
     ],
   },
   87: {
@@ -897,8 +893,8 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     ideaUnits: [
       "Attribution des Verhaltens anderer",
       "Attribution ist fehlgeleitet/ fehlerhaft",
-      "Überschätzung interner Ursachen für Verhalten",
-      "Überschätzung des Situationseinflusses",
+      "Unterschätzung interner Ursachen für Verhalten",
+      "Unterschätzung des Situationseinflusses",
     ],
     expertExamples: [
       "Im spannenden Endspiel der Fußballweltmeisterschaft wird dem Torwart infolge eines Fouls eine gelbe Karte gegeben. Der Torwart wird daraufhin aggressiv und beschimpft den Schiedsrichter. Der Kommentator schlussfolgert, die Reaktion des Torwarts sei durch die generell schon aggressive Art und geringe Frustrationstoleranz des Torwarts bedingt. Im Interview nach dem Spiel erklärt der Torwart bezüglich seines Ausrasters, dass die Situation, im Finale der Weltmeisterschaft zu stehen, einen großen Druck auf ihn ausgeübt habe und er grundsätzlich kein aggressiver Mensch sei.",
@@ -914,8 +910,8 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     ideaUnits: [
       "Attribution des Verhaltens anderer",
       "Attribution ist fehlgeleitet/ fehlerhaft",
-      "Überschätzung interner Ursachen für Verhalten",
-      "Überschätzung des Situationseinflusses",
+      "Unterschätzung interner Ursachen für Verhalten",
+      "Unterschätzung des Situationseinflusses",
     ],
   },
   89: {
