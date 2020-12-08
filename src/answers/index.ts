@@ -10,7 +10,7 @@ export interface Answer {
   Abiturnote?: string;
   Studiengang1?: string;
   Studiengang2?: string;
-  Tippen?: string;
+  Abschluss?: string;
   Semester_Hochschule?: string;
   NachAngaben_1?: string;
   NachAngaben_2?: string;

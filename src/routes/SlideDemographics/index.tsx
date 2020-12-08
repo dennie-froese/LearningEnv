@@ -114,6 +114,8 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
             Abiturnote: grade,
             Studiengang1: subjectOne,
             Studiengang2: subjectTwo || "-",
+            Abschluss: degree,
+            Semester_Hochschule: term.toString(),
           },
         },
       });
