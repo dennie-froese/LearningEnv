@@ -23,5 +23,6 @@ firebase.initializeApp(config);
 const db = firebase.database();
 
 export const saveToDatabase = (string: string, obj: any) => {
-  return db.ref(`/${string}/`).push(obj);
+  const time = Date.now();
+  return db.ref(`/${string}/${time}/`).push(obj);
 };
