@@ -262,8 +262,10 @@
 
 .Slide-nachangaben-label-l {
   width: 15vw;
-  font-size: calc(14px + 1vmin);
+  font-size: calc(8px + 1vmin);
   color: white;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .Slide-range-row-boxes {
