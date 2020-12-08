@@ -19,11 +19,11 @@ function SlideIdeaUnitsTypeTwo({
   ideaUnits,
   expertExamples,
 }: Props) {
-  const [valueOne, setValueOne] = useState<string>("");
-  const [valueTwo, setValueTwo] = useState<string>("");
-  const [valueThree, setValueThree] = useState<string>("");
-  const [valueFour, setValueFour] = useState<string>("");
-  const [exampleEvaluation, setExampleEvaluation] = useState<number>(10);
+  const [valueOne, setValueOne] = useState<number>(0);
+  const [valueTwo, setValueTwo] = useState<number>(0);
+  const [valueThree, setValueThree] = useState<number>(0);
+  const [valueFour, setValueFour] = useState<number>(0);
+  const [exampleEvaluation, setExampleEvaluation] = useState<number>(90);
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
@@ -47,69 +47,69 @@ function SlideIdeaUnitsTypeTwo({
     : "Du hast leider kein Beispiel definiert.";
 
   const resetValues = () => {
-    setValueOne("");
-    setValueTwo("");
-    setValueThree("");
-    setValueFour("");
-    setExampleEvaluation(10);
+    setValueOne(0);
+    setValueTwo(0);
+    setValueThree(0);
+    setValueFour(0);
+    setExampleEvaluation(90);
   };
 
   const finish = () => {
     const obj =
       type === "Attribution_g2"
         ? {
-            Attribution_g2_1: valueOne,
-            Attribution_g2_2: valueTwo,
-            Attribution_g2_3: valueThree,
+            Attribution_g2_1: valueOne.toString(),
+            Attribution_g2_2: valueTwo.toString(),
+            Attribution_g2_3: valueThree.toString(),
             Attribution_g2_4: exampleEvaluation?.toString(),
           }
         : type === "SN_g2"
         ? {
-            SN_g2_1: valueOne,
-            SN_g2_2: valueTwo,
-            SN_g2_3: valueThree,
+            SN_g2_1: valueOne.toString(),
+            SN_g2_2: valueTwo.toString(),
+            SN_g2_3: valueThree.toString(),
             SN_g2_4: exampleEvaluation?.toString(),
           }
         : type === "Konsens_g2"
         ? {
-            Konsens_g2_1: valueOne,
-            Konsens_g2_2: valueTwo,
+            Konsens_g2_1: valueOne.toString(),
+            Konsens_g2_2: valueTwo.toString(),
             Konsens_g2_3: exampleEvaluation?.toString(),
           }
         : type === "Konsistenz_g2"
         ? {
-            Konsistenz_g2_1: valueOne,
-            Konsistenz_g2_2: valueTwo,
-            Konsistenz_g2_3: valueThree,
-            Konsistenz_g2_4: valueFour,
+            Konsistenz_g2_1: valueOne.toString(),
+            Konsistenz_g2_2: valueTwo.toString(),
+            Konsistenz_g2_3: valueThree.toString(),
+            Konsistenz_g2_4: valueFour.toString(),
             Konsistenz_g2_5: exampleEvaluation?.toString(),
           }
         : type === "Distinktheit_g2"
         ? {
-            Distinktheit_g2_1: valueOne,
-            Distinktheit_g2_2: valueTwo,
-            Distinktheit_g2_3: valueThree,
+            Distinktheit_g2_1: valueOne.toString(),
+            Distinktheit_g2_2: valueTwo.toString(),
+            Distinktheit_g2_3: valueThree.toString(),
             Distinktheit_g2_4: exampleEvaluation?.toString(),
           }
         : type === "FA_g2"
         ? {
-            FA_g2_1: valueOne,
-            FA_g2_2: valueTwo,
-            FA_g2_3: valueThree,
-            FA_g2_4: valueFour,
+            FA_g2_1: valueOne.toString(),
+            FA_g2_2: valueTwo.toString(),
+            FA_g2_3: valueThree.toString(),
+            FA_g2_4: valueFour.toString(),
             FA_g2_5: exampleEvaluation?.toString(),
           }
         : type === "SV_g2"
         ? {
-            SV_g2_1: valueOne,
-            SV_g2_2: valueTwo,
+            SV_g2_1: valueOne.toString(),
+            SV_g2_2: valueTwo.toString(),
             SV_g2_3: exampleEvaluation?.toString(),
           }
         : type === "GWG_g2"
         ? {
-            GWG_g2_1: valueOne,
-            GWG_g2_2: valueTwo,
-            GWG_g2_3: valueThree,
+            GWG_g2_1: valueOne.toString(),
+            GWG_g2_2: valueTwo.toString(),
+            GWG_g2_3: valueThree.toString(),
             GWG_g2_4: exampleEvaluation?.toString(),
           }
         : null;
@@ -157,9 +157,9 @@ function SlideIdeaUnitsTypeTwo({
                 <div className="Slide-idea-units-checkbox-row">
                   <input
                     type="checkbox"
-                    checked={valueOne === "yes" ? true : false}
+                    checked={valueOne === 1 ? true : false}
                     onClick={() =>
-                      valueOne === "yes" ? setValueOne("") : setValueOne("yes")
+                      valueOne === 1 ? setValueOne(0) : setValueOne(1)
                     }
                   />
                   <div className="Slide-label">Ja</div>
@@ -167,9 +167,9 @@ function SlideIdeaUnitsTypeTwo({
                 <div className="Slide-idea-units-checkbox-row">
                   <input
                     type="checkbox"
-                    checked={valueOne === "no" ? true : false}
+                    checked={valueOne === 2 ? true : false}
                     onClick={() =>
-                      valueOne === "no" ? setValueOne("") : setValueOne("no")
+                      valueOne === 2 ? setValueOne(0) : setValueOne(2)
                     }
                   />
                   <div className="Slide-label">Nein</div>
@@ -182,9 +182,9 @@ function SlideIdeaUnitsTypeTwo({
                 <div className="Slide-idea-units-checkbox-row">
                   <input
                     type="checkbox"
-                    checked={valueTwo === "yes" ? true : false}
+                    checked={valueTwo === 1 ? true : false}
                     onClick={() =>
-                      valueTwo === "yes" ? setValueTwo("") : setValueTwo("yes")
+                      valueTwo === 1 ? setValueTwo(0) : setValueTwo(1)
                     }
                   />
                   <div className="Slide-label">Ja</div>
@@ -192,9 +192,9 @@ function SlideIdeaUnitsTypeTwo({
                 <div className="Slide-idea-units-checkbox-row">
                   <input
                     type="checkbox"
-                    checked={valueTwo === "no" ? true : false}
+                    checked={valueTwo === 2 ? true : false}
                     onClick={() =>
-                      valueTwo === "no" ? setValueTwo("") : setValueTwo("no")
+                      valueTwo === 2 ? setValueTwo(0) : setValueTwo(2)
                     }
                   />
                   <div className="Slide-label">Nein</div>
@@ -208,11 +208,9 @@ function SlideIdeaUnitsTypeTwo({
                   <div className="Slide-idea-units-checkbox-row">
                     <input
                       type="checkbox"
-                      checked={valueThree === "yes" ? true : false}
+                      checked={valueThree === 1 ? true : false}
                       onClick={() =>
-                        valueThree === "yes"
-                          ? setValueThree("")
-                          : setValueThree("yes")
+                        valueThree === 1 ? setValueThree(0) : setValueThree(1)
                       }
                     />
                     <div className="Slide-label">Ja</div>
@@ -220,11 +218,9 @@ function SlideIdeaUnitsTypeTwo({
                   <div className="Slide-idea-units-checkbox-row">
                     <input
                       type="checkbox"
-                      checked={valueThree === "no" ? true : false}
+                      checked={valueThree === 2 ? true : false}
                       onClick={() =>
-                        valueThree === "no"
-                          ? setValueThree("")
-                          : setValueThree("no")
+                        valueThree === 2 ? setValueThree(0) : setValueThree(2)
                       }
                     />
                     <div className="Slide-label">Nein</div>
@@ -239,11 +235,9 @@ function SlideIdeaUnitsTypeTwo({
                   <div className="Slide-idea-units-checkbox-row">
                     <input
                       type="checkbox"
-                      checked={valueFour === "yes" ? true : false}
+                      checked={valueFour === 1 ? true : false}
                       onClick={() =>
-                        valueFour === "yes"
-                          ? setValueFour("")
-                          : setValueFour("yes")
+                        valueFour === 1 ? setValueFour(0) : setValueFour(1)
                       }
                     />
                     <div className="Slide-label">Ja</div>
@@ -251,11 +245,9 @@ function SlideIdeaUnitsTypeTwo({
                   <div className="Slide-idea-units-checkbox-row">
                     <input
                       type="checkbox"
-                      checked={valueFour === "no" ? true : false}
+                      checked={valueFour === 2 ? true : false}
                       onClick={() =>
-                        valueFour === "no"
-                          ? setValueFour("")
-                          : setValueFour("no")
+                        valueFour === 2 ? setValueFour(0) : setValueFour(2)
                       }
                     />
                     <div className="Slide-label">Nein</div>
@@ -288,7 +280,7 @@ function SlideIdeaUnitsTypeTwo({
                 }
                 onClick={() =>
                   exampleEvaluation === 1
-                    ? setExampleEvaluation(10)
+                    ? setExampleEvaluation(90)
                     : setExampleEvaluation(1)
                 }
               >
@@ -302,7 +294,7 @@ function SlideIdeaUnitsTypeTwo({
                 }
                 onClick={() =>
                   exampleEvaluation === 0.5
-                    ? setExampleEvaluation(10)
+                    ? setExampleEvaluation(90)
                     : setExampleEvaluation(0.5)
                 }
               >
@@ -316,7 +308,7 @@ function SlideIdeaUnitsTypeTwo({
                 }
                 onClick={() =>
                   exampleEvaluation === 0
-                    ? setExampleEvaluation(10)
+                    ? setExampleEvaluation(90)
                     : setExampleEvaluation(0)
                 }
               >

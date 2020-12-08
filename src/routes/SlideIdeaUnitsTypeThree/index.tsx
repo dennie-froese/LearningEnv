@@ -17,7 +17,7 @@ function SlideIdeaUnitsTypeThree({
   header,
   expertExamples,
 }: Props) {
-  const [exampleEvaluation, setExampleEvaluation] = useState<number>(10);
+  const [exampleEvaluation, setExampleEvaluation] = useState<number>(90);
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
@@ -41,7 +41,7 @@ function SlideIdeaUnitsTypeThree({
     : "Du hast leider kein Beispiel definiert.";
 
   const resetValues = () => {
-    setExampleEvaluation(10);
+    setExampleEvaluation(90);
   };
 
   const finish = () => {
@@ -144,7 +144,7 @@ function SlideIdeaUnitsTypeThree({
                 }
                 onClick={() =>
                   exampleEvaluation === 1
-                    ? setExampleEvaluation(10)
+                    ? setExampleEvaluation(90)
                     : setExampleEvaluation(1)
                 }
               >
@@ -158,7 +158,7 @@ function SlideIdeaUnitsTypeThree({
                 }
                 onClick={() =>
                   exampleEvaluation === 0.5
-                    ? setExampleEvaluation(10)
+                    ? setExampleEvaluation(90)
                     : setExampleEvaluation(0.5)
                 }
               >
@@ -172,7 +172,7 @@ function SlideIdeaUnitsTypeThree({
                 }
                 onClick={() =>
                   exampleEvaluation === 0
-                    ? setExampleEvaluation(10)
+                    ? setExampleEvaluation(90)
                     : setExampleEvaluation(0)
                 }
               >

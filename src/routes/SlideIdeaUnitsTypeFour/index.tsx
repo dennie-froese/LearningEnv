@@ -10,7 +10,7 @@ interface Props {
 }
 
 function SlideIdeaUnitsTypeFour({ slideText, type, header }: Props) {
-  const [exampleEvaluation, setExampleEvaluation] = useState<number>(10);
+  const [exampleEvaluation, setExampleEvaluation] = useState<number>(90);
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
@@ -34,7 +34,7 @@ function SlideIdeaUnitsTypeFour({ slideText, type, header }: Props) {
     : "Du hast leider kein Beispiel definiert.";
 
   const resetValues = () => {
-    setExampleEvaluation(10);
+    setExampleEvaluation(90);
   };
 
   const finish = () => {
@@ -115,7 +115,7 @@ function SlideIdeaUnitsTypeFour({ slideText, type, header }: Props) {
                 }
                 onClick={() =>
                   exampleEvaluation === 1
-                    ? setExampleEvaluation(10)
+                    ? setExampleEvaluation(90)
                     : setExampleEvaluation(1)
                 }
               >
@@ -129,7 +129,7 @@ function SlideIdeaUnitsTypeFour({ slideText, type, header }: Props) {
                 }
                 onClick={() =>
                   exampleEvaluation === 0.5
-                    ? setExampleEvaluation(10)
+                    ? setExampleEvaluation(90)
                     : setExampleEvaluation(0.5)
                 }
               >
@@ -143,7 +143,7 @@ function SlideIdeaUnitsTypeFour({ slideText, type, header }: Props) {
                 }
                 onClick={() =>
                   exampleEvaluation === 0
-                    ? setExampleEvaluation(10)
+                    ? setExampleEvaluation(90)
                     : setExampleEvaluation(0)
                 }
               >
