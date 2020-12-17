@@ -1135,7 +1135,8 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   115: {
     id: 115,
-    slideText: "Vielen Dank für deine Teilnahme!",
+    slideText:
+      "Vielen Dank für deine Teilnahme! \n\n Du kannst das Fenster nun schließen.",
     slideType: "Vielen_Dank",
   },
 };
