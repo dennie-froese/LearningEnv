@@ -24,6 +24,8 @@ function SlideIdeaUnitsTypeOne({
   const [valueThree, setValueThree] = useState<number>(0);
   const [valueFour, setValueFour] = useState<number>(0);
   const [exampleEvaluation, setExampleEvaluation] = useState<number>(90);
+  const [error, setError] = useState("");
+
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
@@ -169,17 +171,80 @@ function SlideIdeaUnitsTypeOne({
             GWG_g1_2_4: exampleEvaluation?.toString(),
           }
         : null;
-    dispatch &&
-      launchTime &&
-      dispatch({
-        type: "submit_slide",
-        payload: {
-          type: type,
-          answer: { zeit: launchTime - Date.now(), ...obj },
-        },
-      });
-    restart();
-    type.includes("2") && resetValues();
+
+    if (
+      (type === "Attribution_g1_1" ||
+        type === "Attribution_g1_2" ||
+        type === "SN_g1_1" ||
+        type === "SN_g1_2" ||
+        type === "Distinktheit_g1_1" ||
+        type === "Distinktheit_g1_2" ||
+        type === "GWG_g1_1" ||
+        type === "GWG_g1_2") &&
+      valueOne &&
+      valueTwo &&
+      valueThree &&
+      exampleEvaluation !== 90
+    ) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      restart();
+      type.includes("2") && resetValues();
+      setError("");
+    } else if (
+      (type === "Konsens_g1_1" ||
+        type === "Konsens_g1_2" ||
+        type === "SV_g1_1" ||
+        type === "SV_g1_2") &&
+      valueOne &&
+      valueTwo &&
+      exampleEvaluation !== 90
+    ) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      restart();
+      type.includes("2") && resetValues();
+      setError("");
+    } else if (
+      (type === "Konsistenz_g1_1" ||
+        type === "Konsistenz_g1_2" ||
+        type === "FA_g1_1" ||
+        type === "FA_g1_2") &&
+      valueOne &&
+      valueTwo &&
+      valueThree &&
+      valueFour &&
+      exampleEvaluation !== 90
+    ) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      restart();
+      type.includes("2") && resetValues();
+      setError("");
+    } else {
+      setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+    }
   };
   return (
     <div className="Slide">
@@ -531,6 +596,9 @@ function SlideIdeaUnitsTypeOne({
           </div>
         </div>
         <div className="Slide-nav">
+          <p className="Error-text" style={{ paddingRight: 20 }}>
+            {error}
+          </p>
           <button className="Slide-button" onClick={finish}>
             Weiter
           </button>

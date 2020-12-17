@@ -15,24 +15,28 @@ function SlideFun({ slideText, slideNumber, type, header }: Props) {
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
+  const [error, setError] = useState("");
 
   const finish = () => {
-    dispatch &&
-      launchTime &&
-      dispatch({
-        type: "submit_slide",
-        payload: {
-          type: type,
-          answer: { zeit: launchTime - Date.now(), surveyFun: value },
-        },
-      });
-    context?.user &&
+    if (value) {
       dispatch &&
-      saveToDatabase(context?.user, context?.answers).then(() =>
-        dispatch({ type: "reset" })
-      );
-
-    restart();
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), surveyFun: value },
+          },
+        });
+      context?.user &&
+        dispatch &&
+        saveToDatabase(context?.user, context?.answers).then(() =>
+          dispatch({ type: "reset" })
+        );
+      restart();
+    } else {
+      setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+    }
   };
   return (
     <div className="Slide">
@@ -62,6 +66,9 @@ function SlideFun({ slideText, slideNumber, type, header }: Props) {
           </div>
         </div>
         <div className="Slide-nav">
+          <p className="Error-text" style={{ paddingRight: 20 }}>
+            {error}
+          </p>
           <button className="Slide-button" onClick={finish}>
             Weiter
           </button>

@@ -16,6 +16,7 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
   const [valueFour, setValueFour] = useState<number>(0);
   const [valueFive, setValueFive] = useState<number>(0);
   const [valueSix, setValueSix] = useState<number>(0);
+  const [error, setError] = useState("");
 
   const reset = () => {
     setValueOne(0);
@@ -65,17 +66,48 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
             NachAngaben_21: valueFour?.toString(),
             NachAngaben_22: valueFive?.toString(),
           };
-
-    dispatch &&
-      launchTime &&
-      dispatch({
-        type: "submit_slide",
-        payload: {
-          type: type,
-          answer: { zeit: launchTime - Date.now(), ...obj },
-        },
-      });
-    reset();
+    if (
+      (type === "Nachangaben_12_17" || type === "NachAngaben_6_11") &&
+      valueOne &&
+      valueTwo &&
+      valueThree &&
+      valueFour &&
+      valueFive &&
+      valueSix
+    ) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      reset();
+      setError("");
+    } else if (
+      (type === "Nachangaben_1_5" || type === "Nachangaben_18_22") &&
+      valueOne &&
+      valueTwo &&
+      valueThree &&
+      valueFour &&
+      valueFive
+    ) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      reset();
+      setError("");
+    } else {
+      setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+    }
   };
 
   return (
@@ -447,6 +479,9 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
           )}
         </div>
         <div className="Slide-nav">
+          <p className="Error-text" style={{ paddingRight: 20 }}>
+            {error}
+          </p>
           <button className="Slide-button" onClick={finish}>
             Weiter
           </button>

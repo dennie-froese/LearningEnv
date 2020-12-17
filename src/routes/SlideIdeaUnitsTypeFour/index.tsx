@@ -11,6 +11,8 @@ interface Props {
 
 function SlideIdeaUnitsTypeFour({ slideText, type, header }: Props) {
   const [exampleEvaluation, setExampleEvaluation] = useState<number>(90);
+  const [error, setError] = useState("");
+
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
@@ -72,17 +74,22 @@ function SlideIdeaUnitsTypeFour({ slideText, type, header }: Props) {
             GWG_g4_1: exampleEvaluation?.toString(),
           }
         : null;
-    dispatch &&
-      launchTime &&
-      dispatch({
-        type: "submit_slide",
-        payload: {
-          type: type,
-          answer: { zeit: launchTime - Date.now(), ...obj },
-        },
-      });
-    restart();
-    resetValues();
+
+    if (exampleEvaluation !== 90) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      restart();
+      resetValues();
+    } else {
+      setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+    }
   };
   return (
     <div className="Slide">
@@ -153,6 +160,9 @@ function SlideIdeaUnitsTypeFour({ slideText, type, header }: Props) {
           </div>
         </div>
         <div className="Slide-nav">
+          <p className="Error-text" style={{ paddingRight: 20 }}>
+            {error}
+          </p>
           <button className="Slide-button" onClick={finish}>
             Weiter
           </button>

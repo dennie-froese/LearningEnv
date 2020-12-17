@@ -24,6 +24,8 @@ function SlideIdeaUnitsTypeTwo({
   const [valueThree, setValueThree] = useState<number>(0);
   const [valueFour, setValueFour] = useState<number>(0);
   const [exampleEvaluation, setExampleEvaluation] = useState<number>(90);
+  const [error, setError] = useState("");
+
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
@@ -113,17 +115,70 @@ function SlideIdeaUnitsTypeTwo({
             GWG_g2_4: exampleEvaluation?.toString(),
           }
         : null;
-    dispatch &&
-      launchTime &&
-      dispatch({
-        type: "submit_slide",
-        payload: {
-          type: type,
-          answer: { zeit: launchTime - Date.now(), ...obj },
-        },
-      });
-    restart();
-    resetValues();
+
+    if (
+      (type === "Attribution_g2" ||
+        type === "SN_g2" ||
+        type === "Distinktheit_g2" ||
+        type === "GWG_g2") &&
+      valueOne &&
+      valueTwo &&
+      valueThree &&
+      exampleEvaluation !== 90
+    ) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      restart();
+      resetValues();
+      setError("");
+    } else if (
+      (type === "Konsens_g2" || type === "SV_g2") &&
+      valueOne &&
+      valueTwo &&
+      exampleEvaluation !== 90
+    ) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      restart();
+      resetValues();
+      setError("");
+    } else if (
+      (type === "Konsistenz_g2" || type === "FA_g2") &&
+      valueOne &&
+      valueTwo &&
+      valueThree &&
+      valueFour &&
+      exampleEvaluation !== 90
+    ) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      restart();
+      resetValues();
+      setError("");
+    } else {
+      setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+    }
   };
   return (
     <div className="Slide">
@@ -318,6 +373,9 @@ function SlideIdeaUnitsTypeTwo({
           </div>
         </div>
         <div className="Slide-nav">
+          <p className="Error-text" style={{ paddingRight: 20 }}>
+            {error}
+          </p>
           <button className="Slide-button" onClick={finish}>
             Weiter
           </button>

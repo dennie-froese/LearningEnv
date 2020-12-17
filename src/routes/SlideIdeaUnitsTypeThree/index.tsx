@@ -18,6 +18,8 @@ function SlideIdeaUnitsTypeThree({
   expertExamples,
 }: Props) {
   const [exampleEvaluation, setExampleEvaluation] = useState<number>(90);
+  const [error, setError] = useState("");
+
   const dispatch = useSlidesDispatch();
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
@@ -79,17 +81,22 @@ function SlideIdeaUnitsTypeThree({
             GWG_g3_1: exampleEvaluation?.toString(),
           }
         : null;
-    dispatch &&
-      launchTime &&
-      dispatch({
-        type: "submit_slide",
-        payload: {
-          type: type,
-          answer: { zeit: launchTime - Date.now(), ...obj },
-        },
-      });
-    restart();
-    resetValues();
+    if (exampleEvaluation !== 90) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      restart();
+      resetValues();
+      setError("");
+    } else {
+      setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+    }
   };
   return (
     <div className="Slide">
@@ -182,6 +189,9 @@ function SlideIdeaUnitsTypeThree({
           </div>
         </div>
         <div className="Slide-nav">
+          <p className="Error-text" style={{ paddingRight: 20 }}>
+            {error}
+          </p>
           <button className="Slide-button" onClick={finish}>
             Weiter
           </button>
