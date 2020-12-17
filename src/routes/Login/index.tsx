@@ -6,12 +6,12 @@ import { users } from "../../logins";
 function Login() {
   const [user, setUser] = useState("");
   const [error, setError] = useState("");
-  const [password, setPassword] = useState("");
+  const [mail, setMail] = useState("");
   const dispatch = useSlidesDispatch();
   const history = useHistory();
 
   const logon = () => {
-    if (users[user] === password) {
+    if (users[user] === mail.toLowerCase()) {
       dispatch &&
         dispatch({
           type: "set_user",
@@ -36,8 +36,8 @@ function Login() {
           <label>E-Mail-Adresse:</label>
           <input
             className="Form-input"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={mail}
+            onChange={(e) => setMail(e.target.value)}
             name="name"
           />
           <label>Nummer:</label>
