@@ -177,6 +177,19 @@
   margin-right: 5vw;
 }
 
+.Slide-demographic-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.Slide-demographic-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.Slide-demographic-input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.Slide-demographic-input:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .Slide-demographic-label-checkboxes {
   text-align: center;
   font-size: calc(6px + 1vmin);

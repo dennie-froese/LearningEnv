@@ -89,39 +89,31 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
   const { launchTime, restart } = useTimer();
 
   const finish = () => {
-    // if (
-    //   age &&
-    //   sex &&
-    //   languageOne &&
-    //   languageTwo &&
-    //   grade &&
-    //   term &&
-    //   degree &&
-    //   subjectOne
-    // ) {
-    dispatch &&
-      launchTime &&
-      dispatch({
-        type: "submit_slide",
-        payload: {
-          type: type,
-          answer: {
-            zeit: launchTime - Date.now(),
-            Alter: age,
-            Geschlecht: sex,
-            Geburtssprache1: languageOne,
-            Geburtssprache2: languageTwo || "-",
-            Abiturnote: grade,
-            Studiengang1: subjectOne,
-            Studiengang2: subjectTwo || "-",
-            Abschluss: degree,
-            Semester_Hochschule: term.toString(),
+    if (age && sex && languageOne && grade && term && degree && subjectOne) {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: {
+              zeit: launchTime - Date.now(),
+              Alter: age,
+              Geschlecht: sex,
+              Geburtssprache1: languageOne,
+              Geburtssprache2: languageTwo || "-",
+              Abiturnote: grade,
+              Studiengang1: subjectOne,
+              Studiengang2: subjectTwo || "-",
+              Abschluss: degree,
+              Semester_Hochschule: term.toString(),
+            },
           },
-        },
-      });
-    // } else {
-    //   setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
-    // }
+        });
+      restart();
+    } else {
+      setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+    }
   };
   return (
     <div className="Slide">
@@ -195,6 +187,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
               onChange={(e) => setLanguageTwo(e.target.value)}
               type="text"
               name="name"
+              placeholder="Optional"
             />
           </div>
           <div className="Slide-demographic-row">
@@ -272,6 +265,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
               onChange={(e) => setSubjectTwo(e.target.value)}
               type="text"
               name="name"
+              placeholder="Optional"
             />
           </div>
           <div className="Slide-demographic-row">
