@@ -173,8 +173,7 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
           header={slide.header}
-          ideaUnits={slide.ideaUnits}
-          expertExamples={slide.expertExamples}
+          negativeExamples={slide.negativeExamples}
         />
       ) : ideaUnitsTypeThree.includes(slide.id) ? (
         <SlideIdeaUnitsTypeThree

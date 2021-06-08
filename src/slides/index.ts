@@ -445,13 +445,12 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   38: {
     id: 38,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ mit den beiden hier dargestellten Beispielen ab.",
     slideType: "Attribution_g2",
     header: "Konzept „Attribution“",
-    ideaUnits: [
-      "Subjektiver Prozess/ Mechanismus",
-      "Suche nach Gründen",
-      "Gründe beziehen sich auf Verhalten anderer",
+    negativeExamples: [
+      "In der Verhaltensforschung wird nach den Gründen für menschliches Verhalten gesucht. In einer aktuellen Studie versucht eine Forschergruppe beispielsweise herauszufinden, warum Menschen Attentate verüben. Dabei werden kulturelle Hintergründe, persönliche Erfahrungen und situative Faktoren berücksichtigt.",
+      "Julia ist früher als Kind von der Schaukel gefallen. Immer, wenn sie heute als erwachsene Frau eine Schaukel sieht oder an einem Spielplatz vorbeiläuft, läuft ihr ein Schauer über den Rücken. Sie ist sich sicher, dass das an ihrer prägenden Erfahrung des Sturzes von der Schaukel im Kindesalter liegt.",
     ],
   },
   39: {
