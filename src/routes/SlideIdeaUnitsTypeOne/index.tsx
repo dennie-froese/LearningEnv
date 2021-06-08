@@ -19,10 +19,6 @@ function SlideIdeaUnitsTypeOne({
   negativeExamples,
   expertExamples,
 }: Props) {
-  const [valueOne, setValueOne] = useState<number>(0);
-  const [valueTwo, setValueTwo] = useState<number>(0);
-  const [valueThree, setValueThree] = useState<number>(0);
-  const [valueFour, setValueFour] = useState<number>(0);
   const [exampleEvaluation, setExampleEvaluation] = useState<number>(90);
   const [error, setError] = useState("");
 
@@ -49,10 +45,6 @@ function SlideIdeaUnitsTypeOne({
     : "Du hast leider kein Beispiel definiert.";
 
   const resetValues = () => {
-    setValueOne(0);
-    setValueTwo(0);
-    setValueThree(0);
-    setValueFour(0);
     setExampleEvaluation(90);
   };
 
@@ -60,114 +52,66 @@ function SlideIdeaUnitsTypeOne({
     const obj =
       type === "Attribution_g1_1"
         ? {
-            Attribution_g1_1_1: valueOne.toString(),
-            Attribution_g1_1_2: valueTwo.toString(),
-            Attribution_g1_1_3: valueThree.toString(),
             Attribution_g1_1_4: exampleEvaluation?.toString(),
           }
         : type === "Attribution_g1_2"
         ? {
-            Attribution_g1_2_1: valueOne.toString(),
-            Attribution_g1_2_2: valueTwo.toString(),
-            Attribution_g1_2_3: valueThree.toString(),
             Attribution_g1_2_4: exampleEvaluation?.toString(),
           }
         : type === "SN_g1_1"
         ? {
-            SN_g1_1_1: valueOne.toString(),
-            SN_g1_1_2: valueTwo.toString(),
-            SN_g1_1_3: valueThree.toString(),
             SN_g1_1_4: exampleEvaluation?.toString(),
           }
         : type === "SN_g1_2"
         ? {
-            SN_g1_2_1: valueOne.toString(),
-            SN_g1_2_2: valueTwo.toString(),
-            SN_g1_2_3: valueThree.toString(),
             SN_g1_2_4: exampleEvaluation?.toString(),
           }
         : type === "Konsens_g1_1"
         ? {
-            Konsens_g1_1_1: valueOne.toString(),
-            Konsens_g1_1_2: valueTwo.toString(),
             Konsens_g1_1_3: exampleEvaluation?.toString(),
           }
         : type === "Konsens_g1_2"
         ? {
-            Konsens_g1_2_1: valueOne.toString(),
-            Konsens_g1_2_2: valueTwo.toString(),
             Konsens_g1_2_3: exampleEvaluation?.toString(),
           }
         : type === "Konsistenz_g1_1"
         ? {
-            Konsistenz_g1_1_1: valueOne.toString(),
-            Konsistenz_g1_1_2: valueTwo.toString(),
-            Konsistenz_g1_1_3: valueThree.toString(),
-            Konsistenz_g1_1_4: valueFour.toString(),
             Konsistenz_g1_1_5: exampleEvaluation?.toString(),
           }
         : type === "Konsistenz_g1_2"
         ? {
-            Konsistenz_g1_2_1: valueOne.toString(),
-            Konsistenz_g1_2_2: valueTwo.toString(),
-            Konsistenz_g1_2_3: valueThree.toString(),
-            Konsistenz_g1_2_4: valueFour.toString(),
             Konsistenz_g1_2_5: exampleEvaluation?.toString(),
           }
         : type === "Distinktheit_g1_1"
         ? {
-            Distinktheit_g1_1_1: valueOne.toString(),
-            Distinktheit_g1_1_2: valueTwo.toString(),
-            Distinktheit_g1_1_3: valueThree.toString(),
             Distinktheit_g1_1_4: exampleEvaluation?.toString(),
           }
         : type === "Distinktheit_g1_2"
         ? {
-            Distinktheit_g1_2_1: valueOne.toString(),
-            Distinktheit_g1_2_2: valueTwo.toString(),
-            Distinktheit_g1_2_3: valueThree.toString(),
             Distinktheit_g1_2_4: exampleEvaluation?.toString(),
           }
         : type === "FA_g1_1"
         ? {
-            FA_g1_1_1: valueOne.toString(),
-            FA_g1_1_2: valueTwo.toString(),
-            FA_g1_1_3: valueThree.toString(),
-            FA_g1_1_4: valueFour.toString(),
             FA_g1_1_5: exampleEvaluation?.toString(),
           }
         : type === "FA_g1_2"
         ? {
-            FA_g1_2_1: valueOne.toString(),
-            FA_g1_2_2: valueTwo.toString(),
-            FA_g1_2_3: valueThree.toString(),
-            FA_g1_2_4: valueFour.toString(),
             FA_g1_2_5: exampleEvaluation?.toString(),
           }
         : type === "SV_g1_1"
         ? {
-            SV_g1_1_1: valueOne.toString(),
-            SV_g1_1_2: valueTwo.toString(),
             SV_g1_1_3: exampleEvaluation?.toString(),
           }
         : type === "SV_g1_2"
         ? {
-            SV_g1_2_1: valueOne.toString(),
-            SV_g1_2_2: valueTwo.toString(),
             SV_g1_2_3: exampleEvaluation?.toString(),
           }
         : type === "GWG_g1_1"
         ? {
-            GWG_g1_1_1: valueOne.toString(),
-            GWG_g1_1_2: valueTwo.toString(),
-            GWG_g1_1_3: valueThree.toString(),
             GWG_g1_1_4: exampleEvaluation?.toString(),
           }
         : type === "GWG_g1_2"
         ? {
-            GWG_g1_2_1: valueOne.toString(),
-            GWG_g1_2_2: valueTwo.toString(),
-            GWG_g1_2_3: valueThree.toString(),
             GWG_g1_2_4: exampleEvaluation?.toString(),
           }
         : null;
@@ -180,54 +124,15 @@ function SlideIdeaUnitsTypeOne({
         type === "Distinktheit_g1_1" ||
         type === "Distinktheit_g1_2" ||
         type === "GWG_g1_1" ||
-        type === "GWG_g1_2") &&
-      valueOne &&
-      valueTwo &&
-      valueThree &&
-      exampleEvaluation !== 90
-    ) {
-      dispatch &&
-        launchTime &&
-        dispatch({
-          type: "submit_slide",
-          payload: {
-            type: type,
-            answer: { zeit: launchTime - Date.now(), ...obj },
-          },
-        });
-      restart();
-      type.includes("2") && resetValues();
-      setError("");
-    } else if (
-      (type === "Konsens_g1_1" ||
+        type === "GWG_g1_2" ||
+        type === "Konsens_g1_1" ||
         type === "Konsens_g1_2" ||
         type === "SV_g1_1" ||
-        type === "SV_g1_2") &&
-      valueOne &&
-      valueTwo &&
-      exampleEvaluation !== 90
-    ) {
-      dispatch &&
-        launchTime &&
-        dispatch({
-          type: "submit_slide",
-          payload: {
-            type: type,
-            answer: { zeit: launchTime - Date.now(), ...obj },
-          },
-        });
-      restart();
-      type.includes("2") && resetValues();
-      setError("");
-    } else if (
-      (type === "Konsistenz_g1_1" ||
+        type === "SV_g1_2" ||
+        type === "Konsistenz_g1_1" ||
         type === "Konsistenz_g1_2" ||
         type === "FA_g1_1" ||
         type === "FA_g1_2") &&
-      valueOne &&
-      valueTwo &&
-      valueThree &&
-      valueFour &&
       exampleEvaluation !== 90
     ) {
       dispatch &&
@@ -240,7 +145,7 @@ function SlideIdeaUnitsTypeOne({
           },
         });
       restart();
-      type.includes("2") && resetValues();
+      resetValues();
       setError("");
     } else {
       setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
