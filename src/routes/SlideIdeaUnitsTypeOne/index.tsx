@@ -7,7 +7,7 @@ interface Props {
   slideNumber: number;
   type: string;
   header: string | undefined;
-  ideaUnits: string[] | undefined;
+  negativeExamples: string[] | undefined;
   expertExamples: string[] | undefined;
 }
 
@@ -16,7 +16,7 @@ function SlideIdeaUnitsTypeOne({
   slideNumber,
   type,
   header,
-  ideaUnits,
+  negativeExamples,
   expertExamples,
 }: Props) {
   const [valueOne, setValueOne] = useState<number>(0);
@@ -256,6 +256,10 @@ function SlideIdeaUnitsTypeOne({
           <div className="Slide-text-m">{slideText}</div>
           {expertExamples && expertExamples[0] && expertExamples[1] && (
             <div className="Slide-idea-units-text-container">
+              <div className="Slide-text-m">
+                Diese beiden Expertenbeispiele würden bei der Bewertung einen
+                ganzen Punkt erhalten.
+              </div>
               <div className="Slide-text-m">Expertenbeispiel 1:</div>
               <textarea
                 className="Slide-idea-units-text-container-text"
@@ -272,143 +276,26 @@ function SlideIdeaUnitsTypeOne({
               </textarea>
             </div>
           )}
-          {type.includes("1_1") && (
-            <div className="Slide-idea-units-row">
-              <div className="Slide-idea-unit-box">
-                <div className="Slide-idea-units-box-column">
-                  <div className="Slide-idea-units-checkbox-row">
-                    <input
-                      type="checkbox"
-                      checked={valueOne === 1 ? true : false}
-                      onClick={() =>
-                        valueOne === 1 ? setValueOne(0) : setValueOne(1)
-                      }
-                    />
-                    <div className="Slide-label">Ja</div>
-                  </div>
-                  <div className="Slide-idea-units-checkbox-row">
-                    <input
-                      type="checkbox"
-                      checked={valueOne === 2 ? true : false}
-                      onClick={() =>
-                        valueOne === 2 ? setValueOne(0) : setValueOne(2)
-                      }
-                    />
-                    <div className="Slide-label">Nein</div>
-                  </div>
-                </div>
-                <div className="Slide-label">{ideaUnits && ideaUnits[0]}</div>
-              </div>
-              <div className="Slide-idea-unit-box">
-                <div className="Slide-idea-units-box-column">
-                  <div className="Slide-idea-units-checkbox-row">
-                    <input
-                      type="checkbox"
-                      checked={valueTwo === 1 ? true : false}
-                      onClick={() =>
-                        valueTwo === 1 ? setValueTwo(0) : setValueTwo(1)
-                      }
-                    />
-                    <div className="Slide-label">Ja</div>
-                  </div>
-                  <div className="Slide-idea-units-checkbox-row">
-                    <input
-                      type="checkbox"
-                      checked={valueTwo === 2 ? true : false}
-                      onClick={() =>
-                        valueTwo === 2 ? setValueTwo(0) : setValueTwo(2)
-                      }
-                    />
-                    <div className="Slide-label">Nein</div>
-                  </div>
-                </div>
-                <div className="Slide-label">{ideaUnits && ideaUnits[1]}</div>
-              </div>
-              {ideaUnits && ideaUnits[2] && (
-                <div className="Slide-idea-unit-box">
-                  <div className="Slide-idea-units-box-column">
-                    <div className="Slide-idea-units-checkbox-row">
-                      <input
-                        type="checkbox"
-                        checked={valueThree === 1 ? true : false}
-                        onClick={() =>
-                          valueThree === 1 ? setValueThree(0) : setValueThree(1)
-                        }
-                      />
-                      <div className="Slide-label">Ja</div>
-                    </div>
-                    <div className="Slide-idea-units-checkbox-row">
-                      <input
-                        type="checkbox"
-                        checked={valueThree === 2 ? true : false}
-                        onClick={() =>
-                          valueThree === 2 ? setValueThree(0) : setValueThree(2)
-                        }
-                      />
-                      <div className="Slide-label">Nein</div>
-                    </div>
-                  </div>
-                  <div className="Slide-label">{ideaUnits && ideaUnits[2]}</div>
-                </div>
-              )}
-              {ideaUnits && ideaUnits[3] && (
-                <div className="Slide-idea-unit-box">
-                  <div className="Slide-idea-units-box-column">
-                    <div className="Slide-idea-units-checkbox-row">
-                      <input
-                        type="checkbox"
-                        checked={valueFour === 1 ? true : false}
-                        onClick={() =>
-                          valueFour === 1 ? setValueFour(0) : setValueFour(1)
-                        }
-                      />
-                      <div className="Slide-label">Ja</div>
-                    </div>
-                    <div className="Slide-idea-units-checkbox-row">
-                      <input
-                        type="checkbox"
-                        checked={valueFour === 2 ? true : false}
-                        onClick={() =>
-                          valueFour === 2 ? setValueFour(0) : setValueFour(2)
-                        }
-                      />
-                      <div className="Slide-label">Nein</div>
-                    </div>
-                  </div>
-                  <div className="Slide-label">{ideaUnits && ideaUnits[3]}</div>
-                </div>
-              )}
-            </div>
-          )}
-          {type.includes("1_2") && (
+          {negativeExamples && negativeExamples[0] && negativeExamples[1] && (
             <div className="Slide-idea-units-text-container">
               <div className="Slide-text-m">
-                Beide Expertenbeispiele würden bei der Bewertung jeweils einen
-                ganzen Punkt erhalten und veranschaulichen alle Teilaspekte der
-                Definition:
+                Diese beiden Negativ-Beispiele würden bei der Bewertung keinen
+                Punkt erhalten.
               </div>
-              <div className="Slide-idea-units-row">
-                <div className="Slide-idea-unit-box-l">
-                  <div className="Slide-label">{ideaUnits && ideaUnits[0]}</div>
-                </div>
-                <div className="Slide-idea-unit-box-l">
-                  <div className="Slide-label">{ideaUnits && ideaUnits[1]}</div>
-                </div>
-                {ideaUnits && ideaUnits[2] && (
-                  <div className="Slide-idea-unit-box-l">
-                    <div className="Slide-label">
-                      {ideaUnits && ideaUnits[2]}
-                    </div>
-                  </div>
-                )}
-                {ideaUnits && ideaUnits[3] && (
-                  <div className="Slide-idea-unit-box-l">
-                    <div className="Slide-label">
-                      {ideaUnits && ideaUnits[3]}
-                    </div>
-                  </div>
-                )}
-              </div>
+              <div className="Slide-text-m">Negativ-Beispiel 1:</div>
+              <textarea
+                className="Slide-idea-units-text-container-text"
+                disabled={true}
+              >
+                {negativeExamples[0]}
+              </textarea>
+              <div className="Slide-text-m">Negativ-Beispiel 2:</div>
+              <textarea
+                className="Slide-idea-units-text-container-text"
+                disabled={true}
+              >
+                {negativeExamples[1]}
+              </textarea>
             </div>
           )}
           <div className="Slide-idea-units-text-container">
@@ -420,129 +307,6 @@ function SlideIdeaUnitsTypeOne({
               {yourExample}
             </textarea>
           </div>
-          {type.includes("1_2") && (
-            <div>
-              <div className="Slide-text-m">
-                Dies ist Deine Einschätzung zur Veranschaulichung der in Deinem
-                Beispiel enthaltenen Teilaspekte. Du hast nun die Möglichkeit,
-                dies nochmal zu ändern.
-              </div>
-              <div className="Slide-idea-units-row">
-                <div className="Slide-idea-unit-box">
-                  <div className="Slide-idea-units-box-column">
-                    <div className="Slide-idea-units-checkbox-row">
-                      <input
-                        type="checkbox"
-                        checked={valueOne === 1 ? true : false}
-                        onClick={() =>
-                          valueOne === 1 ? setValueOne(0) : setValueOne(1)
-                        }
-                      />
-                      <div className="Slide-label">Ja</div>
-                    </div>
-                    <div className="Slide-idea-units-checkbox-row">
-                      <input
-                        type="checkbox"
-                        checked={valueOne === 2 ? true : false}
-                        onClick={() =>
-                          valueOne === 2 ? setValueOne(0) : setValueOne(2)
-                        }
-                      />
-                      <div className="Slide-label">Nein</div>
-                    </div>
-                  </div>
-                  <div className="Slide-label">{ideaUnits && ideaUnits[0]}</div>
-                </div>
-                <div className="Slide-idea-unit-box">
-                  <div className="Slide-idea-units-box-column">
-                    <div className="Slide-idea-units-checkbox-row">
-                      <input
-                        type="checkbox"
-                        checked={valueTwo === 1 ? true : false}
-                        onClick={() =>
-                          valueTwo === 1 ? setValueTwo(0) : setValueTwo(1)
-                        }
-                      />
-                      <div className="Slide-label">Ja</div>
-                    </div>
-                    <div className="Slide-idea-units-checkbox-row">
-                      <input
-                        type="checkbox"
-                        checked={valueTwo === 2 ? true : false}
-                        onClick={() =>
-                          valueTwo === 2 ? setValueTwo(0) : setValueTwo(2)
-                        }
-                      />
-                      <div className="Slide-label">Nein</div>
-                    </div>
-                  </div>
-                  <div className="Slide-label">{ideaUnits && ideaUnits[1]}</div>
-                </div>
-                {ideaUnits && ideaUnits[2] && (
-                  <div className="Slide-idea-unit-box">
-                    <div className="Slide-idea-units-box-column">
-                      <div className="Slide-idea-units-checkbox-row">
-                        <input
-                          type="checkbox"
-                          checked={valueThree === 1 ? true : false}
-                          onClick={() =>
-                            valueThree === 1
-                              ? setValueThree(0)
-                              : setValueThree(1)
-                          }
-                        />
-                        <div className="Slide-label">Ja</div>
-                      </div>
-                      <div className="Slide-idea-units-checkbox-row">
-                        <input
-                          type="checkbox"
-                          checked={valueThree === 2 ? true : false}
-                          onClick={() =>
-                            valueThree === 2
-                              ? setValueThree(0)
-                              : setValueThree(2)
-                          }
-                        />
-                        <div className="Slide-label">Nein</div>
-                      </div>
-                    </div>
-                    <div className="Slide-label">
-                      {ideaUnits && ideaUnits[2]}
-                    </div>
-                  </div>
-                )}
-                {ideaUnits && ideaUnits[3] && (
-                  <div className="Slide-idea-unit-box">
-                    <div className="Slide-idea-units-box-column">
-                      <div className="Slide-idea-units-checkbox-row">
-                        <input
-                          type="checkbox"
-                          checked={valueFour === 1 ? true : false}
-                          onClick={() =>
-                            valueFour === 1 ? setValueFour(0) : setValueFour(1)
-                          }
-                        />
-                        <div className="Slide-label">Ja</div>
-                      </div>
-                      <div className="Slide-idea-units-checkbox-row">
-                        <input
-                          type="checkbox"
-                          checked={valueFour === 2 ? true : false}
-                          onClick={() =>
-                            valueFour === 2 ? setValueFour(0) : setValueFour(2)
-                          }
-                        />
-                        <div className="Slide-label">Nein</div>
-                      </div>
-                    </div>
-                    <div className="Slide-label">
-                      {ideaUnits && ideaUnits[3]}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
           <div className="Slide-idea-units-text-container">
             <div className="Slide-text-m">
               {type.includes("1_1")

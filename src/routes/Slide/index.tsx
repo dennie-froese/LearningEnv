@@ -59,21 +59,21 @@ const typeRange: number[] = [
 ];
 const ideaUnitsTypeOne: number[] = [
   36,
-  37,
+  // 37,
   46,
-  47,
+  // 47,
   56,
-  57,
+  // 57,
   66,
-  67,
+  // 67,
   76,
-  77,
+  // 77,
   86,
-  87,
+  // 87,
   96,
-  97,
+  // 97,
   106,
-  107,
+  // 107,
 ];
 const ideaUnitsTypeTwo: number[] = [38, 48, 58, 68, 78, 88, 98, 108];
 const ideaUnitsTypeThree: number[] = [39, 49, 59, 69, 79, 89, 99, 109];
@@ -164,7 +164,7 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
           header={slide.header}
-          ideaUnits={slide.ideaUnits}
+          negativeExamples={slide.negativeExamples}
           expertExamples={slide.expertExamples}
         />
       ) : ideaUnitsTypeTwo.includes(slide.id) ? (
