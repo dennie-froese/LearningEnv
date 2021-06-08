@@ -523,10 +523,9 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "SN_g2",
     header: "Konzept „Soziale Normen“",
-    ideaUnits: [
-      "Explizite oder implizite Konventionen",
-      "Vorgabe von korrektem Verhalten",
-      "Beziehen sich auf soziale Situationen",
+    negativeExamples: [
+      "Charline, Jana und Eva machen jeden Freitag einen Mädelsabend. Dabei wechselt die Gastgeberin des Abends von Woche zu Woche. Diese Woche ist Jana dran. Es hat sich bei ihnen im Freundeskreis etabliert, dass die Gastgeberin auch für Essen und Getränke zu sorgen hat. Jana stellt also Bier in den Kühlschrank und bestellt Pizza vor.",
+      "Lena ist bei ihrer Oma zu Besuch, die gerade die Wäsche vorbereitet: Sie schlägt jedes Kleidungsstück auf links, bevor sie es in die Waschmaschine legt. Lena beobachtet dies und stellt das Verhalten ihrer Oma in Frage. Ihre Oma entgegnet ihr nur: „Das hat man schon immer so gemacht!“.",
     ],
   },
   49: {
@@ -599,9 +598,9 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "Konsens_g2",
     header: "Konzept „hoher Konsens“",
-    ideaUnits: [
-      "Hohes Ausmaß an Übereinstimmung",
-      "Abgleich von eigenem Verhalten mit Verhalten anderer",
+    negativeExamples: [
+      "Ingrid geht jede Woche mittwochs einkaufen. Nach dem Einkauf trägt sie die Einkäufe in ihrem Rollator nach Hause. Dieses Mal hat sie so viel eingekauft, dass ein paar der Lebensmittel auf den Boden fallen. Ein Herr eilt ihr zu Hilfe und legt die heruntergefallenen Lebensmittel zurück in ihren Rollator. Sie bedankt sich und geht nach Hause.",
+      "In einer Spielgruppe eines Kindergartens wird plötzlich ein Feueralarm ausgelöst. Alle Kinder fangen zeitgleich an zu schreien und zu weinen.",
     ],
   },
   59: {
@@ -674,11 +673,9 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "Konsistenz_g2",
     header: "Konzept „hohe Konsistenz“",
-    ideaUnits: [
-      "Hohes Ausmaß der Ähnlichkeit des Verhaltens",
-      "Ähnlichkeit über die Zeit hinweg",
-      "Ähnlichkeit über die gleiche Situation hinweg",
-      "Bezug auf Verhalten oder Reaktion einer Person",
+    negativeExamples: [
+      "Jan geht in dem neuen griechischen Restaurant essen, das vor Kurzem in seinem Wohnort eröffnet wurde. Mit Enttäuschung stellt er fest, dass ihm das Essen nicht schmeckt. Nach und nach beobachtet er, wie die Besucherzahl des Restaurants sinkt und es schließlich wegen mangelnder Kundschaft schließen muss. Jan hält dieses Vorkommnis für konsistent.",
+      "Alex beschließt, ihrer Mutter einen Blumenstrauß zu kaufen, da morgen Muttertag ist. Sie nimmt einen Regenschirm mit, da dunkle Wolken aufziehen. Im Blumengeschäft fällt ihr auf, dass einige andere Kunden ebenfalls mit einem Regenschirm in den Laden gekommen sind.",
     ],
   },
   69: {
@@ -751,10 +748,9 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "Distinktheit_g2",
     header: "Konzept „hohe Distinktheit“",
-    ideaUnits: [
-      "Hohes Ausmaß von unterschiedlichen Reaktionen",
-      "Reaktion auf ähnliche Stimuli oder Situationen",
-      "Verhalten oder Reaktion einer einzelnen Person",
+    negativeExamples: [
+      "Jakob und Sven besuchen die gleiche Klasse. Jakob ist ein sehr guter Schüler, während Sven eher schlechte Noten bekommt. Als sie am Montagmorgen ihre Deutscharbeit zurückbekommen, ist es anders: Jakob hat eine schlechte Note bekommen, Sven dagegen eine gute.",
+      "Beim Einkaufen an der Kasse wünscht Anna dem Kassierer einen schönen Tag. Als sie mittags ihren Sohn Daniel von der Schule abholt, wird sie von der Lehrerin ermahnt, weil Daniel einen anderen Mitschüler beleidigt hat. Anna verabschiedet sich nach dem Gespräch von der Lehrerin und wünscht auch ihr einen schönen Tag.",
     ],
   },
   79: {
@@ -827,11 +823,9 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "FA_g2",
     header: "Konzept „Fundamentaler Attributionsfehler“",
-    ideaUnits: [
-      "Attribution des Verhaltens anderer",
-      "Attribution ist fehlgeleitet/ fehlerhaft",
-      "Unterschätzung interner Ursachen für Verhalten",
-      "Unterschätzung des Situationseinflusses",
+    negativeExamples: [
+      "Unglücklicherweise schreibt eine Schulklasse genau an dem Tag eine Klassenarbeit, an dem eine Baustelle neben der Schule starken Lärm verursacht. Als die Schulklasse die Arbeit ein paar Wochen später wiederbekommen, stellen die Schüler fest, dass diese sehr schlecht ausgefallen ist. Die Schüler*innen schreiben dies dem Lärm der Baustelle zu. Dass es an ihren eigenen Fähigkeiten gelegen haben könnte, kommt ihnen nicht in den Sinn.",
+      "Wenn Frau Müller sich unfreundlich gegenüber ihren Mitmenschen verhält, denkt sie, dass dieses Verhalten an der aktuell stressigen Arbeitsphase liegt. Ist sie dagegen freundlich und höflich, führt sie dies auf ihre gute Erziehung zurück.",
     ],
   },
   89: {
@@ -905,9 +899,9 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideType: "SV_g2",
 
     header: "Konzept „Selbstwertdienliche Verzerrung“",
-    ideaUnits: [
-      "Positives auf eigene Eigenschaften/internale Ursachen zurückgeführt",
-      "Negatives auf unkontrollierbare Faktoren/externale Ursachen zurückgeführt",
+    negativeExamples: [
+      "Mareike gewinnt im Schach gegen ihren Freund Maik. Maik glaubt, dass der Sieg von Mareike nur daran lag, dass er sich schlecht konzentrieren konnte und er einen schlechten Tag hatte.",
+      "Klara ist überzeugt, dass sie ein guter Mensch ist. Ihr Sohn Jakob befindet sich im Teenager-Alter und zeigt aggressives und gewalttätiges Verhalten. Klara schiebt das Verhalten von Jakob auf seinen Vater, weil sie denkt, Jakob habe die Gene von ihm geerbt, und nicht ihre.",
     ],
   },
   99: {
@@ -980,10 +974,9 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
     slideType: "GWG_g2",
     header: "Konzept „Gerechte-Welt-Glaube”",
-    ideaUnits: [
-      "Annahme 1: Welt ist ein vorhersehbarer Ort",
-      "Annahme 2: Welt ist ein gerechter Ort",
-      "Annahme 3: Jeder bekommt, was er oder sie verdient",
+    negativeExamples: [
+      "Julia wird im Supermarkt von einem älteren Mann angerempelt, woraufhin ihr ihre Einkäufe herunterfallen. Sie redet sich ein, dass dieser sie bestimmt nicht gesehen habe und eigentlich einen guten Kern habe. Dabei hat der Mann Julia sogar gesehen, ihm war es aber egal, weil er schnell zur Kasse wollte.",
+      "Can geht es seit Antritt seiner neuen Stelle finanziell sehr gut. Sein Freund Jona dagegen beklagt sich bei ihm, weil er selber Geringverdiener ist. Can ist der Meinung, dass Jona selber daran schuld ist, denn er könnte sich ja einen anderen, besser bezahlten Job suchen.",
     ],
   },
   109: {
