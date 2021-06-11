@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inputValidationOff } from "../../App";
 import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
@@ -81,7 +82,7 @@ function SlideIdeaUnitsTypeThree({
             GWG_g3_1: exampleEvaluation?.toString(),
           }
         : null;
-    if (exampleEvaluation !== 90) {
+    if (exampleEvaluation !== 90 || inputValidationOff) {
       dispatch &&
         launchTime &&
         dispatch({

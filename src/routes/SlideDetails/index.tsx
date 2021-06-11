@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inputValidationOff } from "../../App";
 import { saveToDatabase } from "../../firebase/firebase";
 import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
@@ -23,7 +24,10 @@ function SlideDetails({ slideText, slideNumber, type, header }: Props) {
   const [error, setError] = useState("");
 
   const finish = () => {
-    if (name && details1 && details2 && details3 && details4 && details5) {
+    if (
+      (name && details1 && details2 && details3 && details4 && details5) ||
+      inputValidationOff
+    ) {
       dispatch &&
         launchTime &&
         dispatch({

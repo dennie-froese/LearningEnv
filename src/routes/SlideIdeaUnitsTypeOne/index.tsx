@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inputValidationOff } from "../../App";
 import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
@@ -117,7 +118,7 @@ function SlideIdeaUnitsTypeOne({
         : null;
 
     if (
-      (type === "Attribution_g1_1" ||
+      ((type === "Attribution_g1_1" ||
         type === "Attribution_g1_2" ||
         type === "SN_g1_1" ||
         type === "SN_g1_2" ||
@@ -133,7 +134,8 @@ function SlideIdeaUnitsTypeOne({
         type === "Konsistenz_g1_2" ||
         type === "FA_g1_1" ||
         type === "FA_g1_2") &&
-      exampleEvaluation !== 90
+        exampleEvaluation !== 90) ||
+      inputValidationOff
     ) {
       dispatch &&
         launchTime &&

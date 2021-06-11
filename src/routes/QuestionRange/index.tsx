@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useTimer from "./../../hooks/useTimer";
 import { useSlidesDispatch } from "../../hooks/useSlides";
+import { inputValidationOff } from "../../App";
 
 interface Props {
   questionNumber: number;
@@ -34,7 +35,7 @@ function QuestionRange({ questionNumber, question, type }: Props) {
     );
   }
   const finish = () => {
-    if (value) {
+    if (value || inputValidationOff) {
       const obj =
         type === "Beispiel_Attribution1"
           ? { Ausdenken_Attribution1: value?.toString() }

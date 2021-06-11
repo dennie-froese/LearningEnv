@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inputValidationOff } from "../../App";
 import { useSlidesDispatch } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
@@ -89,7 +90,10 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
   const { launchTime, restart } = useTimer();
 
   const finish = () => {
-    if (age && sex && languageOne && grade && term && degree && subjectOne) {
+    if (
+      (age && sex && languageOne && grade && term && degree && subjectOne) ||
+      inputValidationOff
+    ) {
       dispatch &&
         launchTime &&
         dispatch({

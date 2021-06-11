@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inputValidationOff } from "../../App";
 import { useSlidesDispatch } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
@@ -67,13 +68,14 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
             NachAngaben_22: valueFive?.toString(),
           };
     if (
-      (type === "Nachangaben_12_17" || type === "NachAngaben_6_11") &&
-      valueOne &&
-      valueTwo &&
-      valueThree &&
-      valueFour &&
-      valueFive &&
-      valueSix
+      ((type === "Nachangaben_12_17" || type === "NachAngaben_6_11") &&
+        valueOne &&
+        valueTwo &&
+        valueThree &&
+        valueFour &&
+        valueFive &&
+        valueSix) ||
+      inputValidationOff
     ) {
       dispatch &&
         launchTime &&
@@ -87,12 +89,13 @@ function SlideNachangaben({ slideText, type, nachangaben }: Props) {
       reset();
       setError("");
     } else if (
-      (type === "Nachangaben_1_5" || type === "Nachangaben_18_22") &&
-      valueOne &&
-      valueTwo &&
-      valueThree &&
-      valueFour &&
-      valueFive
+      ((type === "Nachangaben_1_5" || type === "Nachangaben_18_22") &&
+        valueOne &&
+        valueTwo &&
+        valueThree &&
+        valueFour &&
+        valueFive) ||
+      inputValidationOff
     ) {
       dispatch &&
         launchTime &&

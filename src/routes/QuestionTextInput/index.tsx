@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inputValidationOff } from "../../App";
 import { useSlidesDispatch } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
@@ -15,7 +16,7 @@ function QuestionTextInput({ question, questionNumber, type }: Props) {
   const [error, setError] = useState("");
 
   const finish = () => {
-    if (input) {
+    if (input || inputValidationOff) {
       const obj =
         type === "Konzept_Attribution"
           ? { Text_Attribution: input }
