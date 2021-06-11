@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useSlidesDispatch } from "../../hooks/useSlides";
+import { saveToDatabase } from "../../firebase/firebase";
+import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
 interface Props {
@@ -17,6 +18,7 @@ function SlideDetails({ slideText, slideNumber, type, header }: Props) {
   const [details4, setDetails4] = useState<string>("");
   const [details5, setDetails5] = useState<string>("");
   const dispatch = useSlidesDispatch();
+  const context = useSlidesState();
   const { launchTime, restart } = useTimer();
   const [error, setError] = useState("");
 
@@ -41,6 +43,11 @@ function SlideDetails({ slideText, slideNumber, type, header }: Props) {
             },
           },
         });
+      context?.user &&
+        dispatch &&
+        saveToDatabase(context?.user, context?.answers).then(() =>
+          dispatch({ type: "reset" })
+        );
       setName("");
       restart();
     } else {

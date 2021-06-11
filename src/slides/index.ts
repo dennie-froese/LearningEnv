@@ -124,7 +124,7 @@ const SlideIDs = [
   111,
   112,
   113,
-  114,
+  // 114,
   115,
 ];
 
@@ -1014,13 +1014,6 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Damit wir Dir die Aufwandsentschädigung zahlen können, möchten wir Dich noch bitten, Angaben zu Deiner Bankverbindung zu machen. Bitte beachte, dass diese Daten selbstverständlich nur zu Überweisungszwecken gespeichert und nach Auszahlung der Vergütung umgehend gelöscht werden.",
     slideType: "Ende",
     header: "Du bist nun am Ende der Studie angekommen.",
-  },
-  114: {
-    id: 114,
-    slideText:
-      "Dann hast Du hier die Möglichkeit, anzugeben, ob Du für weitere Studien der Arbeitsgruppe „Pädagogische Intervention, Evaluation und Implementation“ per Mail kontaktiert werden möchtest, wenn wieder Probanden für eine Testung gesucht werden.",
-    slideType: "Spass",
-    header: "Dir hat es Spaß gemacht?",
   },
   115: {
     id: 115,

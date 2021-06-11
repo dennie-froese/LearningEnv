@@ -161,9 +161,17 @@ function SlideIdeaUnitsTypeOne({
           <div className="Slide-text-m">{slideText}</div>
           {expertExamples && expertExamples[0] && expertExamples[1] && (
             <div className="Slide-idea-units-text-container">
-              <div className="Slide-text-m">
-                Diese beiden Expertenbeispiele würden bei der Bewertung einen
-                ganzen Punkt erhalten.
+              <div className="Slide-text-row">
+                <div className="Slide-text-m-red">Beide</div>
+                <div className="Slide-text-m">
+                  {" "}
+                  Expertenbeispiele würden bei der Bewertung
+                </div>
+                <div className="Slide-text-m-red"> jeweils</div>
+                <div className="Slide-text-m">
+                  {" "}
+                  <b>einen</b> ganzen Punkt erhalten.
+                </div>
               </div>
               <div className="Slide-text-m">Expertenbeispiel 1:</div>
               <textarea
@@ -183,9 +191,16 @@ function SlideIdeaUnitsTypeOne({
           )}
           {negativeExamples && negativeExamples[0] && negativeExamples[1] && (
             <div className="Slide-idea-units-text-container">
-              <div className="Slide-text-m">
-                Diese beiden Negativ-Beispiele würden bei der Bewertung keinen
-                Punkt erhalten.
+              <div className="Slide-text-row">
+                <div className="Slide-text-m-red">Beide </div>
+                <div className="Slide-text-m">
+                  Negativ-Beispiele würden bei der Bewertung
+                </div>
+                <div className="Slide-text-m-red"> jeweils</div>
+                <div className="Slide-text-m">
+                  {" "}
+                  <b>keinen</b> Punkt erhalten.
+                </div>
               </div>
               <div className="Slide-text-m">Negativ-Beispiel 1:</div>
               <textarea

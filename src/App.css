@@ -347,6 +347,15 @@
   border-radius: 10px;
 }
 
+.Slide-text-row {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 1%;
+}
+
 .Slide-text {
   text-align: left;
   font-size: calc(8px + 1vmin);
@@ -365,6 +374,13 @@
   text-align: left;
   font-size: calc(12px + 1vmin);
   color: white;
+  white-space: pre-wrap;
+}
+
+.Slide-text-m-red {
+  text-align: left;
+  font-size: calc(12px + 1vmin);
+  color: red;
   white-space: pre-wrap;
 }
 
