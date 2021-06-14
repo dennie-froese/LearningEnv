@@ -505,7 +505,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   46: {
     id: 46,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
+      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ nun mit den folgenden Beispielen ab.",
     slideType: "SN_g1_1",
     header: "Konzept „Soziale Normen“",
     negativeExamples: [
@@ -520,7 +520,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   48: {
     id: 48,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ mit den beiden hier dargestellten Beispielen ab.",
     slideType: "SN_g2",
     header: "Konzept „Soziale Normen“",
     negativeExamples: [
@@ -580,7 +580,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   56: {
     id: 56,
     slideText:
-      " Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
+      " Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ nun mit den folgenden Beispielen ab.",
     slideType: "Konsens_g1_1",
     header: "Konzept „hoher Konsens“",
     negativeExamples: [
@@ -595,7 +595,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   58: {
     id: 58,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+      "Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ mit den beiden hier dargestellten Beispielen ab.",
     slideType: "Konsens_g2",
     header: "Konzept „hoher Konsens“",
     negativeExamples: [
@@ -655,7 +655,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   66: {
     id: 66,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ nun mit den folgenden Beispielen ab.",
     slideType: "Konsistenz_g1_1",
     header: "Konzept „hohe Konsistenz“",
     negativeExamples: [
@@ -670,7 +670,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   68: {
     id: 68,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ mit den beiden hier dargestellten Beispielen ab.",
     slideType: "Konsistenz_g2",
     header: "Konzept „hohe Konsistenz“",
     negativeExamples: [
@@ -710,7 +710,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   73: {
     id: 73,
     slideText:
-      "Distinktheit: Das Ausmaß, in dem eine Person in unterschiedlicher Art und Weise auf ähnliche Stimuli oder Situationen reagiert. Die Distinktheit ist hoch, wenn sich eine Personen in wenigen Situationen gleich verhält, und niedrig, wenn sie in vielen Situationen das gleiche Verhalten zeigt.",
+      "Distinktheit: Das Ausmaß, in dem eine Person in unterschiedlicher Art und Weise auf ähnliche Stimuli oder Situationen reagiert. Die Distinktheit ist hoch, wenn sich eine Person in wenigen Situationen gleich verhält, und niedrig, wenn sie in vielen Situationen das gleiche Verhalten zeigt.",
     slideType: "Beispiel_Distinktheit0",
     header:
       "Denke Dir bitte ein Beispiel aus, das das Konzept hoher Distinktheit veranschaulicht.",
@@ -730,7 +730,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   76: {
     id: 76,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ nun mit den folgenden Beispielen ab.",
     slideType: "Distinktheit_g1_1",
     header: "Konzept „hohe Distinktheit“",
     negativeExamples: [
@@ -745,7 +745,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   78: {
     id: 78,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ mit den beiden hier dargestellten Beispielen ab.",
     slideType: "Distinktheit_g2",
     header: "Konzept „hohe Distinktheit“",
     negativeExamples: [
@@ -805,7 +805,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   86: {
     id: 86,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ nun mit den folgenden Beispielen ab.",
     slideType: "FA_g1_1",
     header: "Konzept „Fundamentaler Attributionsfehler“",
     negativeExamples: [
@@ -820,7 +820,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   88: {
     id: 88,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ mit den beiden hier dargestellten Beispielen ab.",
     slideType: "FA_g2",
     header: "Konzept „Fundamentaler Attributionsfehler“",
     negativeExamples: [
@@ -880,7 +880,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   96: {
     id: 96,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
+      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ nun mit den folgenden Beispielen ab.",
     slideType: "SV_g1_1",
     header: "Konzept „Selbstwertdienliche Verzerrung“",
     negativeExamples: [
@@ -895,7 +895,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   98: {
     id: 98,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ mit den beiden hier dargestellten Beispielen ab.",
     slideType: "SV_g2",
 
     header: "Konzept „Selbstwertdienliche Verzerrung“",
@@ -956,7 +956,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   106: {
     id: 106,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den präsentierten Teilaspekten der Definition ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast. ",
+      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ nun mit den folgenden Beispielen ab.",
     slideType: "GWG_g1_1",
     header: "Konzept „Gerechte-Welt-Glaube”",
     negativeExamples: [
@@ -971,7 +971,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   108: {
     id: 108,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den präsentierten Teilaspekten ab und beurteile, ob Du diese Aspekte in Deinem Beispiel veranschaulicht hast.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den beiden hier dargestellten Beispielen ab.",
     slideType: "GWG_g2",
     header: "Konzept „Gerechte-Welt-Glaube”",
     negativeExamples: [
