@@ -122,13 +122,8 @@ function SlideIdeaUnitsTypeTwo({
           {negativeExamples && negativeExamples[0] && negativeExamples[1] && (
             <div className="Slide-idea-units-text-container">
               <div className="Slide-text-row">
-                <div className="Slide-text-m-red">Beide </div>
                 <div className="Slide-text-m">
-                  Negativ-Beispiele würden bei der Bewertung
-                </div>
-                <div className="Slide-text-m-red"> jeweils</div>
-                <div className="Slide-text-m">
-                  {" "}
+                  Beide Negativ-Beispiele würden bei der Bewertung jeweils
                   <b>keinen</b> Punkt erhalten.
                 </div>
               </div>
