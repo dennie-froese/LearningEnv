@@ -111,8 +111,8 @@ function SlideIdeaUnitsTypeFour({ slideText, type, header }: Props) {
           </div>
           <div className="Slide-idea-units-text-container">
             <div className="Slide-text-m">
-              Wenn die Qualität Deines Beispiels bewertet werden müsste, was
-              denkst Du, würde es erhalten:
+              Wenn die Qualität Deines Beispiels bewertet würde, was denkst Du,
+              würde es erhalten:
             </div>
             <div className="Slide-idea-units-row">
               <button

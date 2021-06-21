@@ -885,7 +885,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     header: "Konzept „Selbstwertdienliche Verzerrung“",
     negativeExamples: [
       "Mareike gewinnt im Schach gegen ihren Freund Maik. Maik glaubt, dass der Sieg von Mareike nur daran lag, dass er sich schlecht konzentrieren konnte und er einen schlechten Tag hatte.",
-      "Klara ist überzeugt, dass sie ein guter Mensch ist. Ihr Sohn Jakob befindet sich im Teenager-Alter und zeigt aggressives und gewalttätiges Verhalten. Klara schiebt das Verhalten von Jakob auf seinen Vater, weil sie denkt, Jakob habe die Gene von ihm geerbt, und nicht ihre.",
+      "Klara ist überzeugt, dass ihr Mann und Vater ihres Kindes Jakob ein guter Mensch ist. Ihr Sohn Jakob befindet sich im Teenager-Alter und zeigt aggressives und gewalttätiges Verhalten. Klara denkt, Jakob habe die Gene von ihr geerbt, und nicht von ihrem Mann, weil er ja ihrer Überzeugung nach ein guter Mensch sei.",
     ],
     expertExamples: [
       "Nach einem Referat erhält Janosch sowohl positives als auch negatives Feedback. Eine seiner Mitschülerinnen lobt ihn für die sinnvolle Aufteilung der Inhalte. Janosch führt dies auf seine Intelligenz zurück. Ein anderer Mitschüler macht Janosch darauf aufmerksam, dass die Inhalte des Referats nicht gut nachzuvollziehen waren. Dies erklärt Janosch sich mit den technischen Störungen des Beamers und den Unterbrechungen vom Lehrer – an ihm selber wird dies wohl nicht gelegen haben.",
@@ -901,7 +901,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     header: "Konzept „Selbstwertdienliche Verzerrung“",
     negativeExamples: [
       "Mareike gewinnt im Schach gegen ihren Freund Maik. Maik glaubt, dass der Sieg von Mareike nur daran lag, dass er sich schlecht konzentrieren konnte und er einen schlechten Tag hatte.",
-      "Klara ist überzeugt, dass sie ein guter Mensch ist. Ihr Sohn Jakob befindet sich im Teenager-Alter und zeigt aggressives und gewalttätiges Verhalten. Klara schiebt das Verhalten von Jakob auf seinen Vater, weil sie denkt, Jakob habe die Gene von ihm geerbt, und nicht ihre.",
+      "Klara ist überzeugt, dass ihr Mann und Vater ihres Kindes Jakob ein guter Mensch ist. Ihr Sohn Jakob befindet sich im Teenager-Alter und zeigt aggressives und gewalttätiges Verhalten. Klara denkt, Jakob habe die Gene von ihr geerbt, und nicht von ihrem Mann, weil er ja ihrer Überzeugung nach ein guter Mensch sei.",
     ],
   },
   99: {

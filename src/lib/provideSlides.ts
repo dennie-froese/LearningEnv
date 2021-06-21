@@ -85,7 +85,6 @@ export default function provideSlides(condition: number) {
       111,
       112,
       113,
-      114,
       115,
     ],
     [

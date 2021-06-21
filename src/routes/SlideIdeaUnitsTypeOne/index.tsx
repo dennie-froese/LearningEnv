@@ -166,7 +166,7 @@ function SlideIdeaUnitsTypeOne({
               <div className="Slide-text-row">
                 <div className="Slide-text-m">
                   Beide Expertenbeispiele würden bei der Bewertung jeweils
-                  <b>einen</b> ganzen Punkt erhalten.
+                  <b> einen</b> ganzen Punkt erhalten.
                 </div>
               </div>
               <div className="Slide-text-m">Expertenbeispiel 1:</div>
@@ -190,7 +190,7 @@ function SlideIdeaUnitsTypeOne({
               <div className="Slide-text-row">
                 <div className="Slide-text-m">
                   Beide Negativ-Beispiele würden bei der Bewertung jeweils
-                  <b>keinen</b> Punkt erhalten.
+                  <b> keinen</b> Punkt erhalten.
                 </div>
               </div>
               <div className="Slide-text-m">Negativ-Beispiel 1:</div>
@@ -221,7 +221,7 @@ function SlideIdeaUnitsTypeOne({
           <div className="Slide-idea-units-text-container">
             <div className="Slide-text-m">
               {type.includes("1_1")
-                ? "Wenn die Qualität Deines Beispiels bewertet werden müsste, was denkst Du, würde es erhalten:"
+                ? "Wenn die Qualität Deines Beispiels bewertet würde, was denkst Du, würde es erhalten:"
                 : "Dies ist Deine Einschätzung zur Gesamtbewertung der Qualität Deines Beispiels. Auch hier hast Du die Möglichkeit, die Bewertung nochmal zu ändern. Wenn die Qualität Deines Beispiels bewertet werden müsste, was denkst Du, würde es erhalten:"}
             </div>
             <div className="Slide-idea-units-row">

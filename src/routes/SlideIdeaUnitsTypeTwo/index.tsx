@@ -124,7 +124,7 @@ function SlideIdeaUnitsTypeTwo({
               <div className="Slide-text-row">
                 <div className="Slide-text-m">
                   Beide Negativ-Beispiele würden bei der Bewertung jeweils
-                  <b>keinen</b> Punkt erhalten.
+                  <b> keinen</b> Punkt erhalten.
                 </div>
               </div>
               <div className="Slide-text-m">Negativ-Beispiel 1:</div>
@@ -154,8 +154,8 @@ function SlideIdeaUnitsTypeTwo({
           </div>
           <div className="Slide-idea-units-text-container">
             <div className="Slide-text-m">
-              Wenn die Qualität Deines Beispiels bewertet werden müsste, was
-              denkst Du, würde es erhalten:
+              Wenn die Qualität Deines Beispiels bewertet würde, was denkst Du,
+              würde es erhalten:
             </div>
             <div className="Slide-idea-units-row">
               <button
