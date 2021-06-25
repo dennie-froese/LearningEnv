@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { inputValidationOff } from "../../App";
-import { useSlidesDispatch } from "../../hooks/useSlides";
+import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
 interface Props {
@@ -66,24 +66,55 @@ const TERMS: number[] = [
   20,
 ];
 
+const FACHSEMESTER: number[] = [1, 2];
+
+const JAHRE: string[] = [
+  "kein Jahr",
+  "1-2 Jahre",
+  "3-5 Jahre",
+  "mehr als 5 Jahre",
+];
+
+const SCHOOLYEARS: number[] = [10, 11, 12, 13];
+
 function SlideDemographics({ slideText, slideNumber, type }: Props) {
   const dispatch = useSlidesDispatch();
+  const context = useSlidesState();
   const [age, setAge] = useState<string>("");
   const [sex, setSex] = useState<string>("");
   const [languageOne, setLanguageOne] = useState<string>("");
   const [languageTwo, setLanguageTwo] = useState<string>("");
-  const [dropDownGrade, setDropDownGrade] = useState(false);
-  const dropDownGradeClassName = dropDownGrade
+
+  const [dropDownSchoolYear, setDropDownSchoolYear] = useState(false);
+  const [schoolYear, setschoolYear] = useState<number>(0);
+  const dropDownSchoolYearClassName = dropDownSchoolYear
     ? "Dropdown show"
     : "Dropdown hide";
-  const [grade, setGrade] = useState<string>("");
+
+  const [dropDownGradeGerman, setDropDownGradeGerman] = useState(false);
+  const [gradeGerman, setGradeGerman] = useState<string>("");
+  const dropDownGradeGermanClassName = dropDownGradeGerman
+    ? "Dropdown show"
+    : "Dropdown hide";
+
+  const [dropDownFachSemester, setDropDownFachSemester] = useState(false);
+  const dropDownFachSemesterClassName = dropDownFachSemester
+    ? "Dropdown show"
+    : "Dropdown hide";
+  const [fachSemester, setFachsemester] = useState<number>(0);
+
+  const [dropDownYears, setDropDownYears] = useState(false);
+  const dropDownYearsClassName = dropDownYears
+    ? "Dropdown show"
+    : "Dropdown hide";
+  const [years, setYears] = useState<string>("");
+
   const [dropDownTerm, setDropDownTerm] = useState(false);
   const dropDownTermClassName = dropDownTerm
     ? "Dropdown show"
     : "Dropdown hide";
   const [term, setTerm] = useState<number>(0);
   const [subjectOne, setSubjectOne] = useState<string>("");
-  const [subjectTwo, setSubjectTwo] = useState<string>("");
   const [degree, setDegree] = useState<string>("");
   const [error, setError] = useState("");
 
@@ -91,32 +122,75 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
 
   const finish = () => {
     if (
-      (age && sex && languageOne && grade && term && degree && subjectOne) ||
-      inputValidationOff
+      context?.answers.demographisch_intro.auswahlSchuelerStudent &&
+      context?.answers.demographisch_intro.auswahlSchuelerStudent ===
+        "Schüler*in"
     ) {
-      dispatch &&
-        launchTime &&
-        dispatch({
-          type: "submit_slide",
-          payload: {
-            type: type,
-            answer: {
-              zeit: launchTime - Date.now(),
-              Alter: age,
-              Geschlecht: sex,
-              Geburtssprache1: languageOne,
-              Geburtssprache2: languageTwo || "-",
-              Abiturnote: grade,
-              Studiengang1: subjectOne,
-              Studiengang2: subjectTwo || "-",
-              Abschluss: degree,
-              Semester_Hochschule: term.toString(),
+      if (
+        (age && sex && languageOne && schoolYear && gradeGerman) ||
+        inputValidationOff
+      ) {
+        dispatch &&
+          launchTime &&
+          dispatch({
+            type: "submit_slide",
+            payload: {
+              type: type,
+              answer: {
+                zeit: launchTime - Date.now(),
+                Alter: age,
+                Geschlecht: sex,
+                Geburtssprache1: languageOne,
+                Geburtssprache2: languageTwo || "-",
+                Klassenstufe: schoolYear,
+                ZeugnisnoteDeutsch: gradeGerman,
+              },
             },
-          },
-        });
-      restart();
-    } else {
-      setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+          });
+        restart();
+      } else {
+        setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+      }
+    } else if (
+      context?.answers.demographisch_intro.auswahlSchuelerStudent &&
+      context?.answers.demographisch_intro.auswahlSchuelerStudent ===
+        "Studierende*r"
+    ) {
+      if (
+        (age &&
+          sex &&
+          languageOne &&
+          subjectOne &&
+          fachSemester &&
+          term &&
+          degree &&
+          years) ||
+        inputValidationOff
+      ) {
+        dispatch &&
+          launchTime &&
+          dispatch({
+            type: "submit_slide",
+            payload: {
+              type: type,
+              answer: {
+                zeit: launchTime - Date.now(),
+                Alter: age,
+                Geschlecht: sex,
+                Geburtssprache1: languageOne,
+                Geburtssprache2: languageTwo || "-",
+                Studiengang1: subjectOne,
+                Fachsemester: fachSemester,
+                Semester_Hochschule: term,
+                Abschluss: degree,
+                Schulabluss_Vergangen: years,
+              },
+            },
+          });
+        restart();
+      } else {
+        setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+      }
     }
   };
   return (
@@ -174,6 +248,39 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
               </div>
             </div>
           </div>
+          {context?.answers.demographisch_intro.auswahlSchuelerStudent &&
+            context?.answers.demographisch_intro.auswahlSchuelerStudent ===
+              "Schüler*in" && (
+              <div className="Slide-demographic-row">
+                <p className="Slide-demographic-label-l">Klassenstufe:</p>
+                <div>
+                  <button
+                    className="Dropdown-button"
+                    onClick={() => setDropDownSchoolYear(!dropDownSchoolYear)}
+                  >
+                    {schoolYear ? schoolYear : "Auswahl"}
+                  </button>
+                  {dropDownSchoolYear && (
+                    <div className={dropDownSchoolYearClassName}>
+                      {SCHOOLYEARS.map((schoolYear) => (
+                        <div className="Dropdown-button-small-container">
+                          <button
+                            className="Dropdown-button-small"
+                            id={schoolYear.toString()}
+                            onClick={() => {
+                              setschoolYear(schoolYear);
+                              setDropDownSchoolYear(false);
+                            }}
+                          >
+                            {schoolYear}
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
           <div className="Slide-demographic-row">
             <p className="Slide-demographic-label-l">
               Welche Sprache(n) hast du von Geburt an gelernt?:
@@ -194,189 +301,267 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
               placeholder="Optional"
             />
           </div>
-          <div className="Slide-demographic-row">
-            <p className="Slide-demographic-label-l">Abiturnote:</p>
-            <div>
-              <button
-                className="Dropdown-button"
-                onClick={() => setDropDownGrade(!dropDownGrade)}
-              >
-                {grade ? grade : "Auswahl"}
-              </button>
-              {dropDownGrade && (
-                <div className={dropDownGradeClassName}>
-                  {GRADES.map((grade) => (
-                    <div className="Dropdown-button-small-container">
-                      <button
-                        className="Dropdown-button-small"
-                        id={grade}
-                        onClick={() => {
-                          setGrade(grade);
-                          setDropDownGrade(false);
-                        }}
-                      >
-                        {grade}
-                      </button>
+          {context?.answers.demographisch_intro.auswahlSchuelerStudent &&
+            context?.answers.demographisch_intro.auswahlSchuelerStudent ===
+              "Schüler*in" && (
+              <div className="Slide-demographic-row">
+                <p className="Slide-demographic-label-l">
+                  Letzte Zeugnisnote im Fach Deutsch:
+                </p>
+                <div>
+                  <button
+                    className="Dropdown-button"
+                    onClick={() => setDropDownGradeGerman(!dropDownGradeGerman)}
+                  >
+                    {gradeGerman ? gradeGerman : "Auswahl"}
+                  </button>
+                  {dropDownGradeGerman && (
+                    <div className={dropDownGradeGermanClassName}>
+                      {GRADES.map((grade) => (
+                        <div className="Dropdown-button-small-container">
+                          <button
+                            className="Dropdown-button-small"
+                            id={grade}
+                            onClick={() => {
+                              setGradeGerman(grade);
+                              setDropDownGradeGerman(false);
+                            }}
+                          >
+                            {grade}
+                          </button>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  )}
                 </div>
-              )}
-            </div>
-            <p className="Slide-demographic-label-l">Hochschulsemester:</p>
-            <div>
-              <button
-                className="Dropdown-button"
-                onClick={() => setDropDownTerm(!dropDownTerm)}
-              >
-                {term ? term : "Auswahl"}
-              </button>
-              <div>
-                {dropDownTerm && (
-                  <div className={dropDownTermClassName}>
-                    {TERMS.map((term) => (
-                      <div className="Dropdown-button-small-container">
-                        <button
-                          className="Dropdown-button-small"
-                          id={term.toString()}
-                          onClick={() => {
-                            setTerm(term);
-                            setDropDownTerm(false);
-                          }}
-                        >
-                          {term}
-                        </button>
+              </div>
+            )}
+          {context?.answers.demographisch_intro.auswahlSchuelerStudent &&
+            context?.answers.demographisch_intro.auswahlSchuelerStudent ===
+              "Studierende*r" && (
+              <>
+                <div className="Slide-demographic-row">
+                  <p className="Slide-demographic-label-l">Studiengang:</p>
+                  <input
+                    className="Slide-demographic-input"
+                    value={subjectOne}
+                    onChange={(e) => setSubjectOne(e.target.value)}
+                    type="text"
+                    name="name"
+                  />
+                </div>
+                <div className="Slide-demographic-row">
+                  <p className="Slide-demographic-label-l">Fachsemester:</p>
+                  <div>
+                    <button
+                      className="Dropdown-button"
+                      onClick={() =>
+                        setDropDownFachSemester(!dropDownFachSemester)
+                      }
+                    >
+                      {fachSemester ? fachSemester : "Auswahl"}
+                    </button>
+                    {dropDownFachSemester && (
+                      <div className={dropDownFachSemesterClassName}>
+                        {FACHSEMESTER.map((fachSemester) => (
+                          <div className="Dropdown-button-small-container">
+                            <button
+                              className="Dropdown-button-small"
+                              id={fachSemester.toString()}
+                              onClick={() => {
+                                setFachsemester(fachSemester);
+                                setDropDownFachSemester(false);
+                              }}
+                            >
+                              {fachSemester}
+                            </button>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    )}
                   </div>
-                )}
-              </div>
-            </div>
-          </div>
-          <div className="Slide-demographic-row">
-            <p className="Slide-demographic-label-l">
-              Studiengang (Erstfach & Zweitfach):
-            </p>
-            <input
-              className="Slide-demographic-input"
-              value={subjectOne}
-              onChange={(e) => setSubjectOne(e.target.value)}
-              type="text"
-              name="name"
-            />
-            <input
-              className="Slide-demographic-input"
-              value={subjectTwo}
-              onChange={(e) => setSubjectTwo(e.target.value)}
-              type="text"
-              name="name"
-              placeholder="Optional"
-            />
-          </div>
-          <div className="Slide-demographic-row">
-            <p className="Slide-demographic-label-l">
-              Angestrebter Hochschulabschluss:
-            </p>
-            <div className="Slide-demographic-row-boxes">
-              <div className="Slide-demographic-row-boxes-container">
-                <input
-                  type="checkbox"
-                  checked={
-                    degree === "Bachelor of Arts/Science 1-Fach" ? true : false
-                  }
-                  onClick={() =>
-                    degree === "Bachelor of Arts/Science 1-Fach"
-                      ? setDegree("")
-                      : setDegree("Bachelor of Arts/Science 1-Fach")
-                  }
-                  onChange={() => null}
-                />
-                <div className="Slide-demographic-label-checkboxes">
-                  Bachelor of Arts/Science 1-Fach
+                  <p className="Slide-demographic-label-l">
+                    Hochschulsemester:
+                  </p>
+                  <div>
+                    <button
+                      className="Dropdown-button"
+                      onClick={() => setDropDownTerm(!dropDownTerm)}
+                    >
+                      {term ? term : "Auswahl"}
+                    </button>
+                    <div>
+                      {dropDownTerm && (
+                        <div className={dropDownTermClassName}>
+                          {TERMS.map((term) => (
+                            <div className="Dropdown-button-small-container">
+                              <button
+                                className="Dropdown-button-small"
+                                id={term.toString()}
+                                onClick={() => {
+                                  setTerm(term);
+                                  setDropDownTerm(false);
+                                }}
+                              >
+                                {term}
+                              </button>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="Slide-demographic-row-boxes-container">
-                <input
-                  type="checkbox"
-                  checked={
-                    degree === "Bachelor of Arts/Science 2-Fach" ? true : false
-                  }
-                  onClick={() =>
-                    degree === "Bachelor of Arts/Science 2-Fach"
-                      ? setDegree("")
-                      : setDegree("Bachelor of Arts/Science 2-Fach")
-                  }
-                  onChange={() => null}
-                />
-                <div className="Slide-demographic-label-checkboxes">
-                  Bachelor of Arts/Science 2-Fach
+                <div className="Slide-demographic-row">
+                  <p className="Slide-demographic-label-l">
+                    Angestrebter Hochschulabschluss:
+                  </p>
+                  <div className="Slide-demographic-row-boxes">
+                    <div className="Slide-demographic-row-boxes-container">
+                      <input
+                        type="checkbox"
+                        checked={
+                          degree === "Bachelor of Arts/Science 1-Fach"
+                            ? true
+                            : false
+                        }
+                        onClick={() =>
+                          degree === "Bachelor of Arts/Science 1-Fach"
+                            ? setDegree("")
+                            : setDegree("Bachelor of Arts/Science 1-Fach")
+                        }
+                        onChange={() => null}
+                      />
+                      <div className="Slide-demographic-label-checkboxes">
+                        Bachelor of Arts/Science 1-Fach
+                      </div>
+                    </div>
+                    <div className="Slide-demographic-row-boxes-container">
+                      <input
+                        type="checkbox"
+                        checked={
+                          degree === "Bachelor of Arts/Science 2-Fach"
+                            ? true
+                            : false
+                        }
+                        onClick={() =>
+                          degree === "Bachelor of Arts/Science 2-Fach"
+                            ? setDegree("")
+                            : setDegree("Bachelor of Arts/Science 2-Fach")
+                        }
+                        onChange={() => null}
+                      />
+                      <div className="Slide-demographic-label-checkboxes">
+                        Bachelor of Arts/Science 2-Fach
+                      </div>
+                    </div>
+                    <div className="Slide-demographic-row-boxes-container">
+                      <input
+                        type="checkbox"
+                        checked={
+                          degree === "Master of Arts/Science 1-Fach"
+                            ? true
+                            : false
+                        }
+                        onClick={() =>
+                          degree === "Master of Arts/Science 1-Fach"
+                            ? setDegree("")
+                            : setDegree("Master of Arts/Science 1-Fach")
+                        }
+                        onChange={() => null}
+                      />
+                      <div className="Slide-demographic-label-checkboxes">
+                        Master of Arts/Science 1-Fach
+                      </div>
+                    </div>
+                    <div className="Slide-demographic-row-boxes-container">
+                      <input
+                        type="checkbox"
+                        checked={
+                          degree === "Master of Arts/Science 2-Fach"
+                            ? true
+                            : false
+                        }
+                        onClick={() =>
+                          degree === "Master of Arts/Science 2-Fach"
+                            ? setDegree("")
+                            : setDegree("Master of Arts/Science 2-Fach")
+                        }
+                        onChange={() => null}
+                      />
+                      <div className="Slide-demographic-label-checkboxes">
+                        Master of Arts/Science 2-Fach
+                      </div>
+                    </div>
+                    <div className="Slide-demographic-row-boxes-container">
+                      <input
+                        type="checkbox"
+                        checked={
+                          degree === "Master of Education" ? true : false
+                        }
+                        onClick={() =>
+                          degree === "Master of Education"
+                            ? setDegree("")
+                            : setDegree("Master of Education")
+                        }
+                        onChange={() => null}
+                      />
+                      <div className="Slide-demographic-label-checkboxes">
+                        Master of Education
+                      </div>
+                    </div>
+                    <div className="Slide-demographic-row-boxes-container">
+                      <input
+                        type="checkbox"
+                        checked={
+                          degree === "Anderer Studienabschluss" ? true : false
+                        }
+                        onClick={() =>
+                          degree === "Anderer Studienabschluss"
+                            ? setDegree("")
+                            : setDegree("Anderer Studienabschluss")
+                        }
+                        onChange={() => null}
+                      />
+                      <div className="Slide-demographic-label-checkboxes">
+                        Anderer Studienabschluss
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="Slide-demographic-row-boxes-container">
-                <input
-                  type="checkbox"
-                  checked={
-                    degree === "Master of Arts/Science 1-Fach" ? true : false
-                  }
-                  onClick={() =>
-                    degree === "Master of Arts/Science 1-Fach"
-                      ? setDegree("")
-                      : setDegree("Master of Arts/Science 1-Fach")
-                  }
-                  onChange={() => null}
-                />
-                <div className="Slide-demographic-label-checkboxes">
-                  Master of Arts/Science 1-Fach
+                <div className="Slide-demographic-row">
+                  <p className="Slide-demographic-label-l">
+                    Wie lange ist dein Schulabschluss her?
+                  </p>
+                  <div>
+                    <button
+                      className="Dropdown-button"
+                      onClick={() => setDropDownYears(!dropDownYears)}
+                    >
+                      {years ? years : "Auswahl"}
+                    </button>
+                    {dropDownYears && (
+                      <div className={dropDownYearsClassName}>
+                        {JAHRE.map((years) => (
+                          <div className="Dropdown-button-small-container">
+                            <button
+                              className="Dropdown-button-small"
+                              id={years}
+                              onClick={() => {
+                                setYears(years);
+                                setDropDownYears(false);
+                              }}
+                            >
+                              {years}
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="Slide-demographic-row-boxes-container">
-                <input
-                  type="checkbox"
-                  checked={
-                    degree === "Master of Arts/Science 2-Fach" ? true : false
-                  }
-                  onClick={() =>
-                    degree === "Master of Arts/Science 2-Fach"
-                      ? setDegree("")
-                      : setDegree("Master of Arts/Science 2-Fach")
-                  }
-                  onChange={() => null}
-                />
-                <div className="Slide-demographic-label-checkboxes">
-                  Master of Arts/Science 2-Fach
-                </div>
-              </div>
-              <div className="Slide-demographic-row-boxes-container">
-                <input
-                  type="checkbox"
-                  checked={degree === "Master of Education" ? true : false}
-                  onClick={() =>
-                    degree === "Master of Education"
-                      ? setDegree("")
-                      : setDegree("Master of Education")
-                  }
-                  onChange={() => null}
-                />
-                <div className="Slide-demographic-label-checkboxes">
-                  Master of Education
-                </div>
-              </div>
-              <div className="Slide-demographic-row-boxes-container">
-                <input
-                  type="checkbox"
-                  checked={degree === "Anderer Studienabschluss" ? true : false}
-                  onClick={() =>
-                    degree === "Anderer Studienabschluss"
-                      ? setDegree("")
-                      : setDegree("Anderer Studienabschluss")
-                  }
-                  onChange={() => null}
-                />
-                <div className="Slide-demographic-label-checkboxes">
-                  Anderer Studienabschluss
-                </div>
-              </div>
-            </div>
-          </div>
+              </>
+            )}
         </div>
         <div className="Slide-nav">
           <p className="Error-text" style={{ paddingRight: 20 }}>

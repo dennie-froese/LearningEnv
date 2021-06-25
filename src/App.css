@@ -162,6 +162,14 @@
   padding-left: 2%;
 }
 
+.Slide-choice-row-boxes-container-1 {
+  padding-right: 10%;
+}
+
+.Slide-choice-row-boxes-container-2 {
+  padding-left: 10%;
+}
+
 .Slide-demographic-input {
   width: 15vh;
   height: 25px;

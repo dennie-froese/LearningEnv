@@ -1,17 +1,22 @@
 export interface Answer {
   zeit: number;
+  auswahlSchuelerStudent?: string;
   version?: string;
   vpn?: string;
   code?: string;
   Alter?: string;
   Geschlecht?: string;
+  Klassenstufe?: number;
+  ZeugnisnoteDeutsch?: string;
   Geburtssprache1?: string;
   Geburtssprache2?: string;
   Abiturnote?: string;
   Studiengang1?: string;
   Studiengang2?: string;
   Abschluss?: string;
-  Semester_Hochschule?: string;
+  Fachsemester?: number;
+  Semester_Hochschule?: number;
+  Schulabluss_Vergangen?: string;
   NachAngaben_1?: string;
   NachAngaben_2?: string;
   NachAngaben_3?: string;
