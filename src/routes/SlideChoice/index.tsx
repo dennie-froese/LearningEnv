@@ -1,44 +1,38 @@
 import React, { useState } from "react";
-import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
+import { useHistory } from "react-router-dom";
+import { useSlidesDispatch } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
-interface Props {
-  slideText: string;
-  slideNumber: number;
-  type: string;
-}
-
-function SlideChoice({ slideText, type }: Props) {
-  const context = useSlidesState();
+function SlideChoice() {
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
   const [choice, setChoice] = useState("");
+  const [error, setError] = useState("");
+  const history = useHistory();
 
   const finish = () => {
-    const user = context?.user ? context.user : "";
-    const obj = type === "Willkommen" ? { vpn: user } : null;
-    dispatch &&
-      launchTime &&
-      choice &&
+    if (dispatch && launchTime && choice) {
       dispatch({
-        type: "submit_slide",
-        payload: {
-          type: type,
-          answer: {
-            auswahlSchuelerStudent: choice,
-            zeit: launchTime - Date.now(),
-            ...obj,
-          },
-        },
+        type: "set_schueler",
+        payload: { schueler: choice === "Schüler*in" ? "1" : "0" },
       });
-    restart();
+      restart();
+      setError("");
+      history.push("/slides");
+    } else {
+      setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
+    }
   };
 
   return (
     <div className="Slide">
       <div className="Slide-container">
         <div className="Slide-intro-main">
-          <div className="Slide-text-l">{slideText}</div>
+          <div className="Slide-text-l">
+            Wähle bitte zunächst die zutreffenden Angaben zu Deiner Person aus.
+            Klicke nach der Auswahl bitte auf „Weiter“.
+          </div>
+          <p>Ich bin:</p>
         </div>
         <div className="Slide-demographic">
           <div className="Slide-demographic-row">
@@ -73,6 +67,9 @@ function SlideChoice({ slideText, type }: Props) {
           </div>
         </div>
         <div className="Slide-nav">
+          <p className="Error-text" style={{ paddingRight: 20 }}>
+            {error}
+          </p>
           <button className="Slide-button" onClick={finish}>
             Weiter
           </button>

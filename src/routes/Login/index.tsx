@@ -17,7 +17,7 @@ function Login() {
           type: "set_user",
           payload: { user: user, authenticated: true },
         });
-      history.push("/slides");
+      history.push("/schueler");
     } else {
       setError(
         "Deine Eingaben scheinen nicht korrekt zu sein – bitte überprüfe diese und probiere es noch einmal."

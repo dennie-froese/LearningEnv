@@ -7,6 +7,7 @@ import SomethingWentWrong from "../routes/SomethingWentWrong/index";
 import Slide from "../routes/Slide";
 import { useSlidesState } from "../hooks/useSlides";
 import { SlideInterface } from "../slides";
+import SlideChoice from "../routes/SlideChoice";
 
 function Router() {
   const slides = useSlidesState()?.slides;
@@ -27,6 +28,9 @@ function Router() {
         </Route>
         <Route exact path="/login">
           <Login />
+        </Route>
+        <Route exact path="/schueler">
+          <SlideChoice />
         </Route>
         {slide && <Slide {...slide} />}
         <Route path="*">

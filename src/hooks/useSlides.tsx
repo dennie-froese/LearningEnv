@@ -9,6 +9,7 @@ type UserStateType = {
 };
 
 type SetUser = { type: "set_user"; payload: UserStateType };
+type SetSchueler = { type: "set_schueler"; payload: { schueler: "0" | "1" } };
 type SetSlides = {
   type: "set_slides";
   payload: {
@@ -25,12 +26,13 @@ type Reset = {
   type: "reset";
 };
 
-type Action = SetUser | SetSlides | SubmitSlide | Reset;
+type Action = SetUser | SetSchueler | SetSlides | SubmitSlide | Reset;
 
 type Dispatch = (action: Action) => void;
 
 type State = {
   user: string;
+  schueler: string;
   authenticated: boolean;
   slides: SlideInterface[] | undefined;
   activeSlide: number | undefined;
@@ -53,6 +55,12 @@ function slidesReducer(state: State, action: Action) {
         ...state,
         user: action.payload.user,
         authenticated: action.payload.authenticated,
+      };
+    }
+    case "set_schueler": {
+      return {
+        ...state,
+        schueler: action.payload.schueler,
       };
     }
     case "set_slides": {
@@ -95,6 +103,7 @@ function slidesReducer(state: State, action: Action) {
 function SlidesProvider({ children }: SlidesProviderProps) {
   const [state, dispatch] = useReducer(slidesReducer, {
     user: "",
+    schueler: "",
     authenticated: false,
     slides: undefined,
     activeSlide: undefined,
@@ -103,7 +112,7 @@ function SlidesProvider({ children }: SlidesProviderProps) {
   });
 
   useEffect(() => {
-    if (state.user) {
+    if (state.user && state.schueler) {
       const condition = parseInt(state.user.charAt(0));
       const { slidesArray, slidesSelected } = provideSlides(condition);
       dispatch({
@@ -115,7 +124,7 @@ function SlidesProvider({ children }: SlidesProviderProps) {
         },
       });
     }
-  }, [state.user]);
+  }, [state.user, state.schueler]);
 
   return (
     <SlidesStateContext.Provider value={state}>

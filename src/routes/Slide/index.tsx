@@ -17,11 +17,10 @@ import SlideIdeaUnitsTypeFour from "../SlideIdeaUnitsTypeFour";
 import SlideDetails from "../SlideDetails";
 import { useSlidesState } from "../../hooks/useSlides";
 import SlideFun from "../SlideFun";
-import SlideChoice from "../SlideChoice";
 
-const typeIntro: number[] = [1, 2, 3, 4, 5, 7, 12, 21, 23, 32];
+const typeIntro: number[] = [1, 2, 3, 4, 5, 7, 8, 12, 21, 23, 32];
 const typeIntroWithHeader: number[] = [24, 25, 26, 27, 28, 29, 30, 31];
-const typeNachangaben: number[] = [8, 9, 10, 11];
+const typeNachangaben: number[] = [9, 10, 11];
 const typeTextinput: number[] = [13, 14, 15, 16, 17, 18, 19, 20];
 const typeTextinputWithHeader: number[] = [33, 43, 53, 63, 73, 83, 93, 103];
 const typeRange: number[] = [
@@ -112,12 +111,6 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
           header={slide.header}
-        />
-      ) : slide.slideType === "demographisch_intro" ? (
-        <SlideChoice
-          slideText={slide.slideText}
-          slideNumber={slide.id}
-          type={slide.slideType}
         />
       ) : slide.slideType === "Spass" ? (
         <SlideFun
