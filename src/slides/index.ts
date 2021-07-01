@@ -168,35 +168,9 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   8: {
     id: 8,
-    slideText: "",
-    slideType: "Nachangaben_1_5",
-    nachangaben: {
-      1: [
-        "Wenn ich mir angucke, was wir im Studium können müssen, halte ich mich für….",
-        "Nicht begabt",
-        "Sehr begabt",
-      ],
-      2: [
-        "Wenn ich mir angucke, was wir im Studium können müssen, meine ich, dass mir das Lernen von neuen Sachen….",
-        "Leicht fällt",
-        "Schwer fällt",
-      ],
-      3: [
-        "Wenn ich mir angucke, was wir im Studium können müssen, finde ich, dass ich mit den Aufgaben….",
-        "Gut zurechtkomme",
-        "Nicht zurechtkomme",
-      ],
-      4: [
-        "Wenn ich mir angucke, was wir im Studium können müssen, glaube ich, dass ich….",
-        "Nicht intelligent bin",
-        "Sehr intelligent bin",
-      ],
-      5: [
-        "Wenn ich mir angucke, was wir im Studium können müssen, finde ich, dass ich….",
-        "Viel kann",
-        "Wenig kann",
-      ],
-    },
+    slideText:
+      "Nun möchten wir Dich bitten, anzugeben, inwiefern die folgenden Aussagen auf Dich persönlich zutreffen. Es gibt keine richtigen oder falschen Antworten. Klicke auf „Weiter“, um zur nächsten Seite zu gelangen.",
+    slideType: "Nachangaben_Intro",
   },
   9: {
     id: 9,

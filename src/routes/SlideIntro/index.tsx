@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
@@ -12,20 +13,29 @@ function SlideIntro({ slideText, slideNumber, type }: Props) {
   const context = useSlidesState();
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
+  const history = useHistory();
 
   const finish = () => {
     const user = context?.user ? context.user : "";
     const obj = type === "Willkommen" ? { vpn: user } : null;
-    dispatch &&
-      launchTime &&
-      dispatch({
-        type: "submit_slide",
-        payload: {
-          type: type,
-          answer: { zeit: launchTime - Date.now(), ...obj },
-        },
-      });
-    restart();
+    if (
+      context?.answers?.demographisch_intro?.auswahlSchuelerStudent &&
+      context?.answers?.demographisch_intro?.auswahlSchuelerStudent ===
+        "Schüler*in"
+    ) {
+      history.push("/schueler");
+    } else {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: launchTime - Date.now(), ...obj },
+          },
+        });
+      restart();
+    }
   };
 
   return (
