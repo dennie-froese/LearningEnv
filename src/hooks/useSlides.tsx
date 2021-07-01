@@ -113,7 +113,17 @@ function SlidesProvider({ children }: SlidesProviderProps) {
 
   useEffect(() => {
     if (state.user && state.schueler) {
-      const condition = parseInt(state.user.charAt(0));
+      let condition: number;
+      if (state.schueler === "0" && state.user.charAt(0) === "1") {
+        condition = parseInt(state.user.charAt(0));
+      } else if (state.schueler === "0" && state.user.charAt(0) === "2") {
+        condition = 3;
+      } else if (state.schueler === "1" && state.user.charAt(0) === "1") {
+        condition = 2;
+      } else {
+        condition = 4;
+      }
+
       const { slidesArray, slidesSelected } = provideSlides(condition);
       dispatch({
         type: "set_slides",
