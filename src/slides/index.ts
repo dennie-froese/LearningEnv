@@ -300,19 +300,26 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   19: {
     id: 19,
-    slideText: "Bitte definiere das Konzept „Selbstwertdienliche Verzerrung”.",
-    slideType: "Konzept_SV",
+    slideText:
+      "Nun weißt Du, worum es sich bei der Textsorte handelt. Als nächstes erfährst Du mehr darüber, wie man ein Abstract schreibt. Dazu werden Dir gleich verschiedene Kriterien gezeigt, die ein gutes Abstract erfüllen sollte. Klicke auf „Weiter“.",
+    slideType: "Abstract_Criteria_Intro_1",
   },
   20: {
     id: 20,
-    slideText: "Bitte definiere das Konzept „Gerechte-Welt-Glaube”.",
-    slideType: "Konzept_GWG",
+    slideText: "Kriterium: Inhalt des Abstracts",
+    slideType: "Abstract_Criteria_Intro_2",
   },
   21: {
     id: 21,
-    slideText:
-      "Deine nächste Aufgabe ist es, einen Text zu lesen, der verschiedene Konzepte der Sozialpsychologie behandelt. Es ist wichtig, dass Du den Text aufmerksam liest. Du hast dafür 4:00 Minuten Zeit. Im Anschluss sollst Du Dir Beispiele zu den Themen im Text ausdenken. ",
-    slideType: "Text_Intro",
+    slideText: "Kriterium „Inhalt“:Was sollte ein Abstract beinhalten?",
+    slideType: "Abstract_Criteria",
+    abstractIntroUnits: [
+      "1. Die Beschreibung des untersuchten Problems/der Frage",
+      "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
+      "3. Die Methode, mit der geforscht wurde",
+      "4. Die zentralen Ergebnisse",
+      "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+    ],
   },
   22: {
     id: 22,

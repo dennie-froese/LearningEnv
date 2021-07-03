@@ -79,6 +79,13 @@ function SlideAbstractIntro({
               </p>
             </div>
           )}
+          {abstractIntroUnits && abstractIntroUnits[4] && (
+            <div className="Slide-nachangaben-row-2">
+              <p className="Slide-label-l">
+                {abstractIntroUnits && abstractIntroUnits[4]}
+              </p>
+            </div>
+          )}
         </div>
         <div className="Slide-nav">
           <button className="Slide-button" onClick={finish}>
