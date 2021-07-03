@@ -235,56 +235,68 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   12: {
     id: 12,
-    slideText:
-      "Mit den folgenden Aufgaben soll Dein Wissen zu verschiedenen Konzepten der Sozialpsychologie erfasst werden. Bitte versuche, die Aufgaben möglichst gut zu bearbeiten, rate jedoch nicht. \n\nFalls Du eine der Fragen nicht beantworten kannst, setze bitte ein „-“. Wenn es losgehen kann, klicke bitte auf „Weiter“. ",
+    slideText: "Was ist ein Abstract?",
     slideType: "Abstract_Intro_1",
-    abstractIntroUnits: ["Ich bin einfach nicht gut im Schreiben."],
+    abstractIntroUnits: [
+      "Wissenschaftler forschen und möchten durch Experimente mehr über ein Thema erfahren.",
+    ],
   },
   13: {
     id: 13,
-    slideText: "Bitte definiere das Konzept „Attribution”.",
+    slideText: "Was ist ein Abstract?",
     slideType: "Abstract_Intro_2",
     abstractIntroUnits: [
-      "Ich bin einfach nicht gut im Schreiben.",
-      "Für Schreibaufträge/ Aufsätze bekomme ich gute Noten.",
+      "Wissenschaftler forschen und möchten durch Experimente mehr über ein Thema erfahren.",
+      "Ihre Ergebnisse veröffentlichen sie in Büchern und Zeitschriften.",
     ],
   },
   14: {
     id: 14,
-    slideText: "Bitte definiere das Konzept „Soziale Normen”.",
+    slideText: "Was ist ein Abstract?",
     slideType: "Abstract_Intro_3",
     abstractIntroUnits: [
-      "Ich bin einfach nicht gut im Schreiben.",
-      "Für Schreibaufträge/ Aufsätze bekomme ich gute Noten.",
-      "Ich war schon immer überzeugt, dass Schreiben eine meiner Stärken ist.",
+      "Wissenschaftler forschen und möchten durch Experimente mehr über ein Thema erfahren.",
+      "Ihre Ergebnisse veröffentlichen sie in Büchern und Zeitschriften.",
+      "Um sich auf dem aktuellen Stand zu halten, müssen sie viele Aufsätze von anderen Wissenschaftlern lesen.",
     ],
   },
   15: {
     id: 15,
-    slideText: "Bitte definiere das Konzept „Konsens”.",
+    slideText: "Was ist ein Abstract?",
     slideType: "Abstract_Intro_4",
     abstractIntroUnits: [
-      "Ich bin einfach nicht gut im Schreiben.",
-      "Für Schreibaufträge/ Aufsätze bekomme ich gute Noten.",
-      "Ich war schon immer überzeugt, dass Schreiben eine meiner Stärken ist.",
-      "Beim Schreiben verbessere ich mich schnell.",
+      "Wissenschaftler forschen und möchten durch Experimente mehr über ein Thema erfahren.",
+      "Ihre Ergebnisse veröffentlichen sie in Büchern und Zeitschriften.",
+      "Um sich auf dem aktuellen Stand zu halten, müssen sie viele Aufsätze von anderen Wissenschaftlern lesen.",
+      "Wissenschaftler sind unter Zeitdruck. Abstracts helfen ihnen zu entscheiden, ob sie einen Aufsatz wirklich lesen müssen und ob er wichtig für sie ist.",
     ],
   },
   16: {
     id: 16,
-    slideText: "Bitte definiere das Konzept „Konsistenz”.",
-    slideType: "Konzept_Konsistenz",
+    slideText: "Definition",
+    slideType: "Abstract_Definition_1",
+    abstractIntroUnits: [
+      "Kurze, sachliche Zusammenfassung eines wissenschaftlichen Aufsatzes",
+    ],
   },
   17: {
     id: 17,
-    slideText: "Bitte definiere das Konzept „Distinktheit”.",
-    slideType: "Konzept_Distinktheit",
+    slideText: "Definition",
+    slideType: "Abstract_Definition_2",
+    abstractIntroUnits: [
+      "Kurze, sachliche Zusammenfassung eines wissenschaftlichen Aufsatzes",
+      "fasst die wichtigsten Aspekte zusammen",
+    ],
   },
   18: {
     id: 18,
-    slideText:
-      "Bitte definiere das Konzept „Fundamentaler Attributionsfehler”.",
-    slideType: "Konzept_FA",
+    slideText: "Definition",
+    slideType: "Abstract_Definition_3",
+    abstractIntroUnits: [
+      "Kurze, sachliche Zusammenfassung eines wissenschaftlichen Aufsatzes",
+      "fasst die wichtigsten Aspekte zusammen",
+      "„erster Kontakt“ des Lesers mit dem Aufsatz",
+    ],
   },
   19: {
     id: 19,

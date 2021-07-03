@@ -20,10 +20,10 @@ import { useSlidesState } from "../../hooks/useSlides";
 import SlideFun from "../SlideFun";
 
 const typeIntro: number[] = [1, 2, 3, 4, 5, 8, 11, 21, 23, 32];
-const typeAbstract: number[] = [12, 13, 14, 15];
+const typeAbstract: number[] = [12, 13, 14, 15, 16, 17, 18];
 const typeIntroWithHeader: number[] = [24, 25, 26, 27, 28, 29, 30, 31];
 const typeNachangaben: number[] = [9, 10];
-const typeTextinput: number[] = [13, 14, 15, 16, 17, 18, 19, 20];
+const typeTextinput: number[] = [19, 20];
 const typeTextinputWithHeader: number[] = [33, 43, 53, 63, 73, 83, 93, 103];
 const typeRange: number[] = [
   34,

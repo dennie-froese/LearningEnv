@@ -121,6 +121,16 @@
   color: white;
 }
 
+.Slide-abstract-main {
+  width: 80vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
 .Slide-intro-main {
   padding-top: 10vh;
   width: 80vw;

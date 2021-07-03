@@ -10,7 +10,12 @@ interface Props {
   abstractIntroUnits: string[] | undefined;
 }
 
-function SlideAbstractIntro({ slideText, slideNumber, type }: Props) {
+function SlideAbstractIntro({
+  slideText,
+  slideNumber,
+  type,
+  abstractIntroUnits,
+}: Props) {
   const context = useSlidesState();
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
@@ -42,8 +47,38 @@ function SlideAbstractIntro({ slideText, slideNumber, type }: Props) {
   return (
     <div className="Slide">
       <div className="Slide-container">
-        <div className="Slide-intro-main">
-          <div className="Slide-text-l">{slideText}</div>
+        <div className="Slide-header">
+          <p>{slideText}</p>
+        </div>
+        <div className="Slide-abstract-main">
+          {abstractIntroUnits && abstractIntroUnits[0] && (
+            <div className="Slide-nachangaben-row-1">
+              <p className="Slide-label-l">
+                {abstractIntroUnits && abstractIntroUnits[0]}
+              </p>
+            </div>
+          )}
+          {abstractIntroUnits && abstractIntroUnits[1] && (
+            <div className="Slide-nachangaben-row-2">
+              <p className="Slide-label-l">
+                {abstractIntroUnits && abstractIntroUnits[1]}
+              </p>
+            </div>
+          )}
+          {abstractIntroUnits && abstractIntroUnits[2] && (
+            <div className="Slide-nachangaben-row-1">
+              <p className="Slide-label-l">
+                {abstractIntroUnits && abstractIntroUnits[2]}
+              </p>
+            </div>
+          )}
+          {abstractIntroUnits && abstractIntroUnits[3] && (
+            <div className="Slide-nachangaben-row-2">
+              <p className="Slide-label-l">
+                {abstractIntroUnits && abstractIntroUnits[3]}
+              </p>
+            </div>
+          )}
         </div>
         <div className="Slide-nav">
           <button className="Slide-button" onClick={finish}>
