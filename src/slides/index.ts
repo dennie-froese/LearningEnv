@@ -4,6 +4,7 @@ export type SlideInterface = {
   slideText: string;
   demographic?: Record<string, string>;
   nachangaben?: Record<number, [string, string, string]>;
+  abstractIntroUnits?: string[];
   header?: string;
   ideaUnits?: string[];
   expertExamples?: string[];
@@ -236,22 +237,38 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 12,
     slideText:
       "Mit den folgenden Aufgaben soll Dein Wissen zu verschiedenen Konzepten der Sozialpsychologie erfasst werden. Bitte versuche, die Aufgaben möglichst gut zu bearbeiten, rate jedoch nicht. \n\nFalls Du eine der Fragen nicht beantworten kannst, setze bitte ein „-“. Wenn es losgehen kann, klicke bitte auf „Weiter“. ",
-    slideType: "Konzept_Intro",
+    slideType: "Abstract_Intro_1",
+    abstractIntroUnits: ["Ich bin einfach nicht gut im Schreiben."],
   },
   13: {
     id: 13,
     slideText: "Bitte definiere das Konzept „Attribution”.",
-    slideType: "Konzept_Attribution",
+    slideType: "Abstract_Intro_2",
+    abstractIntroUnits: [
+      "Ich bin einfach nicht gut im Schreiben.",
+      "Für Schreibaufträge/ Aufsätze bekomme ich gute Noten.",
+    ],
   },
   14: {
     id: 14,
     slideText: "Bitte definiere das Konzept „Soziale Normen”.",
-    slideType: "Konzept_SN",
+    slideType: "Abstract_Intro_3",
+    abstractIntroUnits: [
+      "Ich bin einfach nicht gut im Schreiben.",
+      "Für Schreibaufträge/ Aufsätze bekomme ich gute Noten.",
+      "Ich war schon immer überzeugt, dass Schreiben eine meiner Stärken ist.",
+    ],
   },
   15: {
     id: 15,
     slideText: "Bitte definiere das Konzept „Konsens”.",
-    slideType: "Konzept_Konsens",
+    slideType: "Abstract_Intro_4",
+    abstractIntroUnits: [
+      "Ich bin einfach nicht gut im Schreiben.",
+      "Für Schreibaufträge/ Aufsätze bekomme ich gute Noten.",
+      "Ich war schon immer überzeugt, dass Schreiben eine meiner Stärken ist.",
+      "Beim Schreiben verbessere ich mich schnell.",
+    ],
   },
   16: {
     id: 16,

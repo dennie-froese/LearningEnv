@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { SlideInterface } from "../../slides";
 import { Prompt, Route } from "react-router-dom";
 import SlideIntro from "../SlideIntro";
+import SlideAbstractIntro from "../SlideAbstractIntro";
 import SlideIntroWithHeader from "../SlideIntroWithHeader";
 import Finish from "../Finish";
 import SlideDemographics from "../SlideDemographics";
@@ -18,7 +19,8 @@ import SlideDetails from "../SlideDetails";
 import { useSlidesState } from "../../hooks/useSlides";
 import SlideFun from "../SlideFun";
 
-const typeIntro: number[] = [1, 2, 3, 4, 5, 7, 8, 12, 21, 23, 32];
+const typeIntro: number[] = [1, 2, 3, 4, 5, 8, 11, 21, 23, 32];
+const typeAbstract: number[] = [12, 13, 14, 15];
 const typeIntroWithHeader: number[] = [24, 25, 26, 27, 28, 29, 30, 31];
 const typeNachangaben: number[] = [9, 10];
 const typeTextinput: number[] = [13, 14, 15, 16, 17, 18, 19, 20];
@@ -125,6 +127,13 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
         />
+      ) : typeAbstract.includes(slide.id) ? (
+        <SlideAbstractIntro
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          abstractIntroUnits={slide.abstractIntroUnits}
+        />
       ) : typeIntroWithHeader.includes(slide.id) ? (
         <SlideIntroWithHeader
           slideText={slide.slideText}
@@ -134,7 +143,6 @@ function Slide(slide: SlideInterface) {
         />
       ) : typeNachangaben.includes(slide.id) ? (
         <SlideNachangaben
-          slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}
           nachangaben={slide.nachangaben}
