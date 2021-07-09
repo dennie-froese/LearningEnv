@@ -365,6 +365,75 @@
   border-radius: 10px;
 }
 
+.Slide-table-main {
+  padding-top: 5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
+.Slide-table-header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: 15%;
+  background-color: #282c34;
+}
+
+.Slide-table-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: 15%;
+  background-color: #282c34;
+}
+
+.Slide-table-header-cell {
+  align-items: center;
+  width: 35%;
+  font-size: calc(12px + 1vmin);
+  font-weight: bold;
+  color: white;
+  white-space: pre-wrap;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.Slide-table-cell-first-column {
+  width: 15%;
+  padding: 1%;
+}
+
+.Slide-table-cell-first-column-active {
+  width: 15%;
+  padding: 1%;
+  background-color: #13aa41;
+}
+
+.Slide-table-cell-empty {
+  width: 15%;
+  padding: 1%;
+  background-color: #353a44;
+}
+
+.Slide-table-cell {
+  width: 35%;
+  padding: 1%;
+}
+
+.Slide-table-cell-active {
+  background-color: #13aa41;
+  width: 35%;
+  padding: 1%;
+}
+
 .Slide-text-row {
   display: flex;
   align-items: center;

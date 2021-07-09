@@ -4,6 +4,7 @@ export type SlideInterface = {
   slideText: string;
   demographic?: Record<string, string>;
   nachangaben?: Record<number, [string, string, string]>;
+  tableRows?: Record<number, [string, string, string]>;
   abstractIntroUnits?: string[];
   header?: string;
   ideaUnits?: string[];
@@ -323,71 +324,285 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   22: {
     id: 22,
-    slideText:
-      "Der Frage, warum andere sich so verhalten, wie sie es tun, begegnen wir alltäglich in den verschiedensten Kontexten. Der Prozess, durch den wir versuchen, ein eingetretenes Ereignis oder Verhalten auf bestimmte Ursachen zurückzuführen, wird als Attribution bezeichnet. Im Allgemeinen ist dies ein recht planmäßiger Prozess.\nWir prüfen das Verhalten anderer auf Hinweise für die Gründe, die hinter dem liegen, was sie sagen oder tun. Eine grundlegende Frage dabei ist, ob das Verhalten einer anderen Person auf internale Gründe (also Faktoren, die mit der eigenen Intention, Motiven oder Charaktereigenschaften zu tun haben) oder auf externale Ursachen zurückzuführen ist. Externale Ursachen beinhalten oftmals physische Objekte oder Situationen innerhalb der Umwelt, aber auch soziale oder kulturelle Faktoren. Diese Faktoren beinhalten oftmals auch soziale Normen: explizite oder implizite Konventionen, die vorgeben, welches Verhalten in sozialen Situationen angemessen ist. \nUm das Verhalten anderer zu erklären, fokussieren wir uns oft auf Informationen über (1) Konsens, also das Ausmaß, in welchem das Verhalten auch von anderen Personen gezeigt wird, (2) Konsistenz, also das Ausmaß, in welchem eine bestimmte Person jeweils ähnliches Verhalten als Reaktion auf die gleichen Stimuli oder Situationen zeigt, und (3) Distinktheit, also das Ausmaß, in welchem eine bestimmte Person in unterschiedlicher Art und Weise auf ähnliche Situationen oder Stimuli reagiert. Wenn sehr wenige Personen wie eine bestimmte Person handeln (Konsens ist niedrig), die Person sich immer wieder in gleicher Weise verhält (Konsistenz ist hoch) und in derselben Art und Weise in vielen ähnlichen Situationen reagiert (Distinktheit ist niedrig), dann schließen wir daraus, dass ihr Verhalten auf internale Ursachen zurückzuführen ist. Daraus leiten wir ab, was für eine Art von Mensch diese Person ist und vermutlich immer bleiben wird. Wenn alle drei dieser Faktoren hoch sind, leiten wir im Gegensatz dazu eher ab, dass die Person sich auf Grund von externalen Gründen so verhält, wie sie es tut.\nAuch wenn Attribution oft logisches Schlussfolgern beinhaltet, wie sie eben beschrieben wurde, ist das nicht immer der Fall. Tatsächlich wird die Attribution oft Gegenstand verschiedener Wahrnehmungsverzerrungen. Eine der populärsten Wahrnehmungsverzerrungen ist bekannt als fundamentaler Attributionsfehler. Er beschreibt die Tendenz, das Verhalten anderer Personen zu einem größeren Teil auf internale Ursachen zurückzuführen als eigentlich gerechtfertigt wäre, während die Effekte der spezifischen Situation unterschätzt werden. Dies kann uns zu falschen Schlussfolgerungen über andere verleiten. Eine andere Verzerrung in unserer Attribution betrifft unser eigenes Verhalten. Die selbstwertdienliche Verzerrung ist die Tendenz, positive Ergebnisse auf unsere eigenen Eigenschaften zurückzuführen (internale Ursachen), aber negative Ergebnisse auf Faktoren außerhalb unserer Kontrolle (externale Ursachen). Schließlich gibt es noch den Gerechte-Welt-Glauben. Dieser bezieht sich auf das starke Verlangen oder Bedürfnis zu glauben, dass die Welt ein gerechter, vorhersehbarer und geordneter Ort ist, an dem jeder bekommt, was er verdient. Das beeinflusst unsere Attributionen, denn auch wenn wir Anhaltspunkte dafür erhalten, dass die Welt vielleicht nicht gerecht ist, neigen wir dazu, uns dennoch selbst davon überzeugen zu wollen, dass keine Ungerechtigkeit vorkommt.",
-    slideType: "Text_Text",
+    slideText: "",
+    slideType: "Abstract_Table_1",
+    tableRows: {
+      0: ["Beispiel 1", "Beispiel 2", ""],
+      1: [
+        "1. Die Beschreibung des untersuchten Problems/der Frage",
+        "„Die Studie untersucht, ob und wie Jugendliche über Medien lernen und welche Medien sie dazu bevorzugt nutzen.“",
+        "",
+      ],
+      2: ["2. Die Versuchsobjekte oder Datengrundlage (Merkmale)", "", ""],
+      3: ["3. Die Methode, mit der geforscht wurde", "", ""],
+      4: ["4. Die zentralen Ergebnisse", "", ""],
+      5: [
+        "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+        "",
+        "",
+      ],
+    },
   },
   23: {
     id: 23,
-    slideText:
-      "Dir werden nun noch einmal die Definitionen der einzelnen Konzepte, die Du im Text kennengelernt hast, gezeigt. Lies sie Dir bitte aufmerksam durch. Du kannst selbst entscheiden, wie viel Zeit Du dir dafür nimmst.\n\nWenn es losgehen kann, klicke bitte auf „Weiter“. ",
-    slideType: "Definition_Intro",
+    slideText: "",
+    slideType: "Abstract_Table_2",
+    tableRows: {
+      0: ["Beispiel 1", "Beispiel 2", ""],
+      1: [
+        "1. Die Beschreibung des untersuchten Problems/der Frage",
+        "„Die Studie untersucht, ob und wie Jugendliche über Medien lernen und welche Medien sie dazu bevorzugt nutzen.“",
+        "„In zwei Experimenten wurde der Frage nachgegangen, wie Kinder die Fähigkeit entwickeln, zwischen Werbung und anderen Programmformaten zu unterscheiden. Ab welchem Alter können Kinder Werbung von Kinderfilmen unterscheiden?“",
+      ],
+      2: ["2. Die Versuchsobjekte oder Datengrundlage (Merkmale)", "", ""],
+      3: ["3. Die Methode, mit der geforscht wurde", "", ""],
+      4: ["4. Die zentralen Ergebnisse", "", ""],
+      5: [
+        "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+        "",
+        "",
+      ],
+    },
   },
   24: {
     id: 24,
-    slideText:
-      "Der subjektive Prozess, durch den wir versuchen festzustellen, welche Gründe hinter dem Verhalten von anderen Personen stecken.",
-    slideType: "Definition_Attribution",
-    header: "Attribution",
+    slideText: "",
+    slideType: "Abstract_Table_3",
+    tableRows: {
+      0: ["Beispiel 1", "Beispiel 2", ""],
+      1: [
+        "1. Die Beschreibung des untersuchten Problems/der Frage",
+        "„Die Studie untersucht, ob und wie Jugendliche über Medien lernen und welche Medien sie dazu bevorzugt nutzen.“",
+        "„In zwei Experimenten wurde der Frage nachgegangen, wie Kinder die Fähigkeit entwickeln, zwischen Werbung und anderen Programmformaten zu unterscheiden. Ab welchem Alter können Kinder Werbung von Kinderfilmen unterscheiden?“",
+      ],
+      2: [
+        "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
+        "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
+        "",
+      ],
+      3: ["3. Die Methode, mit der geforscht wurde", "", ""],
+      4: ["4. Die zentralen Ergebnisse", "", ""],
+      5: [
+        "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+        "",
+        "",
+      ],
+    },
   },
   25: {
     id: 25,
-    slideText:
-      "Explizite oder implizite Konventionen, die korrektes Verhalten in sozialen Situationen vorgeben.",
-    slideType: "Definition_SN",
-    header: "Soziale Normen",
+    slideText: "",
+    slideType: "Abstract_Table_4",
+    tableRows: {
+      0: ["Beispiel 1", "Beispiel 2", ""],
+      1: [
+        "1. Die Beschreibung des untersuchten Problems/der Frage",
+        "„Die Studie untersucht, ob und wie Jugendliche über Medien lernen und welche Medien sie dazu bevorzugt nutzen.“",
+        "„In zwei Experimenten wurde der Frage nachgegangen, wie Kinder die Fähigkeit entwickeln, zwischen Werbung und anderen Programmformaten zu unterscheiden. Ab welchem Alter können Kinder Werbung von Kinderfilmen unterscheiden?“",
+      ],
+      2: [
+        "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
+        "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
+        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+      ],
+      3: ["3. Die Methode, mit der geforscht wurde", "", ""],
+      4: ["4. Die zentralen Ergebnisse", "", ""],
+      5: [
+        "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+        "",
+        "",
+      ],
+    },
   },
   26: {
     id: 26,
-    slideText:
-      "Das Ausmaß, in dem ein Verhalten einer Person auch von anderen Personen gezeigt wird. Der Konsens ist hoch, wenn viele andere Personen ähnlich reagieren, und niedrig, wenn nur wenige andere Personen ähnlich reagieren.",
-    slideType: "Definition_Konsens",
-    header: "Konsens",
+    slideText: "",
+    slideType: "Abstract_Table_5",
+    tableRows: {
+      0: ["Beispiel 1", "Beispiel 2", ""],
+      1: [
+        "1. Die Beschreibung des untersuchten Problems/der Frage",
+        "„Die Studie untersucht, ob und wie Jugendliche über Medien lernen und welche Medien sie dazu bevorzugt nutzen.“",
+        "„In zwei Experimenten wurde der Frage nachgegangen, wie Kinder die Fähigkeit entwickeln, zwischen Werbung und anderen Programmformaten zu unterscheiden. Ab welchem Alter können Kinder Werbung von Kinderfilmen unterscheiden?“",
+      ],
+      2: [
+        "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
+        "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
+        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+      ],
+      3: [
+        "3. Die Methode, mit der geforscht wurde",
+        "„Die Schülerinnen und Schüler wurden zu ihrem Medienverhalten (Nutzung verschiedener Medien, Einschätzung des Lernpotenzials) mit Hilfe eines leitfadengestützten Interviews befragt.“",
+        "",
+      ],
+      4: ["4. Die zentralen Ergebnisse", "", ""],
+      5: [
+        "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+        "",
+        "",
+      ],
+    },
   },
   27: {
     id: 27,
-    slideText:
-      "Das Ausmaß, in dem eine Person über die Zeit hinweg ähnliche Verhaltensweisen als Reaktion auf die gleiche Situation oder den gleichen Stimulus zeigt. Die Konsistenz ist hoch, wenn das Verhalten sich über die Zeit hinweg ähnelt, und niedrig, wenn das Verhalten nur zu wenigen Zeitpunkten gleichbleibt.",
-    slideType: "Definition_Konsistenz",
-    header: "Konsistenz",
+    slideText: "",
+    slideType: "Abstract_Table_6",
+    tableRows: {
+      0: ["Beispiel 1", "Beispiel 2", ""],
+      1: [
+        "1. Die Beschreibung des untersuchten Problems/der Frage",
+        "„Die Studie untersucht, ob und wie Jugendliche über Medien lernen und welche Medien sie dazu bevorzugt nutzen.“",
+        "„In zwei Experimenten wurde der Frage nachgegangen, wie Kinder die Fähigkeit entwickeln, zwischen Werbung und anderen Programmformaten zu unterscheiden. Ab welchem Alter können Kinder Werbung von Kinderfilmen unterscheiden?“",
+      ],
+      2: [
+        "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
+        "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
+        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+      ],
+      3: [
+        "3. Die Methode, mit der geforscht wurde",
+        "„Die Schülerinnen und Schüler wurden zu ihrem Medienverhalten (Nutzung verschiedener Medien, Einschätzung des Lernpotenzials) mit Hilfe eines leitfadengestützten Interviews befragt.“",
+        "„Zur Beantwortung der Forschungsfrage wurden in einem Experiment mit 5- und 8-jährigen Kindern kurze Ausschnitte von Werbeclips und Kinderfilmen dargeboten. Die Kinder sollten schnellstmöglich mittels Tastendruck zwischen den beiden Programmformaten unterscheiden.“",
+      ],
+      4: ["4. Die zentralen Ergebnisse", "", ""],
+      5: [
+        "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+        "",
+        "",
+      ],
+    },
   },
   28: {
     id: 28,
-    slideText:
-      "Das Ausmaß, in dem eine Person in unterschiedlicher Art und Weise auf ähnliche Stimuli oder Situationen reagiert. Die Distinktheit ist hoch, wenn sich eine Person in wenigen Situationen gleich verhält, und niedrig, wenn sie in vielen ähnlichen Situationen das gleiche Verhalten zeigt.",
-    slideType: "Definition_Distinktheit",
-    header: "Distinktheit",
+    slideText: "",
+    slideType: "Abstract_Table_7",
+    tableRows: {
+      0: ["Beispiel 1", "Beispiel 2", ""],
+      1: [
+        "1. Die Beschreibung des untersuchten Problems/der Frage",
+        "„Die Studie untersucht, ob und wie Jugendliche über Medien lernen und welche Medien sie dazu bevorzugt nutzen.“",
+        "„In zwei Experimenten wurde der Frage nachgegangen, wie Kinder die Fähigkeit entwickeln, zwischen Werbung und anderen Programmformaten zu unterscheiden. Ab welchem Alter können Kinder Werbung von Kinderfilmen unterscheiden?“",
+      ],
+      2: [
+        "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
+        "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
+        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+      ],
+      3: [
+        "3. Die Methode, mit der geforscht wurde",
+        "„Die Schülerinnen und Schüler wurden zu ihrem Medienverhalten (Nutzung verschiedener Medien, Einschätzung des Lernpotenzials) mit Hilfe eines leitfadengestützten Interviews befragt.“",
+        "„Zur Beantwortung der Forschungsfrage wurden in einem Experiment mit 5- und 8-jährigen Kindern kurze Ausschnitte von Werbeclips und Kinderfilmen dargeboten. Die Kinder sollten schnellstmöglich mittels Tastendruck zwischen den beiden Programmformaten unterscheiden.“",
+      ],
+      4: [
+        "4. Die zentralen Ergebnisse",
+        "„Dabei zeigt sich, dass die Jugendlichen vor allem auf qualitativ hochwertige Medienangebote als mögliche Lernquellen setzen, während sie Fernsehserien oder Videoclips ein solches Potenzial absprechen.“",
+        "",
+      ],
+      5: [
+        "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+        "",
+        "",
+      ],
+    },
   },
   29: {
     id: 29,
-    slideText:
-      "Die Tendenz, das Verhalten von anderen in höherem Maße auf interne Ursachen zurückzuführen, als es eigentlich gerechtfertigt wäre, bei gleichzeitigem Unterschätzen des Einflusses der Situation.",
-    slideType: "Definition_FA",
-    header: "Fundamentaler Attributionsfehler",
+    slideText: "",
+    slideType: "Abstract_Table_8",
+    tableRows: {
+      0: ["Beispiel 1", "Beispiel 2", ""],
+      1: [
+        "1. Die Beschreibung des untersuchten Problems/der Frage",
+        "„Die Studie untersucht, ob und wie Jugendliche über Medien lernen und welche Medien sie dazu bevorzugt nutzen.“",
+        "„In zwei Experimenten wurde der Frage nachgegangen, wie Kinder die Fähigkeit entwickeln, zwischen Werbung und anderen Programmformaten zu unterscheiden. Ab welchem Alter können Kinder Werbung von Kinderfilmen unterscheiden?“",
+      ],
+      2: [
+        "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
+        "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
+        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+      ],
+      3: [
+        "3. Die Methode, mit der geforscht wurde",
+        "„Die Schülerinnen und Schüler wurden zu ihrem Medienverhalten (Nutzung verschiedener Medien, Einschätzung des Lernpotenzials) mit Hilfe eines leitfadengestützten Interviews befragt.“",
+        "„Zur Beantwortung der Forschungsfrage wurden in einem Experiment mit 5- und 8-jährigen Kindern kurze Ausschnitte von Werbeclips und Kinderfilmen dargeboten. Die Kinder sollten schnellstmöglich mittels Tastendruck zwischen den beiden Programmformaten unterscheiden.“",
+      ],
+      4: [
+        "4. Die zentralen Ergebnisse",
+        "„Dabei zeigt sich, dass die Jugendlichen vor allem auf qualitativ hochwertige Medienangebote als mögliche Lernquellen setzen, während sie Fernsehserien oder Videoclips ein solches Potenzial absprechen.“",
+        "„Bereits die 4-jährigen Kinder waren dazu in der Lage, das Konzept ‘Werbung‘ von Kinderfilmen zu unterscheiden.“",
+      ],
+      5: [
+        "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+        "",
+        "",
+      ],
+    },
   },
   30: {
     id: 30,
-    slideText:
-      "Die Tendenz, positive Ergebnisse auf unsere eigenen Charaktereigenschaften (internale Ursachen) zurückzuführen, aber negative Ergebnisse eher auf Faktoren außerhalb unserer Kontrolle (externale Ursachen). ",
-    slideType: "Definition_SV",
-    header: "Selbstwertdienliche Verzerrung",
+    slideText: "",
+    slideType: "Abstract_Table_9",
+    tableRows: {
+      0: ["Beispiel 1", "Beispiel 2", ""],
+      1: [
+        "1. Die Beschreibung des untersuchten Problems/der Frage",
+        "„Die Studie untersucht, ob und wie Jugendliche über Medien lernen und welche Medien sie dazu bevorzugt nutzen.“",
+        "„In zwei Experimenten wurde der Frage nachgegangen, wie Kinder die Fähigkeit entwickeln, zwischen Werbung und anderen Programmformaten zu unterscheiden. Ab welchem Alter können Kinder Werbung von Kinderfilmen unterscheiden?“",
+      ],
+      2: [
+        "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
+        "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
+        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+      ],
+      3: [
+        "3. Die Methode, mit der geforscht wurde",
+        "„Die Schülerinnen und Schüler wurden zu ihrem Medienverhalten (Nutzung verschiedener Medien, Einschätzung des Lernpotenzials) mit Hilfe eines leitfadengestützten Interviews befragt.“",
+        "„Zur Beantwortung der Forschungsfrage wurden in einem Experiment mit 5- und 8-jährigen Kindern kurze Ausschnitte von Werbeclips und Kinderfilmen dargeboten. Die Kinder sollten schnellstmöglich mittels Tastendruck zwischen den beiden Programmformaten unterscheiden.“",
+      ],
+      4: [
+        "4. Die zentralen Ergebnisse",
+        "„Dabei zeigt sich, dass die Jugendlichen vor allem auf qualitativ hochwertige Medienangebote als mögliche Lernquellen setzen, während sie Fernsehserien oder Videoclips ein solches Potenzial absprechen.“",
+        "„Bereits die 4-jährigen Kinder waren dazu in der Lage, das Konzept ‘Werbung‘ von Kinderfilmen zu unterscheiden.“",
+      ],
+      5: [
+        "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+        "„Die Einschätzungen des Lernpotenzials der Jugendlichen zeigen, dass Lernangebote hauptsächlich als solche wahrgenommen werden, wenn diese in Formaten wie Nachrichtensendungen explizit gemacht werden.“",
+        "",
+      ],
+    },
   },
   31: {
     id: 31,
-    slideText:
-      "Das starke Verlangen oder Bedürfnis zu glauben, dass die Welt ein geordneter, vorhersehbarer, und gerechter Ort ist, an dem jeder bekommt, was er oder sie verdient.",
-    slideType: "Definition_GWG",
-    header: "Gerechte-Welt-Glaube",
+    slideText: "",
+    slideType: "Abstract_Table_10",
+    tableRows: {
+      0: ["Beispiel 1", "Beispiel 2", ""],
+      1: [
+        "1. Die Beschreibung des untersuchten Problems/der Frage",
+        "„Die Studie untersucht, ob und wie Jugendliche über Medien lernen und welche Medien sie dazu bevorzugt nutzen.“",
+        "„In zwei Experimenten wurde der Frage nachgegangen, wie Kinder die Fähigkeit entwickeln, zwischen Werbung und anderen Programmformaten zu unterscheiden. Ab welchem Alter können Kinder Werbung von Kinderfilmen unterscheiden?“",
+      ],
+      2: [
+        "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
+        "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
+        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+      ],
+      3: [
+        "3. Die Methode, mit der geforscht wurde",
+        "„Die Schülerinnen und Schüler wurden zu ihrem Medienverhalten (Nutzung verschiedener Medien, Einschätzung des Lernpotenzials) mit Hilfe eines leitfadengestützten Interviews befragt.“",
+        "„Zur Beantwortung der Forschungsfrage wurden in einem Experiment mit 5- und 8-jährigen Kindern kurze Ausschnitte von Werbeclips und Kinderfilmen dargeboten. Die Kinder sollten schnellstmöglich mittels Tastendruck zwischen den beiden Programmformaten unterscheiden.“",
+      ],
+      4: [
+        "4. Die zentralen Ergebnisse",
+        "„Dabei zeigt sich, dass die Jugendlichen vor allem auf qualitativ hochwertige Medienangebote als mögliche Lernquellen setzen, während sie Fernsehserien oder Videoclips ein solches Potenzial absprechen.“",
+        "„Bereits die 4-jährigen Kinder waren dazu in der Lage, das Konzept ‘Werbung‘ von Kinderfilmen zu unterscheiden.“",
+      ],
+      5: [
+        "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
+        "„Die Einschätzungen des Lernpotenzials der Jugendlichen zeigen, dass Lernangebote hauptsächlich als solche wahrgenommen werden, wenn diese in Formaten wie Nachrichtensendungen explizit gemacht werden.“",
+        "„Die Ergebnisse zeigen, dass die Unterscheidung von Film und Werbung schon im frühesten Kindesalter bewusst ist.“",
+      ],
+    },
   },
   32: {
     id: 32,

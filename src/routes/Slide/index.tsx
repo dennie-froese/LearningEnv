@@ -18,11 +18,12 @@ import SlideIdeaUnitsTypeFour from "../SlideIdeaUnitsTypeFour";
 import SlideDetails from "../SlideDetails";
 import { useSlidesState } from "../../hooks/useSlides";
 import SlideFun from "../SlideFun";
+import SlideTable from "../SlideTable";
 
 const typeIntro: number[] = [1, 2, 3, 4, 5, 8, 11, 19, 20];
 const typeAbstractIntro: number[] = [12, 13, 14, 15, 16, 17, 18, 21];
-const typeAbstract: number[] = [];
-const typeIntroWithHeader: number[] = [24, 25, 26, 27, 28, 29, 30, 31];
+const typeAbstractTable: number[] = [22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+const typeIntroWithHeader: number[] = [];
 const typeNachangaben: number[] = [9, 10];
 const typeTextinput: number[] = [20];
 const typeTextinputWithHeader: number[] = [33, 43, 53, 63, 73, 83, 93, 103];
@@ -134,6 +135,13 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
           abstractIntroUnits={slide.abstractIntroUnits}
+        />
+      ) : typeAbstractTable.includes(slide.id) ? (
+        <SlideTable
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          tableRows={slide.tableRows}
         />
       ) : typeIntroWithHeader.includes(slide.id) ? (
         <SlideIntroWithHeader

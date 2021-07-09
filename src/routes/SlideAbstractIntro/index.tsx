@@ -80,7 +80,7 @@ function SlideAbstractIntro({
             </div>
           )}
           {abstractIntroUnits && abstractIntroUnits[4] && (
-            <div className="Slide-nachangaben-row-2">
+            <div className="Slide-nachangaben-row-1">
               <p className="Slide-label-l">
                 {abstractIntroUnits && abstractIntroUnits[4]}
               </p>
