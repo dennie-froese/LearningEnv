@@ -228,6 +228,59 @@
   padding-right: 10vw;
 }
 
+.Slide-criteria-units-row-1 {
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #3a3f4b;
+  font-size: calc(12px + 2vmin);
+  color: white;
+  padding-left: 2%;
+  border-style: solid;
+  margin: 1%;
+}
+
+.Slide-criteria-units-row-2 {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  background-color: #2f333d;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: calc(12px + 2vmin);
+  color: white;
+  padding-left: 2%;
+  border-style: solid;
+  margin: 1%;
+}
+
+.Slide-criteria-units-text-box-right {
+  text-align: center;
+  font-size: calc(16px + 1vmin);
+  color: black;
+  white-space: pre-wrap;
+  border-style: solid;
+  margin: 1%;
+  background-color: green;
+  padding: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.Slide-criteria-units-text-box-wrong {
+  text-align: center;
+  font-size: calc(16px + 1vmin);
+  color: black;
+  white-space: pre-wrap;
+  border-style: solid;
+  margin: 1%;
+  background-color: red;
+  padding: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
 .Slide-nachangaben-main {
   width: 90vw;
   display: flex;

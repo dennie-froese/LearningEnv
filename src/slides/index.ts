@@ -5,7 +5,7 @@ export type SlideInterface = {
   demographic?: Record<string, string>;
   nachangaben?: Record<number, [string, string, string]>;
   tableRows?: Record<number, [string, string, string]>;
-  abstractIntroUnits?: string[];
+  criteriaIntroUnits?: string[];
   header?: string;
   ideaUnits?: string[];
   expertExamples?: string[];
@@ -238,7 +238,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 12,
     slideText: "Was ist ein Abstract?",
     slideType: "Abstract_Intro_1",
-    abstractIntroUnits: [
+    criteriaIntroUnits: [
       "Wissenschaftler forschen und möchten durch Experimente mehr über ein Thema erfahren.",
     ],
   },
@@ -246,7 +246,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 13,
     slideText: "Was ist ein Abstract?",
     slideType: "Abstract_Intro_2",
-    abstractIntroUnits: [
+    criteriaIntroUnits: [
       "Wissenschaftler forschen und möchten durch Experimente mehr über ein Thema erfahren.",
       "Ihre Ergebnisse veröffentlichen sie in Büchern und Zeitschriften.",
     ],
@@ -255,7 +255,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 14,
     slideText: "Was ist ein Abstract?",
     slideType: "Abstract_Intro_3",
-    abstractIntroUnits: [
+    criteriaIntroUnits: [
       "Wissenschaftler forschen und möchten durch Experimente mehr über ein Thema erfahren.",
       "Ihre Ergebnisse veröffentlichen sie in Büchern und Zeitschriften.",
       "Um sich auf dem aktuellen Stand zu halten, müssen sie viele Aufsätze von anderen Wissenschaftlern lesen.",
@@ -265,7 +265,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 15,
     slideText: "Was ist ein Abstract?",
     slideType: "Abstract_Intro_4",
-    abstractIntroUnits: [
+    criteriaIntroUnits: [
       "Wissenschaftler forschen und möchten durch Experimente mehr über ein Thema erfahren.",
       "Ihre Ergebnisse veröffentlichen sie in Büchern und Zeitschriften.",
       "Um sich auf dem aktuellen Stand zu halten, müssen sie viele Aufsätze von anderen Wissenschaftlern lesen.",
@@ -276,7 +276,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 16,
     slideText: "Definition",
     slideType: "Abstract_Definition_1",
-    abstractIntroUnits: [
+    criteriaIntroUnits: [
       "Kurze, sachliche Zusammenfassung eines wissenschaftlichen Aufsatzes",
     ],
   },
@@ -284,7 +284,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 17,
     slideText: "Definition",
     slideType: "Abstract_Definition_2",
-    abstractIntroUnits: [
+    criteriaIntroUnits: [
       "Kurze, sachliche Zusammenfassung eines wissenschaftlichen Aufsatzes",
       "fasst die wichtigsten Aspekte zusammen",
     ],
@@ -293,7 +293,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 18,
     slideText: "Definition",
     slideType: "Abstract_Definition_3",
-    abstractIntroUnits: [
+    criteriaIntroUnits: [
       "Kurze, sachliche Zusammenfassung eines wissenschaftlichen Aufsatzes",
       "fasst die wichtigsten Aspekte zusammen",
       "„erster Kontakt“ des Lesers mit dem Aufsatz",
@@ -314,7 +314,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 21,
     slideText: "Kriterium „Inhalt“:Was sollte ein Abstract beinhalten?",
     slideType: "Abstract_Criteria",
-    abstractIntroUnits: [
+    criteriaIntroUnits: [
       "1. Die Beschreibung des untersuchten Problems/der Frage",
       "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
       "3. Die Methode, mit der geforscht wurde",
@@ -606,98 +606,118 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   32: {
     id: 32,
-    slideText:
-      "Deine nächste Aufgabe ist es gleich, Dir Beispiele für die Konzepte auszudenken, die Du im Text kennengelernt hast. Nach jedem Beispiel, das Du Dir ausgedacht hast, wirst Du darum gebeten, Dein Beispiel zu bewerten. \n\nBitte beachte: Die Aufwandsentschädigung erhältst Du nur, wenn Du zu jedem Konzept ein Beispiel generiert hast. \n\nWenn es losgehen kann, klicke bitte auf „Weiter“. ",
-    slideType: "Beispiel_Intro",
+    slideText: "Kriterium “Formales”",
+    slideType: "Criteria_Formal_Intro",
   },
   33: {
     id: 33,
-    slideText:
-      "Attribution: Der subjektive Prozess, durch den wir versuchen festzustellen, welche Gründe hinter dem Verhalten von anderen Personen stecken.",
+    slideText: "Kriterium „Formales“: Was gilt es zu beachten?",
     slideType: "Beispiel_Attribution0",
-    header:
-      "Denke Dir bitte ein Beispiel aus, das das Konzept „Attribution” veranschaulicht.",
+    criteriaIntroUnits: [
+      "1. Maximale Wortanzahl: 250 Wörter",
+      "2. Schreiben in ganzen Sätzen",
+      "3. Keine Verwendung der Ich-Form",
+    ],
   },
   34: {
     id: 34,
-    slideText:
-      "Das Ausdenken eines Beispiels zum Konzept „Attribution“ fiel mir…",
-    slideType: "Beispiel_Attribution1",
+    slideText: "Kriterium “Orthographie und Grammatik”",
+    slideType: "Criteria_Orthographie_Intro",
   },
   35: {
     id: 35,
     slideText:
-      "Beim Ausdenken eines Beispiels zum Konzept „Attribution“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_Attribution2",
+      "Kriterium „Orthographie und Grammatik“:Wie sollte ein Abstract geschrieben sein?",
+    slideType: "Criteria_Orthographie_Intro_1",
+    criteriaIntroUnits: ["1. Orthographisch und grammatisch korrekt schreiben"],
   },
   36: {
     id: 36,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ nun mit den folgenden Beispielen ab.",
-    slideType: "Attribution_g1_1",
-    header: "Konzept „Attribution“",
-    expertExamples: [
-      "Als Maria am Nachmittag nach Hause kommt, die Türen hinter sich zuschlägt und sich in ihrem Zimmer verkriecht, wundert sich ihre Mutter über Marias Verhalten. Sie überlegt, ob dieses mit der Prüfung zusammenhängt, die Maria heute in der Schule abgelegt hat. Die Mutter zieht darüber hinaus als Grund für das Verhalten ihrer Tochter in Erwägung, dass diese einfach ein sehr negativer Mensch ist. Marias Mutter überlegt, am Abend nochmal das Gespräch mit ihrer Tochter zu suchen, um den wahren Grund für Marias Verhalten herauszufinden.",
-      "Tim und Jana sind seit zwei Jahren ein Paar und streiten sich mal wieder. Tim entgegnet Jana auf ihren Vorwurf, sich regelmäßig mit seiner besten Freundin zu treffen: „Du bist doch total eifersüchtig!“ Jana verlässt die Situation und fragt sich wenig später, warum Tim ihr dies an den Kopf geworfen hat. Sie wägt ab, ob sein Verhalten damit begründet werden kann, dass Tim in einem kulturellen Umfeld groß geworden ist, in dem Freundschaften zwischen Mann und Frau üblich und ganz normal sind, auch wenn eine der beiden Personen in einer festen Beziehung ist. Andererseits denkt Jana, sein Verhalten könnte auch damit begründet werden, dass Tim ein sehr impulsiver Mensch ist. Sie beschließt, sich keine weiteren Gedanken zu machen, da sie den Grund für Tims Verhalten vermutlich nie genau erfahren wird.",
+      "Kriterium „Orthographie und Grammatik“:Wie sollte ein Abstract geschrieben sein?",
+    slideType: "Criteria_Orthographie_Intro_2",
+    criteriaIntroUnits: [
+      "1. Orthographisch und grammatisch korrekt schreiben",
+      "2. Für Methoden und Ergebnisse: Präteritum (z.B. ergab, sagte) \n\nFür Fazit und Schlussfolgerungen: Präsens (z.B. ergibt, sagt)",
     ],
-    negativeExamples: [
-      "In der Verhaltensforschung wird nach den Gründen für menschliches Verhalten gesucht. In einer aktuellen Studie versucht eine Forschergruppe beispielsweise herauszufinden, warum Menschen Attentate verüben. Dabei werden kulturelle Hintergründe, persönliche Erfahrungen und situative Faktoren berücksichtigt.",
-      "Julia ist früher als Kind von der Schaukel gefallen. Immer, wenn sie heute als erwachsene Frau eine Schaukel sieht oder an einem Spielplatz vorbeiläuft, läuft ihr ein Schauer über den Rücken. Sie ist sich sicher, dass das an ihrer prägenden Erfahrung des Sturzes von der Schaukel im Kindesalter liegt.",
+  },
+  37: {
+    id: 37,
+    slideText:
+      "Kriterium „Orthographie und Grammatik“:Wie sollte ein Abstract geschrieben sein?",
+    slideType: "Criteria_Orthographie_Intro_3",
+    criteriaIntroUnits: [
+      "1. Orthographisch und grammatisch korrekt schreiben",
+      "2. Für Methoden und Ergebnisse: Präteritum (z.B. ergab, sagte) \n\nFür Fazit und Schlussfolgerungen: Präsens (z.B. ergibt, sagt)",
+      "3. Nutzung eher von Aktiv- statt Passiv-Formulierungen (sagt vs. wird gesagt)",
     ],
   },
   38: {
     id: 38,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ mit den beiden hier dargestellten Beispielen ab.",
-    slideType: "Attribution_g2",
-    header: "Konzept „Attribution“",
-    negativeExamples: [
-      "In der Verhaltensforschung wird nach den Gründen für menschliches Verhalten gesucht. In einer aktuellen Studie versucht eine Forschergruppe beispielsweise herauszufinden, warum Menschen Attentate verüben. Dabei werden kulturelle Hintergründe, persönliche Erfahrungen und situative Faktoren berücksichtigt.",
-      "Julia ist früher als Kind von der Schaukel gefallen. Immer, wenn sie heute als erwachsene Frau eine Schaukel sieht oder an einem Spielplatz vorbeiläuft, läuft ihr ein Schauer über den Rücken. Sie ist sich sicher, dass das an ihrer prägenden Erfahrung des Sturzes von der Schaukel im Kindesalter liegt.",
+      "„Die Studie gibt Einblicke in ein laufendes Forschungsvorhaben zur Identifizierung und Berechnung der Einflussfaktoren auf den Energieverbrauch von Elektrofahrzeugen. In der Region Stuttgart wurden dazu mehrere Elektrofahrzeuge in ihrer alltäglichen Praxis-Nutzung mittels GPS getrackt und dabei Energiedaten aufgenommen. Bisherige Ergebnisse zeigten den Einfluss des Höhenprofils und der Straßenklasse (z.B. Landesstraße, Bundesstraße). Das Wissen um die Bedingungen des Energieverbrauchs ist insbesondere angesichts der begrenzten Reichweite der Fahrzeuge eine Voraussetzung zur Nutzenoptimierung.“",
+    slideType: "Criteria_Orthographie_Right",
+    criteriaIntroUnits: [
+      "1. Orthographisch und grammatisch korrekt schreiben",
+      "2. Für Methoden und Ergebnisse: Präteritum (z.B. ergab, sagte) \n\nFür Fazit und Schlussfolgerungen: Präsens (z.B. ergibt, sagt)",
+      "3. Nutzung eher von Aktiv- statt Passiv-Formulierungen (sagt vs. wird gesagt)",
     ],
   },
   39: {
     id: 39,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ mit den beiden hier dargestellten Expertenbeispielen ab.",
-    slideType: "Attribution_g3",
-    header: "Konzept „Attribution“",
-    expertExamples: [
-      "Als Maria am Nachmittag nach Hause kommt, die Türen hinter sich zuschlägt und sich in ihrem Zimmer verkriecht, wundert sich ihre Mutter über Marias Verhalten. Sie überlegt, ob dieses mit der Prüfung zusammenhängt, die Maria heute in der Schule abgelegt hat. Die Mutter zieht darüber hinaus als Grund für das Verhalten ihrer Tochter in Erwägung, dass diese einfach ein sehr negativer Mensch ist. Marias Mutter überlegt, am Abend nochmal das Gespräch mit ihrer Tochter zu suchen, um den wahren Grund für Marias Verhalten herauszufinden.",
-      "Tim und Jana sind seit zwei Jahren ein Paar und streiten sich mal wieder. Tim entgegnet Jana auf ihren Vorwurf, sich regelmäßig mit seiner besten Freundin zu treffen: „Du bist doch total eifersüchtig!“ Jana verlässt die Situation und fragt sich wenig später, warum Tim ihr dies an den Kopf geworfen hat. Sie wägt ab, ob sein Verhalten damit begründet werden kann, dass Tim in einem kulturellen Umfeld groß geworden ist, in dem Freundschaften zwischen Mann und Frau üblich und ganz normal sind, auch wenn eine der beiden Personen in einer festen Beziehung ist. Andererseits denkt Jana, sein Verhalten könnte auch damit begründet werden, dass Tim ein sehr impulsiver Mensch ist. Sie beschließt, sich keine weiteren Gedanken zu machen, da sie den Grund für Tims Verhalten vermutlich nie genau erfahren wird.",
+      "„In dieser Studie geht es um Elektoautos, und es wurde erforscht, wie viel die so verbrauchen und was darauf einen Einfluss hat, welche Faktoren also eine Rolle dabei spielen, dass ein Auto manchmal mehr und manchmal weniger verbraucht. Die Elektroautos werden mit GPS fahren gelassen und dabei werden viele Energiedaten aufgezeichnet, daraus wurde dann abgelesen, was und wie viel die Autos wo auf ihrer Strecke verbraucht haben. Und herausgefunden wurde, dass das einen Unterschied macht, wie die Straße so ist und wie das Höhenprofil ist sowas. Das war wichtig zu wissen, damit man nachvollziehen kann, welche Sachen Einfluss drauf nehmen, was die Autos so verbrauchen. Das hilft, das zu optimieren, damit die Autos irgendwann auch mehr Reichweite haben als zur Zeit.",
+    slideType: "Criteria_Orthographie_Wrong",
+    criteriaIntroUnits: [
+      "1. Orthographisch und grammatisch korrekt schreiben",
+      "2. Für Methoden und Ergebnisse: Präteritum (z.B. ergab, sagte) \n\nFür Fazit und Schlussfolgerungen: Präsens (z.B. ergibt, sagt)",
+      "3. Nutzung eher von Aktiv- statt Passiv-Formulierungen (sagt vs. wird gesagt)",
     ],
   },
   40: {
     id: 40,
-    slideText: "Bitte bewerte nun Dein Beispiel.",
-    slideType: "Attribution_g4",
-    header: "Konzept „Attribution“",
+    slideText: "Kriterium “Wissenschaftlicher Stil”",
+    slideType: "Criteria_Scientific",
   },
   41: {
     id: 41,
     slideText:
-      "Das Einschätzen der Qualität meines Beispiels zum Konzept „Attribution“ fiel mir…",
-    slideType: "Beispiel_Attribution3",
+      "Kriterium „wissenschaftlicher Stil“:Wie sollte ein Abstract geschrieben sein?",
+    slideType: "Criteria_Scientific_1",
+    criteriaIntroUnits: ["1. Ich schreibe für meine Leser veständlich"],
   },
   42: {
     id: 42,
     slideText:
-      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „Attribution“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_Attribution4",
+      "Kriterium „wissenschaftlicher Stil“:Wie sollte ein Abstract geschrieben sein?",
+    slideType: "Criteria_Scientific_2",
+    criteriaIntroUnits: [
+      "1. Ich schreibe für meine Leser veständlich",
+      "2. Ich beziehe mich nur auf die Studie, schweife nicht ab und verallgemeinere nicht",
+    ],
   },
   43: {
     id: 43,
     slideText:
-      "Soziale Normen: Explizite oder implizite Konventionen, die korrektes Verhalten in sozialen Situationen vorgeben.",
-    slideType: "Beispiel_SN0",
-    header:
-      "Denke Dir bitte ein Beispiel aus, das das Konzept „Soziale Normen” veranschaulicht.",
+      "Kriterium „wissenschaftlicher Stil“:Wie sollte ein Abstract geschrieben sein?",
+    slideType: "Criteria_Scientific_3",
+    criteriaIntroUnits: [
+      "1. Ich schreibe für meine Leser veständlich",
+      "2. Ich beziehe mich nur auf die Studie, schweife nicht ab und verallgemeinere nicht",
+      "3. Ich schreibe objektiv und vermeide Umgangssprache (z.B. total, ein bisschen)",
+    ],
   },
   44: {
     id: 44,
     slideText:
-      "Das Ausdenken eines Beispiels zum Konzept „Soziale Normen“ fiel mir…",
-    slideType: "Beispiel_SN1",
+      "Kriterium „wissenschaftlicher Stil“:Wie sollte ein Abstract geschrieben sein?",
+    slideType: "Criteria_Scientific_4",
+    criteriaIntroUnits: [
+      "1. Ich schreibe für meine Leser veständlich",
+      "2. Ich beziehe mich nur auf die Studie, schweife nicht ab und verallgemeinere nicht",
+      "3. Ich schreibe objektiv und vermeide Umgangssprache (z.B. total, ein bisschen)",
+      "4. Ich drücke mich mit möglichst wenig Wörtern eindeutig aus",
+    ],
   },
   45: {
     id: 45,

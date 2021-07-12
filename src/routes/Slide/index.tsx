@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { SlideInterface } from "../../slides";
 import { Prompt, Route } from "react-router-dom";
 import SlideIntro from "../SlideIntro";
-import SlideAbstractIntro from "../SlideAbstractIntro";
+import SlideCriteriaIntro from "../SlideCriteriaIntro";
 import SlideIntroWithHeader from "../SlideIntroWithHeader";
 import Finish from "../Finish";
 import SlideDemographics from "../SlideDemographics";
@@ -19,21 +19,35 @@ import SlideDetails from "../SlideDetails";
 import { useSlidesState } from "../../hooks/useSlides";
 import SlideFun from "../SlideFun";
 import SlideTable from "../SlideTable";
+import SlideOrtographieBeispiel from "../SlideOrtographieBeispiel";
 
-const typeIntro: number[] = [1, 2, 3, 4, 5, 8, 11, 19, 20];
-const typeAbstractIntro: number[] = [12, 13, 14, 15, 16, 17, 18, 21];
+const typeIntro: number[] = [1, 2, 3, 4, 5, 8, 11, 19, 20, 32, 34, 40];
+const typeCriteriaIntro: number[] = [
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  21,
+  33,
+  35,
+  36,
+  37,
+  41,
+  42,
+  43,
+  44,
+];
+const typeOrtographieBeispiel: number[] = [38, 39];
+
 const typeAbstractTable: number[] = [22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 const typeIntroWithHeader: number[] = [];
 const typeNachangaben: number[] = [9, 10];
 const typeTextinput: number[] = [20];
-const typeTextinputWithHeader: number[] = [33, 43, 53, 63, 73, 83, 93, 103];
+const typeTextinputWithHeader: number[] = [53, 63, 73, 83, 93, 103];
 const typeRange: number[] = [
-  34,
-  35,
-  41,
-  42,
-  44,
-  45,
   51,
   52,
   54,
@@ -62,7 +76,6 @@ const typeRange: number[] = [
   112,
 ];
 const ideaUnitsTypeOne: number[] = [
-  36,
   // 37,
   46,
   // 47,
@@ -123,18 +136,25 @@ function Slide(slide: SlideInterface) {
           type={slide.slideType}
           header={slide.header}
         />
+      ) : typeOrtographieBeispiel.includes(slide.id) ? (
+        <SlideOrtographieBeispiel
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+        />
       ) : typeIntro.includes(slide.id) ? (
         <SlideIntro
           slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}
         />
-      ) : typeAbstractIntro.includes(slide.id) ? (
-        <SlideAbstractIntro
+      ) : typeCriteriaIntro.includes(slide.id) ? (
+        <SlideCriteriaIntro
           slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}
-          abstractIntroUnits={slide.abstractIntroUnits}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
         />
       ) : typeAbstractTable.includes(slide.id) ? (
         <SlideTable
