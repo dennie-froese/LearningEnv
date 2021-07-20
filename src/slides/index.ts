@@ -6,6 +6,7 @@ export type SlideInterface = {
   nachangaben?: Record<number, [string, string, string]>;
   tableRows?: Record<number, [string, string, string]>;
   criteriaIntroUnits?: string[];
+  criteriaExamples?: string[];
   header?: string;
   ideaUnits?: string[];
   expertExamples?: string[];
@@ -721,58 +722,89 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   45: {
     id: 45,
-    slideText:
-      "Beim Ausdenken eines Beispiels zum Konzept „Soziale Normen“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_SN2",
+    slideText: "",
+    slideType: "Criteria_Scientific_Right",
+    criteriaIntroUnits: [
+      "1. Ich schreibe für meine Leser veständlich",
+      "2. Ich beziehe mich nur auf die Studie, schweife nicht ab und verallgemeinere nicht",
+      "3. Ich schreibe objektiv und vermeide Umgangssprache (z.B. total, ein bisschen)",
+      "4. Ich drücke mich mit möglichst wenig Wörtern eindeutig aus",
+    ],
+    criteriaExamples: [
+      "„Die Studie untersucht, welche Faktoren den Energieverbrauch von Elektrofahrzeugen beeinflussen.“",
+      "„Untersucht wurden die Energiedaten mehrerer Elektrofahrzeuge, die mittels GPS in der Region Stuttgart erhoben wurden.“",
+      "„Diese Befunde lassen darauf schließen, dass Faktoren wir Höhenprofil und Straßenart Einfluss auf den Energieverbrauch nehmen.“",
+      "„Erhoben wurden Straßenart und Höhenprofil.“",
+    ],
   },
   46: {
     id: 46,
-    slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ nun mit den folgenden Beispielen ab.",
-    slideType: "SN_g1_1",
-    header: "Konzept „Soziale Normen“",
-    negativeExamples: [
-      "Charline, Jana und Eva machen jeden Freitag einen Mädelsabend. Dabei wechselt die Gastgeberin des Abends von Woche zu Woche. Diese Woche ist Jana dran. Es hat sich bei ihnen im Freundeskreis etabliert, dass die Gastgeberin auch für Essen und Getränke zu sorgen hat. Jana stellt also Bier in den Kühlschrank und bestellt Pizza vor.",
-      "Lena ist bei ihrer Oma zu Besuch, die gerade die Wäsche vorbereitet: Sie schlägt jedes Kleidungsstück auf links, bevor sie es in die Waschmaschine legt. Lena beobachtet dies und stellt das Verhalten ihrer Oma in Frage. Ihre Oma entgegnet ihr nur: „Das hat man schon immer so gemacht!“.",
+    slideText: "",
+    slideType: "Criteria_Scientific_Wrong",
+    criteriaIntroUnits: [
+      "1. Ich schreibe für meine Leser veständlich",
+      "2. Ich beziehe mich nur auf die Studie, schweife nicht ab und verallgemeinere nicht",
+      "3. Ich schreibe objektiv und vermeide Umgangssprache (z.B. total, ein bisschen)",
+      "4. Ich drücke mich mit möglichst wenig Wörtern eindeutig aus",
     ],
-    expertExamples: [
-      "Im Bus fällt Marian eine ältere Dame auf, die erst später zugestiegen ist und daher im Gang stehen muss. Entgegen der anderen Fahrgäste steht Marian sofort auf und bietet der älteren Dame seinen Sitzplan an. Dieses Verhalten sieht er als korrekt an, weil es ihm in seiner Erziehung so vermittelt wurde.",
-      "Michael macht sich nach Feierabend auf den Weg nach Hause. Er fährt in seinem Kleinwagen die übliche Strecke und sieht in weiter Ferne einen Zebrastreifen. Dort wartet eine Familie mit zwei kleinen Kindern, um die Straße zu überqueren. Das Auto vor Michael rast die Straße entlang und beachtet den Zebrastreifen nicht. Michael dagegen bremst bereits einige Meter vor dem Zebrastreifen auf wenige km/h herunter, hält an und winkt die Familie über die Straße. Er ärgert sich darüber, dass der Raser vor ihm sich nicht an die Vorgabe hält, vor dem Zebrastreifen zu warten und die Leute die Straße passieren zu lassen. Michael ordnet sein eigenes Verhalten dagegen als vorbildlich und korrekt ein.",
+    criteriaExamples: [
+      "„Die Studie, die sich mit Elektroautos beschäftigt, zeigt in Abbildung 3, dass auf besonders kurvigen Straßen viel verbraucht wurde.“",
+      "„Des Weiteren wurden noch einige andere Einflussfaktoren erhoben, die nicht in der Studie erwähnt wurden, zum Beispiel Alter der Fahrer, Verkehrsauslastung und Wetterbedingungen.“",
+      "„Die Straßenart und das Höhenprofil sind total  besonders wichtige Einflussfaktoren auf den Energieverbrauch.“",
+      "„In der Testfahrt sollten die schicken Elektroautos besonders schwierige und krass Strecken fahren, um ganz verschiedene Straßenarten zu testen.“",
     ],
+  },
+  47: {
+    id: 47,
+    slideText: "Kriterium “Organisation des Textes”",
+    slideType: "Criteria_Text_Organisation",
   },
   48: {
     id: 48,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ mit den beiden hier dargestellten Beispielen ab.",
-    slideType: "SN_g2",
-    header: "Konzept „Soziale Normen“",
-    negativeExamples: [
-      "Charline, Jana und Eva machen jeden Freitag einen Mädelsabend. Dabei wechselt die Gastgeberin des Abends von Woche zu Woche. Diese Woche ist Jana dran. Es hat sich bei ihnen im Freundeskreis etabliert, dass die Gastgeberin auch für Essen und Getränke zu sorgen hat. Jana stellt also Bier in den Kühlschrank und bestellt Pizza vor.",
-      "Lena ist bei ihrer Oma zu Besuch, die gerade die Wäsche vorbereitet: Sie schlägt jedes Kleidungsstück auf links, bevor sie es in die Waschmaschine legt. Lena beobachtet dies und stellt das Verhalten ihrer Oma in Frage. Ihre Oma entgegnet ihr nur: „Das hat man schon immer so gemacht!“.",
+      "Kriterium „Organisation“:Wie schreibe ich einen sinnvoll aufgebauten Text?",
+    slideType: "Criteria_Text_Organisation_1",
+    criteriaIntroUnits: [
+      "1. Ich nutze zeitliche Ausdrücke (z.B. anschließend), um Verbindungen zwischen den Sätzen zu schaffen",
+      "2. Ich nutze begründende Ausdrücke (z.B. folglich, deshalb, abschließend), um Verbindungen zwischen den Sätzen zu schaffen",
+      "3. Ich nutze weitere Ausdrücke, um Verbindungen zwischen den Sätzen zu schaffen (z.B. damit, um…zu)",
     ],
   },
   49: {
     id: 49,
-    slideText:
-      " Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ mit den beiden hier dargestellten Expertenbeispielen ab. ",
-    slideType: "SN_g3",
-    header: "Konzept „Soziale Normen“",
-    expertExamples: [
-      "Im Bus fällt Marian eine ältere Dame auf, die erst später zugestiegen ist und daher im Gang stehen muss. Entgegen der anderen Fahrgäste steht Marian sofort auf und bietet der älteren Dame seinen Sitzplan an. Dieses Verhalten sieht er als korrekt an, weil es ihm in seiner Erziehung so vermittelt wurde.",
-      "Michael macht sich nach Feierabend auf den Weg nach Hause. Er fährt in seinem Kleinwagen die übliche Strecke und sieht in weiter Ferne einen Zebrastreifen. Dort wartet eine Familie mit zwei kleinen Kindern, um die Straße zu überqueren. Das Auto vor Michael rast die Straße entlang und beachtet den Zebrastreifen nicht. Michael dagegen bremst bereits einige Meter vor dem Zebrastreifen auf wenige km/h herunter, hält an und winkt die Familie über die Straße. Er ärgert sich darüber, dass der Raser vor ihm sich nicht an die Vorgabe hält, vor dem Zebrastreifen zu warten und die Leute die Straße passieren zu lassen. Michael ordnet sein eigenes Verhalten dagegen als vorbildlich und korrekt ein.",
+    slideText: "",
+    slideType: "Criteria_Text_Organisation_Right",
+    criteriaIntroUnits: [
+      "1. Ich nutze zeitliche Ausdrücke (z.B. anschließend), um Verbindungen zwischen den Sätzen zu schaffen",
+      "2. Ich nutze begründende Ausdrücke (z.B. folglich, deshalb, abschließend), um Verbindungen zwischen den Sätzen zu schaffen",
+      "3. Ich nutze weitere Ausdrücke, um Verbindungen zwischen den Sätzen zu schaffen (z.B. damit, um…zu)",
+    ],
+    criteriaExamples: [
+      "„Anschließend wurden die SchülerInnen zu ihrem Mediennutzungsverhalten befragt.“",
+      "„Im Hinblick auf die genannte Forschungsfrage kann somit geschlussfolgert werden, dass Lernangebote hauptsächlich als solche wahrgenommen werden, wenn diese in Formaten wie Nachrichtensendungen explizit gemacht werden.“",
+      "„Um die Mediennutzung zu erfassen, wurden die Art und Regelmäßigkeit der Nutzung erhoben.“",
     ],
   },
   50: {
     id: 50,
-    slideText: "Bitte bewerte nun Dein Beispiel.",
-    slideType: "SN_g4",
-    header: "Konzept „Soziale Normen“",
+    slideText: "",
+    slideType: "Criteria_Text_Organisation_Wrong",
+    criteriaIntroUnits: [
+      "1. Ich nutze zeitliche Ausdrücke (z.B. anschließend), um Verbindungen zwischen den Sätzen zu schaffen",
+      "2. Ich nutze begründende Ausdrücke (z.B. folglich, deshalb, abschließend), um Verbindungen zwischen den Sätzen zu schaffen",
+      "3. Ich nutze weitere Ausdrücke, um Verbindungen zwischen den Sätzen zu schaffen (z.B. damit, um…zu)",
+    ],
+    criteriaExamples: [
+      "Die Mediennutzung wurde erhoben. Die Einschätzung von verschiedenen Medien als Lernquellen wurden erhoben. Die Jugendlichen wurden befragt.“",
+      "„Jugendliche bewerten das Lernpotenzial unterschiedlich. Sie sehen Nachrichten als seriös an.“",
+      "„Das Ergebnis war, dass unterschiedliche Medien unterschiedlich stark als Lernquellen wahrgenommen werden. Das kam bei Interviews mit den Jugendlichen raus. Mit 645 Jugendlichen wurde das nämlich durchgeführt.“",
+      "„Außerdem wurden die Jugendlichen in einen Raum geschickt, in dem sie erstmal Fragen zu ihrem Geburtsort, ihrem familiären Umfeld und ihren Interessen beantworten sollten.“",
+    ],
   },
   51: {
     id: 51,
-    slideText:
-      "Das Einschätzen der Qualität meines Beispiels zum Konzept „Soziale Normen“ fiel mir…",
-    slideType: "Beispiel_SN3",
+    slideText: "Kriterium “Aufbau”",
+    slideType: "Criteria_Structure",
   },
   52: {
     id: 52,

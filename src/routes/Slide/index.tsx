@@ -7,7 +7,6 @@ import SlideIntroWithHeader from "../SlideIntroWithHeader";
 import Finish from "../Finish";
 import SlideDemographics from "../SlideDemographics";
 import SlideNachangaben from "../SlideNachangaben";
-import QuestionTextInput from "../QuestionTextInput";
 import SlideTimer from "../SlideTimer";
 import QuestionTextInputWithHeader from "../QuestionTextInputWithHeader";
 import QuestionRange from "../QuestionRange";
@@ -19,9 +18,10 @@ import SlideDetails from "../SlideDetails";
 import { useSlidesState } from "../../hooks/useSlides";
 import SlideFun from "../SlideFun";
 import SlideTable from "../SlideTable";
-import SlideOrtographieBeispiel from "../SlideOrtographieBeispiel";
+import SlideCriteriaRightWrong from "../SlideCriteriaRightWrong";
+import SlideCriteriaAllGreenRed from "../SlideCriteriaAllGreenRed";
 
-const typeIntro: number[] = [1, 2, 3, 4, 5, 8, 11, 19, 20, 32, 34, 40];
+const typeIntro: number[] = [1, 2, 3, 4, 5, 8, 11, 19, 20, 32, 34, 40, 47, 51];
 const typeCriteriaIntro: number[] = [
   12,
   13,
@@ -39,62 +39,21 @@ const typeCriteriaIntro: number[] = [
   42,
   43,
   44,
+  48,
 ];
-const typeOrtographieBeispiel: number[] = [38, 39];
+
+const typeCriteriaRightWrong: number[] = [38, 39];
+const typeCriteriaAllGreenRed: number[] = [45, 46, 49, 50];
 
 const typeAbstractTable: number[] = [22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 const typeIntroWithHeader: number[] = [];
 const typeNachangaben: number[] = [9, 10];
-const typeTextinput: number[] = [20];
 const typeTextinputWithHeader: number[] = [53, 63, 73, 83, 93, 103];
-const typeRange: number[] = [
-  51,
-  52,
-  54,
-  55,
-  61,
-  62,
-  64,
-  65,
-  71,
-  72,
-  74,
-  75,
-  81,
-  82,
-  84,
-  85,
-  91,
-  92,
-  94,
-  95,
-  101,
-  102,
-  104,
-  105,
-  111,
-  112,
-];
-const ideaUnitsTypeOne: number[] = [
-  // 37,
-  46,
-  // 47,
-  56,
-  // 57,
-  66,
-  // 67,
-  76,
-  // 77,
-  86,
-  // 87,
-  96,
-  // 97,
-  106,
-  // 107,
-];
-const ideaUnitsTypeTwo: number[] = [38, 48, 58, 68, 78, 88, 98, 108];
-const ideaUnitsTypeThree: number[] = [39, 49, 59, 69, 79, 89, 99, 109];
-const ideaUnitsTypeFour: number[] = [40, 50, 60, 70, 80, 90, 100, 110];
+const typeRange: number[] = [];
+const ideaUnitsTypeOne: number[] = [];
+const ideaUnitsTypeTwo: number[] = [];
+const ideaUnitsTypeThree: number[] = [];
+const ideaUnitsTypeFour: number[] = [];
 
 function Slide(slide: SlideInterface) {
   const context = useSlidesState();
@@ -136,12 +95,20 @@ function Slide(slide: SlideInterface) {
           type={slide.slideType}
           header={slide.header}
         />
-      ) : typeOrtographieBeispiel.includes(slide.id) ? (
-        <SlideOrtographieBeispiel
+      ) : typeCriteriaRightWrong.includes(slide.id) ? (
+        <SlideCriteriaRightWrong
           slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}
           criteriaIntroUnits={slide.criteriaIntroUnits}
+        />
+      ) : typeCriteriaAllGreenRed.includes(slide.id) ? (
+        <SlideCriteriaAllGreenRed
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
         />
       ) : typeIntro.includes(slide.id) ? (
         <SlideIntro
@@ -175,12 +142,6 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
           nachangaben={slide.nachangaben}
-        />
-      ) : typeTextinput.includes(slide.id) ? (
-        <QuestionTextInput
-          question={slide.slideText}
-          questionNumber={slide.id}
-          type={slide.slideType}
         />
       ) : typeTextinputWithHeader.includes(slide.id) ? (
         <QuestionTextInputWithHeader
