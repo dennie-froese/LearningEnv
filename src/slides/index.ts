@@ -809,91 +809,74 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   52: {
     id: 52,
     slideText:
-      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „Soziale Normen“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_SN4",
+      "Den Aufbau hast du eigentlich schon kennengelernt. In unseren Beispielen haben sich nach und nach zwei vollständige Abstracts aufgebaut.",
+    slideType: "Criteria_Structure_Table_1",
+    header: "Kriterium „Aufbau“: Wie sollte ein Abstract aufgebaut sein?",
   },
   53: {
     id: 53,
     slideText:
-      "Konsens: Das Ausmaß, in dem ein Verhalten einer Person auch von anderen Personen gezeigt wird. Der Konsens ist hoch, wenn viele andere Personen ähnlich reagieren, und niedrig, wenn nur wenige andere Personen ähnlich reagieren.",
-    slideType: "Beispiel_Konsens0",
-    header:
-      "Denke Dir bitte ein Beispiel aus, das das Konzept von hohem Konsens veranschaulicht.",
+      "So sollte der Aufbau eines Abstracts aussehen. Diese Reihenfolge ist logisch nachvollziehbar und die einzelnen Punkt bauen aufeinander auf. Andere Reihenfolgen (z.B. die Ergebnisse vor der Methode oder das Fazit vor den Ergebnissen) würden verwirrend sein).",
+    slideType: "Criteria_Structure_Table_2",
+    header: "",
   },
   54: {
     id: 54,
-    slideText:
-      " Das Ausdenken eines Beispiels zum Konzept „hoher Konsens“ fiel mir…",
-    slideType: "Beispiel_Konsens1",
+    slideText: "Lesen einer wissenschaftlichen Studie",
+    slideType: "Criteria_ReadingScience",
   },
   55: {
     id: 55,
+    header: "Lesen einer wissenschaftlichen Studie",
     slideText:
-      " Beim Ausdenken eines Beispiels zum Konzept „hoher Konsens“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_Konsens2",
+      "Deine nächste Aufgabe ist es gleich, eine echte wissenschaftliche Studie zu einer Forschungsarbeit zu lesen. \n\n\nDiese trägt den Titel „Steigert Kaugummikauen das kognitive Leistungsvermögen?“ und wurde 2012 in der „Zeitschrift für Pädagogische Psychologie“ veröffentlicht.\n\n\nLies Dir die Studie bitte konzentriert durch. Bitte mache Dir keine Notizen. Du hast XX Minuten Zeit zum Lesen. Anschließend wirst Du eine Aufgabe zu dem Text bearbeiten. Deine verbleibende Lesezeit wird Dir auf dem Bildschirm angezeigt. Bitte nutze die ganze Zeit zum Lesen der Studie.",
+    slideType: "Criteria_ReadingScience_1",
   },
   56: {
     id: 56,
     slideText:
-      " Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ nun mit den folgenden Beispielen ab.",
-    slideType: "Konsens_g1_1",
-    header: "Konzept „hoher Konsens“",
-    negativeExamples: [
-      "Ingrid geht jede Woche mittwochs einkaufen. Nach dem Einkauf trägt sie die Einkäufe in ihrem Rollator nach Hause. Dieses Mal hat sie so viel eingekauft, dass ein paar der Lebensmittel auf den Boden fallen. Ein Herr eilt ihr zu Hilfe und legt die heruntergefallenen Lebensmittel zurück in ihren Rollator. Sie bedankt sich und geht nach Hause.",
-      "In einer Spielgruppe eines Kindergartens wird plötzlich ein Feueralarm ausgelöst. Alle Kinder fangen zeitgleich an zu schreien und zu weinen.",
-    ],
-    expertExamples: [
-      "Julia kann ihre alten Converse-Sneakers nicht mehr sehen und beschließt, am Montag nach der Schule gemeinsam mit ihren beiden Freundinnen shoppen zu gehen, um sich die neuen, angesagten Nike-Sneakers zu kaufen. Als die drei im Schuhgeschäft angekommen sind, betrachten die beiden Freundinnen von Julia ihre eigenen Schuhe und bemerken, dass ihre alten Sneakers im Vergleich mit den neuen Nike-Schuhen von Julia ebenfalls längst aus der Mode gekommen sind. Daraufhin beschließen die beiden, sich genauso wie ihre Freundin Julia die neuen Nike-Sneakers zu kaufen.",
-      "Aufgrund der Corona-Pandemie müssen sich nun alle Mitarbeiter nacheinander ihr Essen in der Mensa holen. Draußen am Essenstisch angekommen, fällt der Arbeitsgruppe auf, dass sich alle für einen Salat mit Falafel entschieden haben. Sie vermuten, dass ihre gleiche Entscheidung sowohl am heißen Wetter als auch an dem aktuellen Ernährungstrend liegt.",
-    ],
+      "Lies Dir die Studie bitte konzentriert durch. Bitte mache Dir keine Notizen. Du hast XX Minuten Zeit zum Lesen. Anschließend wirst Du eine Aufgabe zu dem Text bearbeiten. Deine verbleibende Lesezeit wird Dir auf dem Bildschirm angezeigt. Bitte nutze die ganze Zeit zum Lesen der Studie.",
+    slideType: "Study_Timer",
+  },
+  57: {
+    id: 57,
+    slideText:
+      "Was denkst Du, wie gut hast du die wissenschaftliche Studie verstanden?",
+    slideType: "Likert_Study_1",
   },
   58: {
     id: 58,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ mit den beiden hier dargestellten Beispielen ab.",
-    slideType: "Konsens_g2",
-    header: "Konzept „hoher Konsens“",
-    negativeExamples: [
-      "Ingrid geht jede Woche mittwochs einkaufen. Nach dem Einkauf trägt sie die Einkäufe in ihrem Rollator nach Hause. Dieses Mal hat sie so viel eingekauft, dass ein paar der Lebensmittel auf den Boden fallen. Ein Herr eilt ihr zu Hilfe und legt die heruntergefallenen Lebensmittel zurück in ihren Rollator. Sie bedankt sich und geht nach Hause.",
-      "In einer Spielgruppe eines Kindergartens wird plötzlich ein Feueralarm ausgelöst. Alle Kinder fangen zeitgleich an zu schreien und zu weinen.",
-    ],
+      "Wie leicht oder schwer fiel es Dir gerade, Dein Verständnis zur wissenschaftlichen Studie einzuschätzen?",
+    slideType: "Likert_Study_2",
   },
   59: {
     id: 59,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ mit den beiden hier dargestellten Expertenbeispielen ab.",
-    slideType: "Konsens_g3",
-    header: "Konzept „hoher Konsens“",
-    expertExamples: [
-      "Julia kann ihre alten Converse-Sneakers nicht mehr sehen und beschließt, am Montag nach der Schule gemeinsam mit ihren beiden Freundinnen shoppen zu gehen, um sich die neuen, angesagten Nike-Sneakers zu kaufen. Als die drei im Schuhgeschäft angekommen sind, betrachten die beiden Freundinnen von Julia ihre eigenen Schuhe und bemerken, dass ihre alten Sneakers im Vergleich mit den neuen Nike-Schuhen von Julia ebenfalls längst aus der Mode gekommen sind. Daraufhin beschließen die beiden, sich genauso wie ihre Freundin Julia die neuen Nike-Sneakers zu kaufen.",
-      "Aufgrund der Corona-Pandemie müssen sich nun alle Mitarbeiter nacheinander ihr Essen in der Mensa holen. Draußen am Essenstisch angekommen, fällt der Arbeitsgruppe auf, dass sich alle für einen Salat mit Falafel entschieden haben. Sie vermuten, dass ihre gleiche Entscheidung sowohl am heißen Wetter als auch an dem aktuellen Ernährungstrend liegt.",
-    ],
+      "Beim Einschätzen meines Verständnisses der Studie war meine geistige Denkanstrengung…",
+    slideType: "Likert_Study_3",
   },
   60: {
     id: 60,
-    slideText: "Bitte bewerte nun Dein Beispiel.",
-    slideType: "Konsens_g4",
-    header: "Konzept „hoher Konsens“",
+    slideText: "Ein Abstract schreiben",
+    slideType: "Abstract_Writing",
   },
   61: {
     id: 61,
     slideText:
-      "Das Einschätzen der Qualität meines Beispiels zum Konzept „hoher Konsens“ fiel mir…",
-    slideType: "Beispiel_Konsens3",
+      "Schreibe ein Abstract zu der wissenschaftlichen Studie. \n\nBitte denke dazu daran, was Du vor dem Lesen zu den Kriterien eines Abstracts erfahren hast und versuche, dies in dein Abstract einzubringen.\n\nDer Studientext wird dir parallel während des Schreibens zur Verfügung stehen.\n\nKlicke den Weiter-Button und du gelangst zum Schreibfeld.\n\nDu hast für das Schreiben XX Minuten Zeit.",
+    slideType: "Abstract_Writing_1",
+    header: "Ein Abstract schreiben",
   },
   62: {
     id: 62,
-    slideText:
-      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „hoher Konsens“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_Konsens4",
+    slideText: "",
+    slideType: "Abstract_Writing_2",
   },
   63: {
     id: 63,
-    slideText:
-      "Konsistenz: Das Ausmaß, in dem eine Person über die Zeit hinweg ähnliche Verhaltensweisen als Reaktion auf die gleiche Situation oder den gleichen Stimulus zeigt. Die Konsistenz ist hoch, wenn das Verhalten sich über die Zeit hinweg ähnelt und niedrig, wenn das Verhalten nur zu wenigen Zeitpunkten gleichbleibt.",
+    slideText: "",
     slideType: "Beispiel_Konsistenz0",
-    header:
-      "Denke Dir bitte ein Beispiel aus, das das Konzept hoher Konsistenz veranschaulicht.",
   },
   64: {
     id: 64,

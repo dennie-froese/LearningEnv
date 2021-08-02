@@ -100,6 +100,19 @@
   color: white;
 }
 
+.Slide-textInput-container {
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+}
+
+.Slide-textInput-container-study {
+  width: 40vw;
+  height: 50vh;
+  padding: 2%;
+  overflow-y: auto;
+}
+
 .Slide-header {
   height: 20vh;
   width: 80vw;
@@ -487,6 +500,11 @@
   padding: 1%;
 }
 
+.Slide-table-png {
+  width: 80%;
+  height: 40%;
+}
+
 .Slide-text-row {
   display: flex;
   align-items: center;
@@ -541,15 +559,12 @@
 }
 
 .Slide-textinput-l {
-  width: 75vw;
-  height: 40vh;
+  width: 40vw;
+  height: 50vh;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.3);
   transition: 0.3s all;
-  margin-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding: 5px;
+  padding: 2%;
 }
 
 .Dropdown-button {
@@ -607,7 +622,7 @@
 .Slide-timer-main {
   width: 90vw;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   flex-direction: column;
   font-size: calc(12px + 2vmin);

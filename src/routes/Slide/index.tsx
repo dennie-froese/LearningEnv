@@ -20,8 +20,27 @@ import SlideFun from "../SlideFun";
 import SlideTable from "../SlideTable";
 import SlideCriteriaRightWrong from "../SlideCriteriaRightWrong";
 import SlideCriteriaAllGreenRed from "../SlideCriteriaAllGreenRed";
+import SlideTablePNG from "../SlideTablePNG";
+import QuestionTextInput from "../QuestionTextInput";
 
-const typeIntro: number[] = [1, 2, 3, 4, 5, 8, 11, 19, 20, 32, 34, 40, 47, 51];
+const typeIntro: number[] = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  8,
+  11,
+  19,
+  20,
+  32,
+  34,
+  40,
+  47,
+  51,
+  54,
+  60,
+];
 const typeCriteriaIntro: number[] = [
   12,
   13,
@@ -41,15 +60,17 @@ const typeCriteriaIntro: number[] = [
   44,
   48,
 ];
+const typeStructureTable: number[] = [52, 53];
 
 const typeCriteriaRightWrong: number[] = [38, 39];
 const typeCriteriaAllGreenRed: number[] = [45, 46, 49, 50];
 
 const typeAbstractTable: number[] = [22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-const typeIntroWithHeader: number[] = [];
+const typeIntroWithHeader: number[] = [55, 61];
 const typeNachangaben: number[] = [9, 10];
-const typeTextinputWithHeader: number[] = [53, 63, 73, 83, 93, 103];
-const typeRange: number[] = [];
+const typeTextinputWithHeader: number[] = [];
+const typeTextinput: number[] = [62];
+const typeRange: number[] = [57, 58, 59];
 const ideaUnitsTypeOne: number[] = [];
 const ideaUnitsTypeTwo: number[] = [];
 const ideaUnitsTypeThree: number[] = [];
@@ -75,7 +96,7 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
         />
-      ) : slide.slideType === "Text_Text" ? (
+      ) : slide.slideType === "Study_Timer" ? (
         <SlideTimer
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -101,6 +122,13 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
           criteriaIntroUnits={slide.criteriaIntroUnits}
+        />
+      ) : typeStructureTable.includes(slide.id) ? (
+        <SlideTablePNG
+          header={slide.header}
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
         />
       ) : typeCriteriaAllGreenRed.includes(slide.id) ? (
         <SlideCriteriaAllGreenRed
@@ -150,6 +178,8 @@ function Slide(slide: SlideInterface) {
           type={slide.slideType}
           header={slide.header}
         />
+      ) : typeTextinput.includes(slide.id) ? (
+        <QuestionTextInput questionNumber={slide.id} type={slide.slideType} />
       ) : typeRange.includes(slide.id) ? (
         <QuestionRange
           question={slide.slideText}

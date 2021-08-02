@@ -1,76 +1,75 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { inputValidationOff } from "../../App";
 import { useSlidesDispatch } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
+import { Study } from "../SlideTimer";
 
 interface Props {
-  question: string;
   questionNumber: number;
   type: string;
 }
 
-function QuestionTextInput({ question, questionNumber, type }: Props) {
+function QuestionTextInput({ questionNumber, type }: Props) {
   const [input, setInput] = useState<string>("");
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
-  const [error, setError] = useState("");
+
+  const [minutes, setMinutes] = useState<number>(0);
+  const [seconds, setSeconds] = useState<number>(20);
+
+  useEffect(() => {
+    let myInterval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
+      }
+      if (seconds === 0) {
+        if (minutes === 0) {
+          clearInterval(myInterval);
+          finish();
+        } else {
+          setMinutes(minutes - 1);
+          setSeconds(59);
+        }
+      }
+    }, 1000);
+    return () => {
+      clearInterval(myInterval);
+    };
+  });
 
   const finish = () => {
-    if (input || inputValidationOff) {
-      const obj =
-        type === "Konzept_Attribution"
-          ? { Text_Attribution: input }
-          : type === "Konzept_SN"
-          ? { Text_SN: input }
-          : type === "Konzept_Konsens"
-          ? { Text_Konsens: input }
-          : type === "Konzept_Konsistenz"
-          ? { Text_Konsistenz: input }
-          : type === "Konzept_Distinktheit"
-          ? { Text_Distinktheit: input }
-          : type === "Konzept_FA"
-          ? { Text_FA: input }
-          : type === "Konzept_SV"
-          ? { Text_SV: input }
-          : { Text_GWG: input };
-      setInput("");
-      dispatch &&
-        launchTime &&
-        dispatch({
-          type: "submit_slide",
-          payload: {
-            type: type,
-            answer: { zeit: launchTime - Date.now(), ...obj },
-          },
-        });
-      restart();
-      setError("");
-    } else {
-      setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
-    }
+    dispatch &&
+      launchTime &&
+      dispatch({
+        type: "submit_slide",
+        payload: {
+          type: type,
+          answer: { zeit: launchTime - Date.now(), Text_Attribution: input },
+        },
+      });
+    restart();
   };
 
   return (
     <div className="Slide">
       <div className="Slide-container">
         <div className="Slide-header">
-          <p>{question}</p>
+          <div className="Slide-text-l">
+            Timer: {minutes}:{seconds >= 10 ? seconds : `0${seconds}`}
+          </div>
         </div>
-        <textarea
-          autoCorrect="false"
-          className="Slide-textinput-l"
-          value={input}
-          onChange={(e) => {
-            setInput(e.target.value);
-          }}
-        />
-        <div className="Slide-nav">
-          <p className="Error-text" style={{ paddingRight: 20 }}>
-            {error}
-          </p>
-          <button className="Slide-button" onClick={finish}>
-            Weiter
-          </button>
+        <div className="Slide-textInput-container">
+          <textarea
+            autoCorrect="false"
+            className="Slide-textinput-l"
+            value={input}
+            onChange={(e) => {
+              setInput(e.target.value);
+            }}
+          />
+          <div className="Slide-textInput-container-study">
+            <Study />
+          </div>
         </div>
       </div>
     </div>
