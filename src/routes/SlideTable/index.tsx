@@ -1,4 +1,3 @@
-import { table } from "console";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";

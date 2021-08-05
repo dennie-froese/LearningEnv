@@ -875,170 +875,144 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   63: {
     id: 63,
-    slideText: "",
-    slideType: "Beispiel_Konsistenz0",
+    slideText:
+      "Wie leicht oder schwer fiel es Dir, dein Abstract zu schreiben?",
+    slideType: "Likert_Abstract_Writing",
   },
   64: {
     id: 64,
     slideText:
-      "Das Ausdenken eines Beispiels zum Konzept „hohe Konsistenz“ fiel mir…",
-    slideType: "Beispiel_Konsistenz1",
+      "Beim Schreiben meines Abstracts war meine geistige Denk-Anstrengung insgesamt …",
+    slideType: "Likert_Abstract_Writing_2",
   },
   65: {
     id: 65,
-    slideText:
-      "Beim Ausdenken eines Beispiels zum Konzept „hohe Konsistenz“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_Konsistenz2",
+    slideText: "Selbstbewertung des Abstracts",
+    slideType: "SelfEvaluation_Abstract",
   },
   66: {
     id: 66,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ nun mit den folgenden Beispielen ab.",
-    slideType: "Konsistenz_g1_1",
-    header: "Konzept „hohe Konsistenz“",
-    negativeExamples: [
-      "Jan geht in dem neuen griechischen Restaurant essen, das vor Kurzem in seinem Wohnort eröffnet wurde. Mit Enttäuschung stellt er fest, dass ihm das Essen nicht schmeckt. Nach und nach beobachtet er, wie die Besucherzahl des Restaurants sinkt und es schließlich wegen mangelnder Kundschaft schließen muss. Jan hält dieses Vorkommnis für konsistent.",
-      "Alex beschließt, ihrer Mutter einen Blumenstrauß zu kaufen, da morgen Muttertag ist. Sie nimmt einen Regenschirm mit, da dunkle Wolken aufziehen. Im Blumengeschäft fällt ihr auf, dass einige andere Kunden ebenfalls mit einem Regenschirm in den Laden gekommen sind.",
-    ],
-    expertExamples: [
-      "Als Silvia in der Schule war, hat sie vor Schularbeiten ihren Glücksstein immer drei Mal gerieben, weil sie dachte, dass ihr dies Glück bringt. Mittlerweile ist sie älter, nutzt ihren Glücksstein aber immer noch, beispielsweise am Tag ihrer Führerscheinprüfung. Sie reibt ihn vorher drei Mal, da sie immer noch an die Glückswirkung des Steines glaubt.",
-      "Frau Albers gibt jedes Mal im Restaurant hohes Trinkgeld. Früher hat sie dem Kellner im kleinen Dorfrestaurant bereits 30 Euro gegeben, obwohl sie damals noch nicht viel Geld hatte. Heute, wo sie ihren 50. Geburtstag beim schicken Italiener feiert, gibt sie dem Kellner ebenfalls 30 Euro Trinkgeld.",
-    ],
+      "Nun ist es deine Aufgabe, deinen eigenen Text nach den Kriterien, die du zu Beginn kennengelernt hast, zu bewerten.\n\nDazu erhältst du gleich ein Bewertungsraster, das dir dabei helfen soll, deinen Text genau einzuschätzen.\n\nSchaue dir jedes Kriterium und die dazugehörigen Spalten genau an und versuche, dein Abstract genau und ehrlich anhand der einzelnen Kriterien einzuschätzen.\n\nTrage dann in das dafür vorgesehene Feld die Anzahl der Punkte ein, die du dir für das Kriterium geben würdest.\n\nWenn du bereit bist zu beginnen, klicke den „Weiter“-Button.",
+    slideType: "SelfEvaluation_Abstract_1",
+    header: "Selbstbewertung des Abstracts",
+  },
+  67: {
+    id: 67,
+    slideText:
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Inhalt“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Content",
   },
   68: {
     id: 68,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ mit den beiden hier dargestellten Beispielen ab.",
-    slideType: "Konsistenz_g2",
-    header: "Konzept „hohe Konsistenz“",
-    negativeExamples: [
-      "Jan geht in dem neuen griechischen Restaurant essen, das vor Kurzem in seinem Wohnort eröffnet wurde. Mit Enttäuschung stellt er fest, dass ihm das Essen nicht schmeckt. Nach und nach beobachtet er, wie die Besucherzahl des Restaurants sinkt und es schließlich wegen mangelnder Kundschaft schließen muss. Jan hält dieses Vorkommnis für konsistent.",
-      "Alex beschließt, ihrer Mutter einen Blumenstrauß zu kaufen, da morgen Muttertag ist. Sie nimmt einen Regenschirm mit, da dunkle Wolken aufziehen. Im Blumengeschäft fällt ihr auf, dass einige andere Kunden ebenfalls mit einem Regenschirm in den Laden gekommen sind.",
-    ],
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “Inhalt” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Content_Likert_1",
   },
   69: {
     id: 69,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ mit den beiden hier dargestellten Expertenbeispielen ab.",
-    slideType: "Konsistenz_g3",
-    header: "Konzept „hohe Konsistenz“",
-    expertExamples: [
-      "Als Silvia in der Schule war, hat sie vor Schularbeiten ihren Glücksstein immer drei Mal gerieben, weil sie dachte, dass ihr dies Glück bringt. Mittlerweile ist sie älter, nutzt ihren Glücksstein aber immer noch, beispielsweise am Tag ihrer Führerscheinprüfung. Sie reibt ihn vorher drei Mal, da sie immer noch an die Glückswirkung des Steines glaubt. ",
-      "Frau Albers gibt jedes Mal im Restaurant hohes Trinkgeld. Früher hat sie dem Kellner im kleinen Dorfrestaurant bereits 30 Euro gegeben, obwohl sie damals noch nicht viel Geld hatte. Heute, wo sie ihren 50. Geburtstag beim schicken Italiener feiert, gibt sie dem Kellner ebenfalls 30 Euro Trinkgeld.",
-    ],
+      "Beim Bewerten meines Abstracts zum Kriterium “Inhalt” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Content_Likert_2",
   },
   70: {
     id: 70,
-    slideText: "Bitte bewerte nun Dein Beispiel.",
-    slideType: "Konsistenz_g4",
-    header: "Konzept „hohe Konsistenz“",
+    slideText:
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Formales“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Formal",
   },
   71: {
     id: 71,
     slideText:
-      "Das Einschätzen der Qualität meines Beispiels zum Konzept „hohe Konsistenz“ fiel mir…",
-    slideType: "Beispiel_Konsistenz3",
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “Formales” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Formal_Likert_1",
   },
   72: {
     id: 72,
     slideText:
-      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „hohe Konsistenz“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_Konsistenz4",
+      "Beim Bewerten meines Abstracts zum Kriterium “Formales” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Formal_Likert_2",
   },
   73: {
     id: 73,
     slideText:
-      "Distinktheit: Das Ausmaß, in dem eine Person in unterschiedlicher Art und Weise auf ähnliche Stimuli oder Situationen reagiert. Die Distinktheit ist hoch, wenn sich eine Person in wenigen Situationen gleich verhält, und niedrig, wenn sie in vielen Situationen das gleiche Verhalten zeigt.",
-    slideType: "Beispiel_Distinktheit0",
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Orthographie und Grammatik“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Orthographie",
     header:
       "Denke Dir bitte ein Beispiel aus, das das Konzept hoher Distinktheit veranschaulicht.",
   },
   74: {
     id: 74,
     slideText:
-      "Das Ausdenken eines Beispiels zum Konzept „hohe Distinktheit“ fiel mir…",
-    slideType: "Beispiel_Distinktheit1",
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “Orthographie und Grammatik” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Orthographie_Likert_1",
   },
   75: {
     id: 75,
     slideText:
-      "Beim Ausdenken eines Beispiels zum Konzept „hohe Distinktheit“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_Distinktheit2",
+      "Beim Bewerten meines Abstracts zum Kriterium “Orthographie und Grammatik” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Orthographie_Likert_2",
   },
   76: {
     id: 76,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ nun mit den folgenden Beispielen ab.",
-    slideType: "Distinktheit_g1_1",
-    header: "Konzept „hohe Distinktheit“",
-    negativeExamples: [
-      "Jakob und Sven besuchen die gleiche Klasse. Jakob ist ein sehr guter Schüler, während Sven eher schlechte Noten bekommt. Als sie am Montagmorgen ihre Deutscharbeit zurückbekommen, ist es anders: Jakob hat eine schlechte Note bekommen, Sven dagegen eine gute.",
-      "Beim Einkaufen an der Kasse wünscht Anna dem Kassierer einen schönen Tag. Als sie mittags ihren Sohn Daniel von der Schule abholt, wird sie von der Lehrerin ermahnt, weil Daniel einen anderen Mitschüler beleidigt hat. Anna verabschiedet sich nach dem Gespräch von der Lehrerin und wünscht auch ihr einen schönen Tag.",
-    ],
-    expertExamples: [
-      "Im Hause Müller wird jeden Abend vor dem Essen ein Tischgebet gesprochen. Wenn der jüngste Sohn, Yannick, von seinem Vater darum gebeten wird, das Tischgebet zu halten, kommt er dieser Bitte nach. Wird Yannick allerdings von seiner Mutter darum gebeten, gibt er nur eine genervte Antwort.",
-      "Als Steven eine ältere Dame sieht, deren Einkäufe heruntergefallen sind, eilt er ihr zu Hilfe und räumt ihr die Einkäufe zurück in die Tasche. Am nächsten Tag bemerkt Steven einen älteren Mann, dem sein Portemonnaie auf die Straße gefallen ist. Steven hilft ihm nicht, sondern geht einfach weiter.",
-    ],
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „wissenschaftlicher Stil“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Scientific",
+  },
+  77: {
+    id: 77,
+    slideText:
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “wissenschaftlicher Stil” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Scientific_Likert_1",
   },
   78: {
     id: 78,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ mit den beiden hier dargestellten Beispielen ab.",
-    slideType: "Distinktheit_g2",
-    header: "Konzept „hohe Distinktheit“",
-    negativeExamples: [
-      "Jakob und Sven besuchen die gleiche Klasse. Jakob ist ein sehr guter Schüler, während Sven eher schlechte Noten bekommt. Als sie am Montagmorgen ihre Deutscharbeit zurückbekommen, ist es anders: Jakob hat eine schlechte Note bekommen, Sven dagegen eine gute.",
-      "Beim Einkaufen an der Kasse wünscht Anna dem Kassierer einen schönen Tag. Als sie mittags ihren Sohn Daniel von der Schule abholt, wird sie von der Lehrerin ermahnt, weil Daniel einen anderen Mitschüler beleidigt hat. Anna verabschiedet sich nach dem Gespräch von der Lehrerin und wünscht auch ihr einen schönen Tag.",
-    ],
+      "Beim Bewerten meines Abstracts zum Kriterium “wissenschaftlicher Stil” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Scientific_Likert_2",
   },
   79: {
     id: 79,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ mit den beiden hier dargestellten Expertenbeispielen ab. ",
-    slideType: "Distinktheit_g3",
-    header: "Konzept „hohe Distinktheit“",
-    expertExamples: [
-      "Im Hause Müller wird jeden Abend vor dem Essen ein Tischgebet gesprochen. Wenn der jüngste Sohn, Yannick, von seinem Vater darum gebeten wird, das Tischgebet zu halten, kommt er dieser Bitte nach. Wird Yannick allerdings von seiner Mutter darum gebeten, gibt er nur eine genervte Antwort.",
-      "Als Steven eine ältere Dame sieht, deren Einkäufe heruntergefallen sind, eilt er ihr zu Hilfe und räumt ihr die Einkäufe zurück in die Tasche. Am nächsten Tag bemerkt Steven einen älteren Mann, dem sein Portemonnaie auf die Straße gefallen ist. Steven hilft ihm nicht, sondern geht einfach weiter.",
-    ],
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Organisation des Textes“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Organisation",
   },
   80: {
     id: 80,
-    slideText: "Bitte bewerte nun Dein Beispiel.",
-    slideType: "Distinktheit_g4",
-    header: "Konzept „hohe Distinktheit“",
+    slideText:
+      "Wie leicht oder schwer fiel es dir, dein Abstracts zum Kriterium “Organisation des Textes”zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Organisation_Likert_1",
   },
   81: {
     id: 81,
     slideText:
-      "Das Einschätzen der Qualität meines Beispiels zum Konzept „hohe Distinktheit“ fiel mir…",
-    slideType: "Beispiel_Distinktheit3",
+      "Beim Bewerten meines Abstracts zum Kriterium “Organisation des Textes” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Organisation_Likert_2",
   },
   82: {
     id: 82,
     slideText:
-      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „hohe Distinktheit“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_Distinktheit4",
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Aufbau“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Structure",
   },
   83: {
     id: 83,
     slideText:
-      "Fundamentaler Attributionsfehler: Die Tendenz, das Verhalten von anderen in höherem Maß auf interne Ursachen zurückzuführen, als es eigentlich gerechtfertigt wäre, bei gleichzeitigem Unterschätzen des Einflusses der Situation.",
-    slideType: "Beispiel_FA0",
-    header:
-      "Denke Dir bitte ein Beispiel aus, das das Konzept „Fundamentaler Attributionsfehler” veranschaulicht.",
+      "Wie leicht oder schwer fiel es dir, dein Abstracts zum Kriterium “Aufbau”zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Structure_Likert_1",
   },
   84: {
     id: 84,
     slideText:
-      "Das Ausdenken eines Beispiels zum Konzept „Fundamentaler Attributionsfehler“ fiel mir…",
-    slideType: "Beispiel_FA1",
+      "Beim Bewerten meines Abstracts zum Kriterium “Aufbau” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Structure_Likert_2",
   },
   85: {
     id: 85,
     slideText:
-      "Beim Ausdenken eines Beispiels zum Konzept „Fundamentaler Attributionsfehler“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_FA2",
+      "Nun ist es deine Aufgabe, deinen eigenen Text nach den Kriterien, die du zu Beginn kennengelernt hast, zu bewerten.\n\nDazu erhältst du gleich ein Bewertungsraster, das dir dabei helfen soll, deinen Text genau einzuschätzen.\n\nSchaue dir jedes Kriterium und die dazugehörigen Spalten genau an und versuche, dein Abstract genau und ehrlich anhand der einzelnen Kriterien einzuschätzen.\n\nTrage dann in das dafür vorgesehene Feld die Anzahl der Punkte ein, die du dir für das Kriterium geben würdest.\n\nWenn du bereit bist zu beginnen, klicke den „Weiter“-Button.",
+    slideType: "SelfEvaluation_Abstract_Group2",
+    header: "Selbstbewertung des Abstracts",
   },
   86: {
     id: 86,

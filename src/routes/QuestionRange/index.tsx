@@ -15,8 +15,12 @@ function QuestionRange({ questionNumber, question, type }: Props) {
   const { launchTime, restart } = useTimer();
   const checkboxes: JSX.Element[] = [];
   const range = 7;
-  const from = questionNumber === 58 ? "Sehr leicht" : "Sehr niedrig";
-  const to = questionNumber === 58 ? "Sehr schwer" : "Sehr hoch";
+  const from = [58, 63, 68, 71, 74, 77, 80, 83].includes(questionNumber)
+    ? "Sehr leicht"
+    : "Sehr niedrig";
+  const to = [58, 63, 68, 71, 74, 77, 80, 83].includes(questionNumber)
+    ? "Sehr schwer"
+    : "Sehr hoch";
   const [error, setError] = useState("");
 
   for (var i = 1; i < range + 1; i++) {
