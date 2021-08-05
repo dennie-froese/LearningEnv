@@ -938,8 +938,6 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText:
       "Bitte bewerte hier dein Abstract nach dem Kriterium „Orthographie und Grammatik“ und trage im Eingabefeld deine Bewertung ein.",
     slideType: "SelfEvaluation_Abstract_Orthographie",
-    header:
-      "Denke Dir bitte ein Beispiel aus, das das Konzept hoher Distinktheit veranschaulicht.",
   },
   74: {
     id: 74,
@@ -1017,147 +1015,117 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   86: {
     id: 86,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ nun mit den folgenden Beispielen ab.",
-    slideType: "FA_g1_1",
-    header: "Konzept „Fundamentaler Attributionsfehler“",
-    negativeExamples: [
-      "Unglücklicherweise schreibt eine Schulklasse genau an dem Tag eine Klassenarbeit, an dem eine Baustelle neben der Schule starken Lärm verursacht. Als die Schulklasse die Arbeit ein paar Wochen später wiederbekommen, stellen die Schüler fest, dass diese sehr schlecht ausgefallen ist. Die Schüler*innen schreiben dies dem Lärm der Baustelle zu. Dass es an ihren eigenen Fähigkeiten gelegen haben könnte, kommt ihnen nicht in den Sinn.",
-      "Wenn Frau Müller sich unfreundlich gegenüber ihren Mitmenschen verhält, denkt sie, dass dieses Verhalten an der aktuell stressigen Arbeitsphase liegt. Ist sie dagegen freundlich und höflich, führt sie dies auf ihre gute Erziehung zurück.",
-    ],
-    expertExamples: [
-      "Im spannenden Endspiel der Fußballweltmeisterschaft wird dem Torwart infolge eines Fouls eine gelbe Karte gegeben. Der Torwart wird daraufhin aggressiv und beschimpft den Schiedsrichter. Der Kommentator schlussfolgert, die Reaktion des Torwarts sei durch die generell schon aggressive Art und geringe Frustrationstoleranz des Torwarts bedingt. Im Interview nach dem Spiel erklärt der Torwart bezüglich seines Ausrasters, dass die Situation, im Finale der Weltmeisterschaft zu stehen, einen großen Druck auf ihn ausgeübt habe und er grundsätzlich kein aggressiver Mensch sei.",
-      "Bei Familie Maier ist das Gesprächsthema Nummer 1 die gegenüber von ihnen wohnende Frau Peters. Familie Maier regt sich darüber auf, dass Frau Peters einen Babysitter für ihr Neugeborenes eingestellt hat. Frau und Herr Maier erklären sich dieses Verhalten damit, dass Frau Peters eine lieblose Mutter sei und sich nicht richtig um ihr Kind kümmern würde. Frau Peters ist allerdings alleinerziehend und muss arbeiten gehen, um genug Geld zu verdienen, weshalb sie einen Babysitter benötigt.",
-    ],
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Inhalt“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Group2_Content",
+  },
+  87: {
+    id: 87,
+    slideText:
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “Inhalt” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Group2_Content_Likert_1",
   },
   88: {
     id: 88,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ mit den beiden hier dargestellten Beispielen ab.",
-    slideType: "FA_g2",
-    header: "Konzept „Fundamentaler Attributionsfehler“",
-    negativeExamples: [
-      "Unglücklicherweise schreibt eine Schulklasse genau an dem Tag eine Klassenarbeit, an dem eine Baustelle neben der Schule starken Lärm verursacht. Als die Schulklasse die Arbeit ein paar Wochen später wiederbekommen, stellen die Schüler fest, dass diese sehr schlecht ausgefallen ist. Die Schüler*innen schreiben dies dem Lärm der Baustelle zu. Dass es an ihren eigenen Fähigkeiten gelegen haben könnte, kommt ihnen nicht in den Sinn.",
-      "Wenn Frau Müller sich unfreundlich gegenüber ihren Mitmenschen verhält, denkt sie, dass dieses Verhalten an der aktuell stressigen Arbeitsphase liegt. Ist sie dagegen freundlich und höflich, führt sie dies auf ihre gute Erziehung zurück.",
-    ],
+      "Beim Bewerten meines Abstracts zum Kriterium “Inhalt” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Group2_Content_Likert_2",
   },
   89: {
     id: 89,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ mit den beiden hier dargestellten Expertenbeispielen ab.",
-    slideType: "FA_g3",
-    header: "Konzept „Fundamentaler Attributionsfehler“",
-    expertExamples: [
-      "Im spannenden Endspiel der Fußballweltmeisterschaft wird dem Torwart infolge eines Fouls eine gelbe Karte gegeben. Der Torwart wird daraufhin aggressiv und beschimpft den Schiedsrichter. Der Kommentator schlussfolgert, die Reaktion des Torwarts sei durch die generell schon aggressive Art und geringe Frustrationstoleranz des Torwarts bedingt. Im Interview nach dem Spiel erklärt der Torwart bezüglich seines Ausrasters, dass die Situation, im Finale der Weltmeisterschaft zu stehen, einen großen Druck auf ihn ausgeübt habe und er grundsätzlich kein aggressiver Mensch sei.",
-      "Bei Familie Maier ist das Gesprächsthema Nummer 1 die gegenüber von ihnen wohnende Frau Peters. Familie Maier regt sich darüber auf, dass Frau Peters einen Babysitter für ihr Neugeborenes eingestellt hat. Frau und Herr Maier erklären sich dieses Verhalten damit, dass Frau Peters eine lieblose Mutter sei und sich nicht richtig um ihr Kind kümmern würde. Frau Peters ist allerdings alleinerziehend und muss arbeiten gehen, um genug Geld zu verdienen, weshalb sie einen Babysitter benötigt.",
-    ],
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Formales“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Group2_Formal",
   },
   90: {
     id: 90,
-    slideText: "Bitte bewerte nun Dein Beispiel.",
-    slideType: "FA_g4",
-    header: "Konzept „Fundamentaler Attributionsfehler“",
+    slideText:
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “Formales” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Group2_Formal_Likert_1",
   },
   91: {
     id: 91,
     slideText:
-      "Das Einschätzen der Qualität meines Beispiels zum Konzept „Fundamentaler Attributionsfehler“ fiel mir…",
-    slideType: "Beispiel_FA3",
+      "Beim Bewerten meines Abstracts zum Kriterium “Formales” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Group2_Formal_Likert_2",
   },
   92: {
     id: 92,
     slideText:
-      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „Fundamentaler Attributionsfehler“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_FA4",
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Orthographie und Grammatik“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Group2_Orthographie",
   },
   93: {
     id: 93,
     slideText:
-      "Selbstwertdienliche Verzerrung: Die Tendenz, positive Ergebnisse auf unsere eigenen Charaktereigenschaften (internale Ursachen) zurückzuführen, aber negative Ergebnisse eher auf Faktoren außerhalb unserer Kontrolle (externale Ursachen).",
-    slideType: "Beispiel_SV0",
-    header:
-      "Denke Dir bitte ein Beispiel aus, das das Konzept „Selbstwertdienliche Verzerrung” veranschaulicht.“",
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “Orthographie und Grammatik” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Group2_Orthographie_Likert_1",
   },
   94: {
     id: 94,
     slideText:
-      "Das Ausdenken eines Beispiels zum Konzept „Selbstwertdienliche Verzerrung“ fiel mir…",
-    slideType: "Beispiel_SV1",
+      "Beim Bewerten meines Abstracts zum Kriterium “Orthographie und Grammatik” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Group2_Orthographie_Likert_2",
   },
   95: {
     id: 95,
     slideText:
-      "Beim Ausdenken eines Beispiels zum Konzept „Selbstwertdienliche Verzerrung“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_SV2",
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „wissenschaftlicher Stil“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Group2_Scientific",
   },
   96: {
     id: 96,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ nun mit den folgenden Beispielen ab.",
-    slideType: "SV_g1_1",
-    header: "Konzept „Selbstwertdienliche Verzerrung“",
-    negativeExamples: [
-      "Mareike gewinnt im Schach gegen ihren Freund Maik. Maik glaubt, dass der Sieg von Mareike nur daran lag, dass er sich schlecht konzentrieren konnte und er einen schlechten Tag hatte.",
-      "Klara ist überzeugt, dass ihr Mann und Vater ihres Kindes Jakob ein guter Mensch ist. Ihr Sohn Jakob befindet sich im Teenager-Alter und zeigt aggressives und gewalttätiges Verhalten. Klara denkt, Jakob habe die Gene von ihr geerbt, und nicht von ihrem Mann, weil er ja ihrer Überzeugung nach ein guter Mensch sei.",
-    ],
-    expertExamples: [
-      "Nach einem Referat erhält Janosch sowohl positives als auch negatives Feedback. Eine seiner Mitschülerinnen lobt ihn für die sinnvolle Aufteilung der Inhalte. Janosch führt dies auf seine Intelligenz zurück. Ein anderer Mitschüler macht Janosch darauf aufmerksam, dass die Inhalte des Referats nicht gut nachzuvollziehen waren. Dies erklärt Janosch sich mit den technischen Störungen des Beamers und den Unterbrechungen vom Lehrer – an ihm selber wird dies wohl nicht gelegen haben.",
-      "Herr Janssen ist Geschäftsführer einer privaten Firma und hat vor Kurzem zwei wichtige Angebote bei zwei verschiedenen Firmen eingereicht. Als er die Rückmeldung erhält, dass eines der zwei Angebote abgelehnt wurde, schreibt er dies dem Sachbearbeiter zu, der das Angebot bearbeitet hat, weil dieser wohl eine persönliche Abneigung gegen Herrn Janssen habe. Das zweite Angebot dagegen wurde angenommen, was Herr Janssen damit begründet, dass er sehr gut darin ist, Angebote zu schreiben.",
-    ],
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “wissenschaftlicher Stil” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Group2_Scientific_Likert_1",
+  },
+  97: {
+    id: 97,
+    slideText:
+      "Beim Bewerten meines Abstracts zum Kriterium “wissenschaftlicher Stil” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Group2_Scientific_Likert_2",
   },
   98: {
     id: 98,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ mit den beiden hier dargestellten Beispielen ab.",
-    slideType: "SV_g2",
-
-    header: "Konzept „Selbstwertdienliche Verzerrung“",
-    negativeExamples: [
-      "Mareike gewinnt im Schach gegen ihren Freund Maik. Maik glaubt, dass der Sieg von Mareike nur daran lag, dass er sich schlecht konzentrieren konnte und er einen schlechten Tag hatte.",
-      "Klara ist überzeugt, dass ihr Mann und Vater ihres Kindes Jakob ein guter Mensch ist. Ihr Sohn Jakob befindet sich im Teenager-Alter und zeigt aggressives und gewalttätiges Verhalten. Klara denkt, Jakob habe die Gene von ihr geerbt, und nicht von ihrem Mann, weil er ja ihrer Überzeugung nach ein guter Mensch sei.",
-    ],
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Organisation des Textes“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Group2_Organisation",
   },
   99: {
     id: 99,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ mit den beiden hier dargestellten Expertenbeispielen ab. ",
-    slideType: "SV_g3",
-    header: "Konzept „Selbstwertdienliche Verzerrung“",
-    expertExamples: [
-      "Nach einem Referat erhält Janosch sowohl positives als auch negatives Feedback. Eine seiner Mitschülerinnen lobt ihn für die sinnvolle Aufteilung der Inhalte. Janosch führt dies auf seine Intelligenz zurück. Ein anderer Mitschüler macht Janosch darauf aufmerksam, dass die Inhalte des Referats nicht gut nachzuvollziehen waren. Dies erklärt Janosch sich mit den technischen Störungen des Beamers und den Unterbrechungen vom Lehrer – an ihm selber wird dies wohl nicht gelegen haben.",
-      "Herr Janssen ist Geschäftsführer einer privaten Firma und hat vor Kurzem zwei wichtige Angebote bei zwei verschiedenen Firmen eingereicht. Als er die Rückmeldung erhält, dass eines der zwei Angebote abgelehnt wurde, schreibt er dies dem Sachbearbeiter zu, der das Angebot bearbeitet hat, weil dieser wohl eine persönliche Abneigung gegen Herrn Janssen habe. Das zweite Angebot dagegen wurde angenommen, was Herr Janssen damit begründet, dass er sehr gut darin ist, Angebote zu schreiben.",
-    ],
+      "Wie leicht oder schwer fiel es dir, dein Abstracts zum Kriterium “Organisation des Textes”zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Group2_Organisation_Likert_1",
   },
   100: {
     id: 100,
-    slideText: "Bitte bewerte nun Dein Beispiel.",
-    slideType: "SV_g4",
-    header: "Konzept „Selbstwertdienliche Verzerrung“",
+    slideText:
+      "Beim Bewerten meines Abstracts zum Kriterium “Organisation des Textes” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Group2_Organisation_Likert_2",
   },
   101: {
     id: 101,
     slideText:
-      "Das Einschätzen der Qualität meines Beispiels zum Konzept „Selbstwertdienliche Verzerrung“ fiel mir…",
-    slideType: "Beispiel_SV3",
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Aufbau“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Group2_Structure",
   },
   102: {
     id: 102,
     slideText:
-      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „Selbstwertdienliche Verzerrung“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_SV4",
+      "Wie leicht oder schwer fiel es dir, dein Abstracts zum Kriterium “Aufbau”zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Group2_Structure_Likert_1",
   },
   103: {
     id: 103,
     slideText:
-      "Gerechte-Welt-Glaube: Das starke Verlangen oder Bedürfnis zu glauben, dass die Welt ein geordneter, vorhersehbarer und gerechter Ort ist, an dem jeder bekommt, was er oder sie verdient.",
-    slideType: "Beispiel_GWG0",
-    header:
-      "Denke Dir bitte ein Beispiel aus, das das Konzept „Gerechte-Welt-Glaube” veranschaulicht.",
+      "Beim Bewerten meines Abstracts zum Kriterium “Aufbau” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Group2_Structure_Likert_2",
   },
   104: {
     id: 104,
     slideText:
-      "Das Ausdenken eines Beispiels zum Konzept „Gerechte-Welt-Glaube“ fiel mir…",
+      "Du hast nun die Möglichkeit, zu einem der Kriterien noch einmal einige Beispiele zu sehen und danach Dein Abstract zu überarbeiten. Wähle hierzu auf der nächsten Seite das Kriterium aus, bei dem Du Dein Abstract noch am meisten verbessern kannst.\n\n\n\n\nWenn Du bereit bist zu beginnen, klicke den „Weiter“-Button.",
     slideType: "Beispiel_GWG1",
+    header: "Überarbeitung",
   },
   105: {
     id: 105,

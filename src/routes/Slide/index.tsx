@@ -23,6 +23,7 @@ import SlideCriteriaAllGreenRed from "../SlideCriteriaAllGreenRed";
 import SlideTablePNG from "../SlideTablePNG";
 import QuestionTextInput from "../QuestionTextInput";
 import SlideSelfEvaluation from "../SlideSelfEvaluation";
+import SlideSelfEvaluationGroup2 from "../SlideSelfEvaluationGroup2";
 
 const typeIntro: number[] = [
   1,
@@ -68,10 +69,11 @@ const typeCriteriaRightWrong: number[] = [38, 39];
 const typeCriteriaAllGreenRed: number[] = [45, 46, 49, 50];
 
 const typeAbstractTable: number[] = [22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-const typeIntroWithHeader: number[] = [55, 61, 66, 85];
+const typeIntroWithHeader: number[] = [55, 61, 66, 85, 104];
 const typeNachangaben: number[] = [9, 10];
 
 const typeSelfEvaluation: number[] = [67, 70, 73, 76, 79, 82];
+const typeSelfEvaluationGroup2: number[] = [86, 89, 92, 95, 98, 101];
 
 const typeTextinputWithHeader: number[] = [];
 const typeTextinput: number[] = [62];
@@ -93,6 +95,18 @@ const typeRange: number[] = [
   81,
   83,
   84,
+  87,
+  88,
+  90,
+  91,
+  93,
+  94,
+  96,
+  97,
+  99,
+  100,
+  102,
+  103,
 ];
 const ideaUnitsTypeOne: number[] = [];
 const ideaUnitsTypeTwo: number[] = [];
@@ -169,6 +183,12 @@ function Slide(slide: SlideInterface) {
         />
       ) : typeSelfEvaluation.includes(slide.id) ? (
         <SlideSelfEvaluation
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+        />
+      ) : typeSelfEvaluationGroup2.includes(slide.id) ? (
+        <SlideSelfEvaluationGroup2
           slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}

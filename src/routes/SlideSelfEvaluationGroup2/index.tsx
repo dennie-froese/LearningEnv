@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { inputValidationOff } from "../../App";
-import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
+import { useSlidesDispatch } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
-import Content from "./../../Content.png";
-import Formal from "./../../Formal.png";
-import Satzbau from "./../../Satzbau.png";
-import Scientific from "./../../Scientific.png";
-import Organisation from "./../../Organisation.png";
-import Structure from "./../../Structure.png";
 
 interface Props {
   slideText: string;
@@ -61,45 +55,39 @@ const aspectsStructure = [
   "5. Fazit",
 ];
 
-function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
+function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
   const [input, setInput] = useState<string>("");
   const dispatch = useSlidesDispatch();
-  const context = useSlidesState();
   const [aspects, setAspects] = useState([""]);
-  const [image, setImage] = useState<string | undefined>(undefined);
   const [criteria, setCriteria] = useState("");
+
+  const scaleValues = ["1\nsehr gut", "2", "3", "4", "5", "6\nsehr schlecht"];
 
   useEffect(() => {
     switch (slideNumber) {
-      case 67:
+      case 86:
         setAspects(aspectsContent);
-        setImage(Content);
-        setCriteria("„Inhalt“");
+        setCriteria("Inhalt");
         break;
-      case 70:
+      case 89:
         setAspects(aspectsFormal);
-        setImage(Formal);
-        setCriteria("„Formales“");
+        setCriteria("Formales");
         break;
-      case 73:
+      case 92:
         setAspects(aspectsOrtographie);
-        setImage(Satzbau);
-        setCriteria("„Satzbau“");
+        setCriteria("Orthographie und Grammatik");
         break;
-      case 76:
+      case 95:
         setAspects(aspectsScientific);
-        setImage(Scientific);
-        setCriteria("„Wissenschaftlicher Stil“");
+        setCriteria("Wissenschaftlicher Stil");
         break;
-      case 79:
+      case 98:
         setAspects(aspectsOrganisation);
-        setImage(Organisation);
-        setCriteria("„Organisation“");
+        setCriteria("Organisation");
         break;
-      case 82:
+      case 101:
         setAspects(aspectsStructure);
-        setImage(Structure);
-        setCriteria("„Aufbau“");
+        setCriteria("Aufbau");
         break;
     }
   }, [slideNumber]);
@@ -156,23 +144,23 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
         <div className="Slide-header">
           <div className="Slide-text-l">{slideText}</div>
         </div>
-        <div className="Slide-textInput-container">
+        <div className="Slide-self-evaluation-main">
           <div>
             <div>Aspekte des Kriteriums</div>
             {aspects.map((aspect) => (
               <div className="Slide-self-evaluation-aspects">{aspect}</div>
             ))}
-            <img
-              className="Slide-self-evaluation-table-png"
-              src={image}
-              alt=""
-            />
           </div>
-          <div className="Slide-textInput-container-study">asd</div>
+          <div className="Slide-self-evaluation-scale-row">
+            <div className="Slide-self-evaluation-scale-box">{criteria}</div>
+            {scaleValues.map((value) => (
+              <div className="Slide-self-evaluation-scale-box">{value}</div>
+            ))}
+          </div>
         </div>
         <div className="Slide-nav">
           <div className="Slide-self-evaluation-box">
-            <div>{`Deine Bewertung für das Kriterium ${criteria}:`}</div>
+            <div>{`Deine Bewertung:`}</div>
 
             <input
               className="Slide-self-evaluation-input"
@@ -194,4 +182,4 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
   );
 }
 
-export default SlideSelfEvaluation;
+export default SlideSelfEvaluationGroup2;
