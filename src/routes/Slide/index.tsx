@@ -24,6 +24,7 @@ import SlideTablePNG from "../SlideTablePNG";
 import QuestionTextInput from "../QuestionTextInput";
 import SlideSelfEvaluation from "../SlideSelfEvaluation";
 import SlideSelfEvaluationGroup2 from "../SlideSelfEvaluationGroup2";
+import SlideSelectCriteria from "../SlideSelectCriteria";
 
 const typeIntro: number[] = [
   1,
@@ -152,6 +153,12 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
           header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Selection" ? (
+        <SlideSelectCriteria
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
         />
       ) : typeCriteriaRightWrong.includes(slide.id) ? (
         <SlideCriteriaRightWrong

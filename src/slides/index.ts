@@ -1124,14 +1124,14 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 104,
     slideText:
       "Du hast nun die Möglichkeit, zu einem der Kriterien noch einmal einige Beispiele zu sehen und danach Dein Abstract zu überarbeiten. Wähle hierzu auf der nächsten Seite das Kriterium aus, bei dem Du Dein Abstract noch am meisten verbessern kannst.\n\n\n\n\nWenn Du bereit bist zu beginnen, klicke den „Weiter“-Button.",
-    slideType: "Beispiel_GWG1",
+    slideType: "Criteria_Improvement_Intro",
     header: "Überarbeitung",
   },
   105: {
     id: 105,
     slideText:
-      "Beim Ausdenken eines Beispiels zum Konzept „Gerechte-Welt-Glaube“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_GWG2",
+      "Bitte klicke auf das Kriterium, bei dem Du Dein Abstract noch am meisten verbessern kannst:",
+    slideType: "Criteria_Improvement_Selection",
   },
   106: {
     id: 106,
@@ -1147,6 +1147,11 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Laura streitet sich mit ihrer Mutter. Sie hat erneut ihr Zimmer nicht aufgeräumt, will aber jetzt zur Stufenparty fahren, obwohl ihre Mutter sie darum bittet, vorher ihr Zimmer in Ordnung zu bringen. Laura ignoriert die Bitte und steigt auf ihr Fahrrad. Auf der Hälfte der Strecke übersieht sie einen Bordstein und stürzt. Ihre Knie und Hände sind aufgeschürft. Laura ist sich sicher, dass sie diesen Unfall hätte vorhersehen können, da sie es verdient hatte, hinzufallen, weil sie ihr Zimmer nicht aufgeräumt und sich mit ihrer Mutter gestritten hatte. Laura ist der festen Überzeugung, dass der Unfall ihr zu Recht geschehen ist.",
       "In der Grundschule zeigt Simon stets vorbildliches Verhalten. Er beteiligt sich am Unterricht, hilft seinen Mitschülern und respektiert die Lehrer. Zum Ende des Schuljahres erhält Simon dafür eine Auszeichnung als „bester Schüler des Jahres“. Seine Eltern waren sich schon immer sicher, dass Simon diese Auszeichnung für sein Verhalten verdient hat und es nur gerecht sei, dass sein vorbildliches Verhalten belohnt wird.",
     ],
+  },
+  107: {
+    id: 107,
+    slideText: "",
+    slideType: "",
   },
   108: {
     id: 108,
@@ -1195,11 +1200,68 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideType: "Ende",
     header: "Du bist nun am Ende der Studie angekommen.",
   },
+  114: {
+    id: 114,
+    slideText:
+      "Damit wir Dir die Aufwandsentschädigung zahlen können, möchten wir Dich noch bitten, Angaben zu Deiner Bankverbindung zu machen. Bitte beachte, dass diese Daten selbstverständlich nur zu Überweisungszwecken gespeichert und nach Auszahlung der Vergütung umgehend gelöscht werden.",
+    slideType: "Ende",
+    header: "Du bist nun am Ende der Studie angekommen.",
+  },
   115: {
     id: 115,
     slideText:
       "Vielen Dank für deine Teilnahme! \n\n Du kannst das Fenster nun schließen.",
     slideType: "Vielen_Dank",
+  },
+  116: {
+    id: 116,
+    slideText: "",
+    slideType: "",
+  },
+  117: {
+    id: 117,
+    slideText: "",
+    slideType: "",
+  },
+  118: {
+    id: 118,
+    slideText: "",
+    slideType: "",
+  },
+  119: {
+    id: 119,
+    slideText: "",
+    slideType: "",
+  },
+  120: {
+    id: 120,
+    slideText: "",
+    slideType: "",
+  },
+  121: {
+    id: 121,
+    slideText: "",
+    slideType: "",
+  },
+  122: {
+    id: 122,
+    slideText: "",
+    slideType: "",
+  },
+  123: {
+    id: 123,
+    slideText: "",
+    slideType: "",
+  },
+  124: {
+    id: 124,
+    slideText: "",
+    slideType: "",
+  },
+  125: {
+    id: 125,
+    slideText: "",
+    slideType: "",
   },
 };
 

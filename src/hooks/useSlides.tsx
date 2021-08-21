@@ -22,11 +22,21 @@ type SubmitSlide = {
   type: "submit_slide";
   payload: { type: string; answer: Answer };
 };
+type SubmitSelectionSlide = {
+  type: "submit_selection_slide";
+  payload: { type: string; answer: Answer; newSlide: number };
+};
 type Reset = {
   type: "reset";
 };
 
-type Action = SetUser | SetSchueler | SetSlides | SubmitSlide | Reset;
+type Action =
+  | SetUser
+  | SetSchueler
+  | SetSlides
+  | SubmitSlide
+  | SubmitSelectionSlide
+  | Reset;
 
 type Dispatch = (action: Action) => void;
 
@@ -80,6 +90,19 @@ function slidesReducer(state: State, action: Action) {
             state?.slideSelection[
               state.slideSelection?.indexOf(state.activeSlide) + 1
             ],
+        };
+      } else {
+        return {
+          ...state,
+        };
+      }
+    }
+    case "submit_selection_slide": {
+      if (state.slideSelection && state.activeSlide) {
+        state.answers[action.payload.type] = action.payload.answer;
+        return {
+          ...state,
+          activeSlide: action.payload.newSlide,
         };
       } else {
         return {
