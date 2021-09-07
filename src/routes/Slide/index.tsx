@@ -25,6 +25,10 @@ import QuestionTextInput from "../QuestionTextInput";
 import SlideSelfEvaluation from "../SlideSelfEvaluation";
 import SlideSelfEvaluationGroup2 from "../SlideSelfEvaluationGroup2";
 import SlideSelectCriteria from "../SlideSelectCriteria";
+import SlideCriteriaImprovement106 from "../SlideCriteriaImprovement106";
+import SlideCriteriaImprovement107 from "../SlideCriteriaImprovement107";
+import SlideCriteriaImprovement110 from "../SlideCriteriaImprovement110";
+import SlideCriteriaImprovement111 from "../SlideCriteriaImprovement111";
 
 const typeIntro: number[] = [
   1,
@@ -108,6 +112,18 @@ const typeRange: number[] = [
   100,
   102,
   103,
+  108,
+  109,
+  112,
+  113,
+  116,
+  117,
+  120,
+  121,
+  124,
+  125,
+  128,
+  129,
 ];
 const ideaUnitsTypeOne: number[] = [];
 const ideaUnitsTypeTwo: number[] = [];
@@ -159,6 +175,42 @@ function Slide(slide: SlideInterface) {
           slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Content" ? (
+        <SlideCriteriaImprovement106
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Content_1" ? (
+        <SlideCriteriaImprovement107
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Formal" ? (
+        <SlideCriteriaImprovement110
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Formal_1" ? (
+        <SlideCriteriaImprovement111
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
         />
       ) : typeCriteriaRightWrong.includes(slide.id) ? (
         <SlideCriteriaRightWrong

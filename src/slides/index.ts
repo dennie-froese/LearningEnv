@@ -1135,70 +1135,89 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   106: {
     id: 106,
+    header:
+      "Versuche nachzuvollziehen, warum das Beispiel das Kriterium „Inhalt“ voll erfüllt.",
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ nun mit den folgenden Beispielen ab.",
-    slideType: "GWG_g1_1",
-    header: "Konzept „Gerechte-Welt-Glaube”",
-    negativeExamples: [
-      "Julia wird im Supermarkt von einem älteren Mann angerempelt, woraufhin ihr ihre Einkäufe herunterfallen. Sie redet sich ein, dass dieser sie bestimmt nicht gesehen habe und eigentlich einen guten Kern habe. Dabei hat der Mann Julia sogar gesehen, ihm war es aber egal, weil er schnell zur Kasse wollte.",
-      "Can geht es seit Antritt seiner neuen Stelle finanziell sehr gut. Sein Freund Jona dagegen beklagt sich bei ihm, weil er selber Geringverdiener ist. Can ist der Meinung, dass Jona selber daran schuld ist, denn er könnte sich ja einen anderen, besser bezahlten Job suchen.",
+      "Versuche nachzuvollziehen, warum das Beispiel das Kriterium „Inhalt“ voll erfüllt.",
+    slideType: "Criteria_Improvement_Content",
+    criteriaIntroUnits: [
+      "1. Die Beschreibung des untersuchten Problems/der Frage",
+      "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
+      "3. Die Methode, mit der geforscht wurde",
+      "4. Die zentralen Ergebnisse",
+      "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können",
     ],
-    expertExamples: [
-      "Laura streitet sich mit ihrer Mutter. Sie hat erneut ihr Zimmer nicht aufgeräumt, will aber jetzt zur Stufenparty fahren, obwohl ihre Mutter sie darum bittet, vorher ihr Zimmer in Ordnung zu bringen. Laura ignoriert die Bitte und steigt auf ihr Fahrrad. Auf der Hälfte der Strecke übersieht sie einen Bordstein und stürzt. Ihre Knie und Hände sind aufgeschürft. Laura ist sich sicher, dass sie diesen Unfall hätte vorhersehen können, da sie es verdient hatte, hinzufallen, weil sie ihr Zimmer nicht aufgeräumt und sich mit ihrer Mutter gestritten hatte. Laura ist der festen Überzeugung, dass der Unfall ihr zu Recht geschehen ist.",
-      "In der Grundschule zeigt Simon stets vorbildliches Verhalten. Er beteiligt sich am Unterricht, hilft seinen Mitschülern und respektiert die Lehrer. Zum Ende des Schuljahres erhält Simon dafür eine Auszeichnung als „bester Schüler des Jahres“. Seine Eltern waren sich schon immer sicher, dass Simon diese Auszeichnung für sein Verhalten verdient hat und es nur gerecht sei, dass sein vorbildliches Verhalten belohnt wird.",
+    criteriaExamples: [
+      "Die Studie untersucht, wie viele Kinder und Jugendliche gewalthaltige Computerspiele spielen und ob ein Zusammenhang zwischen dem Spielen und Aggressionen besteht.",
+      "An einem Gymnasium wurden 387 Kinder und Jugendliche zu der Häufigkeit und den Motiven ihrer Nutzung von gewalthaltigen Computerspielen mittels zweier Fragebogen befragt.",
+      "Die gesammelten Ergebnisse zeigten ein sehr hohes Nutzungsverhalten bei den männlichen Teilnehmern, gleichzeitig jedoch ebenso ein erhöhtes Nutzungsverhalten bei den weiblichen TeilnehmerInnen. Spielfreude, Langeweile und Stressabbau konnten durch die Fragebögen als Motive für die Nutzung festgestellt werden.",
+      " Das Wissen über das hohe Mediennutzungsverhalten der TeilnehmerInnen stellt die Grundlage für eine weiterreichende Forschung dar, durch welche Methoden zur Vermittlung von Medienkompetenz ermittelt werden können",
     ],
   },
   107: {
     id: 107,
     slideText: "",
-    slideType: "",
+    slideType: "Criteria_Improvement_Content_1",
+    header:
+      "Versuche nachzuvollziehen, warum das Beispiel das Kriterium „Inhalt“ überhaupt nicht erfüllt.",
+    criteriaIntroUnits: [
+      "1. Die Beschreibung des untersuchten Problems/der Frage: Hier wird die Forschungsfrage nicht genannt! Es wird nur grob das Thema umrissen, das ist nicht genau genug.",
+      "2. Die Versuchsobjekte oder Datengrundlage (Merkmale): die Anzahl der TeilnehmerInnen ist falsch. Außerdem ist diese Angabe auch zu ungenau, es nahmen sowohl Kinder als auch Jugendliche teil.",
+      "3. Die Methode, mit der geforscht wurde: Die Methode der Interviews wurde nicht verwendet. Die Formulierung „so Fragen beantwortet“ ist zu ungenau.",
+      "4. Die zentralen Ergebnisse: Die Ergebnisse wurden falsch wiedergegeben (männlcihe wie weibliche TeilnehmerInnen zeigten erhöhtes Nutzungsverhalten).",
+      "5. Ein Fazit und die wichtigsten Schlüsse, die gezogen werden können: falsches Fazit. Weitere Tests, warum die männlichen Teilnehmer weniger spielen, sind nicht das Ziel von weiteren Studien.",
+    ],
   },
   108: {
     id: 108,
-    slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den beiden hier dargestellten Beispielen ab.",
-    slideType: "GWG_g2",
-    header: "Konzept „Gerechte-Welt-Glaube”",
-    negativeExamples: [
-      "Julia wird im Supermarkt von einem älteren Mann angerempelt, woraufhin ihr ihre Einkäufe herunterfallen. Sie redet sich ein, dass dieser sie bestimmt nicht gesehen habe und eigentlich einen guten Kern habe. Dabei hat der Mann Julia sogar gesehen, ihm war es aber egal, weil er schnell zur Kasse wollte.",
-      "Can geht es seit Antritt seiner neuen Stelle finanziell sehr gut. Sein Freund Jona dagegen beklagt sich bei ihm, weil er selber Geringverdiener ist. Can ist der Meinung, dass Jona selber daran schuld ist, denn er könnte sich ja einen anderen, besser bezahlten Job suchen.",
-    ],
+    slideText: "Wie leicht oder schwer fiel es Dir, das Beispiel zu verstehen?",
+    slideType: "Criteria_Improvement_Content_Likert_1",
   },
   109: {
     id: 109,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ mit den beiden hier dargestellten Expertenbeispielen ab.",
-    slideType: "GWG_g3",
-    header: "Konzept „Gerechte-Welt-Glaube”",
-    expertExamples: [
-      "Laura streitet sich mit ihrer Mutter. Sie hat erneut ihr Zimmer nicht aufgeräumt, will aber jetzt zur Stufenparty fahren, obwohl ihre Mutter sie darum bittet, vorher ihr Zimmer in Ordnung zu bringen. Laura ignoriert die Bitte und steigt auf ihr Fahrrad. Auf der Hälfte der Strecke übersieht sie einen Bordstein und stürzt. Ihre Knie und Hände sind aufgeschürft. Laura ist sich sicher, dass sie diesen Unfall hätte vorhersehen können, da sie es verdient hatte, hinzufallen, weil sie ihr Zimmer nicht aufgeräumt und sich mit ihrer Mutter gestritten hatte. Laura ist der festen Überzeugung, dass der Unfall ihr zu Recht geschehen ist.",
-      "In der Grundschule zeigt Simon stets vorbildliches Verhalten. Er beteiligt sich am Unterricht, hilft seinen Mitschülern und respektiert die Lehrer. Zum Ende des Schuljahres erhält Simon dafür eine Auszeichnung als „bester Schüler des Jahres“. Seine Eltern waren sich schon immer sicher, dass Simon diese Auszeichnung für sein Verhalten verdient hat und es nur gerecht sei, dass sein vorbildliches Verhalten belohnt wird.",
-    ],
+      "Beim Bearbeiten des Beispiels war meine geistige Denk-Anstrengung…",
+    slideType: "Criteria_Improvement_Content_Likert_2",
   },
   110: {
     id: 110,
-    slideText: "Bitte bewerte nun Dein Beispiel.",
-    slideType: "GWG_g4",
-    header: "Konzept „Gerechte-Welt-Glaube”",
+    header:
+      "Versuche nachzuvollziehen, warum das Beispiel das Kriterium „Formales“ voll erfüllt.",
+    slideText:
+      "Versuche nachzuvollziehen, warum das Beispiel das Kriterium „Formales“ voll erfüllt.",
+    slideType: "Criteria_Improvement_Formal",
+    criteriaIntroUnits: [
+      "1. Maximale Wortanzahl: 250 Wörter: dieses Abstract hat 107 Wörter",
+      "2. Schreiben in ganzen Sätzen: hier findest du keine Stichpunkte o.Ä.",
+      "3. Keine Verwendung der Ich-Form: hier findest du keine Verwendung der Ich-Form, sondern nur die der 3. Person",
+    ],
+    criteriaExamples: [
+      "Die Studie untersucht, wie viele Kinder und Jugendliche gewalthaltige Computerspiele spielen und ob ein Zusammenhang zwischen dem Spielen und Aggressionen besteht. \n\nAn einem Gymnasium wurden 387 Kinder und Jugendliche zu der Häufigkeit und den Motiven ihrer Nutzung von gewalthaltigen Computerspielen mittels zweier Fragebogen befragt. \n\nDie gesammelten Ergebnisse zeigten ein sehr hohes Nutzungsverhalten bei den männlichen Teilnehmern, gleichzeitig jedoch ebenso ein erhöhtes Nutzungsverhalten bei den weiblichen TeilnehmerInnen. Spielfreude, Langeweile und Stressabbau konnten durch die Fragebögen als Motive für die Nutzung festgestellt werden.\n\nDas Wissen über das hohe Mediennutzungsverhalten der TeilnehmerInnen stellt die Grundlage für eine weiterreichende Forschung dar, durch welche Methoden zur Vermittlung von Medienkompetenz ermittelt werden können.",
+    ],
   },
   111: {
     id: 111,
+    header:
+      "Versuche nachzuvollziehen, warum das Beispiel das Kriterium „Formales“ überhaupt nicht erfüllt.",
     slideText:
-      "Das Einschätzen der Qualität meines Beispiels zum Konzept „Gerechte-Welt-Glaube“ fiel mir…",
-    slideType: "Beispiel_GWG3",
+      "Versuche nachzuvollziehen, warum das Beispiel das Kriterium „Formales“ überhaupt nicht erfüllt.",
+    slideType: "Criteria_Improvement_Formal_1",
+    criteriaIntroUnits: [
+      "1. Maximale Wortanzahl: 250 Wörter: dieses Abstract hat 266 Wörter und ist damit viel zu lang",
+      "2. Schreiben in ganzen Sätzen: in diesem Abstract findest du Stichpunkte",
+      "3. Keine Verwendung der Ich-Form: im gesamten Abstract wird die 1. Person genutzt",
+    ],
   },
   112: {
     id: 112,
-    slideText:
-      "Beim Einschätzen der Qualität meines Beispiels zum Konzept „Gerechte-Welt-Glaube“ war meine geistige Denkanstrengung…",
-    slideType: "Beispiel_GWG4",
+    slideText: "Wie leicht oder schwer fiel es Dir, das Beispiel zu verstehen?",
+    slideType: "Criteria_Improvement_Formal_Likert_1",
   },
   113: {
     id: 113,
     slideText:
-      "Damit wir Dir die Aufwandsentschädigung zahlen können, möchten wir Dich noch bitten, Angaben zu Deiner Bankverbindung zu machen. Bitte beachte, dass diese Daten selbstverständlich nur zu Überweisungszwecken gespeichert und nach Auszahlung der Vergütung umgehend gelöscht werden.",
-    slideType: "Ende",
-    header: "Du bist nun am Ende der Studie angekommen.",
+      "Beim Bearbeiten des Beispiels war meine geistige Denk-Anstrengung…",
+    slideType: "Criteria_Improvement_Formal_Likert_2",
   },
   114: {
     id: 114,

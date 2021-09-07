@@ -30,12 +30,29 @@ function QuestionRange({ questionNumber, question, type }: Props) {
     96,
     99,
     102,
+    108,
+    112,
   ].includes(questionNumber)
     ? "Sehr leicht"
     : "Sehr niedrig";
-  const to = [58, 63, 68, 71, 74, 77, 80, 83, 87, 90, 93, 96, 99, 102].includes(
-    questionNumber
-  )
+  const to = [
+    58,
+    63,
+    68,
+    71,
+    74,
+    77,
+    80,
+    83,
+    87,
+    90,
+    93,
+    96,
+    99,
+    102,
+    108,
+    112,
+  ].includes(questionNumber)
     ? "Sehr schwer"
     : "Sehr hoch";
   const [error, setError] = useState("");
