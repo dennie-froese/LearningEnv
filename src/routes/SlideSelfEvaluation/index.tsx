@@ -72,31 +72,37 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
   useEffect(() => {
     switch (slideNumber) {
       case 67:
+      case 134:
         setAspects(aspectsContent);
         setImage(Content);
         setCriteria("„Inhalt“");
         break;
       case 70:
+      case 137:
         setAspects(aspectsFormal);
         setImage(Formal);
         setCriteria("„Formales“");
         break;
       case 73:
+      case 140:
         setAspects(aspectsOrtographie);
         setImage(Satzbau);
         setCriteria("„Satzbau“");
         break;
       case 76:
+      case 143:
         setAspects(aspectsScientific);
         setImage(Scientific);
         setCriteria("„Wissenschaftlicher Stil“");
         break;
       case 79:
+      case 146:
         setAspects(aspectsOrganisation);
         setImage(Organisation);
         setCriteria("„Organisation“");
         break;
       case 82:
+      case 149:
         setAspects(aspectsStructure);
         setImage(Structure);
         setCriteria("„Aufbau“");
@@ -168,9 +174,22 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
               alt=""
             />
           </div>
-          <div className="Slide-textInput-container-study">asd</div>
+          <div className="Slide-textInput-container-study">tbd</div>
         </div>
         <div className="Slide-nav">
+          {[134, 137, 140, 143, 146, 149].includes(slideNumber) && (
+            <div className="Slide-self-evaluation-box">
+              <div>{`Deine 1. Bewertung für das Kriterium ${criteria}:`}</div>
+
+              <input
+                className="Slide-self-evaluation-input"
+                //tbd
+                value={"tbd"}
+                type="text"
+                name="name"
+              />
+            </div>
+          )}
           <div className="Slide-self-evaluation-box">
             <div>{`Deine Bewertung für das Kriterium ${criteria}:`}</div>
 

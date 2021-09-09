@@ -29,6 +29,15 @@ import SlideCriteriaImprovement106 from "../SlideCriteriaImprovement106";
 import SlideCriteriaImprovement107 from "../SlideCriteriaImprovement107";
 import SlideCriteriaImprovement110 from "../SlideCriteriaImprovement110";
 import SlideCriteriaImprovement111 from "../SlideCriteriaImprovement111";
+import SlideCriteriaImprovement114 from "../SlideCriteriaImprovement114";
+import SlideCriteriaImprovement115 from "../SlideCriteriaImprovement115";
+import SlideCriteriaImprovement118 from "../SlideCriteriaImprovement118";
+import SlideCriteriaImprovement119 from "../SlideCriteriaImprovement119";
+import SlideCriteriaImprovement122 from "../SlideCriteriaImprovement122";
+import SlideCriteriaImprovement123 from "../SlideCriteriaImprovement123";
+import SlideCriteriaImprovement126 from "../SlideCriteriaImprovement126";
+import SlideCriteriaImprovement127 from "../SlideCriteriaImprovement127";
+import QuestionTextInputCorrection from "../QuestionTextInputCorrection";
 
 const typeIntro: number[] = [
   1,
@@ -74,14 +83,41 @@ const typeCriteriaRightWrong: number[] = [38, 39];
 const typeCriteriaAllGreenRed: number[] = [45, 46, 49, 50];
 
 const typeAbstractTable: number[] = [22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-const typeIntroWithHeader: number[] = [55, 61, 66, 85, 104];
+const typeIntroWithHeader: number[] = [55, 61, 66, 85, 104, 133, 152];
 const typeNachangaben: number[] = [9, 10];
 
-const typeSelfEvaluation: number[] = [67, 70, 73, 76, 79, 82];
-const typeSelfEvaluationGroup2: number[] = [86, 89, 92, 95, 98, 101];
+const typeSelfEvaluation: number[] = [
+  67,
+  70,
+  73,
+  76,
+  79,
+  82,
+  134,
+  137,
+  140,
+  143,
+  146,
+  149,
+];
+const typeSelfEvaluationGroup2: number[] = [
+  86,
+  89,
+  92,
+  95,
+  98,
+  101,
+  153,
+  156,
+  159,
+  162,
+  165,
+  168,
+];
 
 const typeTextinputWithHeader: number[] = [];
 const typeTextinput: number[] = [62];
+const typeTextinputCorrection: number[] = [130];
 const typeRange: number[] = [
   57,
   58,
@@ -124,6 +160,32 @@ const typeRange: number[] = [
   125,
   128,
   129,
+  131,
+  132,
+  135,
+  136,
+  138,
+  139,
+  141,
+  142,
+  144,
+  145,
+  147,
+  148,
+  150,
+  151,
+  154,
+  155,
+  157,
+  158,
+  160,
+  161,
+  163,
+  164,
+  166,
+  167,
+  169,
+  170,
 ];
 const ideaUnitsTypeOne: number[] = [];
 const ideaUnitsTypeTwo: number[] = [];
@@ -212,6 +274,78 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
+      ) : slide.slideType === "Criteria_Improvement_Orthographie" ? (
+        <SlideCriteriaImprovement114
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Orthographie_1" ? (
+        <SlideCriteriaImprovement115
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Scientific" ? (
+        <SlideCriteriaImprovement118
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Scientific_1" ? (
+        <SlideCriteriaImprovement119
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Organisation" ? (
+        <SlideCriteriaImprovement122
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Organisation_1" ? (
+        <SlideCriteriaImprovement123
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Structure" ? (
+        <SlideCriteriaImprovement126
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
+      ) : slide.slideType === "Criteria_Improvement_Structure_1" ? (
+        <SlideCriteriaImprovement127
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          criteriaIntroUnits={slide.criteriaIntroUnits}
+          criteriaExamples={slide.criteriaExamples}
+          header={slide.header}
+        />
       ) : typeCriteriaRightWrong.includes(slide.id) ? (
         <SlideCriteriaRightWrong
           slideText={slide.slideText}
@@ -288,6 +422,11 @@ function Slide(slide: SlideInterface) {
         />
       ) : typeTextinput.includes(slide.id) ? (
         <QuestionTextInput questionNumber={slide.id} type={slide.slideType} />
+      ) : typeTextinputCorrection.includes(slide.id) ? (
+        <QuestionTextInputCorrection
+          questionNumber={slide.id}
+          type={slide.slideType}
+        />
       ) : typeRange.includes(slide.id) ? (
         <QuestionRange
           question={slide.slideText}

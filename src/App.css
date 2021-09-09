@@ -362,6 +362,19 @@
   margin: 1%;
 }
 
+.Slide-criteria-units-text-box-white {
+  text-align: center;
+  font-size: calc(16px + 1vmin);
+  color: black;
+  white-space: pre-wrap;
+  border-style: solid;
+  border-color: white;
+  margin: 1%;
+  padding: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
 .Slide-criteria-units-text-box-yellow {
   text-align: center;
   font-size: calc(16px + 1vmin);
@@ -688,6 +701,7 @@
   border-style: solid;
   border-color: black;
   padding: 1%;
+  margin-right: 1%;
 }
 
 .Slide-self-evaluation-input {
