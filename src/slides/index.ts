@@ -1475,84 +1475,112 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   154: {
     id: 154,
-    slideText: "",
+    slideText:
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “Inhalt” zu bewerten?",
     slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content_Likert",
   },
   155: {
     id: 155,
-    slideText: "",
+    slideText:
+      "Beim Bewerten meines Abstracts zum Kriterium “Inhalt” war meine geistige Denk-Anstrengung…",
     slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content_Likert_1",
   },
   156: {
     id: 156,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Formales“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Formal",
   },
   157: {
     id: 157,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “Formales” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Formal_Likert",
   },
   158: {
     id: 158,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Beim Bewerten meines Abstracts zum Kriterium “Formales” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Formal_Likert_1",
   },
   159: {
     id: 159,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Orthographie und Grammatik“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Ortography",
   },
   160: {
     id: 160,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “Orthographie und Grammatik” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Ortography_Likert",
   },
   161: {
     id: 161,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Beim Bewerten meines Abstracts zum Kriterium “Orthographie und Grammatik” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Ortography_Likert_1",
   },
   162: {
     id: 162,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „wissenschaftlicher Stil“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Scientific",
   },
   163: {
     id: 163,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “wissenschaftlicher Stil” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Scientific_Likert",
   },
   164: {
     id: 164,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Beim Bewerten meines Abstracts zum Kriterium “wissenschaftlicher Stil” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Scientific_Likert_1",
   },
   165: {
     id: 165,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Organisation des Textes“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Organisation",
   },
   166: {
     id: 166,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Wie leicht oder schwer fiel es dir, dein Abstract zum Kriterium “Organisation des Textes” zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Organisation_Likert",
   },
   167: {
     id: 167,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Beim Bewerten meines Abstracts zum Kriterium “Organisation des Textes” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Organisation_Likert_1",
   },
   168: {
     id: 168,
-    slideText: "",
-    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Content",
+    slideText:
+      "Bitte bewerte hier dein Abstract nach dem Kriterium „Aufbau“ und trage im Eingabefeld deine Bewertung ein.",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Structure",
   },
-  169: { id: 169, slideText: "", slideType: "" },
-  170: { id: 170, slideText: "", slideType: "" },
-  171: { id: 171, slideText: "", slideType: "" },
-  172: { id: 172, slideText: "", slideType: "" },
-  173: { id: 173, slideText: "", slideType: "" },
+  169: {
+    id: 169,
+    slideText:
+      "Wie leicht oder schwer fiel es dir, dein Abstracts zum Kriterium “Aufbau”zu bewerten?",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Structure_Likert",
+  },
+  170: {
+    id: 170,
+    slideText:
+      "Beim Bewerten meines Abstracts zum Kriterium “Aufbau” war meine geistige Denk-Anstrengung…",
+    slideType: "SelfEvaluation_Abstract_Corrected_Group2_Structure_Likert_1",
+  },
+  171: {
+    id: 171,
+    slideText: "Du kannst die Website nun schließen.",
+    header: "Vielen Dank für Deine Teilnahme an dieser Studie!",
+    slideType: "Ende",
+  },
 };
 
 export default Slides;

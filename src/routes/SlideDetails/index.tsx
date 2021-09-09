@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { inputValidationOff } from "../../App";
 import { saveToDatabase } from "../../firebase/firebase";
 import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
@@ -22,6 +22,12 @@ function SlideDetails({ slideText, slideNumber, type, header }: Props) {
   const context = useSlidesState();
   const { launchTime, restart } = useTimer();
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    context?.user &&
+      dispatch &&
+      saveToDatabase(context?.user, context?.answers);
+  }, [context?.answers, context?.user, dispatch]);
 
   const finish = () => {
     if (
@@ -47,11 +53,6 @@ function SlideDetails({ slideText, slideNumber, type, header }: Props) {
             },
           },
         });
-      context?.user &&
-        dispatch &&
-        saveToDatabase(context?.user, context?.answers).then(() =>
-          dispatch({ type: "reset" })
-        );
       setName("");
       restart();
     } else {
@@ -66,68 +67,7 @@ function SlideDetails({ slideText, slideNumber, type, header }: Props) {
           <p>{header}</p>
           <p className="Slide-text">{slideText}</p>
         </div>
-        <form className="Form-details">
-          <div className="Form-details-row">
-            <label>Name:</label>
-            <input
-              className="Form-details-input"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              name="name"
-            />
-          </div>
-          <div className="Form-details-row">
-            <label>Adresse:</label>
-            <input
-              className="Form-details-input"
-              value={details1}
-              onChange={(e) => setDetails1(e.target.value)}
-              type="text"
-              name="name"
-            />
-          </div>
-          <p></p>
-          <div className="Form-details-row">
-            <label>Name des Kontoinhabers:</label>
-            <input
-              className="Form-details-input"
-              value={details2}
-              onChange={(e) => setDetails2(e.target.value)}
-              type="text"
-              name="name"
-            />
-          </div>
-          <div className="Form-details-row">
-            <label>Bankinstitut:</label>
-            <input
-              className="Form-details-input"
-              value={details3}
-              onChange={(e) => setDetails3(e.target.value)}
-              type="text"
-              name="name"
-            />
-          </div>
-          <div className="Form-details-row">
-            <label>IBAN:</label>
-            <input
-              className="Form-details-input"
-              value={details4}
-              onChange={(e) => setDetails4(e.target.value)}
-              type="text"
-              name="name"
-            />
-          </div>
-          <div className="Form-details-row">
-            <label>BIC:</label>
-            <input
-              className="Form-details-input"
-              value={details5}
-              onChange={(e) => setDetails5(e.target.value)}
-              type="text"
-              name="name"
-            />
-          </div>
-        </form>
+
         <div className="Slide-nav">
           <p className="Error-text" style={{ paddingRight: 20 }}>
             {error}

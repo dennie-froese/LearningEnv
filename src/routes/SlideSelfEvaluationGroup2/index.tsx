@@ -66,26 +66,32 @@ function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
   useEffect(() => {
     switch (slideNumber) {
       case 86:
+      case 153:
         setAspects(aspectsContent);
         setCriteria("Inhalt");
         break;
       case 89:
+      case 156:
         setAspects(aspectsFormal);
         setCriteria("Formales");
         break;
       case 92:
+      case 159:
         setAspects(aspectsOrtographie);
         setCriteria("Orthographie und Grammatik");
         break;
       case 95:
+      case 162:
         setAspects(aspectsScientific);
         setCriteria("Wissenschaftlicher Stil");
         break;
       case 98:
+      case 165:
         setAspects(aspectsOrganisation);
         setCriteria("Organisation");
         break;
       case 101:
+      case 168:
         setAspects(aspectsStructure);
         setCriteria("Aufbau");
         break;
@@ -159,6 +165,18 @@ function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
           </div>
         </div>
         <div className="Slide-nav">
+          {[153, 156, 159, 162, 165, 168].includes(slideNumber) && (
+            <div className="Slide-self-evaluation-box">
+              <div>{`Deine 1. Bewertung für das Kriterium ${criteria}:`}</div>
+
+              <input
+                className="Slide-self-evaluation-input"
+                value={"tbd"}
+                type="text"
+                name="name"
+              />
+            </div>
+          )}
           <div className="Slide-self-evaluation-box">
             <div>{`Deine Bewertung:`}</div>
 
