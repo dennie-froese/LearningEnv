@@ -4,16 +4,12 @@ import Slides from "./../slides";
 export default function provideSlides(condition: number) {
   const SLIDES_SELECTIONS = [
     [
-      // 1,
-      // 2,
-      // 3,
       4,
       5,
       7,
       8,
-      // 9,
-      10,
-      11,
+      // 10,
+      // 11,
       // 12,
       // 13,
       // 14,
@@ -138,9 +134,6 @@ export default function provideSlides(condition: number) {
       171,
     ],
     [
-      // 1,
-      // 2,
-      // 3,
       // 4,
       5,
       // 7,
@@ -272,14 +265,10 @@ export default function provideSlides(condition: number) {
       171,
     ],
     [
-      // 1,
-      // 2,
-      // 3,
       // 4,
       5,
       // 7,
       // 8,
-      // // 9,
       // 10,
       // 11,
       // 12,
@@ -407,9 +396,6 @@ export default function provideSlides(condition: number) {
       171,
     ],
     [
-      // 1,
-      // 2,
-      // 3,
       // 4,
       5,
       // 7,
