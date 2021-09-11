@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { inputValidationOff } from "../../App";
-import { useSlidesDispatch } from "../../hooks/useSlides";
+import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 import { Study } from "../SlideTimer";
 
@@ -10,7 +10,11 @@ interface Props {
 }
 
 function QuestionTextInputCorrection({ questionNumber, type }: Props) {
-  const [input, setInput] = useState<string>("");
+  const context = useSlidesState();
+  const [input, setInput] = useState<string>(
+    context?.answers?.Abstract_Writing_2?.Text_Attribution || ""
+  );
+
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
 

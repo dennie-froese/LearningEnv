@@ -109,8 +109,17 @@
 .Slide-textInput-container-study {
   width: 40vw;
   height: 50vh;
-  padding: 2%;
-  overflow-y: auto;
+  padding: 1%;
+  overflow-y: scroll;
+  font-size: calc(12px + 1vmin);
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.Slide-textInput-container-study-left {
+  width: 40vw;
+  height: 50vh;
+  padding: 1%;
 }
 
 .Slide-header {

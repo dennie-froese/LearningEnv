@@ -163,7 +163,7 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
           <div className="Slide-text-l">{slideText}</div>
         </div>
         <div className="Slide-textInput-container">
-          <div>
+          <div className="Slide-textInput-container-study-left">
             <div>Aspekte des Kriteriums</div>
             {aspects.map((aspect) => (
               <div className="Slide-self-evaluation-aspects">{aspect}</div>
@@ -174,7 +174,9 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
               alt=""
             />
           </div>
-          <div className="Slide-textInput-container-study">tbd</div>
+          <div className="Slide-textInput-container-study">
+            {context?.answers?.Abstract_Writing_2?.Text_Attribution}
+          </div>
         </div>
         <div className="Slide-nav">
           {[134, 137, 140, 143, 146, 149].includes(slideNumber) && (

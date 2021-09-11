@@ -39,7 +39,7 @@ function SlideSelectCriteria({ slideText, type }: Props) {
 
     if (dispatch && launchTime && choice) {
       dispatch({
-        type: "submit_selection_slide",
+        type: "jump_to_slide",
         payload: {
           type,
           newSlide: newSlide,

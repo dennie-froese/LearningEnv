@@ -22,8 +22,8 @@ type SubmitSlide = {
   type: "submit_slide";
   payload: { type: string; answer: Answer };
 };
-type SubmitSelectionSlide = {
-  type: "submit_selection_slide";
+type JumptToSlide = {
+  type: "jump_to_slide";
   payload: { type: string; answer: Answer; newSlide: number };
 };
 type Reset = {
@@ -35,7 +35,7 @@ type Action =
   | SetSchueler
   | SetSlides
   | SubmitSlide
-  | SubmitSelectionSlide
+  | JumptToSlide
   | Reset;
 
 type Dispatch = (action: Action) => void;
@@ -97,7 +97,7 @@ function slidesReducer(state: State, action: Action) {
         };
       }
     }
-    case "submit_selection_slide": {
+    case "jump_to_slide": {
       if (state.slideSelection && state.activeSlide) {
         state.answers[action.payload.type] = action.payload.answer;
         return {
