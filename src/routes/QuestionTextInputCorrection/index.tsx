@@ -79,7 +79,7 @@ function QuestionTextInputCorrection({ questionNumber, type }: Props) {
             }}
           />
           <div className="Slide-textInput-container-study">
-            <Study />
+            <div>Welche 2 Beispiele sollen hier angezeigt werden?</div>
           </div>
         </div>
       </div>

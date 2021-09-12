@@ -212,7 +212,7 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
         />
-      ) : slide.slideType === "Study_Timer" ? (
+      ) : slide.slideType === "Abstract_Schreiben_Timer" ? (
         <SlideTimer
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -232,13 +232,13 @@ function Slide(slide: SlideInterface) {
           type={slide.slideType}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Selection" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Auswahl" ? (
         <SlideSelectCriteria
           slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}
         />
-      ) : slide.slideType === "Criteria_Improvement_Content" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Inhalt" ? (
         <SlideCriteriaImprovement106
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -247,7 +247,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Content_1" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Inhalt_1" ? (
         <SlideCriteriaImprovement107
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -256,7 +256,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Formal" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Formales" ? (
         <SlideCriteriaImprovement110
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -265,7 +265,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Formal_1" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Formales_1" ? (
         <SlideCriteriaImprovement111
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -274,7 +274,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Orthographie" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Orthographie" ? (
         <SlideCriteriaImprovement114
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -283,7 +283,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Orthographie_1" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Orthographie_1" ? (
         <SlideCriteriaImprovement115
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -292,7 +292,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Scientific" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Wissenschaftlich" ? (
         <SlideCriteriaImprovement118
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -301,7 +301,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Scientific_1" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Wissenschaftlich_1" ? (
         <SlideCriteriaImprovement119
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -310,7 +310,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Organisation" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Text_Organisation" ? (
         <SlideCriteriaImprovement122
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -319,7 +319,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Organisation_1" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Text_Organisation_1" ? (
         <SlideCriteriaImprovement123
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -328,7 +328,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Structure" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Aufbau" ? (
         <SlideCriteriaImprovement126
           slideText={slide.slideText}
           slideNumber={slide.id}
@@ -337,7 +337,7 @@ function Slide(slide: SlideInterface) {
           criteriaExamples={slide.criteriaExamples}
           header={slide.header}
         />
-      ) : slide.slideType === "Criteria_Improvement_Structure_1" ? (
+      ) : slide.slideType === "Kriteriurm_Verbesserung_Aufbau_1" ? (
         <SlideCriteriaImprovement127
           slideText={slide.slideText}
           slideNumber={slide.id}
