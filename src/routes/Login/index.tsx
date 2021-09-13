@@ -4,9 +4,9 @@ import { useSlidesDispatch } from "../../hooks/useSlides";
 import { users } from "../../logins";
 
 function Login() {
-  const [user, setUser] = useState("199");
+  const [user, setUser] = useState("");
   const [error, setError] = useState("");
-  const [mail, setMail] = useState("test@test.com");
+  const [mail, setMail] = useState("");
   const dispatch = useSlidesDispatch();
   const history = useHistory();
 
