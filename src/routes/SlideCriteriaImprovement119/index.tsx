@@ -43,9 +43,9 @@ function SlideCriteriaImprovement119({
   return (
     <div className="Slide">
       <div className="Slide-container">
-        <div className="Slide-main">
-          <div>{header}</div>
+        <div className="Slide-header-small">{header}</div>
 
+        <div className="Slide-main">
           <div className="Slide-criteria-units-row-yellow">
             <p className="Slide-label-l">
               1. Ich schreibe für meine Leser verständlich: hier erfährt der

@@ -43,9 +43,9 @@ function SlideCriteriaImprovement115({
   return (
     <div className="Slide">
       <div className="Slide-container">
-        <div className="Slide-main">
-          <div>{header}</div>
+        <div className="Slide-header-small">{header}</div>
 
+        <div className="Slide-main">
           <div className="Slide-criteria-units-row-1">
             <p className="Slide-label-l">
               Orthographisch und grammatisch korrekt schreiben: hier findest du

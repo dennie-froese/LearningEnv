@@ -43,8 +43,9 @@ function SlideCriteriaImprovement110({
   return (
     <div className="Slide">
       <div className="Slide-container">
+        <div className="Slide-header-small">{header}</div>
+
         <div className="Slide-main">
-          <div>{header}</div>
           {criteriaIntroUnits && criteriaIntroUnits[0] && (
             <div className="Slide-criteria-units-row-yellow">
               <p className="Slide-label-l">{criteriaIntroUnits[0]}</p>
