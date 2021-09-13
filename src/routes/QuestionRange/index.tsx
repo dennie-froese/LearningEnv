@@ -107,14 +107,6 @@ function QuestionRange({ questionNumber, question, type }: Props) {
   const finish = () => {
     if (value || inputValidationOff) {
       if ([109, 113, 117, 121, 125, 129].includes(questionNumber)) {
-        const obj =
-          type === "Beispiel_Attribution1"
-            ? { Ausdenken_Attribution1: value?.toString() }
-            : type === "Beispiel_Attribution2"
-            ? { Ausdenken_Attribution2: value?.toString() }
-            : type === "Beispiel_Attribution3"
-            ? { Ausdenken_Attribution3: value?.toString() }
-            : null;
         setValue(0);
         dispatch &&
           launchTime &&
@@ -122,22 +114,17 @@ function QuestionRange({ questionNumber, question, type }: Props) {
             type: "jump_to_slide",
             payload: {
               type,
-              newSlide: 133,
-              answer: { zeit: launchTime - Date.now() },
+              newSlide: 130,
+              answer: {
+                zeit: launchTime - Date.now(),
+                antwort: value.toString(),
+              },
             },
           });
         restart();
 
         setError("");
       } else {
-        const obj =
-          type === "Beispiel_Attribution1"
-            ? { Ausdenken_Attribution1: value?.toString() }
-            : type === "Beispiel_Attribution2"
-            ? { Ausdenken_Attribution2: value?.toString() }
-            : type === "Beispiel_Attribution3"
-            ? { Ausdenken_Attribution3: value?.toString() }
-            : null;
         setValue(0);
         dispatch &&
           launchTime &&
@@ -147,7 +134,7 @@ function QuestionRange({ questionNumber, question, type }: Props) {
               type: type,
               answer: {
                 zeit: launchTime - Date.now(),
-                ...obj,
+                antwort: value.toString(),
               },
             },
           });

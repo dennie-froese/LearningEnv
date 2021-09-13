@@ -212,7 +212,7 @@ function Slide(slide: SlideInterface) {
           slideNumber={slide.id}
           type={slide.slideType}
         />
-      ) : slide.slideType === "Abstract_Schreiben_Timer" ? (
+      ) : slide.slideType === "Lesen_Studie_2" ? (
         <SlideTimer
           slideText={slide.slideText}
           slideNumber={slide.id}

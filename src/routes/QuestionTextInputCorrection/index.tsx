@@ -12,7 +12,7 @@ interface Props {
 function QuestionTextInputCorrection({ questionNumber, type }: Props) {
   const context = useSlidesState();
   const [input, setInput] = useState<string>(
-    context?.answers?.Abstract_Writing_2?.Text_Attribution || ""
+    context?.answers?.Abstract_Schreiben_Timer?.Text_Attribution || ""
   );
 
   const dispatch = useSlidesDispatch();

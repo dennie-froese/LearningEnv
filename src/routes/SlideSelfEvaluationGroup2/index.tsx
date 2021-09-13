@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { inputValidationOff } from "../../App";
-import { useSlidesDispatch } from "../../hooks/useSlides";
+import { useSlidesDispatch, useSlidesState } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 
 interface Props {
@@ -58,8 +58,11 @@ const aspectsStructure = [
 function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
   const [input, setInput] = useState<string>("");
   const dispatch = useSlidesDispatch();
+  const context = useSlidesState();
+
   const [aspects, setAspects] = useState([""]);
   const [criteria, setCriteria] = useState("");
+  const [valueFirstRound, setValueFirstRound] = useState("");
 
   const scaleValues = ["1\nsehr gut", "2", "3", "4", "5", "6\nsehr schlecht"];
 
@@ -69,59 +72,77 @@ function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
       case 153:
         setAspects(aspectsContent);
         setCriteria("Inhalt");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Inhalt?.antwort || ""
+        );
         break;
       case 89:
       case 156:
         setAspects(aspectsFormal);
         setCriteria("Formales");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Gruppe2_Formales
+            ?.antwort || ""
+        );
         break;
       case 92:
       case 159:
         setAspects(aspectsOrtographie);
         setCriteria("Orthographie und Grammatik");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Gruppe2_Orthographie
+            ?.antwort || ""
+        );
         break;
       case 95:
       case 162:
         setAspects(aspectsScientific);
         setCriteria("Wissenschaftlicher Stil");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Gruppe2_Wissenschaftlich
+            ?.antwort || ""
+        );
         break;
       case 98:
       case 165:
         setAspects(aspectsOrganisation);
         setCriteria("Organisation");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Gruppe2_Text_Organisation
+            ?.antwort || ""
+        );
         break;
       case 101:
       case 168:
         setAspects(aspectsStructure);
         setCriteria("Aufbau");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Gruppe2_Aufbau?.antwort ||
+            ""
+        );
         break;
     }
-  }, [slideNumber]);
+  }, [
+    context?.answers?.Selbstbewertung_Abstract_Gruppe2_Aufbau?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Gruppe2_Formales?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Gruppe2_Orthographie?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Gruppe2_Text_Organisation
+      ?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Gruppe2_Wissenschaftlich
+      ?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Inhalt?.antwort,
+    slideNumber,
+  ]);
 
   const { launchTime, restart } = useTimer();
   const [error, setError] = useState("");
 
   const finish = () => {
     if (input || inputValidationOff) {
-      if (["0", "1", "2", "3", "4", "5", "6"].includes(input)) {
-        const obj =
-          type === "Beispiel_Attribution0"
-            ? { example_Attribution: input }
-            : type === "Beispiel_SN0"
-            ? { example_SN: input }
-            : type === "Beispiel_Konsens0"
-            ? { example_Konsens: input }
-            : type === "Beispiel_Konsistenz0"
-            ? { example_Konsistenz: input }
-            : type === "Beispiel_Distinktheit0"
-            ? { example_Distinktheit: input }
-            : type === "Beispiel_FA0"
-            ? { example_FA: input }
-            : type === "Beispiel_SV0"
-            ? { example_SV: input }
-            : type === "Beispiel_GWG0"
-            ? { example_GWG: input }
-            : null;
+      if (
+        ["0", "1", "2", "3", "4", "5", "6"].includes(input) ||
+        inputValidationOff
+      ) {
         setInput("");
         dispatch &&
           launchTime &&
@@ -129,7 +150,7 @@ function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
             type: "submit_slide",
             payload: {
               type: type,
-              answer: { zeit: launchTime - Date.now(), ...obj },
+              answer: { zeit: launchTime - Date.now(), antwort: input },
             },
           });
         restart();
@@ -165,15 +186,19 @@ function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
           </div>
         </div>
         <div className="Slide-nav">
+          <p className="Error-text" style={{ paddingRight: 20 }}>
+            {error}
+          </p>
           {[153, 156, 159, 162, 165, 168].includes(slideNumber) && (
             <div className="Slide-self-evaluation-box">
               <div>{`Deine 1. Bewertung für das Kriterium ${criteria}:`}</div>
 
               <input
                 className="Slide-self-evaluation-input"
-                value={"tbd"}
+                value={valueFirstRound}
                 type="text"
                 name="name"
+                readOnly={true}
               />
             </div>
           )}
@@ -188,9 +213,6 @@ function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
               name="name"
             />
           </div>
-          <p className="Error-text" style={{ paddingRight: 20 }}>
-            {error}
-          </p>
           <button className="Slide-button" onClick={finish}>
             Weiter
           </button>

@@ -333,7 +333,7 @@ function SlideTimer({ slideText, slideNumber, type }: Props) {
   return (
     <div className="Slide">
       <div className="Slide-container">
-        <div className="Slide-header">
+        <div className="Slide-header-small">
           <div className="Slide-text-l">
             Timer: {minutes}:{seconds >= 10 ? seconds : `0${seconds}`}
           </div>

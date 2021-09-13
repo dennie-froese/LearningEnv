@@ -67,15 +67,6 @@ function SlideDetails({ slideText, slideNumber, type, header }: Props) {
           <p>{header}</p>
           <p className="Slide-text">{slideText}</p>
         </div>
-
-        <div className="Slide-nav">
-          <p className="Error-text" style={{ paddingRight: 20 }}>
-            {error}
-          </p>
-          <button className="Slide-button" onClick={finish}>
-            Weiter
-          </button>
-        </div>
       </div>
     </div>
   );

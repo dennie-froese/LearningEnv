@@ -68,6 +68,7 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
   const [aspects, setAspects] = useState([""]);
   const [image, setImage] = useState<string | undefined>(undefined);
   const [criteria, setCriteria] = useState("");
+  const [valueFirstRound, setValueFirstRound] = useState("");
 
   useEffect(() => {
     switch (slideNumber) {
@@ -76,64 +77,77 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
         setAspects(aspectsContent);
         setImage(Content);
         setCriteria("„Inhalt“");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Inhalt?.antwort || ""
+        );
         break;
       case 70:
       case 137:
         setAspects(aspectsFormal);
         setImage(Formal);
         setCriteria("„Formales“");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Formales?.antwort || ""
+        );
         break;
       case 73:
       case 140:
         setAspects(aspectsOrtographie);
         setImage(Satzbau);
         setCriteria("„Satzbau“");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Orthographie?.antwort || ""
+        );
         break;
       case 76:
       case 143:
         setAspects(aspectsScientific);
         setImage(Scientific);
         setCriteria("„Wissenschaftlicher Stil“");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Wissenschaftlich
+            ?.antwort || ""
+        );
         break;
       case 79:
       case 146:
         setAspects(aspectsOrganisation);
         setImage(Organisation);
         setCriteria("„Organisation“");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Text_Organisation
+            ?.antwort || ""
+        );
         break;
       case 82:
       case 149:
         setAspects(aspectsStructure);
         setImage(Structure);
         setCriteria("„Aufbau“");
+        setValueFirstRound(
+          context?.answers?.Selbstbewertung_Abstract_Aufbau?.antwort || ""
+        );
         break;
     }
-  }, [slideNumber]);
+  }, [
+    context?.answers?.Selbstbewertung_Abstract_Aufbau?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Formales?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Inhalt?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Orthographie?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Text_Organisation?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Wissenschaftlich?.antwort,
+    slideNumber,
+  ]);
 
   const { launchTime, restart } = useTimer();
   const [error, setError] = useState("");
 
   const finish = () => {
     if (input || inputValidationOff) {
-      if (["0", "1", "2", "3", "4", "5", "6"].includes(input)) {
-        const obj =
-          type === "Beispiel_Attribution0"
-            ? { example_Attribution: input }
-            : type === "Beispiel_SN0"
-            ? { example_SN: input }
-            : type === "Beispiel_Konsens0"
-            ? { example_Konsens: input }
-            : type === "Beispiel_Konsistenz0"
-            ? { example_Konsistenz: input }
-            : type === "Beispiel_Distinktheit0"
-            ? { example_Distinktheit: input }
-            : type === "Beispiel_FA0"
-            ? { example_FA: input }
-            : type === "Beispiel_SV0"
-            ? { example_SV: input }
-            : type === "Beispiel_GWG0"
-            ? { example_GWG: input }
-            : null;
+      if (
+        ["0", "1", "2", "3", "4", "5", "6"].includes(input) ||
+        inputValidationOff
+      ) {
         setInput("");
         dispatch &&
           launchTime &&
@@ -141,7 +155,7 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
             type: "submit_slide",
             payload: {
               type: type,
-              answer: { zeit: launchTime - Date.now(), ...obj },
+              answer: { zeit: launchTime - Date.now(), antwort: input },
             },
           });
         restart();
@@ -159,7 +173,7 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
   return (
     <div className="Slide">
       <div className="Slide-container">
-        <div className="Slide-header">
+        <div className="Slide-header-small">
           <div className="Slide-text-l">{slideText}</div>
         </div>
         <div className="Slide-textInput-container">
@@ -168,6 +182,7 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
             {aspects.map((aspect) => (
               <div className="Slide-self-evaluation-aspects">{aspect}</div>
             ))}
+
             <img
               className="Slide-self-evaluation-table-png"
               src={image}
@@ -175,20 +190,23 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
             />
           </div>
           <div className="Slide-textInput-container-study">
-            {context?.answers?.Abstract_Writing_2?.Text_Attribution}
+            {context?.answers?.Abstract_Schreiben_Timer?.Text_Attribution}
           </div>
         </div>
         <div className="Slide-nav">
+          <p className="Error-text" style={{ paddingRight: 20 }}>
+            {error}
+          </p>
           {[134, 137, 140, 143, 146, 149].includes(slideNumber) && (
             <div className="Slide-self-evaluation-box">
               <div>{`Deine 1. Bewertung für das Kriterium ${criteria}:`}</div>
 
               <input
                 className="Slide-self-evaluation-input"
-                //tbd
-                value={"tbd"}
+                value={valueFirstRound}
                 type="text"
                 name="name"
+                readOnly={true}
               />
             </div>
           )}
@@ -203,9 +221,6 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
               name="name"
             />
           </div>
-          <p className="Error-text" style={{ paddingRight: 20 }}>
-            {error}
-          </p>
           <button className="Slide-button" onClick={finish}>
             Weiter
           </button>
