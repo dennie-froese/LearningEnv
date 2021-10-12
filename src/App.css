@@ -100,6 +100,18 @@
   color: white;
 }
 
+.Slide-container-center {
+  background-color: #353a44;
+  min-height: 100vh;
+  min-width: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
 .Slide-textInput-container {
   padding: 1%;
   display: flex;
@@ -154,6 +166,17 @@
   color: white;
 }
 
+.Slide-main-flex-start {
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
 .Slide-abstract-main {
   width: 80vw;
   height: 40vh;
@@ -166,6 +189,18 @@
 
 .Slide-intro-main {
   padding-top: 10vh;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: calc(12px + 2vmin);
+  color: white;
+}
+
+.Slide-intro-main-big {
+  padding-top: 10vh;
+  height: 80vh;
   width: 80vw;
   display: flex;
   align-items: center;
@@ -385,7 +420,7 @@
 .Slide-criteria-units-text-box-white {
   text-align: center;
   font-size: calc(16px + 1vmin);
-  color: black;
+  color: white;
   white-space: pre-wrap;
   border-style: solid;
   border-color: white;
@@ -398,7 +433,7 @@
 .Slide-criteria-units-text-box-yellow {
   text-align: center;
   font-size: calc(16px + 1vmin);
-  color: black;
+  color: white;
   white-space: pre-wrap;
   border-style: solid;
   border-color: yellow;
@@ -411,7 +446,7 @@
 .Slide-criteria-units-text-box-green {
   text-align: center;
   font-size: calc(16px + 1vmin);
-  color: black;
+  color: white;
   white-space: pre-wrap;
   border-style: solid;
   border-color: green;
@@ -424,7 +459,7 @@
 .Slide-criteria-units-text-box-blue {
   text-align: center;
   font-size: calc(16px + 1vmin);
-  color: black;
+  color: white;
   white-space: pre-wrap;
   border-style: solid;
   border-color: blue;
@@ -437,7 +472,7 @@
 .Slide-criteria-units-text-box-red {
   text-align: center;
   font-size: calc(16px + 1vmin);
-  color: black;
+  color: white;
   white-space: pre-wrap;
   border-style: solid;
   border-color: red;
@@ -783,6 +818,13 @@
 .Slide-text {
   text-align: left;
   font-size: calc(8px + 1vmin);
+  color: white;
+  white-space: pre-wrap;
+}
+
+.Slide-text-xl {
+  text-align: center;
+  font-size: calc(24px + 1vmin);
   color: white;
   white-space: pre-wrap;
 }

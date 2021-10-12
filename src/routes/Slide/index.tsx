@@ -39,12 +39,10 @@ import SlideCriteriaImprovement126 from "../SlideCriteriaImprovement126";
 import SlideCriteriaImprovement127 from "../SlideCriteriaImprovement127";
 import QuestionTextInputCorrection from "../QuestionTextInputCorrection";
 
-const typeIntro: number[] = [
-  1,
-  2,
-  3,
+const typeIntro: number[] = [1, 2, 3, 5];
+
+const typeIntroBig: number[] = [
   4,
-  5,
   8,
   11,
   19,
@@ -58,6 +56,7 @@ const typeIntro: number[] = [
   60,
   65,
 ];
+
 const typeCriteriaIntro: number[] = [
   12,
   13,
@@ -373,6 +372,13 @@ function Slide(slide: SlideInterface) {
           slideText={slide.slideText}
           slideNumber={slide.id}
           type={slide.slideType}
+        />
+      ) : typeIntroBig.includes(slide.id) ? (
+        <SlideIntro
+          slideText={slide.slideText}
+          slideNumber={slide.id}
+          type={slide.slideType}
+          big={true}
         />
       ) : typeSelfEvaluation.includes(slide.id) ? (
         <SlideSelfEvaluation

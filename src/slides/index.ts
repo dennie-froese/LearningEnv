@@ -498,7 +498,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   5: {
     id: 5,
     slideText:
-      "Vielen Dank, dass Du an unserer Studie teilnimmst. Im Folgenden wirst Du verschiedene Aufgaben bearbeiten. \n \n \nBitte befolge stets die Anweisungen, die Dir auf den einzelnen Seiten gegeben werden. Für die vollständige Teilnahme an dieser Studie erhältst du eine Aufwandsentschädigung in Höhe von 10 Euro. Das Geld wird Dir nach erfolgreichem Abschluss der Studie per Überweisung ausgezahlt, d.h. Du solltest die Seite vor Beendigung der Studie nicht verlassen. Für die Überweisung benötigen wir Deine Kontodaten, die Du am Ende der Studie angeben musst. Die Daten werden nach Beendigung der Studie anonymisiert und ausschließlich zu forschungsinternen Zwecken von den Mitarbeiter*innen der Arbeitsgruppe Bildungspsychologie der Ruhr-Universität Bochum gespeichert und verwendet. Du kannst der Speicherung und Verwendung Deiner Daten nachträglich widersprechen, musst dann jedoch die Aufwandsentschädigung zurückzahlen. Bitte beachte, dass die Löschung Deiner Daten nur so lange erfolgen kann, wie diese nicht anonymisiert wurden. \n \nBitte beachte, dass Du die Aufwandsentschädigung nur erhältst, wenn Du die Studie vollständig und entsprechend der Anweisungen bearbeitest. Das bedeutet, wenn Du einzelne Seiten z. B. ohne ernsthafte Bearbeitung „durchklickst“, oder Felder freilässt, dann können wir das in Deinen Daten sehen und können Dir die Aufwandsentschädigung für Deine Teilnahme nicht auszahlen. Die Teilnahme an dieser Studie ist freiwillig und kann jederzeit ohne negative Konsequenzen abgebrochen werden kann. \n \nWenn Du alles aufmerksam gelesen hast, klicke auf „Weiter“ und starte damit Deine Teilnahme an der Studie. \n \nKlicke nur auf „Weiter“, wenn Du mit den Teilnahmebedingungen einverstanden bist.",
+      "Vielen Dank, dass Du an unserer Studie teilnimmst. Im Folgenden wirst Du verschiedene Aufgaben bearbeiten. \n \n \nBitte befolge stets die Anweisungen, die Dir auf den einzelnen Seiten gegeben werden. Für die vollständige Teilnahme an dieser Studie erhältst du eine Aufwandsentschädigung in Höhe von 10 Euro. Das Geld wird Dir nach erfolgreichem Abschluss der Studie per Überweisung ausgezahlt, d.h. Du solltest die Seite vor Beendigung der Studie nicht verlassen. Für die Überweisung benötigen wir Deine Kontodaten, die Du am Ende der Studie angeben musst. Die Daten werden nach Beendigung der Studie anonymisiert und ausschließlich zu forschungsinternen Zwecken von den Mitarbeiter*innen der Arbeitsgruppe Bildungspsychologie der Ruhr-Universität Bochum gespeichert und verwendet. Du kannst der Speicherung und Verwendung Deiner Daten nachträglich widersprechen, musst dann jedoch die Aufwandsentschädigung zurückzahlen. Bitte beachte, dass die Löschung Deiner Daten nur so lange erfolgen kann, wie diese nicht anonymisiert wurden. \n \nBitte beachte, dass Du die Aufwandsentschädigung nur erhältst, wenn Du die Studie vollständig und entsprechend der Anweisungen bearbeitest. Das bedeutet, wenn Du einzelne Seiten z. B. ohne ernsthafte Bearbeitung „durchklickst“, oder Felder freilässt, dann können wir das in Deinen Daten sehen und können Dir die Aufwandsentschädigung für Deine Teilnahme nicht auszahlen. Die Teilnahme an dieser Studie ist freiwillig und kann jederzeit ohne negative Konsequenzen abgebrochen werden. \n \nWenn Du alles aufmerksam gelesen hast, klicke auf „Weiter“ und starte damit Deine Teilnahme an der Studie. \n \nKlicke nur auf „Weiter“, wenn Du mit den Teilnahmebedingungen einverstanden bist.",
     slideType: "Intro",
   },
   6: {
@@ -510,7 +510,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   7: {
     id: 7,
     slideText:
-      "Angaben zu deiner Person: Fülle bitte zunächst die folgenden Angaben zu Deiner Person aus. Klicke nach der Eingabe bitte auf „Weiter“.",
+      "Angaben zu Deiner Person: Fülle bitte zunächst die folgenden Angaben zu Deiner Person aus. Klicke nach der Eingabe bitte auf „Weiter“.",
     slideType: "demographisch",
   },
   8: {
@@ -576,7 +576,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   11: {
     id: 11,
     slideText:
-      "Nun möchten wir Dir eine kurze Einführung in eine Textsorte geben, die für das wissenschaftliche Schreiben sehr wichtig ist: das sogenannte Abstract. Doch was ist ein Abstract überhaupt?",
+      "Nun möchten wir Dir eine kurze Einführung in eine Textsorte geben, die für das wissenschaftliche Schreiben sehr wichtig ist: das sogenannte Abstract. \n\n\n\nDoch was ist ein Abstract überhaupt?",
     slideType: "Abstract_Intro",
   },
   12: {
@@ -619,7 +619,8 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   16: {
     id: 16,
-    slideText: "Definition",
+    slideText:
+      "Bitte lies dir nun die Definitionsaspekte eines Abstracts noch einmal genau durch.\n\n\nDefinition",
     slideType: "Abstract_Definition_1",
     criteriaIntroUnits: [
       "Kurze, sachliche Zusammenfassung eines wissenschaftlichen Aufsatzes",
@@ -627,7 +628,8 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   17: {
     id: 17,
-    slideText: "Definition",
+    slideText:
+      "Bitte lies dir nun die Definitionsaspekte eines Abstracts noch einmal genau durch.\n\n\nDefinition",
     slideType: "Abstract_Definition_2",
     criteriaIntroUnits: [
       "Kurze, sachliche Zusammenfassung eines wissenschaftlichen Aufsatzes",
@@ -636,7 +638,8 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   18: {
     id: 18,
-    slideText: "Definition",
+    slideText:
+      "Bitte lies dir nun die Definitionsaspekte eines Abstracts noch einmal genau durch.\n\n\nDefinition",
     slideType: "Abstract_Definition_3",
     criteriaIntroUnits: [
       "Kurze, sachliche Zusammenfassung eines wissenschaftlichen Aufsatzes",
@@ -647,7 +650,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   19: {
     id: 19,
     slideText:
-      "Nun weißt Du, worum es sich bei der Textsorte handelt. Als nächstes erfährst Du mehr darüber, wie man ein Abstract schreibt. Dazu werden Dir gleich verschiedene Kriterien gezeigt, die ein gutes Abstract erfüllen sollte. Klicke auf „Weiter“.",
+      "Nun weißt Du, worum es sich bei der Textsorte handelt. Als nächstes erfährst Du mehr darüber, wie man ein Abstract schreibt. Dazu werden Dir gleich verschiedene Kriterien gezeigt, die ein gutes Abstract erfüllen sollte. Bitte lies dir die folgenden Kriterien aufmerksam durch.\n\n\n\n Klicke auf „Weiter“.",
     slideType: "Abstract_Kriterium_Intro_1",
   },
   20: {
@@ -748,7 +751,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       2: [
         "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
         "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
-        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+        "„Die 360 teilnehmenden Kinder (55 % männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
       ],
       3: ["3. Die Methode, mit der geforscht wurde", "", ""],
       4: ["4. Die zentralen Ergebnisse", "", ""],
@@ -773,7 +776,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       2: [
         "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
         "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
-        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+        "„Die 360 teilnehmenden Kinder (55 % männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
       ],
       3: [
         "3. Die Methode, mit der geforscht wurde",
@@ -802,7 +805,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       2: [
         "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
         "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
-        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+        "„Die 360 teilnehmenden Kinder (55 % männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
       ],
       3: [
         "3. Die Methode, mit der geforscht wurde",
@@ -831,7 +834,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       2: [
         "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
         "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
-        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+        "„Die 360 teilnehmenden Kinder (55 % männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
       ],
       3: [
         "3. Die Methode, mit der geforscht wurde",
@@ -864,7 +867,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       2: [
         "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
         "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
-        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+        "„Die 360 teilnehmenden Kinder (55 % männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
       ],
       3: [
         "3. Die Methode, mit der geforscht wurde",
@@ -897,7 +900,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       2: [
         "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
         "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
-        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+        "„Die 360 teilnehmenden Kinder (55 % männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
       ],
       3: [
         "3. Die Methode, mit der geforscht wurde",
@@ -930,7 +933,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       2: [
         "2. Die Versuchsobjekte oder Datengrundlage (Merkmale)",
         "„645 Schülerinnen und Schüler (320 männlich, 325 weiblich) der 7. bis 10. Jahrgangsstufe von Gymnasien, Real- und Hauptschulen nahmen an der Untersuchung teil.“",
-        "„Die 360 teilnehmenden Kinder (55 % Prozent männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
+        "„Die 360 teilnehmenden Kinder (55 % männlich, 45 % weiblich) variierten im Alter von fünf bis achteinhalb Jahren.“",
       ],
       3: [
         "3. Die Methode, mit der geforscht wurde",
@@ -1021,7 +1024,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   },
   40: {
     id: 40,
-    slideText: "Kriterium “Wissenschaftlicher Stil”",
+    slideText: "Kriterium “wissenschaftlicher Stil”",
     slideType: "Kriterium_Wissenschaftlich",
   },
   41: {
@@ -1029,7 +1032,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText:
       "Kriterium „wissenschaftlicher Stil“:Wie sollte ein Abstract geschrieben sein?",
     slideType: "Kriterium_Wissenschaftlich_1",
-    criteriaIntroUnits: ["1. Ich schreibe für meine Leser veständlich"],
+    criteriaIntroUnits: ["1. Ich schreibe für meine Leser verständlich"],
   },
   42: {
     id: 42,
@@ -1037,7 +1040,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Kriterium „wissenschaftlicher Stil“:Wie sollte ein Abstract geschrieben sein?",
     slideType: "Kriterium_Wissenschaftlich_2",
     criteriaIntroUnits: [
-      "1. Ich schreibe für meine Leser veständlich",
+      "1. Ich schreibe für meine Leser verständlich",
       "2. Ich beziehe mich nur auf die Studie, schweife nicht ab und verallgemeinere nicht",
     ],
   },
@@ -1047,7 +1050,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Kriterium „wissenschaftlicher Stil“:Wie sollte ein Abstract geschrieben sein?",
     slideType: "Kriterium_Wissenschaftlich_3",
     criteriaIntroUnits: [
-      "1. Ich schreibe für meine Leser veständlich",
+      "1. Ich schreibe für meine Leser verständlich",
       "2. Ich beziehe mich nur auf die Studie, schweife nicht ab und verallgemeinere nicht",
       "3. Ich schreibe objektiv und vermeide Umgangssprache (z.B. total, ein bisschen)",
     ],
@@ -1058,7 +1061,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Kriterium „wissenschaftlicher Stil“:Wie sollte ein Abstract geschrieben sein?",
     slideType: "Kriterium_Wissenschaftlich_4",
     criteriaIntroUnits: [
-      "1. Ich schreibe für meine Leser veständlich",
+      "1. Ich schreibe für meine Leser verständlich",
       "2. Ich beziehe mich nur auf die Studie, schweife nicht ab und verallgemeinere nicht",
       "3. Ich schreibe objektiv und vermeide Umgangssprache (z.B. total, ein bisschen)",
       "4. Ich drücke mich mit möglichst wenig Wörtern eindeutig aus",
@@ -1069,7 +1072,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText: "",
     slideType: "Kriterium_Wissenschaftlich_Richtig",
     criteriaIntroUnits: [
-      "1. Ich schreibe für meine Leser veständlich",
+      "1. Ich schreibe für meine Leser verständlich",
       "2. Ich beziehe mich nur auf die Studie, schweife nicht ab und verallgemeinere nicht",
       "3. Ich schreibe objektiv und vermeide Umgangssprache (z.B. total, ein bisschen)",
       "4. Ich drücke mich mit möglichst wenig Wörtern eindeutig aus",
@@ -1086,7 +1089,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText: "",
     slideType: "Kriterium_Wissenschaftlich_Falsch",
     criteriaIntroUnits: [
-      "1. Ich schreibe für meine Leser veständlich",
+      "1. Ich schreibe für meine Leser verständlich",
       "2. Ich beziehe mich nur auf die Studie, schweife nicht ab und verallgemeinere nicht",
       "3. Ich schreibe objektiv und vermeide Umgangssprache (z.B. total, ein bisschen)",
       "4. Ich drücke mich mit möglichst wenig Wörtern eindeutig aus",
@@ -1208,7 +1211,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   61: {
     id: 61,
     slideText:
-      "Schreibe ein Abstract zu der wissenschaftlichen Studie. \n\nBitte denke dazu daran, was Du vor dem Lesen zu den Kriterien eines Abstracts erfahren hast und versuche, dies in dein Abstract einzubringen.\n\nDer Studientext wird dir parallel während des Schreibens zur Verfügung stehen.\n\nKlicke den Weiter-Button und du gelangst zum Schreibfeld.\n\nDu hast für das Schreiben XX Minuten Zeit.",
+      "Schreibe ein Abstract zu der wissenschaftlichen Studie. \n\nBitte denke dazu daran, was Du vor dem Lesen zu den Kriterien eines Abstracts erfahren hast und versuche, dies in Dein Abstract einzubringen.\n\nDer Studientext wird Dir parallel während des Schreibens zur Verfügung stehen.\n\nKlicke den Weiter-Button und Du gelangst zum Schreibfeld.\n\nDu hast für das Schreiben XX Minuten Zeit.",
     slideType: "Abstract_Schreiben_Intro_1",
     header: "Ein Abstract schreiben",
   },
@@ -1237,7 +1240,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   66: {
     id: 66,
     slideText:
-      "Nun ist es deine Aufgabe, deinen eigenen Text nach den Kriterien, die du zu Beginn kennengelernt hast, zu bewerten.\n\nDazu erhältst du gleich ein Bewertungsraster, das dir dabei helfen soll, deinen Text genau einzuschätzen.\n\nSchaue dir jedes Kriterium und die dazugehörigen Spalten genau an und versuche, dein Abstract genau und ehrlich anhand der einzelnen Kriterien einzuschätzen.\n\nTrage dann in das dafür vorgesehene Feld die Anzahl der Punkte ein, die du dir für das Kriterium geben würdest.\n\nWenn du bereit bist zu beginnen, klicke den „Weiter“-Button.",
+      "Nun ist es Deine Aufgabe, Deinen eigenen Text nach den Kriterien, die Du zu Beginn kennengelernt hast, zu bewerten.\n\nDazu erhältst Du gleich ein Bewertungsraster, das Dir dabei helfen soll, Deinen Text genau einzuschätzen.\n\nSchaue Dir jedes Kriterium und die dazugehörigen Spalten genau an und versuche, Dein Abstract genau und ehrlich anhand der einzelnen Kriterien einzuschätzen.\n\nTrage dann in das dafür vorgesehene Feld die Anzahl der Punkte ein, die Du Dir für das Kriterium geben würdest.\n\nWenn Du bereit bist zu beginnen, klicke den „Weiter“-Button.",
     slideType: "Selbstbewertung_Abstract_1",
     header: "Selbstbewertung des Abstracts",
   },
@@ -1692,7 +1695,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   133: {
     id: 133,
     slideText:
-      "Bitte bewerte nun, nach deiner Bearbeitung, noch einmal dein Abstract. Gehe dabei genau wie bei der 1. Selbstbewertung vor, beziehe dich aber nun auf deine überarbeitete Version.",
+      "Bitte bewerte nun, nach Deiner Bearbeitung, noch einmal Dein Abstract. Gehe dabei genau wie bei der 1. Selbstbewertung vor, beziehe Dich aber nun auf Deine überarbeitete Version.",
     slideType: "Selbstbewertung_Abstract_Verbessert_Intro",
     header: "2. Selbstbewertung des Abstracts",
   },
@@ -1807,7 +1810,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   152: {
     id: 152,
     slideText:
-      "Nun ist es deine Aufgabe, deinen eigenen Text nach den Kriterien, die du zu Beginn kennengelernt hast, zu bewerten. \nDazu erhältst du gleich ein Bewertungsraster, das dir dabei helfen soll, deinen Text genau einzuschätzen.\nSchaue dir jedes Kriterium genau an und versuche, dein Abstract genau und ehrlich anhand der einzelnen Kriterien einzuschätzen. \nTrage dann in das dafür vorgesehene Feld die Anzahl der Punkte ein, die du dir für das Kriterium geben würdest.\n\nWenn du bereit bist zu beginnen, klicke den „Weiter“-Button.",
+      "Nun ist es Deine Aufgabe, Deinen eigenen Text nach den Kriterien, die Du zu Beginn kennengelernt hast, zu bewerten. \nDazu erhältst Du gleich ein Bewertungsraster, das Dir dabei helfen soll, Deinen Text genau einzuschätzen.\nSchaue Dir jedes Kriterium genau an und versuche, Dein Abstract genau und ehrlich anhand der einzelnen Kriterien einzuschätzen. \nTrage dann in das dafür vorgesehene Feld die Anzahl der Punkte ein, die Du Dir für das Kriterium geben würdest.\n\nWenn Du bereit bist zu beginnen, klicke den „Weiter“-Button.",
     slideType: "Selbstbewertung_Abstract_Verbessert_Gruppe2_Intro",
     header: "Selbstbewertung des Abstracts",
   },

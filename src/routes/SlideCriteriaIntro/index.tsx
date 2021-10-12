@@ -41,7 +41,7 @@ function SlideCriteriaIntro({
         <div className="Slide-header">
           <p>{slideText}</p>
         </div>
-        <div className="Slide-main">
+        <div className="Slide-main-flex-start">
           {criteriaIntroUnits && criteriaIntroUnits[0] && (
             <div className="Slide-criteria-units-row-1">
               <p className="Slide-label-l">

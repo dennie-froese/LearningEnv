@@ -7,9 +7,10 @@ interface Props {
   slideText: string;
   slideNumber: number;
   type: string;
+  big?: boolean;
 }
 
-function SlideIntro({ slideText, slideNumber, type }: Props) {
+function SlideIntro({ slideText, slideNumber, type, big }: Props) {
   const context = useSlidesState();
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
@@ -40,9 +41,11 @@ function SlideIntro({ slideText, slideNumber, type }: Props) {
 
   return (
     <div className="Slide">
-      <div className="Slide-container">
-        <div className="Slide-intro-main">
-          <div className="Slide-text-l">{slideText}</div>
+      <div className={big ? "Slide-container-center" : "Slide-container"}>
+        <div className={big ? "Slide-intro-main-big" : "Slide-intro-main"}>
+          <div className={big ? "Slide-text-xl" : "Slide-text-l"}>
+            {slideText}
+          </div>
         </div>
         <div className="Slide-nav">
           <button className="Slide-button" onClick={finish}>

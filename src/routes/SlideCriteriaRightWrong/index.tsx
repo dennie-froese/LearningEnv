@@ -44,6 +44,13 @@ function SlideCriteriaRightWrong({
   return (
     <div className="Slide">
       <div className="Slide-container">
+        <div className="Slide-header">
+          <div className="Slide-text-l">
+            Versuche nun mithilfe der Aspekte des Kriteriums für dich
+            nachzuvollziehen, warum dieses Beispiel
+            {slideNumber === 38 ? "" : " nicht"} gelungen ist.
+          </div>
+        </div>
         <div className="Slide-main">
           {criteriaIntroUnits && criteriaIntroUnits[0] && (
             <div className="Slide-criteria-units-row-1">
