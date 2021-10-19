@@ -21,6 +21,7 @@ function SlideIntroWithHeader({ slideText, slideNumber, type, header }: Props) {
         payload: { type: type, answer: { zeit: launchTime - Date.now() } },
       });
     restart();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <div className="Slide">

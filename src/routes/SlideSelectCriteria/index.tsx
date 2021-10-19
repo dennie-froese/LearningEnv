@@ -47,6 +47,7 @@ function SlideSelectCriteria({ slideText, type }: Props) {
         },
       });
       restart();
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setError("");
     } else {
       setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");

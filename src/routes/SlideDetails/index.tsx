@@ -55,6 +55,7 @@ function SlideDetails({ slideText, slideNumber, type, header }: Props) {
         });
       setName("");
       restart();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
     }

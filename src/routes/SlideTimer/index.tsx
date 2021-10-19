@@ -328,6 +328,7 @@ function SlideTimer({ slideText, slideNumber, type }: Props) {
         payload: { type: type, answer: { zeit: launchTime - Date.now() } },
       });
     restart();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

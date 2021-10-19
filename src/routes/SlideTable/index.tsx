@@ -80,6 +80,7 @@ function SlideTable({ slideText, slideNumber, type, tableRows }: Props) {
           },
         });
       restart();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 

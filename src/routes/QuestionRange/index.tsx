@@ -126,7 +126,7 @@ function QuestionRange({ questionNumber, question, type }: Props) {
             },
           });
         restart();
-
+        window.scrollTo({ top: 0, behavior: "smooth" });
         setError("");
       } else {
         setValue(0);
@@ -143,7 +143,7 @@ function QuestionRange({ questionNumber, question, type }: Props) {
             },
           });
         restart();
-
+        window.scrollTo({ top: 0, behavior: "smooth" });
         setError("");
       }
     } else {

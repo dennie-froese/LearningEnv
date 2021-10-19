@@ -159,6 +159,7 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
             },
           });
         restart();
+        window.scrollTo({ top: 0, behavior: "smooth" });
         setError("");
       } else {
         setError(

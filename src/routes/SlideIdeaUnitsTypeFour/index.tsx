@@ -87,6 +87,7 @@ function SlideIdeaUnitsTypeFour({ slideText, type, header }: Props) {
           },
         });
       restart();
+      window.scrollTo({ top: 0, behavior: "smooth" });
       resetValues();
     } else {
       setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");

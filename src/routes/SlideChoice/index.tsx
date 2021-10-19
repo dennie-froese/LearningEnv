@@ -17,6 +17,7 @@ function SlideChoice() {
         payload: { schueler: choice === "Schüler*in" ? "1" : "0" },
       });
       restart();
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setError("");
       history.push("/slides");
     } else {

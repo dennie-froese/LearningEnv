@@ -144,6 +144,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
             },
           });
         restart();
+        window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
       }
@@ -180,6 +181,7 @@ function SlideDemographics({ slideText, slideNumber, type }: Props) {
             },
           });
         restart();
+        window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
       }

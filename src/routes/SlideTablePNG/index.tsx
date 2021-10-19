@@ -37,6 +37,7 @@ function SlideTablePNG({ slideText, header, type, slideNumber }: Props) {
           },
         });
       restart();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 

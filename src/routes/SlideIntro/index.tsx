@@ -36,6 +36,7 @@ function SlideIntro({ slideText, slideNumber, type, big }: Props) {
           },
         });
       restart();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 

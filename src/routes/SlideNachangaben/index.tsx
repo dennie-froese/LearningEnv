@@ -22,6 +22,7 @@ function SlideNachangaben({ type, nachangaben }: Props) {
     setValueThree(0);
     setValueFour(0);
     restart();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const dispatch = useSlidesDispatch();

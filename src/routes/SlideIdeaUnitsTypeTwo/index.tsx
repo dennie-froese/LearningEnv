@@ -105,6 +105,7 @@ function SlideIdeaUnitsTypeTwo({
           },
         });
       restart();
+      window.scrollTo({ top: 0, behavior: "smooth" });
       resetValues();
       setError("");
     } else {

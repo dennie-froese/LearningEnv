@@ -38,6 +38,7 @@ function SlideCriteriaImprovement122({
         },
       });
     restart();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

@@ -34,6 +34,7 @@ function SlideFun({ slideText, slideNumber, type, header }: Props) {
           dispatch({ type: "reset" })
         );
       restart();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
       setError("Bitte überprüfe die Vollständigkeit deiner Angaben.");
     }
