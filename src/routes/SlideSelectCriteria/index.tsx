@@ -16,24 +16,31 @@ function SlideSelectCriteria({ slideText, type }: Props) {
 
   const finish = () => {
     let newSlide: number = 106;
+    let selectedCriteria: string = "";
     switch (choice) {
       case 1:
         newSlide = 106;
+        selectedCriteria = "Inhalt";
         break;
       case 2:
         newSlide = 110;
+        selectedCriteria = "Formales";
         break;
       case 3:
         newSlide = 114;
+        selectedCriteria = "Orthographie und Grammatik";
         break;
       case 4:
         newSlide = 118;
+        selectedCriteria = "Wissenschaftlicher Stil";
         break;
       case 5:
         newSlide = 122;
+        selectedCriteria = "Organisation des Textes";
         break;
       case 6:
         newSlide = 126;
+        selectedCriteria = "Aufbau";
         break;
     }
 
@@ -43,7 +50,10 @@ function SlideSelectCriteria({ slideText, type }: Props) {
         payload: {
           type,
           newSlide: newSlide,
-          answer: { zeit: launchTime - Date.now() },
+          answer: {
+            zeit: launchTime - Date.now(),
+            auswahlKriterium: selectedCriteria,
+          },
         },
       });
       restart();

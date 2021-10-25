@@ -1,6 +1,7 @@
 export interface Answer {
   zeit: number;
   auswahlSchuelerStudent?: string;
+  auswahlKriterium?: string;
   antwort?: string;
   version?: string;
   vpn?: string;

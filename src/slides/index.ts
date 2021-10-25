@@ -1654,7 +1654,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     slideText: "",
     slideType: "Kriteriurm_Verbesserung_Aufbau",
     header:
-      "Versuche nachzuvollziehen, warum das Beispiel das Kriterium „Aufbau“voll erfüllt.",
+      "Versuche nachzuvollziehen, warum das Beispiel das Kriterium „Aufbau“ voll erfüllt.",
   },
   127: {
     id: 127,

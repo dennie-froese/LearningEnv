@@ -43,9 +43,6 @@ function SlideTablePNG({ slideText, header, type, slideNumber }: Props) {
 
   const largeVersion = slideNumber === 53 ? true : false;
 
-  const classNamePNG =
-    slideNumber === 53 ? "Slide-table-png-large" : "Slide-table-png";
-
   return (
     <div className="Slide">
       <div className="Slide-container">
@@ -57,7 +54,7 @@ function SlideTablePNG({ slideText, header, type, slideNumber }: Props) {
         <div className="Slide-main">
           {largeVersion && <p></p>}
           <div className="Slide-text-l">{slideText}</div>
-          <img className={classNamePNG} src={Table} alt="" />
+          <img className="Slide-table-png" src={Table} alt="" />
         </div>
         <div className="Slide-nav">
           <button className="Slide-button" onClick={finish}>
