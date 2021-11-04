@@ -73,7 +73,8 @@ function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
         setAspects(aspectsContent);
         setCriteria("Inhalt");
         setValueFirstRound(
-          context?.answers?.Selbstbewertung_Abstract_Inhalt?.antwort || ""
+          context?.answers?.Selbstbewertung_Abstract_Gruppe2_Inhalt?.antwort ||
+            ""
         );
         break;
       case 89:
@@ -125,12 +126,12 @@ function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
   }, [
     context?.answers?.Selbstbewertung_Abstract_Gruppe2_Aufbau?.antwort,
     context?.answers?.Selbstbewertung_Abstract_Gruppe2_Formales?.antwort,
+    context?.answers?.Selbstbewertung_Abstract_Gruppe2_Inhalt?.antwort,
     context?.answers?.Selbstbewertung_Abstract_Gruppe2_Orthographie?.antwort,
     context?.answers?.Selbstbewertung_Abstract_Gruppe2_Text_Organisation
       ?.antwort,
     context?.answers?.Selbstbewertung_Abstract_Gruppe2_Wissenschaftlich
       ?.antwort,
-    context?.answers?.Selbstbewertung_Abstract_Inhalt?.antwort,
     slideNumber,
   ]);
 
