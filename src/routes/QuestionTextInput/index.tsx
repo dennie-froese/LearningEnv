@@ -17,6 +17,11 @@ function QuestionTextInput({ questionNumber, type }: Props) {
   const [minutes, setMinutes] = useState<number>(0);
   const [seconds, setSeconds] = useState<number>(20);
 
+  function wordCount(str: string) {
+    var m = str.match(/[^\s]+/g);
+    return m ? m.length : 0;
+  }
+
   useEffect(() => {
     let myInterval = setInterval(() => {
       if (seconds > 0) {
@@ -55,6 +60,7 @@ function QuestionTextInput({ questionNumber, type }: Props) {
     <div className="Slide">
       <div className="Slide-container">
         <div className="Slide-header">
+          <div className="Slide-text-l">Anzahl Wörter: {wordCount(input)}</div>
           <div className="Slide-text-l">
             Timer: {minutes}:{seconds >= 10 ? seconds : `0${seconds}`}
           </div>
