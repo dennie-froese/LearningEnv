@@ -191,7 +191,9 @@ function SlideSelfEvaluation({ slideText, slideNumber, type }: Props) {
             />
           </div>
           <div className="Slide-textInput-container-study">
-            {context?.answers?.Abstract_Schreiben_Timer?.Text_Attribution}
+            {[134, 137, 140, 143, 146, 149].includes(slideNumber)
+              ? context?.answers?.Timer_Verbesserung?.antwort
+              : context?.answers?.Abstract_Schreiben_Timer?.antwort}
           </div>
         </div>
         <div className="Slide-nav">

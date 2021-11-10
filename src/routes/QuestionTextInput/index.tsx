@@ -49,7 +49,7 @@ function QuestionTextInput({ questionNumber, type }: Props) {
         type: "submit_slide",
         payload: {
           type: type,
-          answer: { zeit: launchTime - Date.now(), Text_Attribution: input },
+          answer: { zeit: launchTime - Date.now(), antwort: input },
         },
       });
     restart();

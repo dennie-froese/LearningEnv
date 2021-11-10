@@ -40,7 +40,7 @@ const examplesAufbau = [
 function QuestionTextInputCorrection({ questionNumber, type }: Props) {
   const context = useSlidesState();
   const [input, setInput] = useState<string>(
-    context?.answers?.Abstract_Schreiben_Timer?.Text_Attribution || ""
+    context?.answers?.Abstract_Schreiben_Timer?.antwort || ""
   );
   const examplePreviousSelected =
     context?.answers?.Kriteriurm_Verbesserung_Auswahl?.auswahlKriterium || "";
@@ -100,7 +100,7 @@ function QuestionTextInputCorrection({ questionNumber, type }: Props) {
         type: "submit_slide",
         payload: {
           type: type,
-          answer: { zeit: launchTime - Date.now(), Text_Attribution: input },
+          answer: { zeit: launchTime - Date.now(), antwort: input },
         },
       });
     restart();

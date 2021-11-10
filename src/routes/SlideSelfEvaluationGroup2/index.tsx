@@ -173,18 +173,25 @@ function SlideSelfEvaluationGroup2({ slideText, slideNumber, type }: Props) {
         <div className="Slide-header">
           <div className="Slide-text-l">{slideText}</div>
         </div>
-        <div className="Slide-self-evaluation-main">
-          <div>
-            <div>Aspekte des Kriteriums</div>
-            {aspects.map((aspect) => (
-              <div className="Slide-self-evaluation-aspects">{aspect}</div>
-            ))}
+        <div className="Slide-textInput-container">
+          <div className="Slide-textInput-container-study-left-group2">
+            <div style={{ paddingBottom: "10vh" }}>
+              <div>Aspekte des Kriteriums</div>
+              {aspects.map((aspect) => (
+                <div className="Slide-self-evaluation-aspects">{aspect}</div>
+              ))}
+            </div>
+            <div className="Slide-self-evaluation-scale-row">
+              <div className="Slide-self-evaluation-scale-box">{criteria}</div>
+              {scaleValues.map((value) => (
+                <div className="Slide-self-evaluation-scale-box">{value}</div>
+              ))}
+            </div>
           </div>
-          <div className="Slide-self-evaluation-scale-row">
-            <div className="Slide-self-evaluation-scale-box">{criteria}</div>
-            {scaleValues.map((value) => (
-              <div className="Slide-self-evaluation-scale-box">{value}</div>
-            ))}
+          <div className="Slide-textInput-container-study">
+            {[153, 156, 159, 162, 165, 168].includes(slideNumber)
+              ? context?.answers?.Timer_Verbesserung?.antwort
+              : context?.answers?.Abstract_Schreiben_Timer?.antwort}
           </div>
         </div>
         <div className="Slide-nav">
