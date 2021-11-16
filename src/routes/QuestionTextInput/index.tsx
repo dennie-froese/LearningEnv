@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { inputValidationOff } from "../../App";
 import { useSlidesDispatch } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 import { Study } from "../SlideTimer";
@@ -14,8 +13,8 @@ function QuestionTextInput({ questionNumber, type }: Props) {
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
 
-  const [minutes, setMinutes] = useState<number>(0);
-  const [seconds, setSeconds] = useState<number>(20);
+  const [minutes, setMinutes] = useState<number>(1);
+  const [seconds, setSeconds] = useState<number>(0);
 
   function wordCount(str: string) {
     var m = str.match(/[^\s]+/g);
@@ -49,7 +48,7 @@ function QuestionTextInput({ questionNumber, type }: Props) {
         type: "submit_slide",
         payload: {
           type: type,
-          answer: { zeit: launchTime - Date.now(), antwort: input },
+          answer: { zeit: -60000, antwort: input },
         },
       });
     restart();

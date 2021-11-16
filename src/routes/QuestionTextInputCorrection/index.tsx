@@ -70,8 +70,8 @@ function QuestionTextInputCorrection({ questionNumber, type }: Props) {
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
 
-  const [minutes, setMinutes] = useState<number>(0);
-  const [seconds, setSeconds] = useState<number>(10);
+  const [minutes, setMinutes] = useState<number>(1);
+  const [seconds, setSeconds] = useState<number>(0);
 
   useEffect(() => {
     let myInterval = setInterval(() => {
@@ -100,7 +100,7 @@ function QuestionTextInputCorrection({ questionNumber, type }: Props) {
         type: "submit_slide",
         payload: {
           type: type,
-          answer: { zeit: launchTime - Date.now(), antwort: input },
+          answer: { zeit: -60000, antwort: input },
         },
       });
     restart();
