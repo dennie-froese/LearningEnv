@@ -1176,13 +1176,13 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     id: 55,
     header: "Lesen einer wissenschaftlichen Studie",
     slideText:
-      "Deine nächste Aufgabe ist es gleich, eine echte wissenschaftliche Studie zu einer Forschungsarbeit zu lesen. \n\n\nDiese trägt den Titel „Steigert Kaugummikauen das kognitive Leistungsvermögen?“ und wurde 2012 in der „Zeitschrift für Pädagogische Psychologie“ veröffentlicht.\n\n\nLies Dir die Studie bitte konzentriert durch. Bitte mache Dir keine Notizen. Du hast XX Minuten Zeit zum Lesen. Anschließend wirst Du eine Aufgabe zu dem Text bearbeiten. Deine verbleibende Lesezeit wird Dir auf dem Bildschirm angezeigt. Bitte nutze die ganze Zeit zum Lesen der Studie.",
+      "Deine nächste Aufgabe ist es gleich, eine echte wissenschaftliche Studie zu einer Forschungsarbeit zu lesen. \n\n\nDiese trägt den Titel „Steigert Kaugummikauen das kognitive Leistungsvermögen?“ und wurde 2012 in der „Zeitschrift für Pädagogische Psychologie“ veröffentlicht.\n\n\nLies Dir die Studie bitte konzentriert durch. Bitte mache Dir keine Notizen. Du hast 10 Minuten Zeit zum Lesen. Anschließend wirst Du eine Aufgabe zu dem Text bearbeiten. Deine verbleibende Lesezeit wird Dir auf dem Bildschirm angezeigt. Bitte nutze die ganze Zeit zum Lesen der Studie.",
     slideType: "Lesen_Studie_1",
   },
   56: {
     id: 56,
     slideText:
-      "Lies Dir die Studie bitte konzentriert durch. Bitte mache Dir keine Notizen. Du hast XX Minuten Zeit zum Lesen. Anschließend wirst Du eine Aufgabe zu dem Text bearbeiten. Deine verbleibende Lesezeit wird Dir auf dem Bildschirm angezeigt. Bitte nutze die ganze Zeit zum Lesen der Studie.",
+      "Lies Dir die Studie bitte konzentriert durch. Bitte mache Dir keine Notizen. Du hast 10 Minuten Zeit zum Lesen. Anschließend wirst Du eine Aufgabe zu dem Text bearbeiten. Deine verbleibende Lesezeit wird Dir auf dem Bildschirm angezeigt. Bitte nutze die ganze Zeit zum Lesen der Studie.",
     slideType: "Lesen_Studie_2",
   },
   57: {
@@ -1211,7 +1211,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   61: {
     id: 61,
     slideText:
-      "Schreibe ein Abstract zu der wissenschaftlichen Studie. \n\nBitte denke dazu daran, was Du vor dem Lesen zu den Kriterien eines Abstracts erfahren hast und versuche, dies in Dein Abstract einzubringen.\n\nDer Studientext wird Dir parallel während des Schreibens zur Verfügung stehen.\n\nKlicke den Weiter-Button und Du gelangst zum Schreibfeld.\n\nDu hast für das Schreiben XX Minuten Zeit.",
+      "Schreibe ein Abstract zu der wissenschaftlichen Studie. \n\nBitte denke dazu daran, was Du vor dem Lesen zu den Kriterien eines Abstracts erfahren hast und versuche, dies in Dein Abstract einzubringen.\n\nDer Studientext wird Dir parallel während des Schreibens zur Verfügung stehen.\n\nKlicke den Weiter-Button und Du gelangst zum Schreibfeld.\n\nDu hast für das Schreiben 10 Minuten Zeit.",
     slideType: "Abstract_Schreiben_Intro_1",
     header: "Ein Abstract schreiben",
   },
@@ -1677,7 +1677,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   130: {
     id: 130,
     slideText:
-      "Hier siehst Du Dein eben verfasstes Abstract und die ausgewählten Beispiele. Versuche nun, Dein Abstract auf Basis dessen, was du aus dem Beispiel gelernt hast, nun noch zu verbessern. Du hast dafür XX Minuten Zeit.",
+      "Hier siehst Du Dein eben verfasstes Abstract und die ausgewählten Beispiele. Versuche nun, Dein Abstract auf Basis dessen, was du aus dem Beispiel gelernt hast, nun noch zu verbessern. Du hast dafür 5 Minuten Zeit.",
     slideType: "Timer_Verbesserung",
   },
   131: {
