@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import useCountdown from "../../hooks/useCountdown";
 import { useSlidesDispatch } from "../../hooks/useSlides";
 import useTimer from "../../hooks/useTimer";
 import { Study } from "../SlideTimer";
@@ -13,8 +14,11 @@ function QuestionTextInput({ questionNumber, type }: Props) {
   const dispatch = useSlidesDispatch();
   const { launchTime, restart } = useTimer();
 
-  const [minutes, setMinutes] = useState<number>(1);
-  const [seconds, setSeconds] = useState<number>(0);
+  const { counter, startCountdown } = useCountdown(1000);
+
+  useEffect(() => {
+    startCountdown(60);
+  }, [startCountdown]);
 
   function wordCount(str: string) {
     var m = str.match(/[^\s]+/g);
@@ -22,47 +26,40 @@ function QuestionTextInput({ questionNumber, type }: Props) {
   }
 
   useEffect(() => {
-    let myInterval = setInterval(() => {
-      if (seconds > 0) {
-        setSeconds(seconds - 1);
-      }
-      if (seconds === 0) {
-        if (minutes === 0) {
-          clearInterval(myInterval);
-          finish();
-        } else {
-          setMinutes(minutes - 1);
-          setSeconds(59);
-        }
-      }
-    }, 1000);
-    return () => {
-      clearInterval(myInterval);
+    const finish = () => {
+      dispatch &&
+        launchTime &&
+        dispatch({
+          type: "submit_slide",
+          payload: {
+            type: type,
+            answer: { zeit: -60000, antwort: input },
+          },
+        });
+      restart();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     };
-  });
 
-  const finish = () => {
-    dispatch &&
-      launchTime &&
-      dispatch({
-        type: "submit_slide",
-        payload: {
-          type: type,
-          answer: { zeit: -60000, antwort: input },
-        },
-      });
-    restart();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    if (counter === 0) {
+      finish();
+    }
+  }, [counter, dispatch, input, launchTime, restart, type]);
+
+  function secsToTime(duration: number) {
+    const seconds = duration % 60;
+    const minutes = Math.floor(duration / 60);
+
+    return `${minutes < 10 ? "0" + minutes : minutes}:${
+      seconds < 10 ? "0" + seconds : seconds
+    }`;
+  }
 
   return (
     <div className="Slide">
       <div className="Slide-container">
         <div className="Slide-header">
           <div className="Slide-text-l">Anzahl Wörter: {wordCount(input)}</div>
-          <div className="Slide-text-l">
-            Timer: {minutes}:{seconds >= 10 ? seconds : `0${seconds}`}
-          </div>
+          <div className="Slide-text-l">Timer: {secsToTime(counter)}</div>
         </div>
         <div className="Slide-textInput-container">
           <textarea
