@@ -17,7 +17,7 @@ function QuestionTextInput({ questionNumber, type }: Props) {
   const { counter, startCountdown } = useCountdown(1000);
 
   useEffect(() => {
-    startCountdown(60);
+    startCountdown(600);
   }, [startCountdown]);
 
   function wordCount(str: string) {
@@ -33,7 +33,7 @@ function QuestionTextInput({ questionNumber, type }: Props) {
           type: "submit_slide",
           payload: {
             type: type,
-            answer: { zeit: -60000, antwort: input },
+            answer: { zeit: -600000, antwort: input },
           },
         });
       restart();

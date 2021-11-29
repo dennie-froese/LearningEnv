@@ -301,7 +301,7 @@ function SlideTimer({ slideText, slideNumber, type }: Props) {
   const { counter, startCountdown } = useCountdown(1000);
 
   useEffect(() => {
-    startCountdown(60);
+    startCountdown(600);
   }, [startCountdown]);
 
   useEffect(() => {
@@ -310,7 +310,7 @@ function SlideTimer({ slideText, slideNumber, type }: Props) {
         launchTime &&
         dispatch({
           type: "submit_slide",
-          payload: { type: type, answer: { zeit: -60000 } },
+          payload: { type: type, answer: { zeit: -600000 } },
         });
       restart();
       window.scrollTo({ top: 0, behavior: "smooth" });

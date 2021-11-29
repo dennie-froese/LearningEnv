@@ -74,7 +74,7 @@ function QuestionTextInputCorrection({ questionNumber, type }: Props) {
   const { counter, startCountdown } = useCountdown(1000);
 
   useEffect(() => {
-    startCountdown(60);
+    startCountdown(300);
   }, [startCountdown]);
 
   useEffect(() => {
@@ -85,7 +85,7 @@ function QuestionTextInputCorrection({ questionNumber, type }: Props) {
           type: "submit_slide",
           payload: {
             type: type,
-            answer: { zeit: -60000, antwort: input },
+            answer: { zeit: -300000, antwort: input },
           },
         });
       restart();
@@ -115,7 +115,7 @@ function QuestionTextInputCorrection({ questionNumber, type }: Props) {
             {"\n\n"}
             Hier siehst Du Dein eben verfasstes Abstract und die ausgewählten
             Beispiele. Versuche nun, Dein Abstract auf Basis dessen, was du aus
-            dem Beispiel gelernt hast, nun noch zu verbessern. Du hast dafür XX
+            dem Beispiel gelernt hast, nun noch zu verbessern. Du hast dafür 5
             Minuten Zeit.
           </div>
         </div>
