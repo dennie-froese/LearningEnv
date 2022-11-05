@@ -11,7 +11,7 @@ function Login() {
   const history = useHistory();
 
   const logon = () => {
-    if (users[user] === mail.toLowerCase()) {
+    if (users[user].toLowerCase() === mail.toLowerCase()) {
       dispatch &&
         dispatch({
           type: "set_user",

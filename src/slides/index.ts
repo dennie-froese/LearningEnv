@@ -8,6 +8,7 @@ export type SlideInterface = {
   ideaUnits?: string[];
   expertExamples?: string[];
   negativeExamples?: string[];
+  partAspects?: string[];
 };
 
 const SlideIDs = [
@@ -151,7 +152,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   5: {
     id: 5,
     slideText:
-      "Vielen Dank, dass Du an unserer Studie teilnimmst. Im Folgenden wirst Du verschiedene Aufgaben bearbeiten. \n \n \nBitte befolge stets die Anweisungen, die Dir auf den einzelnen Seiten gegeben werden. Für die vollständige Teilnahme an dieser Studie erhältst du eine Aufwandsentschädigung in Höhe von 10 Euro. Das Geld wird Dir nach erfolgreichem Abschluss der Studie per Überweisung ausgezahlt, d.h. Du solltest die Seite vor Beendigung der Studie nicht verlassen. Für die Überweisung benötigen wir Deine Kontodaten, die Du am Ende der Studie angeben musst. Die Daten werden nach Beendigung der Studie anonymisiert und ausschließlich zu forschungsinternen Zwecken von den Mitarbeiter*innen der Arbeitsgruppe Bildungspsychologie der Ruhr-Universität Bochum gespeichert und verwendet. Du kannst der Speicherung und Verwendung Deiner Daten nachträglich widersprechen, musst dann jedoch die Aufwandsentschädigung zurückzahlen. Bitte beachte, dass die Löschung Deiner Daten nur so lange erfolgen kann, wie diese nicht anonymisiert wurden. \n \nBitte beachte, dass Du die Aufwandsentschädigung nur erhältst, wenn Du die Studie vollständig und entsprechend der Anweisungen bearbeitest. Das bedeutet, wenn Du einzelne Seiten z. B. ohne ernsthafte Bearbeitung „durchklickst“, oder Felder freilässt, dann können wir das in Deinen Daten sehen und können Dir die Aufwandsentschädigung für Deine Teilnahme nicht auszahlen. Die Teilnahme an dieser Studie ist freiwillig und kann jederzeit ohne negative Konsequenzen abgebrochen werden kann. \n \nWenn Du alles aufmerksam gelesen hast, klicke auf „Weiter“ und starte damit Deine Teilnahme an der Studie. \n \nKlicke nur auf „Weiter“, wenn Du mit den Teilnahmebedingungen einverstanden bist.",
+      "Vielen Dank, dass Du an unserer Studie teilnimmst. Im Folgenden wirst Du verschiedene Aufgaben bearbeiten. \n \n \nBitte befolge stets die Anweisungen, die Dir auf den einzelnen Seiten gegeben werden. Für die vollständige Teilnahme an dieser Studie erhältst du eine Aufwandsentschädigung in Höhe von 10 Euro. Das Geld wird Dir nach erfolgreichem Abschluss der Studie per Überweisung ausgezahlt, d.h. Du solltest die Seite vor Beendigung der Studie nicht verlassen. Für die Überweisung benötigen wir Deine Kontodaten, die Du am Ende der Studie angeben musst. Die Daten werden nach Beendigung der Studie anonymisiert und ausschließlich zu forschungsinternen Zwecken von den Mitarbeiter*innen der Arbeitsgruppe Bildungspsychologie der Ruhr-Universität Bochum gespeichert und verwendet. Die Daten, ohne Angaben zur Identität, können in einer Online-Datenbank veröffentlicht werden. Die Ergebnisse dieser Studie können auf Konferenzen vorgestellt oder in Fachzeitschriften, Büchern und den Medien veröffentlicht werden. Du kannst der Speicherung und Verwendung Deiner Daten nachträglich widersprechen, musst dann jedoch die Aufwandsentschädigung zurückzahlen. Bitte beachte, dass die Löschung Deiner Daten nur so lange erfolgen kann, wie diese nicht anonymisiert wurden. \n \nBitte beachte, dass Du die Aufwandsentschädigung nur erhältst, wenn Du die Studie vollständig und entsprechend der Anweisungen bearbeitest. Das bedeutet, wenn Du einzelne Seiten z. B. ohne ernsthafte Bearbeitung „durchklickst“, oder Felder freilässt, dann können wir das in Deinen Daten sehen und können Dir die Aufwandsentschädigung für Deine Teilnahme nicht auszahlen. Die Teilnahme an dieser Studie ist freiwillig und kann jederzeit ohne negative Konsequenzen abgebrochen werden kann. \n \nWenn Du alles aufmerksam gelesen hast, klicke auf „Weiter“ und starte damit Deine Teilnahme an der Studie. \n \nKlicke nur auf „Weiter“, wenn Du mit den Teilnahmebedingungen einverstanden bist.",
     slideType: "Intro",
   },
   6: {
@@ -427,10 +428,16 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Beim Ausdenken eines Beispiels zum Konzept „Attribution“ war meine geistige Denkanstrengung…",
     slideType: "Beispiel_Attribution2",
   },
+  999: {
+    id: 999,
+    slideText:
+      "Im nächsten Schritt wirst du gebeten, gewisse Textstellen farblich zu markieren.\n\nMarkiere dazu eine ausgewählte Stelle in den Beispieltexten (links) und klicke dann auf einen der farblich markierten Buttons (rechts), um den ausgewählten Text einzufärben. Du kannst so oft du möchtest zwischen den Farben wechseln, indem du auf die entsprechenden farblichen Buttons klickst. Du kannst Textstellen allerdings nicht doppelt markieren (z.B. mit zwei oder mehr Farben).\n\nUm deine Markierungen zu löschen, klicke auf das Feld mit der Beschriftung „Markierungen zurücksetzen“ (unten rechts)",
+    slideType: "Anleitung",
+  },
   36: {
     id: 36,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ nun mit den folgenden Beispielen ab.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Attribution“ nun mit den folgenden Expertenbeispielen ab.",
     slideType: "Attribution_g1_1",
     header: "Konzept „Attribution“",
     expertExamples: [
@@ -440,6 +447,10 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     negativeExamples: [
       "In der Verhaltensforschung wird nach den Gründen für menschliches Verhalten gesucht. In einer aktuellen Studie versucht eine Forschergruppe beispielsweise herauszufinden, warum Menschen Attentate verüben. Dabei werden kulturelle Hintergründe, persönliche Erfahrungen und situative Faktoren berücksichtigt.",
       "Julia ist früher als Kind von der Schaukel gefallen. Immer, wenn sie heute als erwachsene Frau eine Schaukel sieht oder an einem Spielplatz vorbeiläuft, läuft ihr ein Schauer über den Rücken. Sie ist sich sicher, dass das an ihrer prägenden Erfahrung des Sturzes von der Schaukel im Kindesalter liegt.",
+    ],
+    partAspects: [
+      "Subjektive Suche nach Gründen",
+      "Gründe beziehen sich auf Verhalten anderer",
     ],
   },
   38: {
@@ -451,6 +462,10 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     negativeExamples: [
       "In der Verhaltensforschung wird nach den Gründen für menschliches Verhalten gesucht. In einer aktuellen Studie versucht eine Forschergruppe beispielsweise herauszufinden, warum Menschen Attentate verüben. Dabei werden kulturelle Hintergründe, persönliche Erfahrungen und situative Faktoren berücksichtigt.",
       "Julia ist früher als Kind von der Schaukel gefallen. Immer, wenn sie heute als erwachsene Frau eine Schaukel sieht oder an einem Spielplatz vorbeiläuft, läuft ihr ein Schauer über den Rücken. Sie ist sich sicher, dass das an ihrer prägenden Erfahrung des Sturzes von der Schaukel im Kindesalter liegt.",
+    ],
+    partAspects: [
+      "Subjektive Suche nach Gründen",
+      "Gründe beziehen sich auf Verhalten anderer",
     ],
   },
   39: {
@@ -505,7 +520,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   46: {
     id: 46,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ nun mit den folgenden Beispielen ab.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Soziale Normen“ nun mit den folgenden Expertenbeispielen ab.",
     slideType: "SN_g1_1",
     header: "Konzept „Soziale Normen“",
     negativeExamples: [
@@ -515,6 +530,11 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     expertExamples: [
       "Im Bus fällt Marian eine ältere Dame auf, die erst später zugestiegen ist und daher im Gang stehen muss. Entgegen der anderen Fahrgäste steht Marian sofort auf und bietet der älteren Dame seinen Sitzplan an. Dieses Verhalten sieht er als korrekt an, weil es ihm in seiner Erziehung so vermittelt wurde.",
       "Michael macht sich nach Feierabend auf den Weg nach Hause. Er fährt in seinem Kleinwagen die übliche Strecke und sieht in weiter Ferne einen Zebrastreifen. Dort wartet eine Familie mit zwei kleinen Kindern, um die Straße zu überqueren. Das Auto vor Michael rast die Straße entlang und beachtet den Zebrastreifen nicht. Michael dagegen bremst bereits einige Meter vor dem Zebrastreifen auf wenige km/h herunter, hält an und winkt die Familie über die Straße. Er ärgert sich darüber, dass der Raser vor ihm sich nicht an die Vorgabe hält, vor dem Zebrastreifen zu warten und die Leute die Straße passieren zu lassen. Michael ordnet sein eigenes Verhalten dagegen als vorbildlich und korrekt ein.",
+    ],
+    partAspects: [
+      "Explizite oder implizite Konventionen",
+      "Vorgabe von korrektem Verhalten",
+      "Beziehen sich auf soziale Situationen",
     ],
   },
   48: {
@@ -526,6 +546,11 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     negativeExamples: [
       "Charline, Jana und Eva machen jeden Freitag einen Mädelsabend. Dabei wechselt die Gastgeberin des Abends von Woche zu Woche. Diese Woche ist Jana dran. Es hat sich bei ihnen im Freundeskreis etabliert, dass die Gastgeberin auch für Essen und Getränke zu sorgen hat. Jana stellt also Bier in den Kühlschrank und bestellt Pizza vor.",
       "Lena ist bei ihrer Oma zu Besuch, die gerade die Wäsche vorbereitet: Sie schlägt jedes Kleidungsstück auf links, bevor sie es in die Waschmaschine legt. Lena beobachtet dies und stellt das Verhalten ihrer Oma in Frage. Ihre Oma entgegnet ihr nur: „Das hat man schon immer so gemacht!“.",
+    ],
+    partAspects: [
+      "Explizite oder implizite Konventionen",
+      "Vorgabe von korrektem Verhalten",
+      "Beziehen sich auf soziale Situationen",
     ],
   },
   49: {
@@ -580,7 +605,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   56: {
     id: 56,
     slideText:
-      " Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ nun mit den folgenden Beispielen ab.",
+      " Bitte gleiche Dein Beispiel zum Konzept „hoher Konsens“ nun mit den folgenden Expertenbeispielen ab.",
     slideType: "Konsens_g1_1",
     header: "Konzept „hoher Konsens“",
     negativeExamples: [
@@ -590,6 +615,10 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     expertExamples: [
       "Julia kann ihre alten Converse-Sneakers nicht mehr sehen und beschließt, am Montag nach der Schule gemeinsam mit ihren beiden Freundinnen shoppen zu gehen, um sich die neuen, angesagten Nike-Sneakers zu kaufen. Als die drei im Schuhgeschäft angekommen sind, betrachten die beiden Freundinnen von Julia ihre eigenen Schuhe und bemerken, dass ihre alten Sneakers im Vergleich mit den neuen Nike-Schuhen von Julia ebenfalls längst aus der Mode gekommen sind. Daraufhin beschließen die beiden, sich genauso wie ihre Freundin Julia die neuen Nike-Sneakers zu kaufen.",
       "Aufgrund der Corona-Pandemie müssen sich nun alle Mitarbeiter nacheinander ihr Essen in der Mensa holen. Draußen am Essenstisch angekommen, fällt der Arbeitsgruppe auf, dass sich alle für einen Salat mit Falafel entschieden haben. Sie vermuten, dass ihre gleiche Entscheidung sowohl am heißen Wetter als auch an dem aktuellen Ernährungstrend liegt.",
+    ],
+    partAspects: [
+      "Hohes Ausmaß an Übereinstimmung",
+      "Bezug auf Verhalten oder Reaktion vieler Personen",
     ],
   },
   58: {
@@ -601,6 +630,10 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     negativeExamples: [
       "Ingrid geht jede Woche mittwochs einkaufen. Nach dem Einkauf trägt sie die Einkäufe in ihrem Rollator nach Hause. Dieses Mal hat sie so viel eingekauft, dass ein paar der Lebensmittel auf den Boden fallen. Ein Herr eilt ihr zu Hilfe und legt die heruntergefallenen Lebensmittel zurück in ihren Rollator. Sie bedankt sich und geht nach Hause.",
       "In einer Spielgruppe eines Kindergartens wird plötzlich ein Feueralarm ausgelöst. Alle Kinder fangen zeitgleich an zu schreien und zu weinen.",
+    ],
+    partAspects: [
+      "Hohes Ausmaß an Übereinstimmung",
+      "Bezug auf Verhalten oder Reaktion vieler Personen",
     ],
   },
   59: {
@@ -655,7 +688,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   66: {
     id: 66,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ nun mit den folgenden Beispielen ab.",
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Konsistenz“ nun mit den folgenden Expertenbeispielen ab.",
     slideType: "Konsistenz_g1_1",
     header: "Konzept „hohe Konsistenz“",
     negativeExamples: [
@@ -665,6 +698,11 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     expertExamples: [
       "Als Silvia in der Schule war, hat sie vor Schularbeiten ihren Glücksstein immer drei Mal gerieben, weil sie dachte, dass ihr dies Glück bringt. Mittlerweile ist sie älter, nutzt ihren Glücksstein aber immer noch, beispielsweise am Tag ihrer Führerscheinprüfung. Sie reibt ihn vorher drei Mal, da sie immer noch an die Glückswirkung des Steines glaubt.",
       "Frau Albers gibt jedes Mal im Restaurant hohes Trinkgeld. Früher hat sie dem Kellner im kleinen Dorfrestaurant bereits 30 Euro gegeben, obwohl sie damals noch nicht viel Geld hatte. Heute, wo sie ihren 50. Geburtstag beim schicken Italiener feiert, gibt sie dem Kellner ebenfalls 30 Euro Trinkgeld.",
+    ],
+    partAspects: [
+      "Hohes Ausmaß der Ähnlichkeit des Verhaltens einer Person",
+      "Ähnlichkeit über die Zeit hinweg",
+      "Ähnlichkeit über ähnliche Situation hinweg",
     ],
   },
   68: {
@@ -676,6 +714,11 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     negativeExamples: [
       "Jan geht in dem neuen griechischen Restaurant essen, das vor Kurzem in seinem Wohnort eröffnet wurde. Mit Enttäuschung stellt er fest, dass ihm das Essen nicht schmeckt. Nach und nach beobachtet er, wie die Besucherzahl des Restaurants sinkt und es schließlich wegen mangelnder Kundschaft schließen muss. Jan hält dieses Vorkommnis für konsistent.",
       "Alex beschließt, ihrer Mutter einen Blumenstrauß zu kaufen, da morgen Muttertag ist. Sie nimmt einen Regenschirm mit, da dunkle Wolken aufziehen. Im Blumengeschäft fällt ihr auf, dass einige andere Kunden ebenfalls mit einem Regenschirm in den Laden gekommen sind.",
+    ],
+    partAspects: [
+      "Hohes Ausmaß der Ähnlichkeit des Verhaltens einer Person",
+      "Ähnlichkeit über die Zeit hinweg",
+      "Ähnlichkeit über ähnliche Situation hinweg",
     ],
   },
   69: {
@@ -730,7 +773,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   76: {
     id: 76,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ nun mit den folgenden Beispielen ab.",
+      "Bitte gleiche Dein Beispiel zum Konzept „hohe Distinktheit“ nun mit den folgenden Expertenbeispielen ab.",
     slideType: "Distinktheit_g1_1",
     header: "Konzept „hohe Distinktheit“",
     negativeExamples: [
@@ -740,6 +783,10 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     expertExamples: [
       "Im Hause Müller wird jeden Abend vor dem Essen ein Tischgebet gesprochen. Wenn der jüngste Sohn, Yannick, von seinem Vater darum gebeten wird, das Tischgebet zu halten, kommt er dieser Bitte nach. Wird Yannick allerdings von seiner Mutter darum gebeten, gibt er nur eine genervte Antwort.",
       "Als Steven eine ältere Dame sieht, deren Einkäufe heruntergefallen sind, eilt er ihr zu Hilfe und räumt ihr die Einkäufe zurück in die Tasche. Am nächsten Tag bemerkt Steven einen älteren Mann, dem sein Portemonnaie auf die Straße gefallen ist. Steven hilft ihm nicht, sondern geht einfach weiter.",
+    ],
+    partAspects: [
+      "Hohes Ausmaß von unterschiedlichen Reaktionen einer einzelnen Person",
+      "Reaktion auf ähnliche Stimuli oder Situationen",
     ],
   },
   78: {
@@ -751,6 +798,10 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     negativeExamples: [
       "Jakob und Sven besuchen die gleiche Klasse. Jakob ist ein sehr guter Schüler, während Sven eher schlechte Noten bekommt. Als sie am Montagmorgen ihre Deutscharbeit zurückbekommen, ist es anders: Jakob hat eine schlechte Note bekommen, Sven dagegen eine gute.",
       "Beim Einkaufen an der Kasse wünscht Anna dem Kassierer einen schönen Tag. Als sie mittags ihren Sohn Daniel von der Schule abholt, wird sie von der Lehrerin ermahnt, weil Daniel einen anderen Mitschüler beleidigt hat. Anna verabschiedet sich nach dem Gespräch von der Lehrerin und wünscht auch ihr einen schönen Tag.",
+    ],
+    partAspects: [
+      "Hohes Ausmaß von unterschiedlichen Reaktionen einer einzelnen Person",
+      "Reaktion auf ähnliche Stimuli oder Situationen",
     ],
   },
   79: {
@@ -805,7 +856,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   86: {
     id: 86,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ nun mit den folgenden Beispielen ab.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Fundamentaler Attributionsfehler“ nun mit den folgenden Expertenbeispielen ab.",
     slideType: "FA_g1_1",
     header: "Konzept „Fundamentaler Attributionsfehler“",
     negativeExamples: [
@@ -815,6 +866,12 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     expertExamples: [
       "Im spannenden Endspiel der Fußballweltmeisterschaft wird dem Torwart infolge eines Fouls eine gelbe Karte gegeben. Der Torwart wird daraufhin aggressiv und beschimpft den Schiedsrichter. Der Kommentator schlussfolgert, die Reaktion des Torwarts sei durch die generell schon aggressive Art und geringe Frustrationstoleranz des Torwarts bedingt. Im Interview nach dem Spiel erklärt der Torwart bezüglich seines Ausrasters, dass die Situation, im Finale der Weltmeisterschaft zu stehen, einen großen Druck auf ihn ausgeübt habe und er grundsätzlich kein aggressiver Mensch sei.",
       "Bei Familie Maier ist das Gesprächsthema Nummer 1 die gegenüber von ihnen wohnende Frau Peters. Familie Maier regt sich darüber auf, dass Frau Peters einen Babysitter für ihr Neugeborenes eingestellt hat. Frau und Herr Maier erklären sich dieses Verhalten damit, dass Frau Peters eine lieblose Mutter sei und sich nicht richtig um ihr Kind kümmern würde. Frau Peters ist allerdings alleinerziehend und muss arbeiten gehen, um genug Geld zu verdienen, weshalb sie einen Babysitter benötigt.",
+    ],
+    partAspects: [
+      "Attribution des Verhaltens anderer",
+      "Attribution ist fehlgeleitet/ fehlerhaft",
+      "Überschätzung interner Ursachen für Verhalten",
+      "Unterschätzung des Situationseinflusses",
     ],
   },
   88: {
@@ -826,6 +883,12 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     negativeExamples: [
       "Unglücklicherweise schreibt eine Schulklasse genau an dem Tag eine Klassenarbeit, an dem eine Baustelle neben der Schule starken Lärm verursacht. Als die Schulklasse die Arbeit ein paar Wochen später wiederbekommen, stellen die Schüler fest, dass diese sehr schlecht ausgefallen ist. Die Schüler*innen schreiben dies dem Lärm der Baustelle zu. Dass es an ihren eigenen Fähigkeiten gelegen haben könnte, kommt ihnen nicht in den Sinn.",
       "Wenn Frau Müller sich unfreundlich gegenüber ihren Mitmenschen verhält, denkt sie, dass dieses Verhalten an der aktuell stressigen Arbeitsphase liegt. Ist sie dagegen freundlich und höflich, führt sie dies auf ihre gute Erziehung zurück.",
+    ],
+    partAspects: [
+      "Attribution des Verhaltens anderer",
+      "Attribution ist fehlgeleitet/ fehlerhaft",
+      "Überschätzung interner Ursachen für Verhalten",
+      "Unterschätzung des Situationseinflusses",
     ],
   },
   89: {
@@ -880,7 +943,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   96: {
     id: 96,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ nun mit den folgenden Beispielen ab.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ nun mit den folgenden Expertenbeispielen ab.",
     slideType: "SV_g1_1",
     header: "Konzept „Selbstwertdienliche Verzerrung“",
     negativeExamples: [
@@ -891,17 +954,24 @@ const Slides: { [key in SlideID]: SlideInterface } = {
       "Nach einem Referat erhält Janosch sowohl positives als auch negatives Feedback. Eine seiner Mitschülerinnen lobt ihn für die sinnvolle Aufteilung der Inhalte. Janosch führt dies auf seine Intelligenz zurück. Ein anderer Mitschüler macht Janosch darauf aufmerksam, dass die Inhalte des Referats nicht gut nachzuvollziehen waren. Dies erklärt Janosch sich mit den technischen Störungen des Beamers und den Unterbrechungen vom Lehrer – an ihm selber wird dies wohl nicht gelegen haben.",
       "Herr Janssen ist Geschäftsführer einer privaten Firma und hat vor Kurzem zwei wichtige Angebote bei zwei verschiedenen Firmen eingereicht. Als er die Rückmeldung erhält, dass eines der zwei Angebote abgelehnt wurde, schreibt er dies dem Sachbearbeiter zu, der das Angebot bearbeitet hat, weil dieser wohl eine persönliche Abneigung gegen Herrn Janssen habe. Das zweite Angebot dagegen wurde angenommen, was Herr Janssen damit begründet, dass er sehr gut darin ist, Angebote zu schreiben.",
     ],
+    partAspects: [
+      "Positives auf eigene Eigenschaften/internale Ursachen zurückgeführt",
+      "Negatives auf unkontrollierbare Faktoren/externale Ursachen zurückgeführt",
+    ],
   },
   98: {
     id: 98,
     slideText:
       "Bitte gleiche Dein Beispiel zum Konzept „Selbstwertdienliche Verzerrung“ mit den beiden hier dargestellten Beispielen ab.",
     slideType: "SV_g2",
-
     header: "Konzept „Selbstwertdienliche Verzerrung“",
     negativeExamples: [
       "Mareike gewinnt im Schach gegen ihren Freund Maik. Maik glaubt, dass der Sieg von Mareike nur daran lag, dass er sich schlecht konzentrieren konnte und er einen schlechten Tag hatte.",
       "Klara ist überzeugt, dass ihr Mann und Vater ihres Kindes Jakob ein guter Mensch ist. Ihr Sohn Jakob befindet sich im Teenager-Alter und zeigt aggressives und gewalttätiges Verhalten. Klara denkt, Jakob habe die Gene von ihr geerbt, und nicht von ihrem Mann, weil er ja ihrer Überzeugung nach ein guter Mensch sei.",
+    ],
+    partAspects: [
+      "Positives auf eigene Eigenschaften/internale Ursachen zurückgeführt",
+      "Negatives auf unkontrollierbare Faktoren/externale Ursachen zurückgeführt",
     ],
   },
   99: {
@@ -956,7 +1026,7 @@ const Slides: { [key in SlideID]: SlideInterface } = {
   106: {
     id: 106,
     slideText:
-      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ nun mit den folgenden Beispielen ab.",
+      "Bitte gleiche Dein Beispiel zum Konzept „Gerechte-Welt-Glaube“ nun mit den folgenden Expertenbeispielen ab.",
     slideType: "GWG_g1_1",
     header: "Konzept „Gerechte-Welt-Glaube”",
     negativeExamples: [
@@ -966,6 +1036,11 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     expertExamples: [
       "Laura streitet sich mit ihrer Mutter. Sie hat erneut ihr Zimmer nicht aufgeräumt, will aber jetzt zur Stufenparty fahren, obwohl ihre Mutter sie darum bittet, vorher ihr Zimmer in Ordnung zu bringen. Laura ignoriert die Bitte und steigt auf ihr Fahrrad. Auf der Hälfte der Strecke übersieht sie einen Bordstein und stürzt. Ihre Knie und Hände sind aufgeschürft. Laura ist sich sicher, dass sie diesen Unfall hätte vorhersehen können, da sie es verdient hatte, hinzufallen, weil sie ihr Zimmer nicht aufgeräumt und sich mit ihrer Mutter gestritten hatte. Laura ist der festen Überzeugung, dass der Unfall ihr zu Recht geschehen ist.",
       "In der Grundschule zeigt Simon stets vorbildliches Verhalten. Er beteiligt sich am Unterricht, hilft seinen Mitschülern und respektiert die Lehrer. Zum Ende des Schuljahres erhält Simon dafür eine Auszeichnung als „bester Schüler des Jahres“. Seine Eltern waren sich schon immer sicher, dass Simon diese Auszeichnung für sein Verhalten verdient hat und es nur gerecht sei, dass sein vorbildliches Verhalten belohnt wird.",
+    ],
+    partAspects: [
+      "Annahme 1: Welt ist ein vorhersehbarer Ort",
+      "Annahme 2: Welt ist ein gerechter Ort",
+      "Annahme 3: Jeder bekommt, was er oder sie verdient",
     ],
   },
   108: {
@@ -977,6 +1052,11 @@ const Slides: { [key in SlideID]: SlideInterface } = {
     negativeExamples: [
       "Julia wird im Supermarkt von einem älteren Mann angerempelt, woraufhin ihr ihre Einkäufe herunterfallen. Sie redet sich ein, dass dieser sie bestimmt nicht gesehen habe und eigentlich einen guten Kern habe. Dabei hat der Mann Julia sogar gesehen, ihm war es aber egal, weil er schnell zur Kasse wollte.",
       "Can geht es seit Antritt seiner neuen Stelle finanziell sehr gut. Sein Freund Jona dagegen beklagt sich bei ihm, weil er selber Geringverdiener ist. Can ist der Meinung, dass Jona selber daran schuld ist, denn er könnte sich ja einen anderen, besser bezahlten Job suchen.",
+    ],
+    partAspects: [
+      "Annahme 1: Welt ist ein vorhersehbarer Ort",
+      "Annahme 2: Welt ist ein gerechter Ort",
+      "Annahme 3: Jeder bekommt, was er oder sie verdient",
     ],
   },
   109: {

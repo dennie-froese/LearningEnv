@@ -1,3 +1,5 @@
+import { ColourObject } from "../components/ColouredWord";
+
 export interface Answer {
   zeit: number;
   version?: string;
@@ -12,6 +14,9 @@ export interface Answer {
   Studiengang2?: string;
   Abschluss?: string;
   Semester_Hochschule?: string;
+  Markierung_Beispiel1?: ColourObject[];
+  Markierung_Beispiel2?: ColourObject[];
+  Markierung_Eigenes_Beispiel?: ColourObject[];
   NachAngaben_1?: string;
   NachAngaben_2?: string;
   NachAngaben_3?: string;
